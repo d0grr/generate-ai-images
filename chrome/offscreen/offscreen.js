@@ -56,21 +56,29 @@ let lastDiagnostics = {};
 // ─────────────────────────────────────────────────────────────
 // Message routing
 // ─────────────────────────────────────────────────────────────
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-  if (msg?.target !== "offscreen") return;
-  handle(msg).then(sendResponse).catch((err) => {
-    const msg = errorMessage(err);
-    if (/aborted|cancel/i.test(msg)) {
-      sendResponse({ ok: false, error: msg, cancelled: true });
-    } else {
-      console.error("[offscreen]", err);
-      sendResponse({ ok: false, error: msg, stack: err?.stack });
-    }
+// Chrome runs this engine in a separate offscreen document and talks to it over
+// chrome.runtime.sendMessage, so we register an onMessage listener. Firefox runs
+// the engine inside the (single) background page and calls handle() directly —
+// runtime.sendMessage doesn't round-trip to the sender's own context — so it sets
+// globalThis.__ENGINE_DIRECT__ (in background.html, before this module loads) to
+// skip the listener. handle() and setProgressSink() are exported for that path.
+if (!globalThis.__ENGINE_DIRECT__) {
+  chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+    if (msg?.target !== "offscreen") return;
+    handle(msg).then(sendResponse).catch((err) => {
+      const m = errorMessage(err);
+      if (/aborted|cancel/i.test(m)) {
+        sendResponse({ ok: false, error: m, cancelled: true });
+      } else {
+        console.error("[offscreen]", err);
+        sendResponse({ ok: false, error: m, stack: err?.stack });
+      }
+    });
+    return true;
   });
-  return true;
-});
+}
 
-async function handle(msg) {
+export async function handle(msg) {
   switch (msg.type) {
     case "probe":       return await probe();
     case "warmup":      return await warmup(msg.repoId, msg.schedulerType, msg.dtype, msg.kind, msg.encoderRepoId, msg.unetIO, msg.timestep, msg.unetFile);
@@ -548,8 +556,16 @@ function blobToBase64(blob) {
 // ─────────────────────────────────────────────────────────────
 // Utilities
 // ─────────────────────────────────────────────────────────────
-function postProgress(body) {
+// Progress is pushed through a sink. Chrome's default relays to the SW over
+// runtime.sendMessage; Firefox's background page injects a direct callback via
+// setProgressSink (same context — a message wouldn't reach the core).
+let progressSink = (body) => {
   chrome.runtime.sendMessage({ type: "offscreen:progress", body }).catch(() => {});
+};
+export function setProgressSink(fn) { progressSink = fn; }
+
+function postProgress(body) {
+  progressSink(body);
 }
 
 async function encodeLatentPreview(latents, lh, lw) {

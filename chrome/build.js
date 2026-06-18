@@ -31,18 +31,41 @@ import { execSync }                       from "node:child_process";
 
 const DEV = process.argv.includes("--dev");
 const RAW = process.argv.includes("--raw");
+// --firefox: build the Firefox variant by overlaying ../firefox/ (manifest +
+// background page) on top of the shared chrome/ sources. Everything else (engine,
+// UI, locales, vendor, assets) is reused as-is from this directory.
+const FIREFOX = process.argv.includes("--firefox");
 
 const SRC         = path.dirname(fileURLToPath(import.meta.url));
-const DIST        = path.resolve(SRC, "dist");
+const TARGET      = FIREFOX ? "firefox" : "chrome";
+// Firefox-specific files live in ../firefox/ and shadow the shared chrome/ ones.
+const OVERLAY     = FIREFOX ? path.resolve(SRC, "..", "firefox") : null;
+// Shared chrome/ files that the Firefox build must NOT ship (replaced by the
+// overlay's background page; Firefox has no offscreen document).
+const TARGET_EXCLUDE = FIREFOX
+  ? new Set(["background/service-worker.js", "offscreen/offscreen.html"])
+  : new Set();
+
+const DIST        = FIREFOX ? path.resolve(OVERLAY, "dist") : path.resolve(SRC, "dist");
 // Packaged builds collect in the repo-root release/ (shared across platforms);
-// the zip is platform-prefixed so a future firefox build drops alongside it.
+// the zip is platform-prefixed so each target drops alongside the other.
 const RELEASE_DIR = path.resolve(SRC, "..", "release");
 
-const manifest = JSON.parse(fs.readFileSync(path.join(SRC, "manifest.json"), "utf8"));
+const MANIFEST_PATH = FIREFOX ? path.join(OVERLAY, "manifest.json") : path.join(SRC, "manifest.json");
+const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf8"));
 const VERSION  = manifest.version;
-const ZIP_PATH = path.join(RELEASE_DIR, `chrome-v${VERSION}.zip`);
+const ZIP_PATH = path.join(RELEASE_DIR, `${TARGET}-v${VERSION}.zip`);
 
 const RELEASE = !DEV && !RAW;
+
+// Resolve a relative file to the overlay copy when present, else the shared one.
+function srcFor(relPath) {
+  if (OVERLAY) {
+    const overlaid = path.join(OVERLAY, relPath);
+    if (fs.existsSync(overlaid)) return overlaid;
+  }
+  return path.join(SRC, relPath);
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // FILE REGISTRY
@@ -50,7 +73,10 @@ const RELEASE = !DEV && !RAW;
 
 // First-party ES-module JS → Terser
 const JS_ES_MODULE = new Set([
-  "background/service-worker.js",
+  "background/service-worker.js",     // chrome entry
+  "background/background.js",         // firefox entry (overlay)
+  "background/engine-direct.js",      // firefox flag module (overlay)
+  "background/core.js",
   "offscreen/ort-init.js",
   "offscreen/offscreen.js",
   "offscreen/sd-pipeline.js",
@@ -96,6 +122,7 @@ const CSS_FIRST_PARTY = new Set([
 // HTML → html-minifier-terser
 const HTML_FILES = new Set([
   "offscreen/offscreen.html",
+  "background/background.html",       // firefox engine host page (overlay)
   "popup/lightbox.html",
   "popup/popup.html",
   "workspace/workspace.html",
@@ -180,6 +207,7 @@ function processJSON(relPath, srcPath, dstPath) {
     obj.name       = "__MSG_appName__";
     obj.short_name = "__MSG_shortName__";
     if (obj.action) obj.action.default_title = "__MSG_action_title__";
+    if (obj.sidebar_action) obj.sidebar_action.default_title = "__MSG_action_title__";
     if (obj.content_security_policy?.extension_pages) {
       obj.content_security_policy.extension_pages =
         "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src 'self' https:;";
@@ -201,7 +229,7 @@ function copyVerbatim(relPath, srcPath, dstPath) {
 // ─────────────────────────────────────────────────────────────────────────────
 
 async function processFile(relPath) {
-  const srcPath = path.join(SRC, relPath);
+  const srcPath = srcFor(relPath);
   const dstPath = path.join(DIST, relPath);
   fs.mkdirSync(path.dirname(dstPath), { recursive: true });
 
@@ -274,14 +302,34 @@ async function main() {
   const modeLabel = RAW ? "raw — no minification"
     : DEV ? "dev — source maps"
     : "release — minified";
-  console.log(`\nBuild: Generate AI Images v${VERSION}  [${modeLabel}]\n`);
+  console.log(`\nBuild: Generate AI Images v${VERSION}  [${TARGET} · ${modeLabel}]\n`);
   if (fs.existsSync(DIST)) fs.rmSync(DIST, { recursive: true });
   fs.mkdirSync(DIST, { recursive: true });
 
-  const tasks = [...INCLUDE_FILES];
+  // Collect shared chrome/ files (minus this target's exclusions), then merge in
+  // the overlay's own files (e.g. the Firefox background page). A Set dedupes so
+  // an overlaid file that also exists in chrome/ is processed once (srcFor picks
+  // the overlay copy).
+  const tasks = new Set(INCLUDE_FILES);
   for (const dir of INCLUDE_DIRS) {
     const abs = path.join(SRC, dir);
-    if (fs.existsSync(abs)) tasks.push(...walkDir(abs).map((r) => path.join(dir, r)));
+    if (fs.existsSync(abs)) {
+      for (const r of walkDir(abs)) {
+        const rel = path.join(dir, r);
+        if (!TARGET_EXCLUDE.has(rel)) tasks.add(rel);
+      }
+    }
+  }
+  if (OVERLAY) {
+    // Pull in overlay-only files under the shared dirs (e.g. background/*.html).
+    // The overlay's build output (dist/) and docs (README.md) are not in
+    // INCLUDE_DIRS, so they're never walked.
+    for (const dir of INCLUDE_DIRS) {
+      const abs = path.join(OVERLAY, dir);
+      if (fs.existsSync(abs)) {
+        for (const r of walkDir(abs)) tasks.add(path.join(dir, r));
+      }
+    }
   }
 
   for (const relPath of tasks) await processFile(relPath);

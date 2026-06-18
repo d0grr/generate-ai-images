@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Generate AI Images · WebGPU engine</title>
+</head>
+<body>
+  <!--
+    Firefox MV3 background is a DOM event page (not a service worker), so unlike
+    Chrome it CAN run WebGPU / Workers / OPFS / Canvas directly. We therefore host
+    the inference engine right here instead of in a chrome.offscreen document.
+
+    Load order matters (module scripts execute in document order):
+      1. engine-direct.js  — sets globalThis.__ENGINE_DIRECT__ before the engine loads
+      2. ort-init.js       — assigns globalThis.ort (ORT 1.26 WebGPU bundle)
+      3. background.js     — imports the engine + shared core, wires the adapter
+  -->
+  <script type="module" src="engine-direct.js"></script>
+  <script type="module" src="../offscreen/ort-init.js"></script>
+  <script type="module" src="background.js"></script>
+</body>
+</html>

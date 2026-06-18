@@ -631,7 +631,14 @@ function renderModelBanner() {
   const dlEl    = $("#mb-downloading");
   const instEl  = $("#mb-installing");
   const readyEl = $("#mb-ready");
+  const bannerEl = $("#model-banner");
   if (!noneEl) return;
+
+  // The banner only carries transient status (no model / downloading / preparing).
+  // Once a model is ready its name/size/badge live in the header, so the banner
+  // would just be an empty strip + divider line — hide it then to reclaim space.
+  // Visible by default; the ready branch below hides it.
+  if (bannerEl) bannerEl.hidden = false;
 
   // Cancel ✕ in the loading row — shown only while loading into RAM / compiling
   // shaders (the phase that freezes), so the user can always abort the load.
@@ -682,6 +689,7 @@ function renderModelBanner() {
   if (installed) {
     noneEl.hidden = dlEl.hidden = instEl.hidden = true;
     readyEl.hidden = false;
+    if (bannerEl) bannerEl.hidden = true;   // nothing to show — collapse the strip
 
     const sizeStr = hasBrowserVariant(model)
       ? `${(model.browserSizeGb || 0).toFixed(1)} GB`
