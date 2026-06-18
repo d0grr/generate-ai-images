@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - AI ছবি তৈরি করুন"
+  },
+  "shortName": {
+    "message": "AI ছবি"
+  },
+  "shortDesc": {
+    "message": "AI ইমেজ জেনারেটর দিয়ে টেক্সট থেকে AI ছবি তৈরি করুন, রিয়েলিস্টিক AI পিকচার জেনারেট করুন এখনই।"
+  },
+  "action_title": {
+    "message": "AI ছবি তৈরি করুন"
+  },
+  "open_workspace": {
+    "message": "ওয়ার্কস্পেস খুলুন"
+  },
+  "settings": {
+    "message": "সেটিংস"
+  },
+  "error_title": {
+    "message": "কিছু একটা ভুল হয়েছে"
+  },
+  "btn_diagnostics": {
+    "message": "ডায়াগনস্টিক্স ↗"
+  },
+  "btn_dismiss": {
+    "message": "বন্ধ করুন"
+  },
+  "no_model_selected": {
+    "message": "কোনো মডেল নির্বাচন করা হয়নি"
+  },
+  "mb_get": {
+    "message": "↓ ডাউনলোড"
+  },
+  "mb_downloading": {
+    "message": "ডাউনলোড হচ্ছে…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "ডাউনলোড বাতিল করুন"
+  },
+  "mb_installing": {
+    "message": "ইনস্টল হচ্ছে…"
+  },
+  "mb_verifying": {
+    "message": "ওজন যাচাই করা হচ্ছে · প্রায় শেষ"
+  },
+  "ready": {
+    "message": "প্রস্তুত"
+  },
+  "prompt_placeholder": {
+    "message": "আপনি কী তৈরি করতে চান তা বর্ণনা করুন…"
+  },
+  "btn_clear_title": {
+    "message": "মুছুন"
+  },
+  "btn_clear_aria": {
+    "message": "প্রম্পট মুছুন"
+  },
+  "surprise_me": {
+    "message": "আমাকে চমকে দিন"
+  },
+  "param_steps": {
+    "message": "ধাপ"
+  },
+  "param_guidance": {
+    "message": "গাইডেন্স"
+  },
+  "param_seed": {
+    "message": "সিড"
+  },
+  "seed_random": {
+    "message": "র‍্যান্ডম"
+  },
+  "neg_prompt_label": {
+    "message": "নেগেটিভ প্রম্পট"
+  },
+  "neg_prompt_placeholder": {
+    "message": "যা এড়িয়ে চলতে হবে…"
+  },
+  "btn_parameters": {
+    "message": "প্যারামিটার ▾"
+  },
+  "btn_generate": {
+    "message": "তৈরি করুন"
+  },
+  "install_model_hint": {
+    "message": "তৈরি করুন সক্রিয় করতে একটি মডেল ইনস্টল করুন।"
+  },
+  "img_placeholder": {
+    "message": "আপনার ছবি এখানে দেখা যাবে"
+  },
+  "generating_eyebrow": {
+    "message": "তৈরি হচ্ছে"
+  },
+  "phase_encoding": {
+    "message": "প্রম্পট এনকোড হচ্ছে"
+  },
+  "btn_cancel_gen": {
+    "message": "× বাতিল"
+  },
+  "btn_save": {
+    "message": "↓ সেভ করুন"
+  },
+  "btn_copy": {
+    "message": "⎘ কপি করুন"
+  },
+  "btn_retry": {
+    "message": "↺ আবার চেষ্টা করুন"
+  },
+  "img_generated_alt": {
+    "message": "তৈরি করা ছবি"
+  },
+  "recent_eyebrow": {
+    "message": "সাম্প্রতিক"
+  },
+  "view_all": {
+    "message": "সব দেখুন ↗"
+  },
+  "clear_history": {
+    "message": "ইতিহাস মুছুন"
+  },
+  "loading_model": {
+    "message": "মডেল লোড হচ্ছে…"
+  },
+  "compiling": {
+    "message": "কম্পাইল হচ্ছে…"
+  },
+  "generating_pct": {
+    "message": "তৈরি হচ্ছে · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "প্রস্তুত হচ্ছে…"
+  },
+  "phase_compiling_first": {
+    "message": "শেডার কম্পাইল হচ্ছে · প্রথমবার"
+  },
+  "phase_loading": {
+    "message": "লোড হচ্ছে…"
+  },
+  "phase_fetching": {
+    "message": "মডেল ওজন পাওয়া যাচ্ছে"
+  },
+  "phase_decoding": {
+    "message": "ছবি ডিকোড হচ্ছে…"
+  },
+  "phase_loading_model": {
+    "message": "মডেল লোড হচ্ছে…"
+  },
+  "phase_compiling_shaders": {
+    "message": "শেডার কম্পাইল হচ্ছে…"
+  },
+  "workspace_page_title": {
+    "message": "AI অফলাইন ইমেজ জেনারেটর ওয়ার্কস্পেস"
+  },
+  "workspace_brand": {
+    "message": "AI অফলাইন ইমেজ জেনারেটর"
+  },
+  "workspace_label": {
+    "message": "ওয়ার্কস্পেস"
+  },
+  "tab_gallery": {
+    "message": "গ্যালারি"
+  },
+  "tab_diagnostics": {
+    "message": "ডায়াগনস্টিক্স"
+  },
+  "tab_settings": {
+    "message": "সেটিংস"
+  },
+  "your_generations": {
+    "message": "আপনার তৈরি ছবি"
+  },
+  "gallery_lede": {
+    "message": "সব কিছু এই ডিভাইসে থাকে। পূর্ণ রেজোলিউশনের জন্য টাইলে ক্লিক করুন।"
+  },
+  "filter_model": {
+    "message": "মডেল"
+  },
+  "all_models": {
+    "message": "সব মডেল"
+  },
+  "filter_engine": {
+    "message": "ইঞ্জিন"
+  },
+  "any_engine": {
+    "message": "যেকোনো ইঞ্জিন"
+  },
+  "engine_browser": {
+    "message": "ব্রাউজার · WebGPU"
+  },
+  "filter_window": {
+    "message": "সময়কাল"
+  },
+  "time_all": {
+    "message": "সব সময়"
+  },
+  "time_24h": {
+    "message": "গত ২৪ ঘণ্টা"
+  },
+  "time_7d": {
+    "message": "গত ৭ দিন"
+  },
+  "time_30d": {
+    "message": "গত ৩০ দিন"
+  },
+  "btn_select": {
+    "message": "নির্বাচন করুন"
+  },
+  "no_images_title": {
+    "message": "এখনো কোনো ছবি নেই"
+  },
+  "no_images_lede": {
+    "message": "Alt+Shift+D দিয়ে পপআপ খুলুন, একটি প্রম্পট লিখুন, তৈরি করুন ক্লিক করুন। ফলাফল এখানে দেখা যাবে।"
+  },
+  "no_matches_title": {
+    "message": "কোনো মিল নেই"
+  },
+  "no_matches_lede": {
+    "message": "এই সময়কালে কিছু নেই। ফিল্টার প্রসারিত করার চেষ্টা করুন।"
+  },
+  "compare_kicker": {
+    "message": "তুলনা করুন · হ্যান্ডেল টানুন"
+  },
+  "compare_vs": {
+    "message": "A বনাম B"
+  },
+  "close_aria": {
+    "message": "বন্ধ করুন"
+  },
+  "loading_fullres": {
+    "message": "পূর্ণ রেজোলিউশন লোড হচ্ছে…"
+  },
+  "label_prompt": {
+    "message": "প্রম্পট"
+  },
+  "label_avoid": {
+    "message": "এড়িয়ে চলুন"
+  },
+  "label_seed": {
+    "message": "সিড"
+  },
+  "label_steps": {
+    "message": "ধাপ"
+  },
+  "label_guidance": {
+    "message": "গাইডেন্স"
+  },
+  "label_engine": {
+    "message": "ইঞ্জিন"
+  },
+  "label_duration": {
+    "message": "সময়কাল"
+  },
+  "label_generated": {
+    "message": "তৈরি হয়েছে"
+  },
+  "label_path": {
+    "message": "পাথ"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ সিড পুনরায় ব্যবহার করুন"
+  },
+  "btn_copy_prompt": {
+    "message": "প্রম্পট কপি করুন"
+  },
+  "btn_copy_seed": {
+    "message": "সিড কপি করুন"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG ডাউনলোড করুন"
+  },
+  "btn_delete": {
+    "message": "মুছুন"
+  },
+  "danger_zone": {
+    "message": "বিপজ্জনক এলাকা"
+  },
+  "clear_data_title": {
+    "message": "সব এক্সটেনশন ডেটা মুছুন"
+  },
+  "clear_data_hint": {
+    "message": "সব ক্যাশড মডেল এবং তৈরি ছবি সরিয়ে দেয়। পূর্বাবস্থায় ফেরানো যাবে না।"
+  },
+  "btn_clear_data": {
+    "message": "ডেটা মুছুন"
+  },
+  "diag_title": {
+    "message": "ডায়াগনস্টিক্স"
+  },
+  "diag_lede": {
+    "message": "এক্সটেনশন আপনার ব্রাউজার এবং মেশিন সম্পর্কে যা দেখে। কিছু কাজ না করলে এই ব্লকটি issue-এ কপি করুন।"
+  },
+  "diag_engine": {
+    "message": "সক্রিয় ইঞ্জিন"
+  },
+  "diag_preferred": {
+    "message": "পছন্দসই"
+  },
+  "diag_device": {
+    "message": "ডিভাইস"
+  },
+  "diag_adapter": {
+    "message": "অ্যাডাপ্টার"
+  },
+  "diag_vendor": {
+    "message": "ভেন্ডর"
+  },
+  "diag_vram": {
+    "message": "VRAM অনুমান"
+  },
+  "diag_browser": {
+    "message": "ব্রাউজার পাথ"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS কোটা"
+  },
+  "diag_storage": {
+    "message": "স্টোরেজ"
+  },
+  "diag_installed": {
+    "message": "ইনস্টল করা মডেল"
+  },
+  "diag_recent": {
+    "message": "সাম্প্রতিক ছবি"
+  },
+  "diag_active": {
+    "message": "সক্রিয় মডেল"
+  },
+  "btn_copy_json": {
+    "message": "JSON হিসেবে কপি করুন"
+  },
+  "btn_reprobe": {
+    "message": "প্রোব পুনরায় চালান"
+  },
+  "btn_compare": {
+    "message": "তুলনা করুন"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP এক্সপোর্ট করুন"
+  },
+  "btn_bulk_delete": {
+    "message": "মুছুন"
+  },
+  "btn_cancel_select": {
+    "message": "বাতিল করুন"
+  },
+  "confirm_clear_data": {
+    "message": "সব ক্যাশড মডেল এবং তৈরি ছবি মুছবেন?\n\nএটি পূর্বাবস্থায় ফেরানো যাবে না।"
+  },
+  "clearing": {
+    "message": "মুছে ফেলা হচ্ছে…"
+  },
+  "status_done": {
+    "message": "✓ সম্পন্ন"
+  },
+  "status_saved": {
+    "message": "✓ সেভ হয়েছে"
+  },
+  "status_copied": {
+    "message": "✓ কপি হয়েছে"
+  },
+  "confirm_delete_image": {
+    "message": "এই ছবিটি মুছবেন?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ মুছবেন?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "ছবি"
+  },
+  "image_noun": {
+    "message": "ছবি"
+  },
+  "no_prompt": {
+    "message": "(কোনো প্রম্পট নেই)"
+  },
+  "none_selected": {
+    "message": "(কিছু নির্বাচিত নয়)"
+  },
+  "in_memory_only": {
+    "message": "(শুধুমাত্র মেমরিতে)"
+  },
+  "btn_exit_select": {
+    "message": "নির্বাচন থেকে বেরিয়ে আসুন"
+  },
+  "n_selected": {
+    "message": "$COUNT$ নির্বাচিত",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ ছবি প্যাক হচ্ছে…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ ছবি এক্সপোর্ট হয়েছে",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "একই সিড দিয়ে পুনরায় চালানো হচ্ছে…"
+  },
+  "err_no_engine": {
+    "message": "কোনো জেনারেশন ইঞ্জিন উপলব্ধ নেই"
+  },
+  "err_engine_start": {
+    "message": "ব্রাউজার ইঞ্জিন শুরু করা যায়নি"
+  },
+  "err_inference_failed": {
+    "message": "ব্রাউজারে জেনারেশন ব্যর্থ হয়েছে"
+  },
+  "err_generation_failed": {
+    "message": "তৈরি করা ব্যর্থ হয়েছে"
+  },
+  "no_model_sub": {
+    "message": "শুরু করতে মডেলস ট্যাবে একটি মডেল বেছে নিন"
+  },
+  "mb_pick_model": {
+    "message": "↓ মডেল নির্বাচন"
+  },
+  "popup_tab_generate": {
+    "message": "তৈরি করুন"
+  },
+  "popup_tab_models": {
+    "message": "মডেল"
+  },
+  "models_intro": {
+    "message": "ডাউনলোড করতে একটি মডেল বেছে নিন। ইনস্টলের পর যেকোনো সময় বদলাতে পারেন।"
+  },
+  "sec_downloading": {
+    "message": "ডাউনলোড হচ্ছে"
+  },
+  "sec_installed": {
+    "message": "ইনস্টল করা"
+  },
+  "sec_available": {
+    "message": "উপলব্ধ"
+  },
+  "available_popular": {
+    "message": "জনপ্রিয়"
+  },
+  "empty_models_title": {
+    "message": "এখনো কোনো মডেল ইনস্টল করা নেই"
+  },
+  "empty_models_sub_html": {
+    "message": "নিচে থেকে একটি বেছে <b>↓ পান</b> ট্যাপ করুন।"
+  },
+  "storage_label": {
+    "message": "স্টোরেজ"
+  },
+  "dl_tag_fetching": {
+    "message": "আনা হচ্ছে"
+  },
+  "dl_paused_sub": {
+    "message": "থামানো — চালিয়ে যেতে পুনরায় শুরু করুন"
+  },
+  "dl_meta_got": {
+    "message": "পেয়েছেন"
+  },
+  "dl_meta_speed": {
+    "message": "গতি"
+  },
+  "dl_meta_left": {
+    "message": "বাকি"
+  },
+  "dl_btn_pause": {
+    "message": "‖ থামান"
+  },
+  "dl_btn_resume": {
+    "message": "▶ পুনরায় শুরু"
+  },
+  "dl_btn_hide": {
+    "message": "↓ লুকান"
+  },
+  "dl_btn_cancel_title": {
+    "message": "বাতিল"
+  },
+  "mdl_btn_use": {
+    "message": "ব্যবহার"
+  },
+  "mdl_btn_in_use": {
+    "message": "ব্যবহারে"
+  },
+  "mdl_btn_get": {
+    "message": "পান"
+  },
+  "mdl_btn_token": {
+    "message": "টোকেন"
+  },
+  "mdl_btn_na": {
+    "message": "প্রযোজ্য নয়"
+  },
+  "mdl_loading_sub": {
+    "message": "ডিভাইসে ডাউনলোড হচ্ছে…"
+  }
+}

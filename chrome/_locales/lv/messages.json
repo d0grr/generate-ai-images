@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI attēlu ģenerators - Bezmaksas AI bildes"
+  },
+  "shortName": {
+    "message": "AI attēli"
+  },
+  "shortDesc": {
+    "message": "Izmantojiet AI attēlu ģeneratoru, lai radītu AI attēlus no teksta, ģenerētu reālistiskas AI fotogrāfijas uzreiz."
+  },
+  "action_title": {
+    "message": "Ģenerēt AI attēlus"
+  },
+  "open_workspace": {
+    "message": "Atvērt darbvietu"
+  },
+  "settings": {
+    "message": "Iestatījumi"
+  },
+  "error_title": {
+    "message": "Kaut kas nogāja greizi"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostika ↗"
+  },
+  "btn_dismiss": {
+    "message": "Aizvērt"
+  },
+  "no_model_selected": {
+    "message": "Nav izvēlēts modelis"
+  },
+  "mb_get": {
+    "message": "↓ Iegūt"
+  },
+  "mb_downloading": {
+    "message": "Lejupielādē…"
+  },
+  "mb_of": {
+    "message": "no"
+  },
+  "cancel_download": {
+    "message": "Atcelt lejupielādi"
+  },
+  "mb_installing": {
+    "message": "Instalē…"
+  },
+  "mb_verifying": {
+    "message": "Pārbauda svarus · gandrīz gatavs"
+  },
+  "ready": {
+    "message": "Gatavs"
+  },
+  "prompt_placeholder": {
+    "message": "Aprakstiet, ko vēlaties izveidot…"
+  },
+  "btn_clear_title": {
+    "message": "Notīrīt"
+  },
+  "btn_clear_aria": {
+    "message": "Notīrīt uzvedni"
+  },
+  "surprise_me": {
+    "message": "Pārsteidz mani"
+  },
+  "param_steps": {
+    "message": "Soļi"
+  },
+  "param_guidance": {
+    "message": "Vadīšana"
+  },
+  "param_seed": {
+    "message": "Sēkla"
+  },
+  "seed_random": {
+    "message": "nejauša"
+  },
+  "neg_prompt_label": {
+    "message": "Negatīvā uzvedne"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Lietas, no kurām izvairīties…"
+  },
+  "btn_parameters": {
+    "message": "Parametri ▾"
+  },
+  "btn_generate": {
+    "message": "Ģenerēt"
+  },
+  "install_model_hint": {
+    "message": "Instalējiet modeli, lai aktivizētu Ģenerēšanu."
+  },
+  "img_placeholder": {
+    "message": "Jūsu attēls parādīsies šeit"
+  },
+  "generating_eyebrow": {
+    "message": "ĢENERĒ"
+  },
+  "phase_encoding": {
+    "message": "Kodē uzvedni"
+  },
+  "btn_cancel_gen": {
+    "message": "× atcelt"
+  },
+  "btn_save": {
+    "message": "↓ Saglabāt"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopēt"
+  },
+  "btn_retry": {
+    "message": "↺ Mēģināt vēlreiz"
+  },
+  "img_generated_alt": {
+    "message": "Ģenerētais attēls"
+  },
+  "recent_eyebrow": {
+    "message": "NESENI"
+  },
+  "view_all": {
+    "message": "Skatīt visus ↗"
+  },
+  "clear_history": {
+    "message": "Notīrīt vēsturi"
+  },
+  "loading_model": {
+    "message": "Ielādē modeli…"
+  },
+  "compiling": {
+    "message": "Kompilē…"
+  },
+  "generating_pct": {
+    "message": "Ģenerē · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Gatavo…"
+  },
+  "phase_compiling_first": {
+    "message": "Kompilē ēnotājus · pirmā palaišana"
+  },
+  "phase_loading": {
+    "message": "Ielādē…"
+  },
+  "phase_fetching": {
+    "message": "Ielādē modeļa svarus"
+  },
+  "phase_decoding": {
+    "message": "Dekodē attēlu…"
+  },
+  "phase_loading_model": {
+    "message": "Ielādē modeli…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Kompilē ēnotājus…"
+  },
+  "workspace_page_title": {
+    "message": "AI bezsaistes attēlu ģeneratora darbvieta"
+  },
+  "workspace_brand": {
+    "message": "AI Bezsaistes Attēlu Ģenerators"
+  },
+  "workspace_label": {
+    "message": "darbvieta"
+  },
+  "tab_gallery": {
+    "message": "Galerija"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostika"
+  },
+  "tab_settings": {
+    "message": "Iestatījumi"
+  },
+  "your_generations": {
+    "message": "Jūsu ģenerācijas"
+  },
+  "gallery_lede": {
+    "message": "Viss paliek šajā ierīcē. Noklikšķiniet uz flīzes, lai redzētu pilnu izšķirtspēju un izcelsmi."
+  },
+  "filter_model": {
+    "message": "Modelis"
+  },
+  "all_models": {
+    "message": "Visi modeļi"
+  },
+  "filter_engine": {
+    "message": "Dzinējs"
+  },
+  "any_engine": {
+    "message": "Jebkurš dzinējs"
+  },
+  "engine_browser": {
+    "message": "Pārlūkprogramma · WebGPU"
+  },
+  "filter_window": {
+    "message": "Periods"
+  },
+  "time_all": {
+    "message": "Viss laiks"
+  },
+  "time_24h": {
+    "message": "Pēdējās 24 stundas"
+  },
+  "time_7d": {
+    "message": "Pēdējās 7 dienas"
+  },
+  "time_30d": {
+    "message": "Pēdējās 30 dienas"
+  },
+  "btn_select": {
+    "message": "Izvēlēties"
+  },
+  "no_images_title": {
+    "message": "Attēlu vēl nav"
+  },
+  "no_images_lede": {
+    "message": "Atveriet uznirstošo logu ar Alt+Shift+D, uzrakstiet uzvedni, noklikšķiniet Ģenerēt. Rezultāti parādīsies šeit."
+  },
+  "no_matches_title": {
+    "message": "Nav atbilstību"
+  },
+  "no_matches_lede": {
+    "message": "Šajā periodā nekas nav. Mēģiniet paplašināt filtru."
+  },
+  "compare_kicker": {
+    "message": "Salīdzināt · vilkt rokturi"
+  },
+  "compare_vs": {
+    "message": "A pret B"
+  },
+  "close_aria": {
+    "message": "aizvērt"
+  },
+  "loading_fullres": {
+    "message": "ielādē pilnu izšķirtspēju…"
+  },
+  "label_prompt": {
+    "message": "Uzvedne"
+  },
+  "label_avoid": {
+    "message": "Izvairīties"
+  },
+  "label_seed": {
+    "message": "Sēkla"
+  },
+  "label_steps": {
+    "message": "Soļi"
+  },
+  "label_guidance": {
+    "message": "Vadīšana"
+  },
+  "label_engine": {
+    "message": "Dzinējs"
+  },
+  "label_duration": {
+    "message": "Ilgums"
+  },
+  "label_generated": {
+    "message": "Ģenerēts"
+  },
+  "label_path": {
+    "message": "Ceļš"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Atkārtoti izmantot sēklu"
+  },
+  "btn_copy_prompt": {
+    "message": "Kopēt uzvedni"
+  },
+  "btn_copy_seed": {
+    "message": "Kopēt sēklu"
+  },
+  "btn_download_png": {
+    "message": "↓ Lejupielādēt PNG"
+  },
+  "btn_delete": {
+    "message": "Dzēst"
+  },
+  "danger_zone": {
+    "message": "Bīstamā zona"
+  },
+  "clear_data_title": {
+    "message": "Notīrīt visus paplašinājuma datus"
+  },
+  "clear_data_hint": {
+    "message": "Noņem visus kešatmiņā saglabātos modeļus un ģenerētos attēlus. Nevar atcelt."
+  },
+  "btn_clear_data": {
+    "message": "Notīrīt datus"
+  },
+  "diag_title": {
+    "message": "Diagnostika"
+  },
+  "diag_lede": {
+    "message": "Ko paplašinājums redz par jūsu pārlūkprogrammu un datoru. Kopējiet šo bloku jautājumā, ja kaut kas nedarbojas."
+  },
+  "diag_engine": {
+    "message": "Aktīvais dzinējs"
+  },
+  "diag_preferred": {
+    "message": "Vēlamais"
+  },
+  "diag_device": {
+    "message": "Ierīce"
+  },
+  "diag_adapter": {
+    "message": "Adapteris"
+  },
+  "diag_vendor": {
+    "message": "Ražotājs"
+  },
+  "diag_vram": {
+    "message": "VRAM apr."
+  },
+  "diag_browser": {
+    "message": "Pārlūkprogrammas ceļš"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS kvota"
+  },
+  "diag_storage": {
+    "message": "Krātuve"
+  },
+  "diag_installed": {
+    "message": "Instalētie modeļi"
+  },
+  "diag_recent": {
+    "message": "Nesenie attēli"
+  },
+  "diag_active": {
+    "message": "Aktīvais modelis"
+  },
+  "btn_copy_json": {
+    "message": "Kopēt kā JSON"
+  },
+  "btn_reprobe": {
+    "message": "Pārbaudīt vēlreiz"
+  },
+  "btn_compare": {
+    "message": "Salīdzināt"
+  },
+  "btn_export_zip": {
+    "message": "↓ Eksportēt ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Dzēst"
+  },
+  "btn_cancel_select": {
+    "message": "Atcelt"
+  },
+  "confirm_clear_data": {
+    "message": "Dzēst visus kešatmiņā saglabātos modeļus un ģenerētos attēlus?\n\nTo nevar atcelt."
+  },
+  "clearing": {
+    "message": "Tīra…"
+  },
+  "status_done": {
+    "message": "✓ Gatavs"
+  },
+  "status_saved": {
+    "message": "✓ Saglabāts"
+  },
+  "status_copied": {
+    "message": "✓ Kopēts"
+  },
+  "confirm_delete_image": {
+    "message": "Dzēst šo attēlu?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Dzēst $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "attēlus"
+  },
+  "image_noun": {
+    "message": "attēlu"
+  },
+  "no_prompt": {
+    "message": "(bez uzvednes)"
+  },
+  "none_selected": {
+    "message": "(nekas nav izvēlēts)"
+  },
+  "in_memory_only": {
+    "message": "(tikai atmiņā)"
+  },
+  "btn_exit_select": {
+    "message": "Iziet no atlases"
+  },
+  "n_selected": {
+    "message": "$COUNT$ atlasīts",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Iepako $COUNT$ attēlus…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Eksportēti $COUNT$ attēli",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Palaiž atkārtoti ar to pašu sēklu…"
+  },
+  "err_no_engine": {
+    "message": "Nav pieejams ģenerēšanas dzinējs"
+  },
+  "err_engine_start": {
+    "message": "Nevarēja palaist pārlūkprogrammas dzinēju"
+  },
+  "err_inference_failed": {
+    "message": "Pārlūkprogrammā ģenerēšana neizdevās"
+  },
+  "err_generation_failed": {
+    "message": "Ģenerēšana neizdevās"
+  },
+  "no_model_sub": {
+    "message": "Sāciet, izvēloties modeli cilnē Modeļi"
+  },
+  "mb_pick_model": {
+    "message": "↓ Izvēlēties modeli"
+  },
+  "popup_tab_generate": {
+    "message": "Ģenerēt"
+  },
+  "popup_tab_models": {
+    "message": "Modeļi"
+  },
+  "models_intro": {
+    "message": "Izvēlieties modeli lejupielādei. Pēc instalēšanas varat starp tiem pārslēgties jebkurā laikā."
+  },
+  "sec_downloading": {
+    "message": "Lejupielāde"
+  },
+  "sec_installed": {
+    "message": "Instalētie"
+  },
+  "sec_available": {
+    "message": "Pieejami"
+  },
+  "available_popular": {
+    "message": "populāri"
+  },
+  "empty_models_title": {
+    "message": "Vēl nav instalētu modeļu"
+  },
+  "empty_models_sub_html": {
+    "message": "Izvēlieties zemāk un pieskarieties <b>↓ Iegūt</b>."
+  },
+  "storage_label": {
+    "message": "Krātuve"
+  },
+  "dl_tag_fetching": {
+    "message": "iegūst"
+  },
+  "dl_paused_sub": {
+    "message": "pauzēts — atsāciet, lai turpinātu"
+  },
+  "dl_meta_got": {
+    "message": "Iegūts"
+  },
+  "dl_meta_speed": {
+    "message": "Ātrums"
+  },
+  "dl_meta_left": {
+    "message": "Atlicis"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pauze"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Atsākt"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Slēpt"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Atcelt"
+  },
+  "mdl_btn_use": {
+    "message": "Lietot"
+  },
+  "mdl_btn_in_use": {
+    "message": "Lietošanā"
+  },
+  "mdl_btn_get": {
+    "message": "Iegūt"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n/p"
+  },
+  "mdl_loading_sub": {
+    "message": "Lejupielāde ierīcē…"
+  }
+}

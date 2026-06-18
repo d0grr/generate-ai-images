@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI pildigeneraator - Loo AI pilte"
+  },
+  "shortName": {
+    "message": "AI pildid"
+  },
+  "shortDesc": {
+    "message": "Kasuta AI pildigeneraatorit AI piltide loomiseks tekstist, genereeri realistlikke AI fotosid ja pilte kohe Chrome'is."
+  },
+  "action_title": {
+    "message": "Genereeri AI pilte"
+  },
+  "open_workspace": {
+    "message": "Ava tööruum"
+  },
+  "settings": {
+    "message": "Seaded"
+  },
+  "error_title": {
+    "message": "Midagi läks valesti"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostika ↗"
+  },
+  "btn_dismiss": {
+    "message": "Sulge"
+  },
+  "no_model_selected": {
+    "message": "Mudelit pole valitud"
+  },
+  "mb_get": {
+    "message": "↓ Hangi"
+  },
+  "mb_downloading": {
+    "message": "Allalaadimine…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "Tühista allalaadimine"
+  },
+  "mb_installing": {
+    "message": "Installimine…"
+  },
+  "mb_verifying": {
+    "message": "Kaalude kontrollimine · peaaegu valmis"
+  },
+  "ready": {
+    "message": "Valmis"
+  },
+  "prompt_placeholder": {
+    "message": "Kirjelda, mida soovid luua…"
+  },
+  "btn_clear_title": {
+    "message": "Tühjenda"
+  },
+  "btn_clear_aria": {
+    "message": "Tühjenda viip"
+  },
+  "surprise_me": {
+    "message": "Üllata mind"
+  },
+  "param_steps": {
+    "message": "Sammud"
+  },
+  "param_guidance": {
+    "message": "Juhendamine"
+  },
+  "param_seed": {
+    "message": "Seeme"
+  },
+  "seed_random": {
+    "message": "juhuslik"
+  },
+  "neg_prompt_label": {
+    "message": "Negatiivne viip"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Asjad, mida vältida…"
+  },
+  "btn_parameters": {
+    "message": "Parameetrid ▾"
+  },
+  "btn_generate": {
+    "message": "Genereeri"
+  },
+  "install_model_hint": {
+    "message": "Installige mudel, et lubada Genereerimine."
+  },
+  "img_placeholder": {
+    "message": "Teie pilt ilmub siia"
+  },
+  "generating_eyebrow": {
+    "message": "GENEREERIMINE"
+  },
+  "phase_encoding": {
+    "message": "Viibi kodeerimine"
+  },
+  "btn_cancel_gen": {
+    "message": "× tühista"
+  },
+  "btn_save": {
+    "message": "↓ Salvesta"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopeeri"
+  },
+  "btn_retry": {
+    "message": "↺ Proovi uuesti"
+  },
+  "img_generated_alt": {
+    "message": "Genereeritud pilt"
+  },
+  "recent_eyebrow": {
+    "message": "HILJUTISED"
+  },
+  "view_all": {
+    "message": "Vaata kõiki ↗"
+  },
+  "clear_history": {
+    "message": "Tühjenda ajalugu"
+  },
+  "loading_model": {
+    "message": "Mudeli laadimine…"
+  },
+  "compiling": {
+    "message": "Kompiileerimine…"
+  },
+  "generating_pct": {
+    "message": "Genereerimine · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Ettevalmistamine…"
+  },
+  "phase_compiling_first": {
+    "message": "Varjutajate kompiileerimine · esimene käivitamine"
+  },
+  "phase_loading": {
+    "message": "Laadimine…"
+  },
+  "phase_fetching": {
+    "message": "Mudeli kaalude allalaadimine"
+  },
+  "phase_decoding": {
+    "message": "Pildi dekodeerimine…"
+  },
+  "phase_loading_model": {
+    "message": "Mudeli laadimine…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Varjutajate kompiileerimine…"
+  },
+  "workspace_page_title": {
+    "message": "AI võrguühenduseta pildigeneraatori tööruum"
+  },
+  "workspace_brand": {
+    "message": "AI Võrguühenduseta Pildigeneraator"
+  },
+  "workspace_label": {
+    "message": "tööruum"
+  },
+  "tab_gallery": {
+    "message": "Galerii"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostika"
+  },
+  "tab_settings": {
+    "message": "Seaded"
+  },
+  "your_generations": {
+    "message": "Teie generatsioonid"
+  },
+  "gallery_lede": {
+    "message": "Kõik jääb sellesse seadmesse. Klõpsake plaadil täisresolutsiooni ja päritolu nägemiseks."
+  },
+  "filter_model": {
+    "message": "Mudel"
+  },
+  "all_models": {
+    "message": "Kõik mudelid"
+  },
+  "filter_engine": {
+    "message": "Mootor"
+  },
+  "any_engine": {
+    "message": "Mis tahes mootor"
+  },
+  "engine_browser": {
+    "message": "Brauser · WebGPU"
+  },
+  "filter_window": {
+    "message": "Periood"
+  },
+  "time_all": {
+    "message": "Kogu aeg"
+  },
+  "time_24h": {
+    "message": "Viimased 24 tundi"
+  },
+  "time_7d": {
+    "message": "Viimased 7 päeva"
+  },
+  "time_30d": {
+    "message": "Viimased 30 päeva"
+  },
+  "btn_select": {
+    "message": "Vali"
+  },
+  "no_images_title": {
+    "message": "Pilte veel pole"
+  },
+  "no_images_lede": {
+    "message": "Ava hüpikaken Alt+Shift+D-ga, kirjuta viip, klõpsa Genereeri. Tulemused ilmuvad siia."
+  },
+  "no_matches_title": {
+    "message": "Vasteid pole"
+  },
+  "no_matches_lede": {
+    "message": "Selles perioodis midagi pole. Proovige filtrit laiendada."
+  },
+  "compare_kicker": {
+    "message": "Võrdle · lohista käepidet"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "sulge"
+  },
+  "loading_fullres": {
+    "message": "täisresolutsiooni laadimine…"
+  },
+  "label_prompt": {
+    "message": "Viip"
+  },
+  "label_avoid": {
+    "message": "Väldi"
+  },
+  "label_seed": {
+    "message": "Seeme"
+  },
+  "label_steps": {
+    "message": "Sammud"
+  },
+  "label_guidance": {
+    "message": "Juhendamine"
+  },
+  "label_engine": {
+    "message": "Mootor"
+  },
+  "label_duration": {
+    "message": "Kestus"
+  },
+  "label_generated": {
+    "message": "Genereeritud"
+  },
+  "label_path": {
+    "message": "Tee"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Kasuta seemet uuesti"
+  },
+  "btn_copy_prompt": {
+    "message": "Kopeeri viip"
+  },
+  "btn_copy_seed": {
+    "message": "Kopeeri seeme"
+  },
+  "btn_download_png": {
+    "message": "↓ Laadi alla PNG"
+  },
+  "btn_delete": {
+    "message": "Kustuta"
+  },
+  "danger_zone": {
+    "message": "Ohtlik tsoon"
+  },
+  "clear_data_title": {
+    "message": "Tühjenda kõik laienduse andmed"
+  },
+  "clear_data_hint": {
+    "message": "Eemaldab kõik vahemällu salvestatud mudelid ja genereeritud pildid. Ei saa tühistada."
+  },
+  "btn_clear_data": {
+    "message": "Tühjenda andmed"
+  },
+  "diag_title": {
+    "message": "Diagnostika"
+  },
+  "diag_lede": {
+    "message": "Mida laiendus näeb teie brauseri ja masina kohta. Kopeerige see plokk probleemile, kui midagi ei tööta."
+  },
+  "diag_engine": {
+    "message": "Aktiivne mootor"
+  },
+  "diag_preferred": {
+    "message": "Eelistatud"
+  },
+  "diag_device": {
+    "message": "Seade"
+  },
+  "diag_adapter": {
+    "message": "Adapter"
+  },
+  "diag_vendor": {
+    "message": "Tootja"
+  },
+  "diag_vram": {
+    "message": "VRAM hinnang"
+  },
+  "diag_browser": {
+    "message": "Brauseri tee"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS kvoot"
+  },
+  "diag_storage": {
+    "message": "Salvestusruum"
+  },
+  "diag_installed": {
+    "message": "Installitud mudelid"
+  },
+  "diag_recent": {
+    "message": "Hiljutised pildid"
+  },
+  "diag_active": {
+    "message": "Aktiivne mudel"
+  },
+  "btn_copy_json": {
+    "message": "Kopeeri JSON-ina"
+  },
+  "btn_reprobe": {
+    "message": "Käivita kontrollid uuesti"
+  },
+  "btn_compare": {
+    "message": "Võrdle"
+  },
+  "btn_export_zip": {
+    "message": "↓ Ekspordi ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Kustuta"
+  },
+  "btn_cancel_select": {
+    "message": "Tühista"
+  },
+  "confirm_clear_data": {
+    "message": "Kustutada kõik vahemällu salvestatud mudelid ja genereeritud pildid?\n\nSeda ei saa tühistada."
+  },
+  "clearing": {
+    "message": "Tühjendamine…"
+  },
+  "status_done": {
+    "message": "✓ Valmis"
+  },
+  "status_saved": {
+    "message": "✓ Salvestatud"
+  },
+  "status_copied": {
+    "message": "✓ Kopeeritud"
+  },
+  "confirm_delete_image": {
+    "message": "Kustutada see pilt?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Kustutada $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "pilti"
+  },
+  "image_noun": {
+    "message": "pilti"
+  },
+  "no_prompt": {
+    "message": "(viibita)"
+  },
+  "none_selected": {
+    "message": "(midagi pole valitud)"
+  },
+  "in_memory_only": {
+    "message": "(ainult mälus)"
+  },
+  "btn_exit_select": {
+    "message": "Välju valikust"
+  },
+  "n_selected": {
+    "message": "$COUNT$ valitud",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ pildi pakendamine…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Eksporditi $COUNT$ pilti",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Käivitan uuesti sama seemnega…"
+  },
+  "err_no_engine": {
+    "message": "Genereerimismootor ei ole saadaval"
+  },
+  "err_engine_start": {
+    "message": "Brauseri mootorit ei saanud käivitada"
+  },
+  "err_inference_failed": {
+    "message": "Brauseris genereerimine ebaõnnestus"
+  },
+  "err_generation_failed": {
+    "message": "Genereerimine ebaõnnestus"
+  },
+  "no_model_sub": {
+    "message": "Alustamiseks vali mudel vahekaardilt Mudelid"
+  },
+  "mb_pick_model": {
+    "message": "↓ Vali mudel"
+  },
+  "popup_tab_generate": {
+    "message": "Loo"
+  },
+  "popup_tab_models": {
+    "message": "Mudelid"
+  },
+  "models_intro": {
+    "message": "Vali allalaadimiseks mudel. Pärast paigaldamist saad nende vahel igal ajal vahetada."
+  },
+  "sec_downloading": {
+    "message": "Allalaadimine"
+  },
+  "sec_installed": {
+    "message": "Paigaldatud"
+  },
+  "sec_available": {
+    "message": "Saadaval"
+  },
+  "available_popular": {
+    "message": "populaarsed"
+  },
+  "empty_models_title": {
+    "message": "Veel pole ühtegi mudelit paigaldatud"
+  },
+  "empty_models_sub_html": {
+    "message": "Vali allpool ja vajuta <b>↓ Hangi</b>."
+  },
+  "storage_label": {
+    "message": "Salvestusruum"
+  },
+  "dl_tag_fetching": {
+    "message": "hankimine"
+  },
+  "dl_paused_sub": {
+    "message": "paus — jätkamiseks taasta"
+  },
+  "dl_meta_got": {
+    "message": "Saadud"
+  },
+  "dl_meta_speed": {
+    "message": "Kiirus"
+  },
+  "dl_meta_left": {
+    "message": "Jäänud"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Paus"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Jätka"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Peida"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Tühista"
+  },
+  "mdl_btn_use": {
+    "message": "Kasuta"
+  },
+  "mdl_btn_in_use": {
+    "message": "Kasutusel"
+  },
+  "mdl_btn_get": {
+    "message": "Hangi"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "p/p"
+  },
+  "mdl_loading_sub": {
+    "message": "Allalaadimine seadmesse…"
+  }
+}

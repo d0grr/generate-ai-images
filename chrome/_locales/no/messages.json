@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI bildegenerator - Lag AI-bilder"
+  },
+  "shortName": {
+    "message": "AI bilder"
+  },
+  "shortDesc": {
+    "message": "Bruk AI bildegeneratoren til å generere AI-bilder fra tekst, lage AI-fotografier og realistiske AI-bilder øyeblikkelig."
+  },
+  "action_title": {
+    "message": "Generer AI-bilder"
+  },
+  "open_workspace": {
+    "message": "Åpne arbeidsområde"
+  },
+  "settings": {
+    "message": "Innstillinger"
+  },
+  "error_title": {
+    "message": "Noe gikk galt"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostikk ↗"
+  },
+  "btn_dismiss": {
+    "message": "Lukk"
+  },
+  "no_model_selected": {
+    "message": "Ingen modell valgt"
+  },
+  "mb_get": {
+    "message": "↓ Last ned"
+  },
+  "mb_downloading": {
+    "message": "Laster ned…"
+  },
+  "mb_of": {
+    "message": "av"
+  },
+  "cancel_download": {
+    "message": "Avbryt nedlasting"
+  },
+  "mb_installing": {
+    "message": "Installerer…"
+  },
+  "mb_verifying": {
+    "message": "Verifiserer vekter · nesten ferdig"
+  },
+  "ready": {
+    "message": "Klar"
+  },
+  "prompt_placeholder": {
+    "message": "Beskriv hva du vil lage…"
+  },
+  "btn_clear_title": {
+    "message": "Tøm"
+  },
+  "btn_clear_aria": {
+    "message": "Tøm prompt"
+  },
+  "surprise_me": {
+    "message": "Overrask meg"
+  },
+  "param_steps": {
+    "message": "Trinn"
+  },
+  "param_guidance": {
+    "message": "Veiledning"
+  },
+  "param_seed": {
+    "message": "Frø"
+  },
+  "seed_random": {
+    "message": "tilfeldig"
+  },
+  "neg_prompt_label": {
+    "message": "Negativt prompt"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Ting å unngå…"
+  },
+  "btn_parameters": {
+    "message": "Parametere ▾"
+  },
+  "btn_generate": {
+    "message": "Generer"
+  },
+  "install_model_hint": {
+    "message": "Installer en modell for å aktivere Generer."
+  },
+  "img_placeholder": {
+    "message": "Bildet ditt vises her"
+  },
+  "generating_eyebrow": {
+    "message": "GENERERER"
+  },
+  "phase_encoding": {
+    "message": "Koder prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× avbryt"
+  },
+  "btn_save": {
+    "message": "↓ Lagre"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopier"
+  },
+  "btn_retry": {
+    "message": "↺ Prøv igjen"
+  },
+  "img_generated_alt": {
+    "message": "Generert bilde"
+  },
+  "recent_eyebrow": {
+    "message": "SISTE"
+  },
+  "view_all": {
+    "message": "Se alle ↗"
+  },
+  "clear_history": {
+    "message": "Tøm historikk"
+  },
+  "loading_model": {
+    "message": "Laster modell…"
+  },
+  "compiling": {
+    "message": "Kompilerer…"
+  },
+  "generating_pct": {
+    "message": "Genererer · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Forbereder…"
+  },
+  "phase_compiling_first": {
+    "message": "Kompilerer shaders · første kjøring"
+  },
+  "phase_loading": {
+    "message": "Laster…"
+  },
+  "phase_fetching": {
+    "message": "Henter modellvekter"
+  },
+  "phase_decoding": {
+    "message": "Dekoder bilde…"
+  },
+  "phase_loading_model": {
+    "message": "Laster modell…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Kompilerer shaders…"
+  },
+  "workspace_page_title": {
+    "message": "AI Offline-bildegenerator arbeidsområde"
+  },
+  "workspace_brand": {
+    "message": "AI Offline-bildegenerator"
+  },
+  "workspace_label": {
+    "message": "arbeidsområde"
+  },
+  "tab_gallery": {
+    "message": "Galleri"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostikk"
+  },
+  "tab_settings": {
+    "message": "Innstillinger"
+  },
+  "your_generations": {
+    "message": "Dine genereringer"
+  },
+  "gallery_lede": {
+    "message": "Alt forblir på denne enheten. Klikk på en flis for full oppløsning og opprinnelse."
+  },
+  "filter_model": {
+    "message": "Modell"
+  },
+  "all_models": {
+    "message": "Alle modeller"
+  },
+  "filter_engine": {
+    "message": "Motor"
+  },
+  "any_engine": {
+    "message": "Alle motorer"
+  },
+  "engine_browser": {
+    "message": "Nettleser · WebGPU"
+  },
+  "filter_window": {
+    "message": "Periode"
+  },
+  "time_all": {
+    "message": "Alle tider"
+  },
+  "time_24h": {
+    "message": "Siste 24 timer"
+  },
+  "time_7d": {
+    "message": "Siste 7 dager"
+  },
+  "time_30d": {
+    "message": "Siste 30 dager"
+  },
+  "btn_select": {
+    "message": "Velg"
+  },
+  "no_images_title": {
+    "message": "Ingen bilder ennå"
+  },
+  "no_images_lede": {
+    "message": "Åpne popup med Alt+Shift+D, skriv et prompt, klikk Generer. Resultater vises her."
+  },
+  "no_matches_title": {
+    "message": "Ingen treff"
+  },
+  "no_matches_lede": {
+    "message": "Ingenting i denne perioden. Prøv å utvide filteret."
+  },
+  "compare_kicker": {
+    "message": "Sammenlign · dra håndtaket"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "lukk"
+  },
+  "loading_fullres": {
+    "message": "laster full oppløsning…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Unngå"
+  },
+  "label_seed": {
+    "message": "Frø"
+  },
+  "label_steps": {
+    "message": "Trinn"
+  },
+  "label_guidance": {
+    "message": "Veiledning"
+  },
+  "label_engine": {
+    "message": "Motor"
+  },
+  "label_duration": {
+    "message": "Varighet"
+  },
+  "label_generated": {
+    "message": "Generert"
+  },
+  "label_path": {
+    "message": "Sti"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Gjenbruk frø"
+  },
+  "btn_copy_prompt": {
+    "message": "Kopier prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Kopier frø"
+  },
+  "btn_download_png": {
+    "message": "↓ Last ned PNG"
+  },
+  "btn_delete": {
+    "message": "Slett"
+  },
+  "danger_zone": {
+    "message": "Faresone"
+  },
+  "clear_data_title": {
+    "message": "Tøm alle utvidelsesdata"
+  },
+  "clear_data_hint": {
+    "message": "Fjerner alle bufrede modeller og genererte bilder. Kan ikke angres."
+  },
+  "btn_clear_data": {
+    "message": "Tøm data"
+  },
+  "diag_title": {
+    "message": "Diagnostikk"
+  },
+  "diag_lede": {
+    "message": "Hva utvidelsen ser om nettleseren og maskinen din. Kopier denne blokken til et problem hvis noe ikke fungerer."
+  },
+  "diag_engine": {
+    "message": "Aktiv motor"
+  },
+  "diag_preferred": {
+    "message": "Foretrukket"
+  },
+  "diag_device": {
+    "message": "Enhet"
+  },
+  "diag_adapter": {
+    "message": "Adapter"
+  },
+  "diag_vendor": {
+    "message": "Leverandør"
+  },
+  "diag_vram": {
+    "message": "VRAM est."
+  },
+  "diag_browser": {
+    "message": "Nettlesersti"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS-kvote"
+  },
+  "diag_storage": {
+    "message": "Lagring"
+  },
+  "diag_installed": {
+    "message": "Installerte modeller"
+  },
+  "diag_recent": {
+    "message": "Siste bilder"
+  },
+  "diag_active": {
+    "message": "Aktiv modell"
+  },
+  "btn_copy_json": {
+    "message": "Kopier som JSON"
+  },
+  "btn_reprobe": {
+    "message": "Kjør sjekker på nytt"
+  },
+  "btn_compare": {
+    "message": "Sammenlign"
+  },
+  "btn_export_zip": {
+    "message": "↓ Eksporter ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Slett"
+  },
+  "btn_cancel_select": {
+    "message": "Avbryt"
+  },
+  "confirm_clear_data": {
+    "message": "Slette alle bufrede modeller og genererte bilder?\n\nDette kan ikke angres."
+  },
+  "clearing": {
+    "message": "Tømmer…"
+  },
+  "status_done": {
+    "message": "✓ Ferdig"
+  },
+  "status_saved": {
+    "message": "✓ Lagret"
+  },
+  "status_copied": {
+    "message": "✓ Kopiert"
+  },
+  "confirm_delete_image": {
+    "message": "Slette dette bildet?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Slette $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "bilder"
+  },
+  "image_noun": {
+    "message": "bilde"
+  },
+  "no_prompt": {
+    "message": "(ingen prompt)"
+  },
+  "none_selected": {
+    "message": "(ingenting valgt)"
+  },
+  "in_memory_only": {
+    "message": "(bare i minnet)"
+  },
+  "btn_exit_select": {
+    "message": "Avslutt valg"
+  },
+  "n_selected": {
+    "message": "$COUNT$ valgt",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Pakker $COUNT$ bilder…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Eksporterte $COUNT$ bilder",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Kjører igjen med samme frø…"
+  },
+  "err_no_engine": {
+    "message": "Ingen genereringsmotor tilgjengelig"
+  },
+  "err_engine_start": {
+    "message": "Kunne ikke starte nettlesermotoren"
+  },
+  "err_inference_failed": {
+    "message": "Generering i nettleseren mislyktes"
+  },
+  "err_generation_failed": {
+    "message": "Generering mislyktes"
+  },
+  "no_model_sub": {
+    "message": "Velg en modell i Modeller-fanen for å komme i gang"
+  },
+  "mb_pick_model": {
+    "message": "↓ Velg modell"
+  },
+  "popup_tab_generate": {
+    "message": "Generer"
+  },
+  "popup_tab_models": {
+    "message": "Modeller"
+  },
+  "models_intro": {
+    "message": "Velg en modell å laste ned. Etter installasjon kan du bytte når som helst."
+  },
+  "sec_downloading": {
+    "message": "Laster ned"
+  },
+  "sec_installed": {
+    "message": "Installerte"
+  },
+  "sec_available": {
+    "message": "Tilgjengelige"
+  },
+  "available_popular": {
+    "message": "populære"
+  },
+  "empty_models_title": {
+    "message": "Ingen modeller installert ennå"
+  },
+  "empty_models_sub_html": {
+    "message": "Velg én nedenfor og trykk <b>↓ Hent</b>."
+  },
+  "storage_label": {
+    "message": "Lagring"
+  },
+  "dl_tag_fetching": {
+    "message": "henter"
+  },
+  "dl_paused_sub": {
+    "message": "satt på pause — fortsett for å gå videre"
+  },
+  "dl_meta_got": {
+    "message": "Mottatt"
+  },
+  "dl_meta_speed": {
+    "message": "Fart"
+  },
+  "dl_meta_left": {
+    "message": "Igjen"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pause"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Fortsett"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Skjul"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Avbryt"
+  },
+  "mdl_btn_use": {
+    "message": "Bruk"
+  },
+  "mdl_btn_in_use": {
+    "message": "I bruk"
+  },
+  "mdl_btn_get": {
+    "message": "Last ned"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n/a"
+  },
+  "mdl_loading_sub": {
+    "message": "Laster ned til enheten…"
+  }
+}

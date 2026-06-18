@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - AI చిత్రాలు సృష్టించు"
+  },
+  "shortName": {
+    "message": "AI చిత్రాలు"
+  },
+  "shortDesc": {
+    "message": "AI ఇమేజ్ జెనరేటర్ వాడి టెక్స్ట్ నుండి AI చిత్రాలు సృష్టించండి, AI ఫోటోలు మరియు వాస్తవ AI ఇమేజ్‌లు తక్షణమే."
+  },
+  "action_title": {
+    "message": "AI చిత్రాలు రూపొందించు"
+  },
+  "open_workspace": {
+    "message": "వర్క్‌స్పేస్ తెరవు"
+  },
+  "settings": {
+    "message": "సెట్టింగ్‌లు"
+  },
+  "error_title": {
+    "message": "ఏదో తప్పు జరిగింది"
+  },
+  "btn_diagnostics": {
+    "message": "రోగనిర్ధారణ ↗"
+  },
+  "btn_dismiss": {
+    "message": "మూసు"
+  },
+  "no_model_selected": {
+    "message": "మోడల్ ఏదీ ఎంచుకోలేదు"
+  },
+  "mb_get": {
+    "message": "↓ పొందు"
+  },
+  "mb_downloading": {
+    "message": "డౌన్‌లోడ్ అవుతోంది…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "డౌన్‌లోడ్ రద్దు చేయి"
+  },
+  "mb_installing": {
+    "message": "ఇన్‌స్టాల్ అవుతోంది…"
+  },
+  "mb_verifying": {
+    "message": "బరువులు ధృవీకరిస్తోంది · దాదాపు పూర్తైంది"
+  },
+  "ready": {
+    "message": "సిద్ధంగా ఉంది"
+  },
+  "prompt_placeholder": {
+    "message": "మీరు ఏమి సృష్టించాలని కోరుకుంటున్నారో వివరించండి…"
+  },
+  "btn_clear_title": {
+    "message": "క్లియర్"
+  },
+  "btn_clear_aria": {
+    "message": "ప్రాంప్ట్ క్లియర్ చేయి"
+  },
+  "surprise_me": {
+    "message": "నన్ను ఆశ్చర్యపరచు"
+  },
+  "param_steps": {
+    "message": "దశలు"
+  },
+  "param_guidance": {
+    "message": "మార్గదర్శనం"
+  },
+  "param_seed": {
+    "message": "విత్తనం"
+  },
+  "seed_random": {
+    "message": "యాదృచ్ఛిక"
+  },
+  "neg_prompt_label": {
+    "message": "నెగటివ్ ప్రాంప్ట్"
+  },
+  "neg_prompt_placeholder": {
+    "message": "నివారించాల్సినవి…"
+  },
+  "btn_parameters": {
+    "message": "పారామీటర్‌లు ▾"
+  },
+  "btn_generate": {
+    "message": "రూపొందించు"
+  },
+  "install_model_hint": {
+    "message": "రూపొందించుని ఎనేబుల్ చేయడానికి మోడల్ ఇన్‌స్టాల్ చేయండి."
+  },
+  "img_placeholder": {
+    "message": "మీ చిత్రం ఇక్కడ కనిపిస్తుంది"
+  },
+  "generating_eyebrow": {
+    "message": "రూపొందిస్తోంది"
+  },
+  "phase_encoding": {
+    "message": "ప్రాంప్ట్ ఎన్‌కోడ్ అవుతోంది"
+  },
+  "btn_cancel_gen": {
+    "message": "× రద్దు"
+  },
+  "btn_save": {
+    "message": "↓ సేవ్"
+  },
+  "btn_copy": {
+    "message": "⎘ కాపీ"
+  },
+  "btn_retry": {
+    "message": "↺ మళ్ళీ ప్రయత్నించు"
+  },
+  "img_generated_alt": {
+    "message": "రూపొందించిన చిత్రం"
+  },
+  "recent_eyebrow": {
+    "message": "ఇటీవలి"
+  },
+  "view_all": {
+    "message": "అన్నీ చూడు ↗"
+  },
+  "clear_history": {
+    "message": "చరిత్ర క్లియర్ చేయి"
+  },
+  "loading_model": {
+    "message": "మోడల్ లోడ్ అవుతోంది…"
+  },
+  "compiling": {
+    "message": "కంపైల్ అవుతోంది…"
+  },
+  "generating_pct": {
+    "message": "రూపొందిస్తోంది · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "సిద్ధపడుతోంది…"
+  },
+  "phase_compiling_first": {
+    "message": "షేడర్‌లు కంపైల్ అవుతున్నాయి · మొదటిసారి"
+  },
+  "phase_loading": {
+    "message": "లోడ్ అవుతోంది…"
+  },
+  "phase_fetching": {
+    "message": "మోడల్ బరువులు పొందుతోంది"
+  },
+  "phase_decoding": {
+    "message": "చిత్రం డీకోడ్ అవుతోంది…"
+  },
+  "phase_loading_model": {
+    "message": "మోడల్ లోడ్ అవుతోంది…"
+  },
+  "phase_compiling_shaders": {
+    "message": "షేడర్‌లు కంపైల్ అవుతున్నాయి…"
+  },
+  "workspace_page_title": {
+    "message": "AI ఆఫ్‌లైన్ చిత్ర జనరేటర్ వర్క్‌స్పేస్"
+  },
+  "workspace_brand": {
+    "message": "AI ఆఫ్‌లైన్ చిత్ర జనరేటర్"
+  },
+  "workspace_label": {
+    "message": "వర్క్‌స్పేస్"
+  },
+  "tab_gallery": {
+    "message": "గ్యాలరీ"
+  },
+  "tab_diagnostics": {
+    "message": "రోగనిర్ధారణ"
+  },
+  "tab_settings": {
+    "message": "సెట్టింగ్‌లు"
+  },
+  "your_generations": {
+    "message": "మీ రూపొందింపులు"
+  },
+  "gallery_lede": {
+    "message": "అన్నీ ఈ పరికరంలో ఉంటాయి. పూర్తి రిజల్యూషన్ కోసం టైల్‌పై క్లిక్ చేయండి."
+  },
+  "filter_model": {
+    "message": "మోడల్"
+  },
+  "all_models": {
+    "message": "అన్ని మోడళ్లు"
+  },
+  "filter_engine": {
+    "message": "ఇంజిన్"
+  },
+  "any_engine": {
+    "message": "ఏ ఇంజిన్‌అయినా"
+  },
+  "engine_browser": {
+    "message": "బ్రౌజర్ · WebGPU"
+  },
+  "filter_window": {
+    "message": "కాలావధి"
+  },
+  "time_all": {
+    "message": "అన్ని సమయాలు"
+  },
+  "time_24h": {
+    "message": "గత 24 గంటలు"
+  },
+  "time_7d": {
+    "message": "గత 7 రోజులు"
+  },
+  "time_30d": {
+    "message": "గత 30 రోజులు"
+  },
+  "btn_select": {
+    "message": "ఎంచుకో"
+  },
+  "no_images_title": {
+    "message": "ఇంకా చిత్రాలు లేవు"
+  },
+  "no_images_lede": {
+    "message": "Alt+Shift+D తో పాప్అప్ తెరవండి, ప్రాంప్ట్ రాయండి, రూపొందించు నొక్కండి. ఫలితాలు ఇక్కడ కనిపిస్తాయి."
+  },
+  "no_matches_title": {
+    "message": "సరిపోలికలు లేవు"
+  },
+  "no_matches_lede": {
+    "message": "ఈ కాలావధిలో ఏమీ లేదు. ఫిల్టర్ విస్తరించడానికి ప్రయత్నించండి."
+  },
+  "compare_kicker": {
+    "message": "పోల్చు · హ్యాండిల్ లాగు"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "మూసు"
+  },
+  "loading_fullres": {
+    "message": "పూర్తి రిజల్యూషన్ లోడ్ అవుతోంది…"
+  },
+  "label_prompt": {
+    "message": "ప్రాంప్ట్"
+  },
+  "label_avoid": {
+    "message": "నివారించు"
+  },
+  "label_seed": {
+    "message": "విత్తనం"
+  },
+  "label_steps": {
+    "message": "దశలు"
+  },
+  "label_guidance": {
+    "message": "మార్గదర్శనం"
+  },
+  "label_engine": {
+    "message": "ఇంజిన్"
+  },
+  "label_duration": {
+    "message": "వ్యవధి"
+  },
+  "label_generated": {
+    "message": "రూపొందించబడింది"
+  },
+  "label_path": {
+    "message": "పాత్"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ విత్తనం మళ్ళీ వాడు"
+  },
+  "btn_copy_prompt": {
+    "message": "ప్రాంప్ట్ కాపీ చేయి"
+  },
+  "btn_copy_seed": {
+    "message": "విత్తనం కాపీ చేయి"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG డౌన్‌లోడ్"
+  },
+  "btn_delete": {
+    "message": "తొలగించు"
+  },
+  "danger_zone": {
+    "message": "ప్రమాద జోన్"
+  },
+  "clear_data_title": {
+    "message": "అన్ని ఎక్స్‌టెన్షన్ డేటా క్లియర్ చేయి"
+  },
+  "clear_data_hint": {
+    "message": "అన్ని కాష్ చేసిన మోడళ్లు మరియు రూపొందించిన చిత్రాలను తొలగిస్తుంది. రద్దు చేయడం సాధ్యం కాదు."
+  },
+  "btn_clear_data": {
+    "message": "డేటా క్లియర్ చేయి"
+  },
+  "diag_title": {
+    "message": "రోగనిర్ధారణ"
+  },
+  "diag_lede": {
+    "message": "ఎక్స్‌టెన్షన్ మీ బ్రౌజర్ మరియు మెషీన్ గురించి చూసేది. ఏదైనా పని చేయకపోతే ఈ బ్లాక్‌ను issue లో కాపీ చేయండి."
+  },
+  "diag_engine": {
+    "message": "యాక్టివ్ ఇంజిన్"
+  },
+  "diag_preferred": {
+    "message": "ప్రాధాన్య"
+  },
+  "diag_device": {
+    "message": "పరికరం"
+  },
+  "diag_adapter": {
+    "message": "అడాప్టర్"
+  },
+  "diag_vendor": {
+    "message": "విక్రేత"
+  },
+  "diag_vram": {
+    "message": "VRAM అంచనా"
+  },
+  "diag_browser": {
+    "message": "బ్రౌజర్ పాత్"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS కోటా"
+  },
+  "diag_storage": {
+    "message": "నిల్వ"
+  },
+  "diag_installed": {
+    "message": "ఇన్‌స్టాల్ చేసిన మోడళ్లు"
+  },
+  "diag_recent": {
+    "message": "ఇటీవలి చిత్రాలు"
+  },
+  "diag_active": {
+    "message": "యాక్టివ్ మోడల్"
+  },
+  "btn_copy_json": {
+    "message": "JSON గా కాపీ చేయి"
+  },
+  "btn_reprobe": {
+    "message": "ప్రోబ్‌లు మళ్ళీ అమలు చేయి"
+  },
+  "btn_compare": {
+    "message": "పోల్చు"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP ఎగుమతి"
+  },
+  "btn_bulk_delete": {
+    "message": "తొలగించు"
+  },
+  "btn_cancel_select": {
+    "message": "రద్దు"
+  },
+  "confirm_clear_data": {
+    "message": "అన్ని కాష్ మోడళ్లు మరియు రూపొందించిన చిత్రాలు తొలగించాలా?\n\nఇది రద్దు చేయడం సాధ్యం కాదు."
+  },
+  "clearing": {
+    "message": "క్లియర్ అవుతోంది…"
+  },
+  "status_done": {
+    "message": "✓ పూర్తైంది"
+  },
+  "status_saved": {
+    "message": "✓ సేవ్ అయింది"
+  },
+  "status_copied": {
+    "message": "✓ కాపీ అయింది"
+  },
+  "confirm_delete_image": {
+    "message": "ఈ చిత్రం తొలగించాలా?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ తొలగించాలా?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "చిత్రాలు"
+  },
+  "image_noun": {
+    "message": "చిత్రం"
+  },
+  "no_prompt": {
+    "message": "(ప్రాంప్ట్ లేదు)"
+  },
+  "none_selected": {
+    "message": "(ఏదీ ఎంచుకోలేదు)"
+  },
+  "in_memory_only": {
+    "message": "(మెమరీలో మాత్రమే)"
+  },
+  "btn_exit_select": {
+    "message": "ఎంపిక నుండి బయటకు రా"
+  },
+  "n_selected": {
+    "message": "$COUNT$ ఎంచుకున్నారు",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ చిత్రాలు ప్యాక్ అవుతున్నాయి…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ చిత్రాలు ఎగుమతి చేయబడ్డాయి",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "అదే విత్తనంతో మళ్ళీ నడుపుతోంది…"
+  },
+  "err_no_engine": {
+    "message": "ఏ ఉత్పత్తి ఇంజిన్ అందుబాటులో లేదు"
+  },
+  "err_engine_start": {
+    "message": "బ్రౌజర్ ఇంజిన్ ప్రారంభించలేకపోయింది"
+  },
+  "err_inference_failed": {
+    "message": "బ్రౌజర్‌లో ఉత్పత్తి విఫలమైంది"
+  },
+  "err_generation_failed": {
+    "message": "రూపొందించడం విఫలమైంది"
+  },
+  "no_model_sub": {
+    "message": "ప్రారంభించడానికి మోడల్స్ ట్యాబ్‌లో ఒక మోడల్‌ను ఎంచుకోండి"
+  },
+  "mb_pick_model": {
+    "message": "↓ మోడల్‌ను ఎంచుకోండి"
+  },
+  "popup_tab_generate": {
+    "message": "సృష్టించు"
+  },
+  "popup_tab_models": {
+    "message": "మోడల్స్"
+  },
+  "models_intro": {
+    "message": "డౌన్‌లోడ్ చేయడానికి ఒక మోడల్‌ను ఎంచుకోండి. ఇన్‌స్టాల్ చేశాక మీరు ఎప్పుడైనా మార్చవచ్చు."
+  },
+  "sec_downloading": {
+    "message": "డౌన్‌లోడ్ అవుతోంది"
+  },
+  "sec_installed": {
+    "message": "ఇన్‌స్టాల్ చేయబడింది"
+  },
+  "sec_available": {
+    "message": "అందుబాటులో"
+  },
+  "available_popular": {
+    "message": "ప్రసిద్ధ"
+  },
+  "empty_models_title": {
+    "message": "ఇంకా ఏ మోడల్ ఇన్‌స్టాల్ చేయలేదు"
+  },
+  "empty_models_sub_html": {
+    "message": "క్రింది నుండి ఒకటి ఎంచుకుని <b>↓ పొందండి</b> నొక్కండి."
+  },
+  "storage_label": {
+    "message": "నిల్వ"
+  },
+  "dl_tag_fetching": {
+    "message": "తెస్తోంది"
+  },
+  "dl_paused_sub": {
+    "message": "విరామం — కొనసాగించడానికి తిరిగి ప్రారంభించండి"
+  },
+  "dl_meta_got": {
+    "message": "పొందిన"
+  },
+  "dl_meta_speed": {
+    "message": "వేగం"
+  },
+  "dl_meta_left": {
+    "message": "మిగిలిన"
+  },
+  "dl_btn_pause": {
+    "message": "‖ ఆపండి"
+  },
+  "dl_btn_resume": {
+    "message": "▶ తిరిగి ప్రారంభం"
+  },
+  "dl_btn_hide": {
+    "message": "↓ దాచు"
+  },
+  "dl_btn_cancel_title": {
+    "message": "రద్దు"
+  },
+  "mdl_btn_use": {
+    "message": "ఉపయోగించు"
+  },
+  "mdl_btn_in_use": {
+    "message": "ఉపయోగంలో"
+  },
+  "mdl_btn_get": {
+    "message": "పొందండి"
+  },
+  "mdl_btn_token": {
+    "message": "టోకెన్"
+  },
+  "mdl_btn_na": {
+    "message": "అ.కా."
+  },
+  "mdl_loading_sub": {
+    "message": "పరికరానికి డౌన్‌లోడ్ అవుతోంది…"
+  }
+}

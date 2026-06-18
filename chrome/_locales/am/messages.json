@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI ምስል ጀነሬተር - AI ሥዕሎችን ይፍጠሩ"
+  },
+  "shortName": {
+    "message": "AI ምስል"
+  },
+  "shortDesc": {
+    "message": "AI ምስል ጀነሬተርን ተጠቀሙ፡ ከጽሑፍ AI ምስሎችን ይፍጠሩ፣ የ AI ሥዕሎችን ያወጡ እና ፎቶዎችን ወዲያውኑ ያምጡ።"
+  },
+  "action_title": {
+    "message": "AI ምስሎችን ፍጠር"
+  },
+  "open_workspace": {
+    "message": "የስራ ቦታ ክፈት"
+  },
+  "settings": {
+    "message": "ቅንብሮች"
+  },
+  "error_title": {
+    "message": "የሆነ ስህተት ተፈጠረ"
+  },
+  "btn_diagnostics": {
+    "message": "ምርመራ ↗"
+  },
+  "btn_dismiss": {
+    "message": "ዝጋ"
+  },
+  "no_model_selected": {
+    "message": "ምንም ሞዴል አልተመረጠም"
+  },
+  "mb_get": {
+    "message": "↓ አውርድ"
+  },
+  "mb_downloading": {
+    "message": "በማውረድ ላይ…"
+  },
+  "mb_of": {
+    "message": "ከ"
+  },
+  "cancel_download": {
+    "message": "ማውረዱን ሰርዝ"
+  },
+  "mb_installing": {
+    "message": "በመጫን ላይ…"
+  },
+  "mb_verifying": {
+    "message": "ክብደቶችን እያረጋገጠ · ሊጠናቀቅ ቀረው"
+  },
+  "ready": {
+    "message": "ዝግጁ"
+  },
+  "prompt_placeholder": {
+    "message": "ምን መፍጠር እንደሚፈልጉ ይግለጹ…"
+  },
+  "btn_clear_title": {
+    "message": "አጽዳ"
+  },
+  "btn_clear_aria": {
+    "message": "ፕሮምፕቱን አጽዳ"
+  },
+  "surprise_me": {
+    "message": "አስደንቀኝ"
+  },
+  "param_steps": {
+    "message": "ደረጃዎች"
+  },
+  "param_guidance": {
+    "message": "መመሪያ"
+  },
+  "param_seed": {
+    "message": "ዘር"
+  },
+  "seed_random": {
+    "message": "ዘፈቀደ"
+  },
+  "neg_prompt_label": {
+    "message": "አሉታዊ ፕሮምፕት"
+  },
+  "neg_prompt_placeholder": {
+    "message": "መቀልበስ ያለባቸው ነገሮች…"
+  },
+  "btn_parameters": {
+    "message": "ፓራሜትሮች ▾"
+  },
+  "btn_generate": {
+    "message": "ፍጠር"
+  },
+  "install_model_hint": {
+    "message": "ፍጠርን ለማስቻል ሞዴል ጫን።"
+  },
+  "img_placeholder": {
+    "message": "ምስሎ እዚህ ይታያል"
+  },
+  "generating_eyebrow": {
+    "message": "ሲፈጠር"
+  },
+  "phase_encoding": {
+    "message": "ፕሮምፕቱን ኮድ ሲሰጥ"
+  },
+  "btn_cancel_gen": {
+    "message": "× ሰርዝ"
+  },
+  "btn_save": {
+    "message": "↓ አስቀምጥ"
+  },
+  "btn_copy": {
+    "message": "⎘ ቅዳ"
+  },
+  "btn_retry": {
+    "message": "↺ እንደገና ሞክር"
+  },
+  "img_generated_alt": {
+    "message": "የተፈጠረ ምስል"
+  },
+  "recent_eyebrow": {
+    "message": "የቅርብ ጊዜ"
+  },
+  "view_all": {
+    "message": "ሁሉ ይመልከቱ ↗"
+  },
+  "clear_history": {
+    "message": "ታሪኩን አጽዳ"
+  },
+  "loading_model": {
+    "message": "ሞዴሉን በማስጫን ላይ…"
+  },
+  "compiling": {
+    "message": "ሲቀናበር…"
+  },
+  "generating_pct": {
+    "message": "ሲፈጠር · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "ሲዘጋጅ…"
+  },
+  "phase_compiling_first": {
+    "message": "ሻደሮችን ሲቀናበር · ለመጀመሪያ ጊዜ"
+  },
+  "phase_loading": {
+    "message": "ሲጫን…"
+  },
+  "phase_fetching": {
+    "message": "የሞዴል ክብደቶችን ሲያወርድ"
+  },
+  "phase_decoding": {
+    "message": "ምስሉን ሲፈታ…"
+  },
+  "phase_loading_model": {
+    "message": "ሞዴሉን ሲጫን…"
+  },
+  "phase_compiling_shaders": {
+    "message": "ሻደሮችን ሲቀናበር…"
+  },
+  "workspace_page_title": {
+    "message": "AI ኦፍላይን ምስል ፈጣሪ የስራ ቦታ"
+  },
+  "workspace_brand": {
+    "message": "AI ኦፍላይን ምስል ፈጣሪ"
+  },
+  "workspace_label": {
+    "message": "የስራ ቦታ"
+  },
+  "tab_gallery": {
+    "message": "ጋለሪ"
+  },
+  "tab_diagnostics": {
+    "message": "ምርመራ"
+  },
+  "tab_settings": {
+    "message": "ቅንብሮች"
+  },
+  "your_generations": {
+    "message": "የፈጠሩዋቸው ምስሎች"
+  },
+  "gallery_lede": {
+    "message": "ሁሉም በዚህ ስርዓት ይቀራሉ። ሙሉ ጥራት እና ምንጭ ለማየት ካርዱን ጠቅ ያድርጉ።"
+  },
+  "filter_model": {
+    "message": "ሞዴል"
+  },
+  "all_models": {
+    "message": "ሁሉም ሞዴሎች"
+  },
+  "filter_engine": {
+    "message": "ሞተር"
+  },
+  "any_engine": {
+    "message": "ማንኛውም ሞተር"
+  },
+  "engine_browser": {
+    "message": "አሳሽ · WebGPU"
+  },
+  "filter_window": {
+    "message": "ጊዜ ሰሌዳ"
+  },
+  "time_all": {
+    "message": "ሁሉ ጊዜ"
+  },
+  "time_24h": {
+    "message": "ያለፉት 24 ሰዓታት"
+  },
+  "time_7d": {
+    "message": "ያለፉት 7 ቀናት"
+  },
+  "time_30d": {
+    "message": "ያለፉት 30 ቀናት"
+  },
+  "btn_select": {
+    "message": "ምረጥ"
+  },
+  "no_images_title": {
+    "message": "ምስሎ እስካሁን የለም"
+  },
+  "no_images_lede": {
+    "message": "Alt+Shift+D ን ተጠቅሞ ፖፐ አፕ ክፈት፣ ፕሮምፕት ጻፍ፣ ፍጠርን ጠቅ አድርግ። ውጤቶቹ እዚህ ይታያሉ።"
+  },
+  "no_matches_title": {
+    "message": "ምንም ተዛማጅ የለም"
+  },
+  "no_matches_lede": {
+    "message": "በዚህ ጊዜ ሰሌዳ ውስጥ ምንም የለም። ማጣሪያ ለማስፋፋት ሞክር።"
+  },
+  "compare_kicker": {
+    "message": "አወዳዳር · እጀቱን ጎትት"
+  },
+  "compare_vs": {
+    "message": "A ሐ B"
+  },
+  "close_aria": {
+    "message": "ዝጋ"
+  },
+  "loading_fullres": {
+    "message": "ሙሉ ጥራት ሲጫን…"
+  },
+  "label_prompt": {
+    "message": "ፕሮምፕት"
+  },
+  "label_avoid": {
+    "message": "ማስወገድ"
+  },
+  "label_seed": {
+    "message": "ዘር"
+  },
+  "label_steps": {
+    "message": "ደረጃዎች"
+  },
+  "label_guidance": {
+    "message": "መመሪያ"
+  },
+  "label_engine": {
+    "message": "ሞተር"
+  },
+  "label_duration": {
+    "message": "ጊዜ"
+  },
+  "label_generated": {
+    "message": "የተፈጠረ"
+  },
+  "label_path": {
+    "message": "መንገድ"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ ዘሩን እንደገና ተጠቀም"
+  },
+  "btn_copy_prompt": {
+    "message": "ፕሮምፕቱን ቅዳ"
+  },
+  "btn_copy_seed": {
+    "message": "ዘሩን ቅዳ"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG አውርድ"
+  },
+  "btn_delete": {
+    "message": "ሰርዝ"
+  },
+  "danger_zone": {
+    "message": "አደጋ ዞን"
+  },
+  "clear_data_title": {
+    "message": "ሁሉ የተቀጥያ ውሂብ አጽዳ"
+  },
+  "clear_data_hint": {
+    "message": "በካሽ ያሉ ሁሉ ሞዴሎችን እና የተፈጠሩ ምስሎችን ያስወግዳል። ሊነጣ አይቻልም።"
+  },
+  "btn_clear_data": {
+    "message": "ውሂቡን አጽዳ"
+  },
+  "diag_title": {
+    "message": "ምርመራ"
+  },
+  "diag_lede": {
+    "message": "ተቀጥያው ስለ አሳሽዎ እና ኮምፒውተርዎ የሚያይ ነው። የሆነ ካልሰራ ይህን ብሎክ ኢሹ ውስጥ ቅዱ።"
+  },
+  "diag_engine": {
+    "message": "ንቁ ሞተር"
+  },
+  "diag_preferred": {
+    "message": "የሚፈለግ"
+  },
+  "diag_device": {
+    "message": "ስርዓት"
+  },
+  "diag_adapter": {
+    "message": "አስማሚ"
+  },
+  "diag_vendor": {
+    "message": "አቅራቢ"
+  },
+  "diag_vram": {
+    "message": "VRAM ግምት"
+  },
+  "diag_browser": {
+    "message": "የአሳሽ መንገድ"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS ኮታ"
+  },
+  "diag_storage": {
+    "message": "ማከማቻ"
+  },
+  "diag_installed": {
+    "message": "የተጫኑ ሞዴሎች"
+  },
+  "diag_recent": {
+    "message": "የቅርብ ምስሎች"
+  },
+  "diag_active": {
+    "message": "ንቁ ሞዴል"
+  },
+  "btn_copy_json": {
+    "message": "እንደ JSON ቅዳ"
+  },
+  "btn_reprobe": {
+    "message": "ፕሮቦቹን እንደገና አሂድ"
+  },
+  "btn_compare": {
+    "message": "አወዳዳር"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP ላክ"
+  },
+  "btn_bulk_delete": {
+    "message": "ሰርዝ"
+  },
+  "btn_cancel_select": {
+    "message": "ሰርዝ"
+  },
+  "confirm_clear_data": {
+    "message": "ሁሉ በካሽ ያሉ ሞዴሎችን እና የተፈጠሩ ምስሎችን ሰርዝ?\n\nይህ ሊነጣ አይቻልም።"
+  },
+  "clearing": {
+    "message": "ሲጸዳ…"
+  },
+  "status_done": {
+    "message": "✓ ተጠናቀቀ"
+  },
+  "status_saved": {
+    "message": "✓ ተቀምጧል"
+  },
+  "status_copied": {
+    "message": "✓ ተቀዷል"
+  },
+  "confirm_delete_image": {
+    "message": "ይህን ምስል ሰርዝ?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ ሰርዝ?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "ምስሎች"
+  },
+  "image_noun": {
+    "message": "ምስል"
+  },
+  "no_prompt": {
+    "message": "(ፕሮምፕት የለም)"
+  },
+  "none_selected": {
+    "message": "(ምንም አልተመረጠም)"
+  },
+  "in_memory_only": {
+    "message": "(በማስታወሻ ብቻ)"
+  },
+  "btn_exit_select": {
+    "message": "ምርጫ ውጣ"
+  },
+  "n_selected": {
+    "message": "$COUNT$ ተመርጠዋል",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ ምስሎች ሲሸጐ…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ ምስሎች ተልከዋል",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "ተመሳሳይ ዘር ተጠቅሞ እንደገና ሲሄድ…"
+  },
+  "err_no_engine": {
+    "message": "የመፍጠር ሞተር አይገኝም"
+  },
+  "err_engine_start": {
+    "message": "የአሳሽ ሞተር ሊጀምር አልቻለም"
+  },
+  "err_inference_failed": {
+    "message": "በአሳሹ ውስጥ መፍጠር አልተሳካም"
+  },
+  "err_generation_failed": {
+    "message": "ፍጠሩ ተሳናፈ"
+  },
+  "no_model_sub": {
+    "message": "ለመጀመር በሞዴሎች ትር ውስጥ ሞዴል ይምረጡ"
+  },
+  "mb_pick_model": {
+    "message": "↓ ሞዴል ምረጥ"
+  },
+  "popup_tab_generate": {
+    "message": "ፍጠር"
+  },
+  "popup_tab_models": {
+    "message": "ሞዴሎች"
+  },
+  "models_intro": {
+    "message": "ለማውረድ ሞዴል ይምረጡ። ሲጫን በማንኛውም ጊዜ መቀየር ይችላሉ።"
+  },
+  "sec_downloading": {
+    "message": "በማውረድ ላይ"
+  },
+  "sec_installed": {
+    "message": "የተጫኑ"
+  },
+  "sec_available": {
+    "message": "ይገኛል"
+  },
+  "available_popular": {
+    "message": "ታዋቂ"
+  },
+  "empty_models_title": {
+    "message": "እስካሁን ምንም ሞዴል አልተጫነም"
+  },
+  "empty_models_sub_html": {
+    "message": "ከታች ይምረጡ እና <b>↓ አግኝ</b> ይንኩ።"
+  },
+  "storage_label": {
+    "message": "ማከማቻ"
+  },
+  "dl_tag_fetching": {
+    "message": "በመውሰድ ላይ"
+  },
+  "dl_paused_sub": {
+    "message": "ቆሟል — ለመቀጠል ይቀጥሉ"
+  },
+  "dl_meta_got": {
+    "message": "ተገኘ"
+  },
+  "dl_meta_speed": {
+    "message": "ፍጥነት"
+  },
+  "dl_meta_left": {
+    "message": "ቀሪ"
+  },
+  "dl_btn_pause": {
+    "message": "‖ አቁም"
+  },
+  "dl_btn_resume": {
+    "message": "▶ ቀጥል"
+  },
+  "dl_btn_hide": {
+    "message": "↓ ደብቅ"
+  },
+  "dl_btn_cancel_title": {
+    "message": "ሰርዝ"
+  },
+  "mdl_btn_use": {
+    "message": "ተጠቀም"
+  },
+  "mdl_btn_in_use": {
+    "message": "በአገልግሎት ላይ"
+  },
+  "mdl_btn_get": {
+    "message": "አግኝ"
+  },
+  "mdl_btn_token": {
+    "message": "ቶከን"
+  },
+  "mdl_btn_na": {
+    "message": "የለም"
+  },
+  "mdl_loading_sub": {
+    "message": "ወደ መሣሪያው በማውረድ ላይ…"
+  }
+}

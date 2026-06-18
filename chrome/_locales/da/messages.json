@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "KI Bildgenerator - Generer AI-billeder"
+  },
+  "shortName": {
+    "message": "AI Billeder"
+  },
+  "shortDesc": {
+    "message": "Brug AI-billedgeneratoren til at generere AI-billeder fra tekst, skabe AI-fotos og lave realistiske billeder øjeblikkeligt."
+  },
+  "action_title": {
+    "message": "Generer AI-billeder"
+  },
+  "open_workspace": {
+    "message": "Åbn arbejdsområde"
+  },
+  "settings": {
+    "message": "Indstillinger"
+  },
+  "error_title": {
+    "message": "Noget gik galt"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostik ↗"
+  },
+  "btn_dismiss": {
+    "message": "Luk"
+  },
+  "no_model_selected": {
+    "message": "Ingen model valgt"
+  },
+  "mb_get": {
+    "message": "↓ Download"
+  },
+  "mb_downloading": {
+    "message": "Downloader…"
+  },
+  "mb_of": {
+    "message": "af"
+  },
+  "cancel_download": {
+    "message": "Annuller download"
+  },
+  "mb_installing": {
+    "message": "Installerer…"
+  },
+  "mb_verifying": {
+    "message": "Verificerer vægte · næsten færdig"
+  },
+  "ready": {
+    "message": "Klar"
+  },
+  "prompt_placeholder": {
+    "message": "Beskriv hvad du vil skabe…"
+  },
+  "btn_clear_title": {
+    "message": "Ryd"
+  },
+  "btn_clear_aria": {
+    "message": "Ryd prompt"
+  },
+  "surprise_me": {
+    "message": "Overrask mig"
+  },
+  "param_steps": {
+    "message": "Trin"
+  },
+  "param_guidance": {
+    "message": "Vejledning"
+  },
+  "param_seed": {
+    "message": "Seed"
+  },
+  "seed_random": {
+    "message": "tilfældig"
+  },
+  "neg_prompt_label": {
+    "message": "Negativ prompt"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Ting at undgå…"
+  },
+  "btn_parameters": {
+    "message": "Parametre ▾"
+  },
+  "btn_generate": {
+    "message": "Generer"
+  },
+  "install_model_hint": {
+    "message": "Installer en model for at aktivere Generer."
+  },
+  "img_placeholder": {
+    "message": "Dit billede vises her"
+  },
+  "generating_eyebrow": {
+    "message": "GENERERER"
+  },
+  "phase_encoding": {
+    "message": "Koder prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× annuller"
+  },
+  "btn_save": {
+    "message": "↓ Gem"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopiér"
+  },
+  "btn_retry": {
+    "message": "↺ Prøv igen"
+  },
+  "img_generated_alt": {
+    "message": "Genereret billede"
+  },
+  "recent_eyebrow": {
+    "message": "SENESTE"
+  },
+  "view_all": {
+    "message": "Se alle ↗"
+  },
+  "clear_history": {
+    "message": "Ryd historik"
+  },
+  "loading_model": {
+    "message": "Indlæser model…"
+  },
+  "compiling": {
+    "message": "Kompilerer…"
+  },
+  "generating_pct": {
+    "message": "Genererer · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Forbereder…"
+  },
+  "phase_compiling_first": {
+    "message": "Kompilerer shaders · første kørsel"
+  },
+  "phase_loading": {
+    "message": "Indlæser…"
+  },
+  "phase_fetching": {
+    "message": "Henter modelvægte"
+  },
+  "phase_decoding": {
+    "message": "Afkoder billede…"
+  },
+  "phase_loading_model": {
+    "message": "Indlæser model…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Kompilerer shaders…"
+  },
+  "workspace_page_title": {
+    "message": "AI Offline-billedgenerator arbejdsområde"
+  },
+  "workspace_brand": {
+    "message": "AI Offline-billedgenerator"
+  },
+  "workspace_label": {
+    "message": "arbejdsområde"
+  },
+  "tab_gallery": {
+    "message": "Galleri"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostik"
+  },
+  "tab_settings": {
+    "message": "Indstillinger"
+  },
+  "your_generations": {
+    "message": "Dine generationer"
+  },
+  "gallery_lede": {
+    "message": "Alt forbliver på denne enhed. Klik på en flise for fuld opløsning og oprindelse."
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "Alle modeller"
+  },
+  "filter_engine": {
+    "message": "Motor"
+  },
+  "any_engine": {
+    "message": "Enhver motor"
+  },
+  "engine_browser": {
+    "message": "Browser · WebGPU"
+  },
+  "filter_window": {
+    "message": "Periode"
+  },
+  "time_all": {
+    "message": "Hele tiden"
+  },
+  "time_24h": {
+    "message": "Sidste 24 timer"
+  },
+  "time_7d": {
+    "message": "Sidste 7 dage"
+  },
+  "time_30d": {
+    "message": "Sidste 30 dage"
+  },
+  "btn_select": {
+    "message": "Vælg"
+  },
+  "no_images_title": {
+    "message": "Ingen billeder endnu"
+  },
+  "no_images_lede": {
+    "message": "Åbn popup med Alt+Shift+D, skriv en prompt, klik Generer. Resultater vises her."
+  },
+  "no_matches_title": {
+    "message": "Ingen resultater"
+  },
+  "no_matches_lede": {
+    "message": "Intet i denne periode. Prøv at udvide filteret."
+  },
+  "compare_kicker": {
+    "message": "Sammenlign · træk håndtaget"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "luk"
+  },
+  "loading_fullres": {
+    "message": "indlæser fuld opløsning…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Undgå"
+  },
+  "label_seed": {
+    "message": "Seed"
+  },
+  "label_steps": {
+    "message": "Trin"
+  },
+  "label_guidance": {
+    "message": "Vejledning"
+  },
+  "label_engine": {
+    "message": "Motor"
+  },
+  "label_duration": {
+    "message": "Varighed"
+  },
+  "label_generated": {
+    "message": "Genereret"
+  },
+  "label_path": {
+    "message": "Sti"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Genbrug seed"
+  },
+  "btn_copy_prompt": {
+    "message": "Kopiér prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Kopiér seed"
+  },
+  "btn_download_png": {
+    "message": "↓ Download PNG"
+  },
+  "btn_delete": {
+    "message": "Slet"
+  },
+  "danger_zone": {
+    "message": "Farezonen"
+  },
+  "clear_data_title": {
+    "message": "Ryd alle udvidelsesdata"
+  },
+  "clear_data_hint": {
+    "message": "Fjerner alle cachede modeller og genererede billeder. Kan ikke fortrydes."
+  },
+  "btn_clear_data": {
+    "message": "Ryd data"
+  },
+  "diag_title": {
+    "message": "Diagnostik"
+  },
+  "diag_lede": {
+    "message": "Hvad udvidelsen ser om din browser og maskine. Kopiér denne blok til et problem, hvis noget ikke virker."
+  },
+  "diag_engine": {
+    "message": "Aktiv motor"
+  },
+  "diag_preferred": {
+    "message": "Foretrukken"
+  },
+  "diag_device": {
+    "message": "Enhed"
+  },
+  "diag_adapter": {
+    "message": "Adapter"
+  },
+  "diag_vendor": {
+    "message": "Leverandør"
+  },
+  "diag_vram": {
+    "message": "VRAM est."
+  },
+  "diag_browser": {
+    "message": "Browsersti"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS-kvota"
+  },
+  "diag_storage": {
+    "message": "Lager"
+  },
+  "diag_installed": {
+    "message": "Installerede modeller"
+  },
+  "diag_recent": {
+    "message": "Seneste billeder"
+  },
+  "diag_active": {
+    "message": "Aktiv model"
+  },
+  "btn_copy_json": {
+    "message": "Kopiér som JSON"
+  },
+  "btn_reprobe": {
+    "message": "Kør tjek igen"
+  },
+  "btn_compare": {
+    "message": "Sammenlign"
+  },
+  "btn_export_zip": {
+    "message": "↓ Eksportér ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Slet"
+  },
+  "btn_cancel_select": {
+    "message": "Annullér"
+  },
+  "confirm_clear_data": {
+    "message": "Slette alle cachede modeller og genererede billeder?\n\nDette kan ikke fortrydes."
+  },
+  "clearing": {
+    "message": "Rydder…"
+  },
+  "status_done": {
+    "message": "✓ Færdig"
+  },
+  "status_saved": {
+    "message": "✓ Gemt"
+  },
+  "status_copied": {
+    "message": "✓ Kopieret"
+  },
+  "confirm_delete_image": {
+    "message": "Slette dette billede?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Slette $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "billeder"
+  },
+  "image_noun": {
+    "message": "billede"
+  },
+  "no_prompt": {
+    "message": "(ingen prompt)"
+  },
+  "none_selected": {
+    "message": "(intet valgt)"
+  },
+  "in_memory_only": {
+    "message": "(kun i hukommelsen)"
+  },
+  "btn_exit_select": {
+    "message": "Afslut valg"
+  },
+  "n_selected": {
+    "message": "$COUNT$ valgt",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Pakker $COUNT$ billeder…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Eksporterede $COUNT$ billeder",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Kører igen med samme seed…"
+  },
+  "err_no_engine": {
+    "message": "Ingen genereringsmotor tilgængelig"
+  },
+  "err_engine_start": {
+    "message": "Kunne ikke starte browsermotoren"
+  },
+  "err_inference_failed": {
+    "message": "Generering i browseren mislykkedes"
+  },
+  "err_generation_failed": {
+    "message": "Generering mislykkedes"
+  },
+  "no_model_sub": {
+    "message": "Vælg en model under fanen Modeller for at komme i gang"
+  },
+  "mb_pick_model": {
+    "message": "↓ Vælg model"
+  },
+  "popup_tab_generate": {
+    "message": "Generér"
+  },
+  "popup_tab_models": {
+    "message": "Modeller"
+  },
+  "models_intro": {
+    "message": "Vælg en model at hente. Når den er installeret, kan du skifte mellem dem når som helst."
+  },
+  "sec_downloading": {
+    "message": "Henter"
+  },
+  "sec_installed": {
+    "message": "Installerede"
+  },
+  "sec_available": {
+    "message": "Tilgængelige"
+  },
+  "available_popular": {
+    "message": "populære"
+  },
+  "empty_models_title": {
+    "message": "Ingen modeller installeret endnu"
+  },
+  "empty_models_sub_html": {
+    "message": "Vælg en nedenfor og tryk på <b>↓ Hent</b>."
+  },
+  "storage_label": {
+    "message": "Lager"
+  },
+  "dl_tag_fetching": {
+    "message": "henter"
+  },
+  "dl_paused_sub": {
+    "message": "pause — genoptag for at fortsætte"
+  },
+  "dl_meta_got": {
+    "message": "Fået"
+  },
+  "dl_meta_speed": {
+    "message": "Hastighed"
+  },
+  "dl_meta_left": {
+    "message": "Tilbage"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pause"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Genoptag"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Skjul"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Annullér"
+  },
+  "mdl_btn_use": {
+    "message": "Brug"
+  },
+  "mdl_btn_in_use": {
+    "message": "I brug"
+  },
+  "mdl_btn_get": {
+    "message": "Download"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n/a"
+  },
+  "mdl_loading_sub": {
+    "message": "Henter til enhed…"
+  }
+}

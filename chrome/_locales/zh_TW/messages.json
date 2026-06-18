@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI圖片生成 - AI繪圖生成器"
+  },
+  "shortName": {
+    "message": "AI圖片生成"
+  },
+  "shortDesc": {
+    "message": "AI圖片生成工具：從文字生成AI圖片，一鍵生成逼真AI照片與AI繪圖，即時生成。"
+  },
+  "action_title": {
+    "message": "生成AI圖片"
+  },
+  "open_workspace": {
+    "message": "開啟工作區"
+  },
+  "settings": {
+    "message": "設定"
+  },
+  "error_title": {
+    "message": "發生錯誤"
+  },
+  "btn_diagnostics": {
+    "message": "診斷 ↗"
+  },
+  "btn_dismiss": {
+    "message": "關閉"
+  },
+  "no_model_selected": {
+    "message": "未選擇模型"
+  },
+  "mb_get": {
+    "message": "↓ 下載"
+  },
+  "mb_downloading": {
+    "message": "下載中…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "取消下載"
+  },
+  "mb_installing": {
+    "message": "安裝中…"
+  },
+  "mb_verifying": {
+    "message": "正在驗證權重 · 即將完成"
+  },
+  "ready": {
+    "message": "就緒"
+  },
+  "prompt_placeholder": {
+    "message": "描述您想要建立的內容…"
+  },
+  "btn_clear_title": {
+    "message": "清除"
+  },
+  "btn_clear_aria": {
+    "message": "清除提示詞"
+  },
+  "surprise_me": {
+    "message": "給我驚喜"
+  },
+  "param_steps": {
+    "message": "步數"
+  },
+  "param_guidance": {
+    "message": "引導"
+  },
+  "param_seed": {
+    "message": "種子"
+  },
+  "seed_random": {
+    "message": "隨機"
+  },
+  "neg_prompt_label": {
+    "message": "負面提示詞"
+  },
+  "neg_prompt_placeholder": {
+    "message": "要排除的內容…"
+  },
+  "btn_parameters": {
+    "message": "參數 ▾"
+  },
+  "btn_generate": {
+    "message": "生成"
+  },
+  "install_model_hint": {
+    "message": "安裝模型以啟用生成功能。"
+  },
+  "img_placeholder": {
+    "message": "您的圖片將在此處顯示"
+  },
+  "generating_eyebrow": {
+    "message": "生成中"
+  },
+  "phase_encoding": {
+    "message": "正在編碼提示詞"
+  },
+  "btn_cancel_gen": {
+    "message": "× 取消"
+  },
+  "btn_save": {
+    "message": "↓ 儲存"
+  },
+  "btn_copy": {
+    "message": "⎘ 複製"
+  },
+  "btn_retry": {
+    "message": "↺ 重試"
+  },
+  "img_generated_alt": {
+    "message": "已生成圖片"
+  },
+  "recent_eyebrow": {
+    "message": "最近"
+  },
+  "view_all": {
+    "message": "查看全部 ↗"
+  },
+  "clear_history": {
+    "message": "清除歷史記錄"
+  },
+  "loading_model": {
+    "message": "正在載入模型…"
+  },
+  "compiling": {
+    "message": "編譯中…"
+  },
+  "generating_pct": {
+    "message": "生成中 · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "準備中…"
+  },
+  "phase_compiling_first": {
+    "message": "正在編譯著色器 · 首次執行"
+  },
+  "phase_loading": {
+    "message": "載入中…"
+  },
+  "phase_fetching": {
+    "message": "正在取得模型權重"
+  },
+  "phase_decoding": {
+    "message": "正在解碼圖片…"
+  },
+  "phase_loading_model": {
+    "message": "正在載入模型…"
+  },
+  "phase_compiling_shaders": {
+    "message": "正在編譯著色器…"
+  },
+  "workspace_page_title": {
+    "message": "AI離線圖片生成工作區"
+  },
+  "workspace_brand": {
+    "message": "AI離線圖片生成器"
+  },
+  "workspace_label": {
+    "message": "工作區"
+  },
+  "tab_gallery": {
+    "message": "圖庫"
+  },
+  "tab_diagnostics": {
+    "message": "診斷"
+  },
+  "tab_settings": {
+    "message": "設定"
+  },
+  "your_generations": {
+    "message": "您的生成作品"
+  },
+  "gallery_lede": {
+    "message": "所有內容保留在此裝置上。按一下圖塊可查看完整解析度和來源資訊。"
+  },
+  "filter_model": {
+    "message": "模型"
+  },
+  "all_models": {
+    "message": "所有模型"
+  },
+  "filter_engine": {
+    "message": "引擎"
+  },
+  "any_engine": {
+    "message": "任意引擎"
+  },
+  "engine_browser": {
+    "message": "瀏覽器 · WebGPU"
+  },
+  "filter_window": {
+    "message": "時間範圍"
+  },
+  "time_all": {
+    "message": "全部時間"
+  },
+  "time_24h": {
+    "message": "最近24小時"
+  },
+  "time_7d": {
+    "message": "最近7天"
+  },
+  "time_30d": {
+    "message": "最近30天"
+  },
+  "btn_select": {
+    "message": "選取"
+  },
+  "no_images_title": {
+    "message": "暫無圖片"
+  },
+  "no_images_lede": {
+    "message": "按Alt+Shift+D開啟彈窗，輸入提示詞並按下生成。結果將顯示在此處。"
+  },
+  "no_matches_title": {
+    "message": "無符合結果"
+  },
+  "no_matches_lede": {
+    "message": "此時間範圍內無內容。請嘗試擴大篩選條件。"
+  },
+  "compare_kicker": {
+    "message": "比較 · 拖曳控制點"
+  },
+  "compare_vs": {
+    "message": "A 對比 B"
+  },
+  "close_aria": {
+    "message": "關閉"
+  },
+  "loading_fullres": {
+    "message": "正在載入原始解析度…"
+  },
+  "label_prompt": {
+    "message": "提示詞"
+  },
+  "label_avoid": {
+    "message": "排除"
+  },
+  "label_seed": {
+    "message": "種子"
+  },
+  "label_steps": {
+    "message": "步數"
+  },
+  "label_guidance": {
+    "message": "引導"
+  },
+  "label_engine": {
+    "message": "引擎"
+  },
+  "label_duration": {
+    "message": "時長"
+  },
+  "label_generated": {
+    "message": "生成時間"
+  },
+  "label_path": {
+    "message": "路徑"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ 重複使用種子"
+  },
+  "btn_copy_prompt": {
+    "message": "複製提示詞"
+  },
+  "btn_copy_seed": {
+    "message": "複製種子"
+  },
+  "btn_download_png": {
+    "message": "↓ 下載PNG"
+  },
+  "btn_delete": {
+    "message": "刪除"
+  },
+  "danger_zone": {
+    "message": "危險區域"
+  },
+  "clear_data_title": {
+    "message": "清除所有擴充功能資料"
+  },
+  "clear_data_hint": {
+    "message": "刪除所有快取模型和生成圖片，無法復原。"
+  },
+  "btn_clear_data": {
+    "message": "清除資料"
+  },
+  "diag_title": {
+    "message": "診斷"
+  },
+  "diag_lede": {
+    "message": "擴充功能關於您的瀏覽器和裝置的資訊。若有問題，請將此區塊複製到issue中。"
+  },
+  "diag_engine": {
+    "message": "活躍引擎"
+  },
+  "diag_preferred": {
+    "message": "偏好"
+  },
+  "diag_device": {
+    "message": "裝置"
+  },
+  "diag_adapter": {
+    "message": "轉接器"
+  },
+  "diag_vendor": {
+    "message": "廠商"
+  },
+  "diag_vram": {
+    "message": "VRAM估計"
+  },
+  "diag_browser": {
+    "message": "瀏覽器路徑"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS配額"
+  },
+  "diag_storage": {
+    "message": "儲存空間"
+  },
+  "diag_installed": {
+    "message": "已安裝模型"
+  },
+  "diag_recent": {
+    "message": "最近圖片"
+  },
+  "diag_active": {
+    "message": "活躍模型"
+  },
+  "btn_copy_json": {
+    "message": "複製為JSON"
+  },
+  "btn_reprobe": {
+    "message": "重新偵測"
+  },
+  "btn_compare": {
+    "message": "比較"
+  },
+  "btn_export_zip": {
+    "message": "↓ 匯出ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "刪除"
+  },
+  "btn_cancel_select": {
+    "message": "取消"
+  },
+  "confirm_clear_data": {
+    "message": "刪除所有快取模型和生成圖片？\n\n此操作無法復原。"
+  },
+  "clearing": {
+    "message": "清除中…"
+  },
+  "status_done": {
+    "message": "✓ 完成"
+  },
+  "status_saved": {
+    "message": "✓ 已儲存"
+  },
+  "status_copied": {
+    "message": "✓ 已複製"
+  },
+  "confirm_delete_image": {
+    "message": "刪除此圖片？"
+  },
+  "confirm_bulk_delete": {
+    "message": "刪除$COUNT$張$NOUN$？",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "圖片"
+  },
+  "image_noun": {
+    "message": "圖片"
+  },
+  "no_prompt": {
+    "message": "（無提示詞）"
+  },
+  "none_selected": {
+    "message": "（未選取）"
+  },
+  "in_memory_only": {
+    "message": "（僅在記憶體中）"
+  },
+  "btn_exit_select": {
+    "message": "結束選取"
+  },
+  "n_selected": {
+    "message": "已選取$COUNT$張",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "正在封裝$COUNT$張圖片…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "已匯出$COUNT$張圖片",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "使用相同種子重新執行中…"
+  },
+  "err_no_engine": {
+    "message": "沒有可用的生成引擎"
+  },
+  "err_engine_start": {
+    "message": "無法啟動瀏覽器引擎"
+  },
+  "err_inference_failed": {
+    "message": "瀏覽器生成失敗"
+  },
+  "err_generation_failed": {
+    "message": "生成失敗"
+  },
+  "no_model_sub": {
+    "message": "在「模型」分頁中選擇模型即可開始"
+  },
+  "mb_pick_model": {
+    "message": "↓ 選擇模型"
+  },
+  "popup_tab_generate": {
+    "message": "生成"
+  },
+  "popup_tab_models": {
+    "message": "模型"
+  },
+  "models_intro": {
+    "message": "選擇要下載的模型。安裝後可隨時切換。"
+  },
+  "sec_downloading": {
+    "message": "下載中"
+  },
+  "sec_installed": {
+    "message": "已安裝"
+  },
+  "sec_available": {
+    "message": "可用"
+  },
+  "available_popular": {
+    "message": "熱門"
+  },
+  "empty_models_title": {
+    "message": "尚未安裝模型"
+  },
+  "empty_models_sub_html": {
+    "message": "在下方選擇並點選 <b>↓ 取得</b>。"
+  },
+  "storage_label": {
+    "message": "儲存空間"
+  },
+  "dl_tag_fetching": {
+    "message": "取得中"
+  },
+  "dl_paused_sub": {
+    "message": "已暫停 — 繼續以恢復"
+  },
+  "dl_meta_got": {
+    "message": "已取得"
+  },
+  "dl_meta_speed": {
+    "message": "速度"
+  },
+  "dl_meta_left": {
+    "message": "剩餘"
+  },
+  "dl_btn_pause": {
+    "message": "‖ 暫停"
+  },
+  "dl_btn_resume": {
+    "message": "▶ 繼續"
+  },
+  "dl_btn_hide": {
+    "message": "↓ 隱藏"
+  },
+  "dl_btn_cancel_title": {
+    "message": "取消"
+  },
+  "mdl_btn_use": {
+    "message": "使用"
+  },
+  "mdl_btn_in_use": {
+    "message": "使用中"
+  },
+  "mdl_btn_get": {
+    "message": "下載"
+  },
+  "mdl_btn_token": {
+    "message": "權杖"
+  },
+  "mdl_btn_na": {
+    "message": "無"
+  },
+  "mdl_loading_sub": {
+    "message": "正在下載到裝置…"
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "מחולל תמונות AI - יצירת תמונות AI"
+  },
+  "shortName": {
+    "message": "AI תמונות"
+  },
+  "shortDesc": {
+    "message": "השתמש במחולל תמונות AI ליצירת תמונות AI מטקסט, ייצור תמונות ריאליסטיות והפקת תמונות AI באופן מיידי."
+  },
+  "action_title": {
+    "message": "צור תמונות AI"
+  },
+  "open_workspace": {
+    "message": "פתח סביבת עבודה"
+  },
+  "settings": {
+    "message": "הגדרות"
+  },
+  "error_title": {
+    "message": "משהו השתבש"
+  },
+  "btn_diagnostics": {
+    "message": "אבחון ↗"
+  },
+  "btn_dismiss": {
+    "message": "סגור"
+  },
+  "no_model_selected": {
+    "message": "לא נבחר מודל"
+  },
+  "mb_get": {
+    "message": "↓ קבל"
+  },
+  "mb_downloading": {
+    "message": "מוריד…"
+  },
+  "mb_of": {
+    "message": "מתוך"
+  },
+  "cancel_download": {
+    "message": "בטל הורדה"
+  },
+  "mb_installing": {
+    "message": "מתקין…"
+  },
+  "mb_verifying": {
+    "message": "מאמת משקלים · כמעט מוכן"
+  },
+  "ready": {
+    "message": "מוכן"
+  },
+  "prompt_placeholder": {
+    "message": "תאר את מה שאתה רוצה ליצור…"
+  },
+  "btn_clear_title": {
+    "message": "נקה"
+  },
+  "btn_clear_aria": {
+    "message": "נקה הנחיה"
+  },
+  "surprise_me": {
+    "message": "הפתע אותי"
+  },
+  "param_steps": {
+    "message": "שלבים"
+  },
+  "param_guidance": {
+    "message": "הכוונה"
+  },
+  "param_seed": {
+    "message": "זרע"
+  },
+  "seed_random": {
+    "message": "אקראי"
+  },
+  "neg_prompt_label": {
+    "message": "הנחיה שלילית"
+  },
+  "neg_prompt_placeholder": {
+    "message": "דברים שיש להימנע מהם…"
+  },
+  "btn_parameters": {
+    "message": "פרמטרים ▾"
+  },
+  "btn_generate": {
+    "message": "צור"
+  },
+  "install_model_hint": {
+    "message": "התקן מודל כדי להפעיל יצירה."
+  },
+  "img_placeholder": {
+    "message": "התמונה שלך תופיע כאן"
+  },
+  "generating_eyebrow": {
+    "message": "יוצר"
+  },
+  "phase_encoding": {
+    "message": "מקודד הנחיה"
+  },
+  "btn_cancel_gen": {
+    "message": "× בטל"
+  },
+  "btn_save": {
+    "message": "↓ שמור"
+  },
+  "btn_copy": {
+    "message": "⎘ העתק"
+  },
+  "btn_retry": {
+    "message": "↺ נסה שוב"
+  },
+  "img_generated_alt": {
+    "message": "תמונה שנוצרה"
+  },
+  "recent_eyebrow": {
+    "message": "אחרונות"
+  },
+  "view_all": {
+    "message": "הצג הכל ↗"
+  },
+  "clear_history": {
+    "message": "נקה היסטוריה"
+  },
+  "loading_model": {
+    "message": "טוען מודל…"
+  },
+  "compiling": {
+    "message": "מקמפל…"
+  },
+  "generating_pct": {
+    "message": "יוצר · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "מכין…"
+  },
+  "phase_compiling_first": {
+    "message": "מקמפל צללים · הפעלה ראשונה"
+  },
+  "phase_loading": {
+    "message": "טוען…"
+  },
+  "phase_fetching": {
+    "message": "מביא משקלי מודל"
+  },
+  "phase_decoding": {
+    "message": "מפענח תמונה…"
+  },
+  "phase_loading_model": {
+    "message": "טוען מודל…"
+  },
+  "phase_compiling_shaders": {
+    "message": "מקמפל צללים…"
+  },
+  "workspace_page_title": {
+    "message": "סביבת עבודה של מחולל תמונות AI לא מקוון"
+  },
+  "workspace_brand": {
+    "message": "מחולל תמונות AI לא מקוון"
+  },
+  "workspace_label": {
+    "message": "סביבת עבודה"
+  },
+  "tab_gallery": {
+    "message": "גלריה"
+  },
+  "tab_diagnostics": {
+    "message": "אבחון"
+  },
+  "tab_settings": {
+    "message": "הגדרות"
+  },
+  "your_generations": {
+    "message": "היצירות שלך"
+  },
+  "gallery_lede": {
+    "message": "הכל נשאר במכשיר זה. לחץ על אריח לרזולוציה מלאה ומקור."
+  },
+  "filter_model": {
+    "message": "מודל"
+  },
+  "all_models": {
+    "message": "כל המודלים"
+  },
+  "filter_engine": {
+    "message": "מנוע"
+  },
+  "any_engine": {
+    "message": "כל מנוע"
+  },
+  "engine_browser": {
+    "message": "דפדפן · WebGPU"
+  },
+  "filter_window": {
+    "message": "תקופה"
+  },
+  "time_all": {
+    "message": "כל הזמן"
+  },
+  "time_24h": {
+    "message": "24 שעות אחרונות"
+  },
+  "time_7d": {
+    "message": "7 ימים אחרונים"
+  },
+  "time_30d": {
+    "message": "30 ימים אחרונים"
+  },
+  "btn_select": {
+    "message": "בחר"
+  },
+  "no_images_title": {
+    "message": "אין תמונות עדיין"
+  },
+  "no_images_lede": {
+    "message": "פתח את החלון הקופץ עם Alt+Shift+D, כתוב הנחיה, לחץ צור. התוצאות יופיעו כאן."
+  },
+  "no_matches_title": {
+    "message": "אין תוצאות"
+  },
+  "no_matches_lede": {
+    "message": "אין כלום בתקופה זו. נסה להרחיב את המסנן."
+  },
+  "compare_kicker": {
+    "message": "השווה · גרור את הידית"
+  },
+  "compare_vs": {
+    "message": "A מול B"
+  },
+  "close_aria": {
+    "message": "סגור"
+  },
+  "loading_fullres": {
+    "message": "טוען רזולוציה מלאה…"
+  },
+  "label_prompt": {
+    "message": "הנחיה"
+  },
+  "label_avoid": {
+    "message": "הימנע"
+  },
+  "label_seed": {
+    "message": "זרע"
+  },
+  "label_steps": {
+    "message": "שלבים"
+  },
+  "label_guidance": {
+    "message": "הכוונה"
+  },
+  "label_engine": {
+    "message": "מנוע"
+  },
+  "label_duration": {
+    "message": "משך"
+  },
+  "label_generated": {
+    "message": "נוצר"
+  },
+  "label_path": {
+    "message": "נתיב"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ השתמש שוב בזרע"
+  },
+  "btn_copy_prompt": {
+    "message": "העתק הנחיה"
+  },
+  "btn_copy_seed": {
+    "message": "העתק זרע"
+  },
+  "btn_download_png": {
+    "message": "↓ הורד PNG"
+  },
+  "btn_delete": {
+    "message": "מחק"
+  },
+  "danger_zone": {
+    "message": "אזור מסוכן"
+  },
+  "clear_data_title": {
+    "message": "נקה את כל נתוני ההרחבה"
+  },
+  "clear_data_hint": {
+    "message": "מסיר את כל המודלים במטמון ואת התמונות שנוצרו. לא ניתן לבטל."
+  },
+  "btn_clear_data": {
+    "message": "נקה נתונים"
+  },
+  "diag_title": {
+    "message": "אבחון"
+  },
+  "diag_lede": {
+    "message": "מה ההרחבה רואה על הדפדפן והמחשב שלך. העתק בלוק זה לבעיה אם משהו לא עובד."
+  },
+  "diag_engine": {
+    "message": "מנוע פעיל"
+  },
+  "diag_preferred": {
+    "message": "מועדף"
+  },
+  "diag_device": {
+    "message": "מכשיר"
+  },
+  "diag_adapter": {
+    "message": "מתאם"
+  },
+  "diag_vendor": {
+    "message": "יצרן"
+  },
+  "diag_vram": {
+    "message": "הערכת VRAM"
+  },
+  "diag_browser": {
+    "message": "נתיב דפדפן"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "מכסת OPFS"
+  },
+  "diag_storage": {
+    "message": "אחסון"
+  },
+  "diag_installed": {
+    "message": "מודלים מותקנים"
+  },
+  "diag_recent": {
+    "message": "תמונות אחרונות"
+  },
+  "diag_active": {
+    "message": "מודל פעיל"
+  },
+  "btn_copy_json": {
+    "message": "העתק כ-JSON"
+  },
+  "btn_reprobe": {
+    "message": "הפעל בדיקות מחדש"
+  },
+  "btn_compare": {
+    "message": "השווה"
+  },
+  "btn_export_zip": {
+    "message": "↓ ייצא ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "מחק"
+  },
+  "btn_cancel_select": {
+    "message": "בטל"
+  },
+  "confirm_clear_data": {
+    "message": "למחוק את כל המודלים במטמון ואת התמונות שנוצרו?\n\nלא ניתן לבטל פעולה זו."
+  },
+  "clearing": {
+    "message": "מנקה…"
+  },
+  "status_done": {
+    "message": "✓ בוצע"
+  },
+  "status_saved": {
+    "message": "✓ נשמר"
+  },
+  "status_copied": {
+    "message": "✓ הועתק"
+  },
+  "confirm_delete_image": {
+    "message": "למחוק תמונה זו?"
+  },
+  "confirm_bulk_delete": {
+    "message": "למחוק $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "תמונות"
+  },
+  "image_noun": {
+    "message": "תמונה"
+  },
+  "no_prompt": {
+    "message": "(אין הנחיה)"
+  },
+  "none_selected": {
+    "message": "(לא נבחר דבר)"
+  },
+  "in_memory_only": {
+    "message": "(בזיכרון בלבד)"
+  },
+  "btn_exit_select": {
+    "message": "צא מהבחירה"
+  },
+  "n_selected": {
+    "message": "$COUNT$ נבחרו",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "אורז $COUNT$ תמונות…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "יוצאו $COUNT$ תמונות",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "מריץ מחדש עם אותו זרע…"
+  },
+  "err_no_engine": {
+    "message": "אין מנוע יצירה זמין"
+  },
+  "err_engine_start": {
+    "message": "לא ניתן להפעיל את מנוע הדפדפן"
+  },
+  "err_inference_failed": {
+    "message": "היצירה בדפדפן נכשלה"
+  },
+  "err_generation_failed": {
+    "message": "היצירה נכשלה"
+  },
+  "no_model_sub": {
+    "message": "כדי להתחיל, בחרו דגם בלשונית דגמים"
+  },
+  "mb_pick_model": {
+    "message": "↓ בחירת דגם"
+  },
+  "popup_tab_generate": {
+    "message": "צור"
+  },
+  "popup_tab_models": {
+    "message": "דגמים"
+  },
+  "models_intro": {
+    "message": "בחרו דגם להורדה. לאחר התקנה אפשר להחליף בין הדגמים בכל עת."
+  },
+  "sec_downloading": {
+    "message": "מוריד"
+  },
+  "sec_installed": {
+    "message": "מותקנים"
+  },
+  "sec_available": {
+    "message": "זמינים"
+  },
+  "available_popular": {
+    "message": "פופולריים"
+  },
+  "empty_models_title": {
+    "message": "עדיין אין דגמים מותקנים"
+  },
+  "empty_models_sub_html": {
+    "message": "בחרו דגם למטה ולחצו על <b>↓ הורדה</b>."
+  },
+  "storage_label": {
+    "message": "אחסון"
+  },
+  "dl_tag_fetching": {
+    "message": "מאחזר"
+  },
+  "dl_paused_sub": {
+    "message": "מושהה — חידוש כדי להמשיך"
+  },
+  "dl_meta_got": {
+    "message": "הורד"
+  },
+  "dl_meta_speed": {
+    "message": "מהירות"
+  },
+  "dl_meta_left": {
+    "message": "נותר"
+  },
+  "dl_btn_pause": {
+    "message": "‖ השהה"
+  },
+  "dl_btn_resume": {
+    "message": "▶ חידוש"
+  },
+  "dl_btn_hide": {
+    "message": "↓ הסתרה"
+  },
+  "dl_btn_cancel_title": {
+    "message": "ביטול"
+  },
+  "mdl_btn_use": {
+    "message": "השתמש"
+  },
+  "mdl_btn_in_use": {
+    "message": "בשימוש"
+  },
+  "mdl_btn_get": {
+    "message": "הורדה"
+  },
+  "mdl_btn_token": {
+    "message": "טוקן"
+  },
+  "mdl_btn_na": {
+    "message": "לא זמין"
+  },
+  "mdl_loading_sub": {
+    "message": "מוריד למכשיר…"
+  }
+}

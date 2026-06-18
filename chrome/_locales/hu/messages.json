@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI képgenerátor - AI képek generálása"
+  },
+  "shortName": {
+    "message": "AI Képek"
+  },
+  "shortDesc": {
+    "message": "AI képgenerátor: hozz létre AI képeket szövegből, generálj realisztikus AI fotókat és képeket azonnal Chrome-ban."
+  },
+  "action_title": {
+    "message": "AI képek generálása"
+  },
+  "open_workspace": {
+    "message": "Munkaterület megnyitása"
+  },
+  "settings": {
+    "message": "Beállítások"
+  },
+  "error_title": {
+    "message": "Valami hiba történt"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnosztika ↗"
+  },
+  "btn_dismiss": {
+    "message": "Bezárás"
+  },
+  "no_model_selected": {
+    "message": "Nincs kiválasztott modell"
+  },
+  "mb_get": {
+    "message": "↓ Letöltés"
+  },
+  "mb_downloading": {
+    "message": "Letöltés…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "Letöltés megszakítása"
+  },
+  "mb_installing": {
+    "message": "Telepítés…"
+  },
+  "mb_verifying": {
+    "message": "Súlyok ellenőrzése · majdnem kész"
+  },
+  "ready": {
+    "message": "Kész"
+  },
+  "prompt_placeholder": {
+    "message": "Írja le, mit szeretne létrehozni…"
+  },
+  "btn_clear_title": {
+    "message": "Törlés"
+  },
+  "btn_clear_aria": {
+    "message": "Prompt törlése"
+  },
+  "surprise_me": {
+    "message": "Lepjen meg"
+  },
+  "param_steps": {
+    "message": "Lépések"
+  },
+  "param_guidance": {
+    "message": "Irányítás"
+  },
+  "param_seed": {
+    "message": "Mag"
+  },
+  "seed_random": {
+    "message": "véletlenszerű"
+  },
+  "neg_prompt_label": {
+    "message": "Negatív prompt"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Elkerülendő dolgok…"
+  },
+  "btn_parameters": {
+    "message": "Paraméterek ▾"
+  },
+  "btn_generate": {
+    "message": "Generálás"
+  },
+  "install_model_hint": {
+    "message": "Telepítsen egy modellt a Generálás engedélyezéséhez."
+  },
+  "img_placeholder": {
+    "message": "A kép itt jelenik meg"
+  },
+  "generating_eyebrow": {
+    "message": "GENERÁLÁS"
+  },
+  "phase_encoding": {
+    "message": "Prompt kódolása"
+  },
+  "btn_cancel_gen": {
+    "message": "× mégse"
+  },
+  "btn_save": {
+    "message": "↓ Mentés"
+  },
+  "btn_copy": {
+    "message": "⎘ Másolás"
+  },
+  "btn_retry": {
+    "message": "↺ Újra"
+  },
+  "img_generated_alt": {
+    "message": "Generált kép"
+  },
+  "recent_eyebrow": {
+    "message": "LEGUTÓBBI"
+  },
+  "view_all": {
+    "message": "Összes megtekintése ↗"
+  },
+  "clear_history": {
+    "message": "Előzmények törlése"
+  },
+  "loading_model": {
+    "message": "Modell betöltése…"
+  },
+  "compiling": {
+    "message": "Fordítás…"
+  },
+  "generating_pct": {
+    "message": "Generálás · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Előkészítés…"
+  },
+  "phase_compiling_first": {
+    "message": "Shaderek fordítása · első futtatás"
+  },
+  "phase_loading": {
+    "message": "Betöltés…"
+  },
+  "phase_fetching": {
+    "message": "Modellsúlyok letöltése"
+  },
+  "phase_decoding": {
+    "message": "Kép dekódolása…"
+  },
+  "phase_loading_model": {
+    "message": "Modell betöltése…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Shaderek fordítása…"
+  },
+  "workspace_page_title": {
+    "message": "AI offline képgenerátor munkaterület"
+  },
+  "workspace_brand": {
+    "message": "AI Offline Képgenerátor"
+  },
+  "workspace_label": {
+    "message": "munkaterület"
+  },
+  "tab_gallery": {
+    "message": "Galéria"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnosztika"
+  },
+  "tab_settings": {
+    "message": "Beállítások"
+  },
+  "your_generations": {
+    "message": "Saját generálásai"
+  },
+  "gallery_lede": {
+    "message": "Minden ezen az eszközön marad. Kattintson egy csempére a teljes felbontásért és forrásért."
+  },
+  "filter_model": {
+    "message": "Modell"
+  },
+  "all_models": {
+    "message": "Összes modell"
+  },
+  "filter_engine": {
+    "message": "Motor"
+  },
+  "any_engine": {
+    "message": "Bármely motor"
+  },
+  "engine_browser": {
+    "message": "Böngésző · WebGPU"
+  },
+  "filter_window": {
+    "message": "Időszak"
+  },
+  "time_all": {
+    "message": "Mindig"
+  },
+  "time_24h": {
+    "message": "Elmúlt 24 óra"
+  },
+  "time_7d": {
+    "message": "Elmúlt 7 nap"
+  },
+  "time_30d": {
+    "message": "Elmúlt 30 nap"
+  },
+  "btn_select": {
+    "message": "Kijelölés"
+  },
+  "no_images_title": {
+    "message": "Még nincsenek képek"
+  },
+  "no_images_lede": {
+    "message": "Nyissa meg az előugró ablakot az Alt+Shift+D billentyűkkel, írjon egy promptot, kattintson a Generálás gombra. Az eredmények itt jelennek meg."
+  },
+  "no_matches_title": {
+    "message": "Nincs találat"
+  },
+  "no_matches_lede": {
+    "message": "Ebben az időszakban semmi. Próbálja szélesíteni a szűrőt."
+  },
+  "compare_kicker": {
+    "message": "Összehasonlítás · húzza a fogantyút"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "bezárás"
+  },
+  "loading_fullres": {
+    "message": "teljes felbontás betöltése…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Elkerülés"
+  },
+  "label_seed": {
+    "message": "Mag"
+  },
+  "label_steps": {
+    "message": "Lépések"
+  },
+  "label_guidance": {
+    "message": "Irányítás"
+  },
+  "label_engine": {
+    "message": "Motor"
+  },
+  "label_duration": {
+    "message": "Időtartam"
+  },
+  "label_generated": {
+    "message": "Generálva"
+  },
+  "label_path": {
+    "message": "Útvonal"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Mag újrahasználata"
+  },
+  "btn_copy_prompt": {
+    "message": "Prompt másolása"
+  },
+  "btn_copy_seed": {
+    "message": "Mag másolása"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG letöltése"
+  },
+  "btn_delete": {
+    "message": "Törlés"
+  },
+  "danger_zone": {
+    "message": "Veszélyes terület"
+  },
+  "clear_data_title": {
+    "message": "Összes bővítményadat törlése"
+  },
+  "clear_data_hint": {
+    "message": "Eltávolít minden gyorsítótárazott modellt és generált képet. Nem vonható vissza."
+  },
+  "btn_clear_data": {
+    "message": "Adatok törlése"
+  },
+  "diag_title": {
+    "message": "Diagnosztika"
+  },
+  "diag_lede": {
+    "message": "Amit a bővítmény lát a böngészőről és a gépről. Másolja be ezt a blokkot egy issue-ba, ha valami nem működik."
+  },
+  "diag_engine": {
+    "message": "Aktív motor"
+  },
+  "diag_preferred": {
+    "message": "Előnyben részesített"
+  },
+  "diag_device": {
+    "message": "Eszköz"
+  },
+  "diag_adapter": {
+    "message": "Adapter"
+  },
+  "diag_vendor": {
+    "message": "Gyártó"
+  },
+  "diag_vram": {
+    "message": "VRAM becsl."
+  },
+  "diag_browser": {
+    "message": "Böngésző útvonala"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS-kvóta"
+  },
+  "diag_storage": {
+    "message": "Tárhely"
+  },
+  "diag_installed": {
+    "message": "Telepített modellek"
+  },
+  "diag_recent": {
+    "message": "Legutóbbi képek"
+  },
+  "diag_active": {
+    "message": "Aktív modell"
+  },
+  "btn_copy_json": {
+    "message": "Másolás JSON-ként"
+  },
+  "btn_reprobe": {
+    "message": "Ellenőrzések újrafuttatása"
+  },
+  "btn_compare": {
+    "message": "Összehasonlítás"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP exportálása"
+  },
+  "btn_bulk_delete": {
+    "message": "Törlés"
+  },
+  "btn_cancel_select": {
+    "message": "Mégse"
+  },
+  "confirm_clear_data": {
+    "message": "Törli az összes gyorsítótárazott modellt és generált képet?\n\nEz nem vonható vissza."
+  },
+  "clearing": {
+    "message": "Törlés…"
+  },
+  "status_done": {
+    "message": "✓ Kész"
+  },
+  "status_saved": {
+    "message": "✓ Mentve"
+  },
+  "status_copied": {
+    "message": "✓ Másolva"
+  },
+  "confirm_delete_image": {
+    "message": "Törli ezt a képet?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Törli $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "képet"
+  },
+  "image_noun": {
+    "message": "képet"
+  },
+  "no_prompt": {
+    "message": "(nincs prompt)"
+  },
+  "none_selected": {
+    "message": "(semmi nincs kijelölve)"
+  },
+  "in_memory_only": {
+    "message": "(csak a memóriában)"
+  },
+  "btn_exit_select": {
+    "message": "Kijelölés befejezése"
+  },
+  "n_selected": {
+    "message": "$COUNT$ kijelölve",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ kép becsomagolása…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ kép exportálva",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Újrafuttatás ugyanazzal a maggal…"
+  },
+  "err_no_engine": {
+    "message": "Nincs elérhető generáló motor"
+  },
+  "err_engine_start": {
+    "message": "A böngészőmotor nem indítható el"
+  },
+  "err_inference_failed": {
+    "message": "A böngészőbeli generálás sikertelen"
+  },
+  "err_generation_failed": {
+    "message": "A generálás sikertelen"
+  },
+  "no_model_sub": {
+    "message": "Válassz egy modellt a Modellek lapon a kezdéshez"
+  },
+  "mb_pick_model": {
+    "message": "↓ Modell választása"
+  },
+  "popup_tab_generate": {
+    "message": "Generálás"
+  },
+  "popup_tab_models": {
+    "message": "Modellek"
+  },
+  "models_intro": {
+    "message": "Válassz egy modellt a letöltéshez. Telepítés után bármikor válthatsz közöttük."
+  },
+  "sec_downloading": {
+    "message": "Letöltés"
+  },
+  "sec_installed": {
+    "message": "Telepítve"
+  },
+  "sec_available": {
+    "message": "Elérhető"
+  },
+  "available_popular": {
+    "message": "népszerű"
+  },
+  "empty_models_title": {
+    "message": "Még nincs telepített modell"
+  },
+  "empty_models_sub_html": {
+    "message": "Válassz egyet lent és koppints a <b>↓ Letöltés</b> gombra."
+  },
+  "storage_label": {
+    "message": "Tárhely"
+  },
+  "dl_tag_fetching": {
+    "message": "letöltés"
+  },
+  "dl_paused_sub": {
+    "message": "szüneteltetve — folytatáshoz indítsd újra"
+  },
+  "dl_meta_got": {
+    "message": "Letöltve"
+  },
+  "dl_meta_speed": {
+    "message": "Sebesség"
+  },
+  "dl_meta_left": {
+    "message": "Hátra"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Szünet"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Folytatás"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Elrejt"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Mégse"
+  },
+  "mdl_btn_use": {
+    "message": "Használ"
+  },
+  "mdl_btn_in_use": {
+    "message": "Használatban"
+  },
+  "mdl_btn_get": {
+    "message": "Letöltés"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n/a"
+  },
+  "mdl_loading_sub": {
+    "message": "Letöltés az eszközre…"
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - AI படங்கள் உருவாக்கு"
+  },
+  "shortName": {
+    "message": "AI படங்கள்"
+  },
+  "shortDesc": {
+    "message": "AI இமேஜ் ஜெனரேட்டர் பயன்படுத்தி உரையிலிருந்து AI படங்கள் உருவாக்கவும், AI ஒளிப்படங்கள் உடனடியாக பெறுங்கள்."
+  },
+  "action_title": {
+    "message": "AI படங்களை உருவாக்கு"
+  },
+  "open_workspace": {
+    "message": "பணியிடத்தைத் திற"
+  },
+  "settings": {
+    "message": "அமைப்புகள்"
+  },
+  "error_title": {
+    "message": "ஏதோ தவறு நடந்தது"
+  },
+  "btn_diagnostics": {
+    "message": "நோயறிதல் ↗"
+  },
+  "btn_dismiss": {
+    "message": "மூடு"
+  },
+  "no_model_selected": {
+    "message": "மாதிரி எதுவும் தேர்ந்தெடுக்கப்படவில்லை"
+  },
+  "mb_get": {
+    "message": "↓ பெறு"
+  },
+  "mb_downloading": {
+    "message": "பதிவிறக்குகிறது…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "பதிவிறக்கத்தை ரத்துசெய்"
+  },
+  "mb_installing": {
+    "message": "நிறுவுகிறது…"
+  },
+  "mb_verifying": {
+    "message": "எடைகளை சரிபார்க்கிறது · கிட்டத்தட்ட முடிந்தது"
+  },
+  "ready": {
+    "message": "தயார்"
+  },
+  "prompt_placeholder": {
+    "message": "நீங்கள் என்ன உருவாக்க விரும்புகிறீர்கள் என்று விவரிக்கவும்…"
+  },
+  "btn_clear_title": {
+    "message": "அழி"
+  },
+  "btn_clear_aria": {
+    "message": "வாக்கியத்தை அழி"
+  },
+  "surprise_me": {
+    "message": "என்னை ஆச்சரியப்படுத்து"
+  },
+  "param_steps": {
+    "message": "படிகள்"
+  },
+  "param_guidance": {
+    "message": "வழிகாட்டுதல்"
+  },
+  "param_seed": {
+    "message": "விதை"
+  },
+  "seed_random": {
+    "message": "சீரற்ற"
+  },
+  "neg_prompt_label": {
+    "message": "எதிர்மறை வாக்கியம்"
+  },
+  "neg_prompt_placeholder": {
+    "message": "தவிர்க்க வேண்டியவை…"
+  },
+  "btn_parameters": {
+    "message": "அளவுருக்கள் ▾"
+  },
+  "btn_generate": {
+    "message": "உருவாக்கு"
+  },
+  "install_model_hint": {
+    "message": "உருவாக்கலை இயக்க ஒரு மாதிரியை நிறுவவும்."
+  },
+  "img_placeholder": {
+    "message": "உங்கள் படம் இங்கே தோன்றும்"
+  },
+  "generating_eyebrow": {
+    "message": "உருவாக்குகிறது"
+  },
+  "phase_encoding": {
+    "message": "வாக்கியத்தை குறியாக்கம் செய்கிறது"
+  },
+  "btn_cancel_gen": {
+    "message": "× ரத்துசெய்"
+  },
+  "btn_save": {
+    "message": "↓ சேமி"
+  },
+  "btn_copy": {
+    "message": "⎘ நகலெடு"
+  },
+  "btn_retry": {
+    "message": "↺ மீண்டும் முயற்சி"
+  },
+  "img_generated_alt": {
+    "message": "உருவாக்கிய படம்"
+  },
+  "recent_eyebrow": {
+    "message": "சமீபத்திய"
+  },
+  "view_all": {
+    "message": "அனைத்தையும் காட்டு ↗"
+  },
+  "clear_history": {
+    "message": "வரலாற்றை அழி"
+  },
+  "loading_model": {
+    "message": "மாதிரி ஏற்றுகிறது…"
+  },
+  "compiling": {
+    "message": "தொகுக்கிறது…"
+  },
+  "generating_pct": {
+    "message": "உருவாக்குகிறது · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "தயாரிக்கிறது…"
+  },
+  "phase_compiling_first": {
+    "message": "ஷேடர்களை தொகுக்கிறது · முதல் இயக்கம்"
+  },
+  "phase_loading": {
+    "message": "ஏற்றுகிறது…"
+  },
+  "phase_fetching": {
+    "message": "மாதிரி எடைகளை பெறுகிறது"
+  },
+  "phase_decoding": {
+    "message": "படத்தை டிகோட் செய்கிறது…"
+  },
+  "phase_loading_model": {
+    "message": "மாதிரி ஏற்றுகிறது…"
+  },
+  "phase_compiling_shaders": {
+    "message": "ஷேடர்களை தொகுக்கிறது…"
+  },
+  "workspace_page_title": {
+    "message": "AI ஆஃப்லைன் படம் உருவாக்கி பணியிடம்"
+  },
+  "workspace_brand": {
+    "message": "AI ஆஃப்லைன் படம் உருவாக்கி"
+  },
+  "workspace_label": {
+    "message": "பணியிடம்"
+  },
+  "tab_gallery": {
+    "message": "கேலரி"
+  },
+  "tab_diagnostics": {
+    "message": "நோயறிதல்"
+  },
+  "tab_settings": {
+    "message": "அமைப்புகள்"
+  },
+  "your_generations": {
+    "message": "உங்கள் உருவாக்கங்கள்"
+  },
+  "gallery_lede": {
+    "message": "அனைத்தும் இந்த சாதனத்தில் இருக்கும். முழு தெளிவு மற்றும் மூலத்திற்கு ஒரு ஓடு கிளிக் செய்யுங்கள்."
+  },
+  "filter_model": {
+    "message": "மாதிரி"
+  },
+  "all_models": {
+    "message": "அனைத்து மாதிரிகள்"
+  },
+  "filter_engine": {
+    "message": "இயந்திரம்"
+  },
+  "any_engine": {
+    "message": "எந்த இயந்திரமும்"
+  },
+  "engine_browser": {
+    "message": "உலாவி · WebGPU"
+  },
+  "filter_window": {
+    "message": "காலகட்டம்"
+  },
+  "time_all": {
+    "message": "எல்லா நேரமும்"
+  },
+  "time_24h": {
+    "message": "கடந்த 24 மணி நேரம்"
+  },
+  "time_7d": {
+    "message": "கடந்த 7 நாட்கள்"
+  },
+  "time_30d": {
+    "message": "கடந்த 30 நாட்கள்"
+  },
+  "btn_select": {
+    "message": "தேர்ந்தெடு"
+  },
+  "no_images_title": {
+    "message": "இன்னும் படங்கள் இல்லை"
+  },
+  "no_images_lede": {
+    "message": "Alt+Shift+D மூலம் பாப்அப்பை திறக்கவும், வாக்கியம் எழுதவும், உருவாக்கு கிளிக் செய்யவும். முடிவுகள் இங்கே தோன்றும்."
+  },
+  "no_matches_title": {
+    "message": "பொருத்தங்கள் இல்லை"
+  },
+  "no_matches_lede": {
+    "message": "இந்த காலகட்டத்தில் எதுவும் இல்லை. வடிகட்டியை விரிவுபடுத்திப் பாருங்கள்."
+  },
+  "compare_kicker": {
+    "message": "ஒப்பிடு · கைப்பிடியை இழு"
+  },
+  "compare_vs": {
+    "message": "A எதிர் B"
+  },
+  "close_aria": {
+    "message": "மூடு"
+  },
+  "loading_fullres": {
+    "message": "முழு தெளிவு ஏற்றுகிறது…"
+  },
+  "label_prompt": {
+    "message": "வாக்கியம்"
+  },
+  "label_avoid": {
+    "message": "தவிர்"
+  },
+  "label_seed": {
+    "message": "விதை"
+  },
+  "label_steps": {
+    "message": "படிகள்"
+  },
+  "label_guidance": {
+    "message": "வழிகாட்டுதல்"
+  },
+  "label_engine": {
+    "message": "இயந்திரம்"
+  },
+  "label_duration": {
+    "message": "காலம்"
+  },
+  "label_generated": {
+    "message": "உருவாக்கிய தேதி"
+  },
+  "label_path": {
+    "message": "பாதை"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ விதையை மீண்டும் பயன்படுத்து"
+  },
+  "btn_copy_prompt": {
+    "message": "வாக்கியத்தை நகலெடு"
+  },
+  "btn_copy_seed": {
+    "message": "விதையை நகலெடு"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG பதிவிறக்கு"
+  },
+  "btn_delete": {
+    "message": "நீக்கு"
+  },
+  "danger_zone": {
+    "message": "ஆபத்தான பகுதி"
+  },
+  "clear_data_title": {
+    "message": "அனைத்து நீட்டிப்பு தரவையும் அழி"
+  },
+  "clear_data_hint": {
+    "message": "அனைத்து கேஷ் செய்யப்பட்ட மாதிரிகள் மற்றும் உருவாக்கிய படங்களை நீக்குகிறது. செயல்தவிர்க்க முடியாது."
+  },
+  "btn_clear_data": {
+    "message": "தரவை அழி"
+  },
+  "diag_title": {
+    "message": "நோயறிதல்"
+  },
+  "diag_lede": {
+    "message": "நீட்டிப்பு உங்கள் உலாவி மற்றும் இயந்திரத்தைப் பற்றி பார்க்கும் தகவல். ஏதாவது வேலை செய்யாவிட்டால் இந்த பகுதியை issue-ல் நகலெடுக்கவும்."
+  },
+  "diag_engine": {
+    "message": "செயலில் உள்ள இயந்திரம்"
+  },
+  "diag_preferred": {
+    "message": "விருப்பமான"
+  },
+  "diag_device": {
+    "message": "சாதனம்"
+  },
+  "diag_adapter": {
+    "message": "அடாப்டர்"
+  },
+  "diag_vendor": {
+    "message": "விற்பனையாளர்"
+  },
+  "diag_vram": {
+    "message": "VRAM மதிப்பீடு"
+  },
+  "diag_browser": {
+    "message": "உலாவி பாதை"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS ஒதுக்கீடு"
+  },
+  "diag_storage": {
+    "message": "சேமிப்பகம்"
+  },
+  "diag_installed": {
+    "message": "நிறுவப்பட்ட மாதிரிகள்"
+  },
+  "diag_recent": {
+    "message": "சமீபத்திய படங்கள்"
+  },
+  "diag_active": {
+    "message": "செயலில் உள்ள மாதிரி"
+  },
+  "btn_copy_json": {
+    "message": "JSON ஆக நகலெடு"
+  },
+  "btn_reprobe": {
+    "message": "ஆய்வுகளை மீண்டும் இயக்கு"
+  },
+  "btn_compare": {
+    "message": "ஒப்பிடு"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP ஏற்றுமதி"
+  },
+  "btn_bulk_delete": {
+    "message": "நீக்கு"
+  },
+  "btn_cancel_select": {
+    "message": "ரத்துசெய்"
+  },
+  "confirm_clear_data": {
+    "message": "அனைத்து கேஷ் மாதிரிகள் மற்றும் படங்களை நீக்கவா?\n\nசெயல்தவிர்க்க முடியாது."
+  },
+  "clearing": {
+    "message": "அழிக்கிறது…"
+  },
+  "status_done": {
+    "message": "✓ முடிந்தது"
+  },
+  "status_saved": {
+    "message": "✓ சேமிக்கப்பட்டது"
+  },
+  "status_copied": {
+    "message": "✓ நகலெடுக்கப்பட்டது"
+  },
+  "confirm_delete_image": {
+    "message": "இந்த படத்தை நீக்கவா?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ நீக்கவா?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "படங்கள்"
+  },
+  "image_noun": {
+    "message": "படம்"
+  },
+  "no_prompt": {
+    "message": "(வாக்கியம் இல்லை)"
+  },
+  "none_selected": {
+    "message": "(எதுவும் தேர்ந்தெடுக்கப்படவில்லை)"
+  },
+  "in_memory_only": {
+    "message": "(நினைவகத்தில் மட்டும்)"
+  },
+  "btn_exit_select": {
+    "message": "தேர்விலிருந்து வெளியேறு"
+  },
+  "n_selected": {
+    "message": "$COUNT$ தேர்ந்தெடுக்கப்பட்டது",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ படங்களை பேக் செய்கிறது…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ படங்கள் ஏற்றுமதி செய்யப்பட்டன",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "அதே விதையுடன் மீண்டும் இயக்குகிறது…"
+  },
+  "err_no_engine": {
+    "message": "உருவாக்க இயந்திரம் கிடைக்கவில்லை"
+  },
+  "err_engine_start": {
+    "message": "உலாவி இயந்திரம் தொடங்க முடியவில்லை"
+  },
+  "err_inference_failed": {
+    "message": "உலாவியில் உருவாக்கம் தோல்வியடைந்தது"
+  },
+  "err_generation_failed": {
+    "message": "உருவாக்கல் தோல்வியடைந்தது"
+  },
+  "no_model_sub": {
+    "message": "தொடங்க, மாதிரிகள் தாவலில் ஒரு மாதிரியைத் தேர்ந்தெடுக்கவும்"
+  },
+  "mb_pick_model": {
+    "message": "↓ மாதிரியைத் தேர்வுசெய்"
+  },
+  "popup_tab_generate": {
+    "message": "உருவாக்கு"
+  },
+  "popup_tab_models": {
+    "message": "மாதிரிகள்"
+  },
+  "models_intro": {
+    "message": "பதிவிறக்க ஒரு மாதிரியைத் தேர்ந்தெடுக்கவும். நிறுவியதும் எப்போது வேண்டுமானாலும் மாற்றலாம்."
+  },
+  "sec_downloading": {
+    "message": "பதிவிறக்குகிறது"
+  },
+  "sec_installed": {
+    "message": "நிறுவப்பட்டது"
+  },
+  "sec_available": {
+    "message": "கிடைக்கிறது"
+  },
+  "available_popular": {
+    "message": "பிரபலமான"
+  },
+  "empty_models_title": {
+    "message": "இன்னும் எந்த மாதிரியும் நிறுவப்படவில்லை"
+  },
+  "empty_models_sub_html": {
+    "message": "கீழே ஒன்றைத் தேர்ந்து <b>↓ பெறு</b> தட்டவும்."
+  },
+  "storage_label": {
+    "message": "சேமிப்பு"
+  },
+  "dl_tag_fetching": {
+    "message": "பெறுகிறது"
+  },
+  "dl_paused_sub": {
+    "message": "இடைநிறுத்தப்பட்டது — தொடர மீண்டும் தொடங்கவும்"
+  },
+  "dl_meta_got": {
+    "message": "பெற்றது"
+  },
+  "dl_meta_speed": {
+    "message": "வேகம்"
+  },
+  "dl_meta_left": {
+    "message": "மீதம்"
+  },
+  "dl_btn_pause": {
+    "message": "‖ இடைநிறுத்து"
+  },
+  "dl_btn_resume": {
+    "message": "▶ தொடர்"
+  },
+  "dl_btn_hide": {
+    "message": "↓ மறை"
+  },
+  "dl_btn_cancel_title": {
+    "message": "ரத்து"
+  },
+  "mdl_btn_use": {
+    "message": "பயன்படுத்து"
+  },
+  "mdl_btn_in_use": {
+    "message": "பயன்பாட்டில்"
+  },
+  "mdl_btn_get": {
+    "message": "பெறு"
+  },
+  "mdl_btn_token": {
+    "message": "டோக்கன்"
+  },
+  "mdl_btn_na": {
+    "message": "இல்லை"
+  },
+  "mdl_loading_sub": {
+    "message": "சாதனத்திற்கு பதிவிறக்குகிறது…"
+  }
+}

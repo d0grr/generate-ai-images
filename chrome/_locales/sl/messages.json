@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI generator slik - AI slike brezplačno"
+  },
+  "shortName": {
+    "message": "AI slike"
+  },
+  "shortDesc": {
+    "message": "Uporabite AI generator slik za ustvarjanje AI slik iz besedila, generiranje realističnih AI fotografij takoj v Chromu."
+  },
+  "action_title": {
+    "message": "Ustvari UI slike"
+  },
+  "open_workspace": {
+    "message": "Odpri delovni prostor"
+  },
+  "settings": {
+    "message": "Nastavitve"
+  },
+  "error_title": {
+    "message": "Prišlo je do napake"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostika ↗"
+  },
+  "btn_dismiss": {
+    "message": "Zapri"
+  },
+  "no_model_selected": {
+    "message": "Noben model ni izbran"
+  },
+  "mb_get": {
+    "message": "↓ Prenesi"
+  },
+  "mb_downloading": {
+    "message": "Prenašanje…"
+  },
+  "mb_of": {
+    "message": "od"
+  },
+  "cancel_download": {
+    "message": "Prekini prenos"
+  },
+  "mb_installing": {
+    "message": "Nameščanje…"
+  },
+  "mb_verifying": {
+    "message": "Preverjanje uteži · skoraj končano"
+  },
+  "ready": {
+    "message": "Pripravljeno"
+  },
+  "prompt_placeholder": {
+    "message": "Opišite, kaj želite ustvariti…"
+  },
+  "btn_clear_title": {
+    "message": "Počisti"
+  },
+  "btn_clear_aria": {
+    "message": "Počisti poziv"
+  },
+  "surprise_me": {
+    "message": "Preseneti me"
+  },
+  "param_steps": {
+    "message": "Koraki"
+  },
+  "param_guidance": {
+    "message": "Vodenje"
+  },
+  "param_seed": {
+    "message": "Seme"
+  },
+  "seed_random": {
+    "message": "naključno"
+  },
+  "neg_prompt_label": {
+    "message": "Negativni poziv"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Stvari za izogibanje…"
+  },
+  "btn_parameters": {
+    "message": "Parametri ▾"
+  },
+  "btn_generate": {
+    "message": "Ustvari"
+  },
+  "install_model_hint": {
+    "message": "Namestite model za aktivacijo Ustvari."
+  },
+  "img_placeholder": {
+    "message": "Vaša slika se bo prikazala tukaj"
+  },
+  "generating_eyebrow": {
+    "message": "USTVARJANJE"
+  },
+  "phase_encoding": {
+    "message": "Kodiranje poziva"
+  },
+  "btn_cancel_gen": {
+    "message": "× prekliči"
+  },
+  "btn_save": {
+    "message": "↓ Shrani"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopiraj"
+  },
+  "btn_retry": {
+    "message": "↺ Poskusi znova"
+  },
+  "img_generated_alt": {
+    "message": "Ustvarjena slika"
+  },
+  "recent_eyebrow": {
+    "message": "NEDAVNO"
+  },
+  "view_all": {
+    "message": "Prikaži vse ↗"
+  },
+  "clear_history": {
+    "message": "Počisti zgodovino"
+  },
+  "loading_model": {
+    "message": "Nalaganje modela…"
+  },
+  "compiling": {
+    "message": "Prevajanje…"
+  },
+  "generating_pct": {
+    "message": "Ustvarjanje · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Priprava…"
+  },
+  "phase_compiling_first": {
+    "message": "Prevajanje senčilnikov · prvi zagon"
+  },
+  "phase_loading": {
+    "message": "Nalaganje…"
+  },
+  "phase_fetching": {
+    "message": "Pridobivanje uteži modela"
+  },
+  "phase_decoding": {
+    "message": "Dekodiranje slike…"
+  },
+  "phase_loading_model": {
+    "message": "Nalaganje modela…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Prevajanje senčilnikov…"
+  },
+  "workspace_page_title": {
+    "message": "Delovni prostor UI generatorja slik brez povezave"
+  },
+  "workspace_brand": {
+    "message": "UI Generator Slik Brez Povezave"
+  },
+  "workspace_label": {
+    "message": "delovni prostor"
+  },
+  "tab_gallery": {
+    "message": "Galerija"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostika"
+  },
+  "tab_settings": {
+    "message": "Nastavitve"
+  },
+  "your_generations": {
+    "message": "Vaše ustvaritve"
+  },
+  "gallery_lede": {
+    "message": "Vse ostane na tej napravi. Kliknite ploščico za polno ločljivost in izvor."
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "Vsi modeli"
+  },
+  "filter_engine": {
+    "message": "Motor"
+  },
+  "any_engine": {
+    "message": "Kateri koli motor"
+  },
+  "engine_browser": {
+    "message": "Brskalnik · WebGPU"
+  },
+  "filter_window": {
+    "message": "Obdobje"
+  },
+  "time_all": {
+    "message": "Ves čas"
+  },
+  "time_24h": {
+    "message": "Zadnjih 24 ur"
+  },
+  "time_7d": {
+    "message": "Zadnjih 7 dni"
+  },
+  "time_30d": {
+    "message": "Zadnjih 30 dni"
+  },
+  "btn_select": {
+    "message": "Izberi"
+  },
+  "no_images_title": {
+    "message": "Še ni slik"
+  },
+  "no_images_lede": {
+    "message": "Odprite pojavno okno z Alt+Shift+D, napišite poziv, kliknite Ustvari. Rezultati se prikažejo tukaj."
+  },
+  "no_matches_title": {
+    "message": "Ni zadetkov"
+  },
+  "no_matches_lede": {
+    "message": "V tem obdobju nič. Poskusite razširiti filter."
+  },
+  "compare_kicker": {
+    "message": "Primerjaj · povleci ročaj"
+  },
+  "compare_vs": {
+    "message": "A proti B"
+  },
+  "close_aria": {
+    "message": "zapri"
+  },
+  "loading_fullres": {
+    "message": "nalaganje polne ločljivosti…"
+  },
+  "label_prompt": {
+    "message": "Poziv"
+  },
+  "label_avoid": {
+    "message": "Izogibaj se"
+  },
+  "label_seed": {
+    "message": "Seme"
+  },
+  "label_steps": {
+    "message": "Koraki"
+  },
+  "label_guidance": {
+    "message": "Vodenje"
+  },
+  "label_engine": {
+    "message": "Motor"
+  },
+  "label_duration": {
+    "message": "Trajanje"
+  },
+  "label_generated": {
+    "message": "Ustvarjeno"
+  },
+  "label_path": {
+    "message": "Pot"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Ponovna uporaba semena"
+  },
+  "btn_copy_prompt": {
+    "message": "Kopiraj poziv"
+  },
+  "btn_copy_seed": {
+    "message": "Kopiraj seme"
+  },
+  "btn_download_png": {
+    "message": "↓ Prenesi PNG"
+  },
+  "btn_delete": {
+    "message": "Izbriši"
+  },
+  "danger_zone": {
+    "message": "Nevarno območje"
+  },
+  "clear_data_title": {
+    "message": "Počisti vse podatke razširitve"
+  },
+  "clear_data_hint": {
+    "message": "Odstrani vse predpomnjene modele in ustvarjene slike. Ne more se razveljaviti."
+  },
+  "btn_clear_data": {
+    "message": "Počisti podatke"
+  },
+  "diag_title": {
+    "message": "Diagnostika"
+  },
+  "diag_lede": {
+    "message": "Kar razširitev vidi o vašem brskalniku in računalniku. Kopirajte ta blok v issue, če kaj ne deluje."
+  },
+  "diag_engine": {
+    "message": "Aktivni motor"
+  },
+  "diag_preferred": {
+    "message": "Zaželeni"
+  },
+  "diag_device": {
+    "message": "Naprava"
+  },
+  "diag_adapter": {
+    "message": "Adapter"
+  },
+  "diag_vendor": {
+    "message": "Ponudnik"
+  },
+  "diag_vram": {
+    "message": "VRAM oce."
+  },
+  "diag_browser": {
+    "message": "Pot brskalnika"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Kvota OPFS"
+  },
+  "diag_storage": {
+    "message": "Shramba"
+  },
+  "diag_installed": {
+    "message": "Nameščeni modeli"
+  },
+  "diag_recent": {
+    "message": "Nedavne slike"
+  },
+  "diag_active": {
+    "message": "Aktivni model"
+  },
+  "btn_copy_json": {
+    "message": "Kopiraj kot JSON"
+  },
+  "btn_reprobe": {
+    "message": "Ponovno preveri"
+  },
+  "btn_compare": {
+    "message": "Primerjaj"
+  },
+  "btn_export_zip": {
+    "message": "↓ Izvozi ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Izbriši"
+  },
+  "btn_cancel_select": {
+    "message": "Prekliči"
+  },
+  "confirm_clear_data": {
+    "message": "Izbrisati vse predpomnjene modele in ustvarjene slike?\n\nTega ni mogoče razveljaviti."
+  },
+  "clearing": {
+    "message": "Čiščenje…"
+  },
+  "status_done": {
+    "message": "✓ Končano"
+  },
+  "status_saved": {
+    "message": "✓ Shranjeno"
+  },
+  "status_copied": {
+    "message": "✓ Kopirano"
+  },
+  "confirm_delete_image": {
+    "message": "Izbrisati to sliko?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Izbrisati $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "slik"
+  },
+  "image_noun": {
+    "message": "sliko"
+  },
+  "no_prompt": {
+    "message": "(brez poziva)"
+  },
+  "none_selected": {
+    "message": "(nič ni izbrano)"
+  },
+  "in_memory_only": {
+    "message": "(samo v pomnilniku)"
+  },
+  "btn_exit_select": {
+    "message": "Zapusti izbor"
+  },
+  "n_selected": {
+    "message": "$COUNT$ izbranih",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Pakiranje $COUNT$ slik…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Izvoženo $COUNT$ slik",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Znova zaganjam z istim semenom…"
+  },
+  "err_no_engine": {
+    "message": "Noben generator ni na voljo"
+  },
+  "err_engine_start": {
+    "message": "Motorja brskalnika ni bilo mogoče zagnati"
+  },
+  "err_inference_failed": {
+    "message": "Generiranje v brskalniku ni uspelo"
+  },
+  "err_generation_failed": {
+    "message": "Ustvarjanje ni uspelo"
+  },
+  "no_model_sub": {
+    "message": "Izberite model na zavihku Modeli za začetek"
+  },
+  "mb_pick_model": {
+    "message": "↓ Izberi model"
+  },
+  "popup_tab_generate": {
+    "message": "Ustvari"
+  },
+  "popup_tab_models": {
+    "message": "Modeli"
+  },
+  "models_intro": {
+    "message": "Izberite model za prenos. Po namestitvi lahko kadar koli preklapljate med njimi."
+  },
+  "sec_downloading": {
+    "message": "Prenašanje"
+  },
+  "sec_installed": {
+    "message": "Nameščeni"
+  },
+  "sec_available": {
+    "message": "Na voljo"
+  },
+  "available_popular": {
+    "message": "priljubljeni"
+  },
+  "empty_models_title": {
+    "message": "Še ni nameščenih modelov"
+  },
+  "empty_models_sub_html": {
+    "message": "Izberite enega spodaj in tapnite <b>↓ Prenesi</b>."
+  },
+  "storage_label": {
+    "message": "Shramba"
+  },
+  "dl_tag_fetching": {
+    "message": "prenašanje"
+  },
+  "dl_paused_sub": {
+    "message": "začasno ustavljeno — nadaljujte za nadaljevanje"
+  },
+  "dl_meta_got": {
+    "message": "Preneseno"
+  },
+  "dl_meta_speed": {
+    "message": "Hitrost"
+  },
+  "dl_meta_left": {
+    "message": "Preostalo"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Premor"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Nadaljuj"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Skrij"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Prekliči"
+  },
+  "mdl_btn_use": {
+    "message": "Uporabi"
+  },
+  "mdl_btn_in_use": {
+    "message": "V uporabi"
+  },
+  "mdl_btn_get": {
+    "message": "Prenesi"
+  },
+  "mdl_btn_token": {
+    "message": "Žeton"
+  },
+  "mdl_btn_na": {
+    "message": "n/p"
+  },
+  "mdl_loading_sub": {
+    "message": "Prenašanje v napravo…"
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - مولد صور ذكاء"
+  },
+  "shortName": {
+    "message": "AI للصور"
+  },
+  "shortDesc": {
+    "message": "مولد صور الذكاء الاصطناعي: أنشئ صورًا بالذكاء الاصطناعي من النص، وصوّر مشاهد واقعية بضغطة واحدة."
+  },
+  "action_title": {
+    "message": "إنشاء صور بالذكاء الاصطناعي"
+  },
+  "open_workspace": {
+    "message": "فتح مساحة العمل"
+  },
+  "settings": {
+    "message": "الإعدادات"
+  },
+  "error_title": {
+    "message": "حدث خطأ"
+  },
+  "btn_diagnostics": {
+    "message": "التشخيص ↗"
+  },
+  "btn_dismiss": {
+    "message": "إغلاق"
+  },
+  "no_model_selected": {
+    "message": "لم يتم اختيار نموذج"
+  },
+  "mb_get": {
+    "message": "↓ تنزيل"
+  },
+  "mb_downloading": {
+    "message": "جاري التنزيل…"
+  },
+  "mb_of": {
+    "message": "من"
+  },
+  "cancel_download": {
+    "message": "إلغاء التنزيل"
+  },
+  "mb_installing": {
+    "message": "جاري التثبيت…"
+  },
+  "mb_verifying": {
+    "message": "التحقق من الأوزان · اكتمل تقريبًا"
+  },
+  "ready": {
+    "message": "جاهز"
+  },
+  "prompt_placeholder": {
+    "message": "صف ما تريد إنشاءه…"
+  },
+  "btn_clear_title": {
+    "message": "مسح"
+  },
+  "btn_clear_aria": {
+    "message": "مسح النص"
+  },
+  "surprise_me": {
+    "message": "فاجئني"
+  },
+  "param_steps": {
+    "message": "الخطوات"
+  },
+  "param_guidance": {
+    "message": "التوجيه"
+  },
+  "param_seed": {
+    "message": "البذرة"
+  },
+  "seed_random": {
+    "message": "عشوائي"
+  },
+  "neg_prompt_label": {
+    "message": "النص السلبي"
+  },
+  "neg_prompt_placeholder": {
+    "message": "عناصر يجب تجنبها…"
+  },
+  "btn_parameters": {
+    "message": "المعاملات ▾"
+  },
+  "btn_generate": {
+    "message": "إنشاء"
+  },
+  "install_model_hint": {
+    "message": "ثبّت نموذجًا لتفعيل الإنشاء."
+  },
+  "img_placeholder": {
+    "message": "ستظهر صورتك هنا"
+  },
+  "generating_eyebrow": {
+    "message": "جاري الإنشاء"
+  },
+  "phase_encoding": {
+    "message": "ترميز النص"
+  },
+  "btn_cancel_gen": {
+    "message": "× إلغاء"
+  },
+  "btn_save": {
+    "message": "↓ حفظ"
+  },
+  "btn_copy": {
+    "message": "⎘ نسخ"
+  },
+  "btn_retry": {
+    "message": "↺ إعادة المحاولة"
+  },
+  "img_generated_alt": {
+    "message": "الصورة المُنشأة"
+  },
+  "recent_eyebrow": {
+    "message": "الأخيرة"
+  },
+  "view_all": {
+    "message": "عرض الكل ↗"
+  },
+  "clear_history": {
+    "message": "مسح السجل"
+  },
+  "loading_model": {
+    "message": "جاري تحميل النموذج…"
+  },
+  "compiling": {
+    "message": "جاري الترجمة…"
+  },
+  "generating_pct": {
+    "message": "جاري الإنشاء · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "جاري التحضير…"
+  },
+  "phase_compiling_first": {
+    "message": "ترجمة التظليل · التشغيل الأول"
+  },
+  "phase_loading": {
+    "message": "جاري التحميل…"
+  },
+  "phase_fetching": {
+    "message": "جلب أوزان النموذج"
+  },
+  "phase_decoding": {
+    "message": "فك ترميز الصورة…"
+  },
+  "phase_loading_model": {
+    "message": "جاري تحميل النموذج…"
+  },
+  "phase_compiling_shaders": {
+    "message": "جاري ترجمة التظليل…"
+  },
+  "workspace_page_title": {
+    "message": "مساحة عمل منشئ الصور بالذكاء الاصطناعي دون اتصال"
+  },
+  "workspace_brand": {
+    "message": "منشئ صور AI بدون إنترنت"
+  },
+  "workspace_label": {
+    "message": "مساحة العمل"
+  },
+  "tab_gallery": {
+    "message": "المعرض"
+  },
+  "tab_diagnostics": {
+    "message": "التشخيص"
+  },
+  "tab_settings": {
+    "message": "الإعدادات"
+  },
+  "your_generations": {
+    "message": "إنشاءاتك"
+  },
+  "gallery_lede": {
+    "message": "كل شيء يبقى على هذا الجهاز. انقر على صورة لعرض الدقة الكاملة والمصدر."
+  },
+  "filter_model": {
+    "message": "النموذج"
+  },
+  "all_models": {
+    "message": "جميع النماذج"
+  },
+  "filter_engine": {
+    "message": "المحرك"
+  },
+  "any_engine": {
+    "message": "أي محرك"
+  },
+  "engine_browser": {
+    "message": "المتصفح · WebGPU"
+  },
+  "filter_window": {
+    "message": "الفترة"
+  },
+  "time_all": {
+    "message": "كل الوقت"
+  },
+  "time_24h": {
+    "message": "آخر 24 ساعة"
+  },
+  "time_7d": {
+    "message": "آخر 7 أيام"
+  },
+  "time_30d": {
+    "message": "آخر 30 يومًا"
+  },
+  "btn_select": {
+    "message": "تحديد"
+  },
+  "no_images_title": {
+    "message": "لا توجد صور بعد"
+  },
+  "no_images_lede": {
+    "message": "افتح النافذة المنبثقة بـ Alt+Shift+D، اكتب نصًا، وانقر إنشاء. ستظهر النتائج هنا."
+  },
+  "no_matches_title": {
+    "message": "لا توجد نتائج"
+  },
+  "no_matches_lede": {
+    "message": "لا شيء في هذه الفترة. جرّب توسيع الفلتر."
+  },
+  "compare_kicker": {
+    "message": "مقارنة · اسحب المقبض"
+  },
+  "compare_vs": {
+    "message": "أ مقابل ب"
+  },
+  "close_aria": {
+    "message": "إغلاق"
+  },
+  "loading_fullres": {
+    "message": "تحميل الدقة الكاملة…"
+  },
+  "label_prompt": {
+    "message": "النص"
+  },
+  "label_avoid": {
+    "message": "تجنب"
+  },
+  "label_seed": {
+    "message": "البذرة"
+  },
+  "label_steps": {
+    "message": "الخطوات"
+  },
+  "label_guidance": {
+    "message": "التوجيه"
+  },
+  "label_engine": {
+    "message": "المحرك"
+  },
+  "label_duration": {
+    "message": "المدة"
+  },
+  "label_generated": {
+    "message": "تاريخ الإنشاء"
+  },
+  "label_path": {
+    "message": "المسار"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ إعادة استخدام البذرة"
+  },
+  "btn_copy_prompt": {
+    "message": "نسخ النص"
+  },
+  "btn_copy_seed": {
+    "message": "نسخ البذرة"
+  },
+  "btn_download_png": {
+    "message": "↓ تنزيل PNG"
+  },
+  "btn_delete": {
+    "message": "حذف"
+  },
+  "danger_zone": {
+    "message": "منطقة الخطر"
+  },
+  "clear_data_title": {
+    "message": "مسح جميع بيانات الامتداد"
+  },
+  "clear_data_hint": {
+    "message": "يحذف جميع النماذج المخزنة مؤقتًا والصور المُنشأة. لا يمكن التراجع."
+  },
+  "btn_clear_data": {
+    "message": "مسح البيانات"
+  },
+  "diag_title": {
+    "message": "التشخيص"
+  },
+  "diag_lede": {
+    "message": "ما يراه الامتداد عن متصفحك وجهازك. انسخ هذه المعلومات في issue إذا كان هناك مشكلة."
+  },
+  "diag_engine": {
+    "message": "المحرك النشط"
+  },
+  "diag_preferred": {
+    "message": "المفضل"
+  },
+  "diag_device": {
+    "message": "الجهاز"
+  },
+  "diag_adapter": {
+    "message": "المحوّل"
+  },
+  "diag_vendor": {
+    "message": "الشركة المصنّعة"
+  },
+  "diag_vram": {
+    "message": "تقدير VRAM"
+  },
+  "diag_browser": {
+    "message": "مسار المتصفح"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "حصة OPFS"
+  },
+  "diag_storage": {
+    "message": "التخزين"
+  },
+  "diag_installed": {
+    "message": "النماذج المثبّتة"
+  },
+  "diag_recent": {
+    "message": "الصور الأخيرة"
+  },
+  "diag_active": {
+    "message": "النموذج النشط"
+  },
+  "btn_copy_json": {
+    "message": "نسخ كـ JSON"
+  },
+  "btn_reprobe": {
+    "message": "إعادة الفحص"
+  },
+  "btn_compare": {
+    "message": "مقارنة"
+  },
+  "btn_export_zip": {
+    "message": "↓ تصدير ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "حذف"
+  },
+  "btn_cancel_select": {
+    "message": "إلغاء"
+  },
+  "confirm_clear_data": {
+    "message": "هل تريد حذف جميع النماذج المخزنة مؤقتًا والصور المُنشأة؟\n\nلا يمكن التراجع عن هذا الإجراء."
+  },
+  "clearing": {
+    "message": "جاري المسح…"
+  },
+  "status_done": {
+    "message": "✓ تم"
+  },
+  "status_saved": {
+    "message": "✓ تم الحفظ"
+  },
+  "status_copied": {
+    "message": "✓ تم النسخ"
+  },
+  "confirm_delete_image": {
+    "message": "هل تريد حذف هذه الصورة؟"
+  },
+  "confirm_bulk_delete": {
+    "message": "هل تريد حذف $COUNT$ $NOUN$؟",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "صور"
+  },
+  "image_noun": {
+    "message": "صورة"
+  },
+  "no_prompt": {
+    "message": "(بدون نص)"
+  },
+  "none_selected": {
+    "message": "(لم يتم التحديد)"
+  },
+  "in_memory_only": {
+    "message": "(في الذاكرة فقط)"
+  },
+  "btn_exit_select": {
+    "message": "إنهاء التحديد"
+  },
+  "n_selected": {
+    "message": "تم تحديد $COUNT$",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "تعبئة $COUNT$ صور…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "تم تصدير $COUNT$ صور",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "إعادة التشغيل بنفس البذرة…"
+  },
+  "err_no_engine": {
+    "message": "لا يوجد محرك إنشاء متاح"
+  },
+  "err_engine_start": {
+    "message": "تعذّر تشغيل محرك المتصفح"
+  },
+  "err_inference_failed": {
+    "message": "فشل الإنشاء في المتصفح"
+  },
+  "err_generation_failed": {
+    "message": "فشل الإنشاء"
+  },
+  "no_model_sub": {
+    "message": "اختر نموذجًا من علامة التبويب «النماذج» للبدء"
+  },
+  "mb_pick_model": {
+    "message": "↓ اختيار نموذج"
+  },
+  "popup_tab_generate": {
+    "message": "إنشاء"
+  },
+  "popup_tab_models": {
+    "message": "النماذج"
+  },
+  "models_intro": {
+    "message": "اختر نموذجًا للتنزيل. يمكنك التبديل بين النماذج في أي وقت بعد التثبيت."
+  },
+  "sec_downloading": {
+    "message": "جاري التنزيل"
+  },
+  "sec_installed": {
+    "message": "المثبتة"
+  },
+  "sec_available": {
+    "message": "المتاحة"
+  },
+  "available_popular": {
+    "message": "شائع"
+  },
+  "empty_models_title": {
+    "message": "لا توجد نماذج مثبتة بعد"
+  },
+  "empty_models_sub_html": {
+    "message": "اختر واحدًا أدناه واضغط على <b>↓ احصل</b>."
+  },
+  "storage_label": {
+    "message": "التخزين"
+  },
+  "dl_tag_fetching": {
+    "message": "جاري الجلب"
+  },
+  "dl_paused_sub": {
+    "message": "متوقف — استأنف للمتابعة"
+  },
+  "dl_meta_got": {
+    "message": "تم"
+  },
+  "dl_meta_speed": {
+    "message": "السرعة"
+  },
+  "dl_meta_left": {
+    "message": "متبقي"
+  },
+  "dl_btn_pause": {
+    "message": "‖ إيقاف"
+  },
+  "dl_btn_resume": {
+    "message": "▶ استئناف"
+  },
+  "dl_btn_hide": {
+    "message": "↓ إخفاء"
+  },
+  "dl_btn_cancel_title": {
+    "message": "إلغاء"
+  },
+  "mdl_btn_use": {
+    "message": "استخدام"
+  },
+  "mdl_btn_in_use": {
+    "message": "قيد الاستخدام"
+  },
+  "mdl_btn_get": {
+    "message": "تنزيل"
+  },
+  "mdl_btn_token": {
+    "message": "رمز"
+  },
+  "mdl_btn_na": {
+    "message": "غير متاح"
+  },
+  "mdl_loading_sub": {
+    "message": "جاري التنزيل إلى الجهاز…"
+  }
+}

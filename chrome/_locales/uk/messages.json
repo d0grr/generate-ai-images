@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "Генератор зображень ШІ - AI зображення"
+  },
+  "shortName": {
+    "message": "AI Малюнки"
+  },
+  "shortDesc": {
+    "message": "Генератор зображень ШІ: створюйте AI-картинки з тексту, генеруйте реалістичні AI-фото миттєво в Chrome."
+  },
+  "action_title": {
+    "message": "Генерувати зображення ШІ"
+  },
+  "open_workspace": {
+    "message": "Відкрити робочий простір"
+  },
+  "settings": {
+    "message": "Налаштування"
+  },
+  "error_title": {
+    "message": "Щось пішло не так"
+  },
+  "btn_diagnostics": {
+    "message": "Діагностика ↗"
+  },
+  "btn_dismiss": {
+    "message": "Закрити"
+  },
+  "no_model_selected": {
+    "message": "Модель не вибрана"
+  },
+  "mb_get": {
+    "message": "↓ Завантажити"
+  },
+  "mb_downloading": {
+    "message": "Завантаження…"
+  },
+  "mb_of": {
+    "message": "з"
+  },
+  "cancel_download": {
+    "message": "Скасувати завантаження"
+  },
+  "mb_installing": {
+    "message": "Встановлення…"
+  },
+  "mb_verifying": {
+    "message": "Перевірка ваг · майже готово"
+  },
+  "ready": {
+    "message": "Готово"
+  },
+  "prompt_placeholder": {
+    "message": "Опишіть, що ви хочете створити…"
+  },
+  "btn_clear_title": {
+    "message": "Очистити"
+  },
+  "btn_clear_aria": {
+    "message": "Очистити запит"
+  },
+  "surprise_me": {
+    "message": "Здиви мене"
+  },
+  "param_steps": {
+    "message": "Кроки"
+  },
+  "param_guidance": {
+    "message": "Відповідність"
+  },
+  "param_seed": {
+    "message": "Зерно"
+  },
+  "seed_random": {
+    "message": "випадкове"
+  },
+  "neg_prompt_label": {
+    "message": "Негативний запит"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Що виключити…"
+  },
+  "btn_parameters": {
+    "message": "Параметри ▾"
+  },
+  "btn_generate": {
+    "message": "Згенерувати"
+  },
+  "install_model_hint": {
+    "message": "Встановіть модель для активації генерації."
+  },
+  "img_placeholder": {
+    "message": "Ваше зображення з'явиться тут"
+  },
+  "generating_eyebrow": {
+    "message": "ГЕНЕРАЦІЯ"
+  },
+  "phase_encoding": {
+    "message": "Кодування запиту"
+  },
+  "btn_cancel_gen": {
+    "message": "× скасувати"
+  },
+  "btn_save": {
+    "message": "↓ Зберегти"
+  },
+  "btn_copy": {
+    "message": "⎘ Копіювати"
+  },
+  "btn_retry": {
+    "message": "↺ Повторити"
+  },
+  "img_generated_alt": {
+    "message": "Згенероване зображення"
+  },
+  "recent_eyebrow": {
+    "message": "НЕЩОДАВНІ"
+  },
+  "view_all": {
+    "message": "Переглянути все ↗"
+  },
+  "clear_history": {
+    "message": "Очистити історію"
+  },
+  "loading_model": {
+    "message": "Завантаження моделі…"
+  },
+  "compiling": {
+    "message": "Компіляція…"
+  },
+  "generating_pct": {
+    "message": "Генерація · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Підготовка…"
+  },
+  "phase_compiling_first": {
+    "message": "Компіляція шейдерів · перший запуск"
+  },
+  "phase_loading": {
+    "message": "Завантаження…"
+  },
+  "phase_fetching": {
+    "message": "Отримання ваг моделі"
+  },
+  "phase_decoding": {
+    "message": "Декодування зображення…"
+  },
+  "phase_loading_model": {
+    "message": "Завантаження моделі…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Компіляція шейдерів…"
+  },
+  "workspace_page_title": {
+    "message": "Робочий простір офлайн-генератора зображень ШІ"
+  },
+  "workspace_brand": {
+    "message": "ШІ Офлайн-генератор зображень"
+  },
+  "workspace_label": {
+    "message": "робочий простір"
+  },
+  "tab_gallery": {
+    "message": "Галерея"
+  },
+  "tab_diagnostics": {
+    "message": "Діагностика"
+  },
+  "tab_settings": {
+    "message": "Налаштування"
+  },
+  "your_generations": {
+    "message": "Ваші генерації"
+  },
+  "gallery_lede": {
+    "message": "Все залишається на цьому пристрої. Натисніть плитку для повної роздільної здатності та походження."
+  },
+  "filter_model": {
+    "message": "Модель"
+  },
+  "all_models": {
+    "message": "Всі моделі"
+  },
+  "filter_engine": {
+    "message": "Двигун"
+  },
+  "any_engine": {
+    "message": "Будь-який двигун"
+  },
+  "engine_browser": {
+    "message": "Браузер · WebGPU"
+  },
+  "filter_window": {
+    "message": "Період"
+  },
+  "time_all": {
+    "message": "Весь час"
+  },
+  "time_24h": {
+    "message": "Останні 24 години"
+  },
+  "time_7d": {
+    "message": "Останні 7 днів"
+  },
+  "time_30d": {
+    "message": "Останні 30 днів"
+  },
+  "btn_select": {
+    "message": "Вибрати"
+  },
+  "no_images_title": {
+    "message": "Зображень поки немає"
+  },
+  "no_images_lede": {
+    "message": "Відкрийте спливаюче вікно Alt+Shift+D, напишіть запит і натисніть Згенерувати. Результати з'являться тут."
+  },
+  "no_matches_title": {
+    "message": "Збігів немає"
+  },
+  "no_matches_lede": {
+    "message": "У цьому періоді нічого немає. Спробуйте розширити фільтр."
+  },
+  "compare_kicker": {
+    "message": "Порівняти · перетягніть розділювач"
+  },
+  "compare_vs": {
+    "message": "A проти B"
+  },
+  "close_aria": {
+    "message": "закрити"
+  },
+  "loading_fullres": {
+    "message": "завантаження повної роздільної здатності…"
+  },
+  "label_prompt": {
+    "message": "Запит"
+  },
+  "label_avoid": {
+    "message": "Виключити"
+  },
+  "label_seed": {
+    "message": "Зерно"
+  },
+  "label_steps": {
+    "message": "Кроки"
+  },
+  "label_guidance": {
+    "message": "Відповідність"
+  },
+  "label_engine": {
+    "message": "Двигун"
+  },
+  "label_duration": {
+    "message": "Тривалість"
+  },
+  "label_generated": {
+    "message": "Згенеровано"
+  },
+  "label_path": {
+    "message": "Шлях"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Повторно використати зерно"
+  },
+  "btn_copy_prompt": {
+    "message": "Копіювати запит"
+  },
+  "btn_copy_seed": {
+    "message": "Копіювати зерно"
+  },
+  "btn_download_png": {
+    "message": "↓ Завантажити PNG"
+  },
+  "btn_delete": {
+    "message": "Видалити"
+  },
+  "danger_zone": {
+    "message": "Небезпечна зона"
+  },
+  "clear_data_title": {
+    "message": "Очистити всі дані розширення"
+  },
+  "clear_data_hint": {
+    "message": "Видаляє всі кешовані моделі та згенеровані зображення. Не можна скасувати."
+  },
+  "btn_clear_data": {
+    "message": "Очистити дані"
+  },
+  "diag_title": {
+    "message": "Діагностика"
+  },
+  "diag_lede": {
+    "message": "Що розширення бачить про ваш браузер і машину. Скопіюйте цей блок в issue, якщо щось не працює."
+  },
+  "diag_engine": {
+    "message": "Активний двигун"
+  },
+  "diag_preferred": {
+    "message": "Пріоритетний"
+  },
+  "diag_device": {
+    "message": "Пристрій"
+  },
+  "diag_adapter": {
+    "message": "Адаптер"
+  },
+  "diag_vendor": {
+    "message": "Виробник"
+  },
+  "diag_vram": {
+    "message": "Обсяг VRAM"
+  },
+  "diag_browser": {
+    "message": "Шлях браузера"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Квота OPFS"
+  },
+  "diag_storage": {
+    "message": "Сховище"
+  },
+  "diag_installed": {
+    "message": "Встановлені моделі"
+  },
+  "diag_recent": {
+    "message": "Останні зображення"
+  },
+  "diag_active": {
+    "message": "Активна модель"
+  },
+  "btn_copy_json": {
+    "message": "Копіювати як JSON"
+  },
+  "btn_reprobe": {
+    "message": "Перезапустити перевірку"
+  },
+  "btn_compare": {
+    "message": "Порівняти"
+  },
+  "btn_export_zip": {
+    "message": "↓ Експорт ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Видалити"
+  },
+  "btn_cancel_select": {
+    "message": "Скасувати"
+  },
+  "confirm_clear_data": {
+    "message": "Видалити всі кешовані моделі та згенеровані зображення?\n\nЦю дію не можна скасувати."
+  },
+  "clearing": {
+    "message": "Очищення…"
+  },
+  "status_done": {
+    "message": "✓ Готово"
+  },
+  "status_saved": {
+    "message": "✓ Збережено"
+  },
+  "status_copied": {
+    "message": "✓ Скопійовано"
+  },
+  "confirm_delete_image": {
+    "message": "Видалити це зображення?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Видалити $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "зображень"
+  },
+  "image_noun": {
+    "message": "зображення"
+  },
+  "no_prompt": {
+    "message": "(без запиту)"
+  },
+  "none_selected": {
+    "message": "(нічого не вибрано)"
+  },
+  "in_memory_only": {
+    "message": "(тільки в пам'яті)"
+  },
+  "btn_exit_select": {
+    "message": "Вийти з режиму вибору"
+  },
+  "n_selected": {
+    "message": "$COUNT$ вибрано",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Пакування $COUNT$ зображень…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Експортовано $COUNT$ зображень",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Повтор з тим самим зерном…"
+  },
+  "err_no_engine": {
+    "message": "Немає доступного двигуна генерації"
+  },
+  "err_engine_start": {
+    "message": "Не вдалося запустити браузерний двигун"
+  },
+  "err_inference_failed": {
+    "message": "Генерація у браузері не вдалася"
+  },
+  "err_generation_failed": {
+    "message": "Генерація не вдалася"
+  },
+  "no_model_sub": {
+    "message": "Виберіть модель на вкладці Моделі, щоб почати"
+  },
+  "mb_pick_model": {
+    "message": "↓ Вибрати модель"
+  },
+  "popup_tab_generate": {
+    "message": "Створити"
+  },
+  "popup_tab_models": {
+    "message": "Моделі"
+  },
+  "models_intro": {
+    "message": "Виберіть модель для завантаження. Після встановлення між ними можна перемикатися будь-коли."
+  },
+  "sec_downloading": {
+    "message": "Завантаження"
+  },
+  "sec_installed": {
+    "message": "Встановлені"
+  },
+  "sec_available": {
+    "message": "Доступні"
+  },
+  "available_popular": {
+    "message": "популярні"
+  },
+  "empty_models_title": {
+    "message": "Поки немає встановлених моделей"
+  },
+  "empty_models_sub_html": {
+    "message": "Виберіть нижче й натисніть <b>↓ Отримати</b>."
+  },
+  "storage_label": {
+    "message": "Сховище"
+  },
+  "dl_tag_fetching": {
+    "message": "отримання"
+  },
+  "dl_paused_sub": {
+    "message": "пауза — продовжте, щоб тривало"
+  },
+  "dl_meta_got": {
+    "message": "Отримано"
+  },
+  "dl_meta_speed": {
+    "message": "Швидкість"
+  },
+  "dl_meta_left": {
+    "message": "Залишилось"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Пауза"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Продовжити"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Сховати"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Скасувати"
+  },
+  "mdl_btn_use": {
+    "message": "Вибрати"
+  },
+  "mdl_btn_in_use": {
+    "message": "У роботі"
+  },
+  "mdl_btn_get": {
+    "message": "Завантажити"
+  },
+  "mdl_btn_token": {
+    "message": "Токен"
+  },
+  "mdl_btn_na": {
+    "message": "н/д"
+  },
+  "mdl_loading_sub": {
+    "message": "Завантаження на пристрій…"
+  }
+}

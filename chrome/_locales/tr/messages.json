@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "Yapay Zeka Görsel Oluşturma - AI Resim"
+  },
+  "shortName": {
+    "message": "AI Görseli"
+  },
+  "shortDesc": {
+    "message": "Yapay zeka görsel oluşturma aracıyla metinden AI görseller üretin, gerçekçi AI fotoğraflar ve resimler anında oluşturun."
+  },
+  "action_title": {
+    "message": "AI Görsel Oluştur"
+  },
+  "open_workspace": {
+    "message": "Çalışma alanını aç"
+  },
+  "settings": {
+    "message": "Ayarlar"
+  },
+  "error_title": {
+    "message": "Bir şeyler ters gitti"
+  },
+  "btn_diagnostics": {
+    "message": "Tanılama ↗"
+  },
+  "btn_dismiss": {
+    "message": "Kapat"
+  },
+  "no_model_selected": {
+    "message": "Model seçilmedi"
+  },
+  "mb_get": {
+    "message": "↓ İndir"
+  },
+  "mb_downloading": {
+    "message": "İndiriliyor…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "İndirmeyi iptal et"
+  },
+  "mb_installing": {
+    "message": "Yükleniyor…"
+  },
+  "mb_verifying": {
+    "message": "Ağırlıklar doğrulanıyor · neredeyse bitti"
+  },
+  "ready": {
+    "message": "Hazır"
+  },
+  "prompt_placeholder": {
+    "message": "Ne oluşturmak istediğinizi açıklayın…"
+  },
+  "btn_clear_title": {
+    "message": "Temizle"
+  },
+  "btn_clear_aria": {
+    "message": "İstemi temizle"
+  },
+  "surprise_me": {
+    "message": "Beni şaşırt"
+  },
+  "param_steps": {
+    "message": "Adımlar"
+  },
+  "param_guidance": {
+    "message": "Yönlendirme"
+  },
+  "param_seed": {
+    "message": "Tohum"
+  },
+  "seed_random": {
+    "message": "rastgele"
+  },
+  "neg_prompt_label": {
+    "message": "Negatif istem"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Kaçınılacak şeyler…"
+  },
+  "btn_parameters": {
+    "message": "Parametreler ▾"
+  },
+  "btn_generate": {
+    "message": "Oluştur"
+  },
+  "install_model_hint": {
+    "message": "Oluştur'u etkinleştirmek için bir model yükleyin."
+  },
+  "img_placeholder": {
+    "message": "Görseliniz burada görünecek"
+  },
+  "generating_eyebrow": {
+    "message": "OLUŞTURULUYOR"
+  },
+  "phase_encoding": {
+    "message": "İstem kodlanıyor"
+  },
+  "btn_cancel_gen": {
+    "message": "× iptal"
+  },
+  "btn_save": {
+    "message": "↓ Kaydet"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopyala"
+  },
+  "btn_retry": {
+    "message": "↺ Yeniden Dene"
+  },
+  "img_generated_alt": {
+    "message": "Oluşturulan görsel"
+  },
+  "recent_eyebrow": {
+    "message": "SON"
+  },
+  "view_all": {
+    "message": "Tümünü gör ↗"
+  },
+  "clear_history": {
+    "message": "Geçmişi temizle"
+  },
+  "loading_model": {
+    "message": "Model yükleniyor…"
+  },
+  "compiling": {
+    "message": "Derleniyor…"
+  },
+  "generating_pct": {
+    "message": "Oluşturuluyor · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Hazırlanıyor…"
+  },
+  "phase_compiling_first": {
+    "message": "Shader'lar derleniyor · ilk çalıştırma"
+  },
+  "phase_loading": {
+    "message": "Yükleniyor…"
+  },
+  "phase_fetching": {
+    "message": "Model ağırlıkları alınıyor"
+  },
+  "phase_decoding": {
+    "message": "Görsel çözümleniyor…"
+  },
+  "phase_loading_model": {
+    "message": "Model yükleniyor…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Shader'lar derleniyor…"
+  },
+  "workspace_page_title": {
+    "message": "AI Çevrimdışı Görsel Oluşturucu Çalışma Alanı"
+  },
+  "workspace_brand": {
+    "message": "AI Çevrimdışı Görsel Oluşturucu"
+  },
+  "workspace_label": {
+    "message": "çalışma alanı"
+  },
+  "tab_gallery": {
+    "message": "Galeri"
+  },
+  "tab_diagnostics": {
+    "message": "Tanılama"
+  },
+  "tab_settings": {
+    "message": "Ayarlar"
+  },
+  "your_generations": {
+    "message": "Oluşturmalarınız"
+  },
+  "gallery_lede": {
+    "message": "Her şey bu cihazda kalır. Tam çözünürlük için bir kareye tıklayın."
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "Tüm modeller"
+  },
+  "filter_engine": {
+    "message": "Motor"
+  },
+  "any_engine": {
+    "message": "Herhangi bir motor"
+  },
+  "engine_browser": {
+    "message": "Tarayıcı · WebGPU"
+  },
+  "filter_window": {
+    "message": "Zaman aralığı"
+  },
+  "time_all": {
+    "message": "Tüm zamanlar"
+  },
+  "time_24h": {
+    "message": "Son 24 saat"
+  },
+  "time_7d": {
+    "message": "Son 7 gün"
+  },
+  "time_30d": {
+    "message": "Son 30 gün"
+  },
+  "btn_select": {
+    "message": "Seç"
+  },
+  "no_images_title": {
+    "message": "Henüz görsel yok"
+  },
+  "no_images_lede": {
+    "message": "Alt+Shift+D ile açılır pencereyi açın, bir istem yazın, Oluştur'a tıklayın. Sonuçlar burada görünür."
+  },
+  "no_matches_title": {
+    "message": "Eşleşme yok"
+  },
+  "no_matches_lede": {
+    "message": "Bu aralıkta hiçbir şey yok. Filtreyi genişletmeyi deneyin."
+  },
+  "compare_kicker": {
+    "message": "Karşılaştır · tutamacı sürükle"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "kapat"
+  },
+  "loading_fullres": {
+    "message": "tam çözünürlük yükleniyor…"
+  },
+  "label_prompt": {
+    "message": "İstem"
+  },
+  "label_avoid": {
+    "message": "Kaçın"
+  },
+  "label_seed": {
+    "message": "Tohum"
+  },
+  "label_steps": {
+    "message": "Adımlar"
+  },
+  "label_guidance": {
+    "message": "Yönlendirme"
+  },
+  "label_engine": {
+    "message": "Motor"
+  },
+  "label_duration": {
+    "message": "Süre"
+  },
+  "label_generated": {
+    "message": "Oluşturuldu"
+  },
+  "label_path": {
+    "message": "Yol"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Tohumu yeniden kullan"
+  },
+  "btn_copy_prompt": {
+    "message": "İstemi kopyala"
+  },
+  "btn_copy_seed": {
+    "message": "Tohumu kopyala"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG indir"
+  },
+  "btn_delete": {
+    "message": "Sil"
+  },
+  "danger_zone": {
+    "message": "Tehlikeli alan"
+  },
+  "clear_data_title": {
+    "message": "Tüm uzantı verilerini temizle"
+  },
+  "clear_data_hint": {
+    "message": "Önbelleğe alınan tüm modelleri ve oluşturulan görselleri kaldırır. Geri alınamaz."
+  },
+  "btn_clear_data": {
+    "message": "Verileri temizle"
+  },
+  "diag_title": {
+    "message": "Tanılama"
+  },
+  "diag_lede": {
+    "message": "Uzantının tarayıcınız ve makineniz hakkında gördükleri. Bir sorun varsa bu bloğu bir issue'ya kopyalayın."
+  },
+  "diag_engine": {
+    "message": "Etkin motor"
+  },
+  "diag_preferred": {
+    "message": "Tercih edilen"
+  },
+  "diag_device": {
+    "message": "Cihaz"
+  },
+  "diag_adapter": {
+    "message": "Adaptör"
+  },
+  "diag_vendor": {
+    "message": "Üretici"
+  },
+  "diag_vram": {
+    "message": "VRAM tah."
+  },
+  "diag_browser": {
+    "message": "Tarayıcı yolu"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS kotası"
+  },
+  "diag_storage": {
+    "message": "Depolama"
+  },
+  "diag_installed": {
+    "message": "Yüklü modeller"
+  },
+  "diag_recent": {
+    "message": "Son görseller"
+  },
+  "diag_active": {
+    "message": "Etkin model"
+  },
+  "btn_copy_json": {
+    "message": "JSON olarak kopyala"
+  },
+  "btn_reprobe": {
+    "message": "Kontrolleri yeniden çalıştır"
+  },
+  "btn_compare": {
+    "message": "Karşılaştır"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP dışa aktar"
+  },
+  "btn_bulk_delete": {
+    "message": "Sil"
+  },
+  "btn_cancel_select": {
+    "message": "İptal"
+  },
+  "confirm_clear_data": {
+    "message": "Önbelleğe alınan tüm modelleri ve oluşturulan görselleri silinsin mi?\n\nBu işlem geri alınamaz."
+  },
+  "clearing": {
+    "message": "Temizleniyor…"
+  },
+  "status_done": {
+    "message": "✓ Tamam"
+  },
+  "status_saved": {
+    "message": "✓ Kaydedildi"
+  },
+  "status_copied": {
+    "message": "✓ Kopyalandı"
+  },
+  "confirm_delete_image": {
+    "message": "Bu görsel silinsin mi?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ silinsin mi?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "görsel"
+  },
+  "image_noun": {
+    "message": "görsel"
+  },
+  "no_prompt": {
+    "message": "(istem yok)"
+  },
+  "none_selected": {
+    "message": "(hiçbiri seçilmedi)"
+  },
+  "in_memory_only": {
+    "message": "(yalnızca bellekte)"
+  },
+  "btn_exit_select": {
+    "message": "Seçimi bitir"
+  },
+  "n_selected": {
+    "message": "$COUNT$ seçildi",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ görsel paketleniyor…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ görsel dışa aktarıldı",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Aynı tohumla yeniden çalıştırılıyor…"
+  },
+  "err_no_engine": {
+    "message": "Kullanılabilir oluşturma motoru yok"
+  },
+  "err_engine_start": {
+    "message": "Tarayıcı motoru başlatılamadı"
+  },
+  "err_inference_failed": {
+    "message": "Tarayıcıda oluşturma başarısız"
+  },
+  "err_generation_failed": {
+    "message": "Oluşturma başarısız oldu"
+  },
+  "no_model_sub": {
+    "message": "Başlamak için Modeller sekmesinden bir model seçin"
+  },
+  "mb_pick_model": {
+    "message": "↓ Model seç"
+  },
+  "popup_tab_generate": {
+    "message": "Oluştur"
+  },
+  "popup_tab_models": {
+    "message": "Modeller"
+  },
+  "models_intro": {
+    "message": "İndirilecek bir model seçin. Kurulumdan sonra dilediğiniz an aralarında geçiş yapabilirsiniz."
+  },
+  "sec_downloading": {
+    "message": "İndiriliyor"
+  },
+  "sec_installed": {
+    "message": "Yüklü"
+  },
+  "sec_available": {
+    "message": "Mevcut"
+  },
+  "available_popular": {
+    "message": "popüler"
+  },
+  "empty_models_title": {
+    "message": "Henüz yüklü model yok"
+  },
+  "empty_models_sub_html": {
+    "message": "Aşağıdan birini seçip <b>↓ Al</b>'a dokunun."
+  },
+  "storage_label": {
+    "message": "Depolama"
+  },
+  "dl_tag_fetching": {
+    "message": "alınıyor"
+  },
+  "dl_paused_sub": {
+    "message": "duraklatıldı — devam ettirmek için sürdürün"
+  },
+  "dl_meta_got": {
+    "message": "Alındı"
+  },
+  "dl_meta_speed": {
+    "message": "Hız"
+  },
+  "dl_meta_left": {
+    "message": "Kalan"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Duraklat"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Devam et"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Gizle"
+  },
+  "dl_btn_cancel_title": {
+    "message": "İptal"
+  },
+  "mdl_btn_use": {
+    "message": "Kullan"
+  },
+  "mdl_btn_in_use": {
+    "message": "Kullanımda"
+  },
+  "mdl_btn_get": {
+    "message": "İndir"
+  },
+  "mdl_btn_token": {
+    "message": "Belirteç"
+  },
+  "mdl_btn_na": {
+    "message": "yok"
+  },
+  "mdl_loading_sub": {
+    "message": "Cihaza indiriliyor…"
+  }
+}

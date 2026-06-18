@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI afbeelding genereren - AI beeldmaker"
+  },
+  "shortName": {
+    "message": "AI Beeld"
+  },
+  "shortDesc": {
+    "message": "Gebruik de AI afbeeldingsgenerator om AI afbeeldingen te genereren uit tekst, AI foto's te maken en realistische beelden te creëren."
+  },
+  "action_title": {
+    "message": "AI-afbeeldingen genereren"
+  },
+  "open_workspace": {
+    "message": "Werkruimte openen"
+  },
+  "settings": {
+    "message": "Instellingen"
+  },
+  "error_title": {
+    "message": "Er is iets misgegaan"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostiek ↗"
+  },
+  "btn_dismiss": {
+    "message": "Sluiten"
+  },
+  "no_model_selected": {
+    "message": "Geen model geselecteerd"
+  },
+  "mb_get": {
+    "message": "↓ Downloaden"
+  },
+  "mb_downloading": {
+    "message": "Wordt gedownload…"
+  },
+  "mb_of": {
+    "message": "van"
+  },
+  "cancel_download": {
+    "message": "Download annuleren"
+  },
+  "mb_installing": {
+    "message": "Wordt geïnstalleerd…"
+  },
+  "mb_verifying": {
+    "message": "Gewichten worden geverifieerd · bijna klaar"
+  },
+  "ready": {
+    "message": "Gereed"
+  },
+  "prompt_placeholder": {
+    "message": "Beschrijf wat je wilt maken…"
+  },
+  "btn_clear_title": {
+    "message": "Wissen"
+  },
+  "btn_clear_aria": {
+    "message": "Prompt wissen"
+  },
+  "surprise_me": {
+    "message": "Verras me"
+  },
+  "param_steps": {
+    "message": "Stappen"
+  },
+  "param_guidance": {
+    "message": "Geleiding"
+  },
+  "param_seed": {
+    "message": "Seed"
+  },
+  "seed_random": {
+    "message": "willekeurig"
+  },
+  "neg_prompt_label": {
+    "message": "Negatieve prompt"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Te vermijden dingen…"
+  },
+  "btn_parameters": {
+    "message": "Parameters ▾"
+  },
+  "btn_generate": {
+    "message": "Genereren"
+  },
+  "install_model_hint": {
+    "message": "Installeer een model om Genereren in te schakelen."
+  },
+  "img_placeholder": {
+    "message": "Je afbeelding verschijnt hier"
+  },
+  "generating_eyebrow": {
+    "message": "GENEREREN"
+  },
+  "phase_encoding": {
+    "message": "Prompt coderen"
+  },
+  "btn_cancel_gen": {
+    "message": "× annuleren"
+  },
+  "btn_save": {
+    "message": "↓ Opslaan"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopiëren"
+  },
+  "btn_retry": {
+    "message": "↺ Opnieuw"
+  },
+  "img_generated_alt": {
+    "message": "Gegenereerde afbeelding"
+  },
+  "recent_eyebrow": {
+    "message": "RECENT"
+  },
+  "view_all": {
+    "message": "Alles bekijken ↗"
+  },
+  "clear_history": {
+    "message": "Geschiedenis wissen"
+  },
+  "loading_model": {
+    "message": "Model wordt geladen…"
+  },
+  "compiling": {
+    "message": "Compileren…"
+  },
+  "generating_pct": {
+    "message": "$PERCENT$% renderen…",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Voorbereiden…"
+  },
+  "phase_compiling_first": {
+    "message": "Shaders compileren · eerste start"
+  },
+  "phase_loading": {
+    "message": "Laden…"
+  },
+  "phase_fetching": {
+    "message": "Modelgewichten ophalen"
+  },
+  "phase_decoding": {
+    "message": "Afbeelding decoderen"
+  },
+  "phase_loading_model": {
+    "message": "Model laden…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Shaders compileren…"
+  },
+  "workspace_page_title": {
+    "message": "AI Afbeeldingsgenerator"
+  },
+  "workspace_brand": {
+    "message": "AI Afbeeldingen"
+  },
+  "workspace_label": {
+    "message": "AI Afbeeldingsgenerator"
+  },
+  "tab_gallery": {
+    "message": "Galerij"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostiek"
+  },
+  "tab_settings": {
+    "message": "Instellingen"
+  },
+  "your_generations": {
+    "message": "Jouw generaties"
+  },
+  "gallery_lede": {
+    "message": "Alles wat je hebt gemaakt"
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "Alle modellen"
+  },
+  "filter_engine": {
+    "message": "Engine"
+  },
+  "any_engine": {
+    "message": "Elke engine"
+  },
+  "engine_browser": {
+    "message": "Browser"
+  },
+  "filter_window": {
+    "message": "Tijdvenster"
+  },
+  "time_all": {
+    "message": "Altijd"
+  },
+  "time_24h": {
+    "message": "Laatste 24 uur"
+  },
+  "time_7d": {
+    "message": "Laatste 7 dagen"
+  },
+  "time_30d": {
+    "message": "Laatste 30 dagen"
+  },
+  "btn_select": {
+    "message": "Selecteren"
+  },
+  "no_images_title": {
+    "message": "Nog geen afbeeldingen"
+  },
+  "no_images_lede": {
+    "message": "Genereer je eerste afbeelding om hier te beginnen"
+  },
+  "no_matches_title": {
+    "message": "Geen resultaten"
+  },
+  "no_matches_lede": {
+    "message": "Pas de filters aan om afbeeldingen te vinden"
+  },
+  "compare_kicker": {
+    "message": "Vergelijken · sleep handvat"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "Sluiten"
+  },
+  "loading_fullres": {
+    "message": "Volledige resolutie laden…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Vermijden"
+  },
+  "label_seed": {
+    "message": "Seed"
+  },
+  "label_steps": {
+    "message": "Stappen"
+  },
+  "label_guidance": {
+    "message": "Geleiding"
+  },
+  "label_engine": {
+    "message": "Engine"
+  },
+  "label_duration": {
+    "message": "Duur"
+  },
+  "label_generated": {
+    "message": "Gegenereerd"
+  },
+  "label_path": {
+    "message": "Pad"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Seed hergebruiken"
+  },
+  "btn_copy_prompt": {
+    "message": "Prompt kopiëren"
+  },
+  "btn_copy_seed": {
+    "message": "Seed kopiëren"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG downloaden"
+  },
+  "btn_delete": {
+    "message": "Verwijderen"
+  },
+  "danger_zone": {
+    "message": "Gevarenzone"
+  },
+  "clear_data_title": {
+    "message": "Alle extensiegegevens wissen"
+  },
+  "clear_data_hint": {
+    "message": "Verwijdert alle gecachede modellen en gegenereerde afbeeldingen. Kan niet ongedaan worden gemaakt."
+  },
+  "btn_clear_data": {
+    "message": "Gegevens wissen"
+  },
+  "diag_title": {
+    "message": "Diagnostiek"
+  },
+  "diag_lede": {
+    "message": "Systeeminformatie voor probleemoplossing"
+  },
+  "diag_engine": {
+    "message": "Engine"
+  },
+  "diag_preferred": {
+    "message": "Voorkeur"
+  },
+  "diag_device": {
+    "message": "Apparaat"
+  },
+  "diag_adapter": {
+    "message": "Adapter"
+  },
+  "diag_vendor": {
+    "message": "Leverancier"
+  },
+  "diag_vram": {
+    "message": "VRAM"
+  },
+  "diag_browser": {
+    "message": "Browser"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "ORT"
+  },
+  "diag_tj": {
+    "message": "Transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS"
+  },
+  "diag_storage": {
+    "message": "Opslag"
+  },
+  "diag_installed": {
+    "message": "Geïnstalleerde modellen"
+  },
+  "diag_recent": {
+    "message": "Recente generaties"
+  },
+  "diag_active": {
+    "message": "Actief model"
+  },
+  "btn_copy_json": {
+    "message": "JSON kopiëren"
+  },
+  "btn_reprobe": {
+    "message": "Controles opnieuw uitvoeren"
+  },
+  "btn_compare": {
+    "message": "Vergelijken"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP exporteren"
+  },
+  "btn_bulk_delete": {
+    "message": "Verwijderen"
+  },
+  "btn_cancel_select": {
+    "message": "Annuleren"
+  },
+  "confirm_clear_data": {
+    "message": "Alle gecachede modellen en gegenereerde afbeeldingen verwijderen?\n\nDit kan niet ongedaan worden gemaakt."
+  },
+  "clearing": {
+    "message": "Wissen…"
+  },
+  "status_done": {
+    "message": "✓ Klaar"
+  },
+  "status_saved": {
+    "message": "✓ Opgeslagen"
+  },
+  "status_copied": {
+    "message": "✓ Gekopieerd"
+  },
+  "confirm_delete_image": {
+    "message": "Deze afbeelding verwijderen?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ verwijderen?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "afbeeldingen"
+  },
+  "image_noun": {
+    "message": "afbeelding"
+  },
+  "no_prompt": {
+    "message": "(geen prompt)"
+  },
+  "none_selected": {
+    "message": "Geen geselecteerd"
+  },
+  "in_memory_only": {
+    "message": "Alleen in geheugen"
+  },
+  "btn_exit_select": {
+    "message": "Afsluiten"
+  },
+  "n_selected": {
+    "message": "$COUNT$ geselecteerd",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ afbeeldingen inpakken…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ afbeeldingen geëxporteerd",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Seed hergebruikt"
+  },
+  "err_no_engine": {
+    "message": "Geen generatiemotor beschikbaar"
+  },
+  "err_engine_start": {
+    "message": "Engine starten mislukt"
+  },
+  "err_inference_failed": {
+    "message": "Generatie in browser is mislukt"
+  },
+  "err_generation_failed": {
+    "message": "Genereren mislukt"
+  },
+  "no_model_sub": {
+    "message": "Kies een model op het tabblad Modellen om te beginnen"
+  },
+  "mb_pick_model": {
+    "message": "↓ Model kiezen"
+  },
+  "popup_tab_generate": {
+    "message": "Genereren"
+  },
+  "popup_tab_models": {
+    "message": "Modellen"
+  },
+  "models_intro": {
+    "message": "Kies een model om te downloaden. Na installatie kun je op elk moment wisselen."
+  },
+  "sec_downloading": {
+    "message": "Downloaden"
+  },
+  "sec_installed": {
+    "message": "Geïnstalleerd"
+  },
+  "sec_available": {
+    "message": "Beschikbaar"
+  },
+  "available_popular": {
+    "message": "populair"
+  },
+  "empty_models_title": {
+    "message": "Nog geen modellen geïnstalleerd"
+  },
+  "empty_models_sub_html": {
+    "message": "Kies hieronder een en tik op <b>↓ Ophalen</b>."
+  },
+  "storage_label": {
+    "message": "Opslag"
+  },
+  "dl_tag_fetching": {
+    "message": "ophalen"
+  },
+  "dl_paused_sub": {
+    "message": "gepauzeerd — hervat om door te gaan"
+  },
+  "dl_meta_got": {
+    "message": "Ontvangen"
+  },
+  "dl_meta_speed": {
+    "message": "Snelheid"
+  },
+  "dl_meta_left": {
+    "message": "Resterend"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pauze"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Hervatten"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Verbergen"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Annuleren"
+  },
+  "mdl_btn_use": {
+    "message": "Gebruik"
+  },
+  "mdl_btn_in_use": {
+    "message": "In gebruik"
+  },
+  "mdl_btn_get": {
+    "message": "Downloaden"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n.v.t."
+  },
+  "mdl_loading_sub": {
+    "message": "Downloaden naar apparaat…"
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - AI ಚಿತ್ರ ರಚಿಸಿ"
+  },
+  "shortName": {
+    "message": "AI ಚಿತ್ರ"
+  },
+  "shortDesc": {
+    "message": "AI ಇಮೇಜ್ ಜನರೇಟರ್ ಬಳಸಿ ಪಠ್ಯದಿಂದ AI ಚಿತ್ರಗಳನ್ನು ರಚಿಸಿ, AI ಫೋಟೋಗಳನ್ನು ಮತ್ತು AI ಚಿತ್ರಗಳನ್ನು ತಕ್ಷಣ ಪಡೆಯಿರಿ."
+  },
+  "action_title": {
+    "message": "AI ಚಿತ್ರಗಳನ್ನು ರಚಿಸಿ"
+  },
+  "open_workspace": {
+    "message": "ಕಾರ್ಯಸ್ಥಳ ತೆರೆಯಿರಿ"
+  },
+  "settings": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+  },
+  "error_title": {
+    "message": "ಏನೋ ತಪ್ಪಾಯಿತು"
+  },
+  "btn_diagnostics": {
+    "message": "ರೋಗನಿರ್ಣಯ ↗"
+  },
+  "btn_dismiss": {
+    "message": "ಮುಚ್ಚಿ"
+  },
+  "no_model_selected": {
+    "message": "ಯಾವುದೇ ಮಾದರಿ ಆಯ್ಕೆ ಮಾಡಿಲ್ಲ"
+  },
+  "mb_get": {
+    "message": "↓ ಡೌನ್‌ಲೋಡ್"
+  },
+  "mb_downloading": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ರದ್ದು ಮಾಡಿ"
+  },
+  "mb_installing": {
+    "message": "ಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ…"
+  },
+  "mb_verifying": {
+    "message": "ತೂಕಗಳನ್ನು ಪರಿಶೀಲಿಸಲಾಗುತ್ತಿದೆ · ಬಹುತೇಕ ಮುಗಿಯಿತು"
+  },
+  "ready": {
+    "message": "ಸಿದ್ಧ"
+  },
+  "prompt_placeholder": {
+    "message": "ನೀವು ರಚಿಸಲು ಬಯಸುವುದನ್ನು ವಿವರಿಸಿ…"
+  },
+  "btn_clear_title": {
+    "message": "ತೆರವುಗೊಳಿಸಿ"
+  },
+  "btn_clear_aria": {
+    "message": "ಪ್ರಾಂಪ್ಟ್ ತೆರವುಗೊಳಿಸಿ"
+  },
+  "surprise_me": {
+    "message": "ನನ್ನನ್ನು ಆಶ್ಚರ್ಯಗೊಳಿಸಿ"
+  },
+  "param_steps": {
+    "message": "ಹಂತಗಳು"
+  },
+  "param_guidance": {
+    "message": "ಮಾರ್ಗದರ್ಶನ"
+  },
+  "param_seed": {
+    "message": "ಬೀಜ"
+  },
+  "seed_random": {
+    "message": "ಯಾದೃಚ್ಛಿಕ"
+  },
+  "neg_prompt_label": {
+    "message": "ನಕಾರಾತ್ಮಕ ಪ್ರಾಂಪ್ಟ್"
+  },
+  "neg_prompt_placeholder": {
+    "message": "ತಪ್ಪಿಸಬೇಕಾದ ವಿಷಯಗಳು…"
+  },
+  "btn_parameters": {
+    "message": "ನಿಯತಾಂಕಗಳು ▾"
+  },
+  "btn_generate": {
+    "message": "ರಚಿಸಿ"
+  },
+  "install_model_hint": {
+    "message": "ರಚಿಸಿ ಸಕ್ರಿಯಗೊಳಿಸಲು ಮಾದರಿ ಸ್ಥಾಪಿಸಿ."
+  },
+  "img_placeholder": {
+    "message": "ನಿಮ್ಮ ಚಿತ್ರ ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತದೆ"
+  },
+  "generating_eyebrow": {
+    "message": "ರಚಿಸಲಾಗುತ್ತಿದೆ"
+  },
+  "phase_encoding": {
+    "message": "ಪ್ರಾಂಪ್ಟ್ ಎನ್‌ಕೋಡ್ ಆಗುತ್ತಿದೆ"
+  },
+  "btn_cancel_gen": {
+    "message": "× ರದ್ದು"
+  },
+  "btn_save": {
+    "message": "↓ ಉಳಿಸಿ"
+  },
+  "btn_copy": {
+    "message": "⎘ ನಕಲಿಸಿ"
+  },
+  "btn_retry": {
+    "message": "↺ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ"
+  },
+  "img_generated_alt": {
+    "message": "ರಚಿಸಿದ ಚಿತ್ರ"
+  },
+  "recent_eyebrow": {
+    "message": "ಇತ್ತೀಚಿನ"
+  },
+  "view_all": {
+    "message": "ಎಲ್ಲವನ್ನೂ ನೋಡಿ ↗"
+  },
+  "clear_history": {
+    "message": "ಇತಿಹಾಸ ತೆರವುಗೊಳಿಸಿ"
+  },
+  "loading_model": {
+    "message": "ಮಾದರಿ ಲೋಡ್ ಆಗುತ್ತಿದೆ…"
+  },
+  "compiling": {
+    "message": "ಸಂಕಲಿಸಲಾಗುತ್ತಿದೆ…"
+  },
+  "generating_pct": {
+    "message": "ರಚಿಸಲಾಗುತ್ತಿದೆ · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "ಸಿದ್ಧಪಡಿಸಲಾಗುತ್ತಿದೆ…"
+  },
+  "phase_compiling_first": {
+    "message": "ಶೇಡರ್‌ಗಳನ್ನು ಸಂಕಲಿಸಲಾಗುತ್ತಿದೆ · ಮೊದಲ ಬಾರಿ"
+  },
+  "phase_loading": {
+    "message": "ಲೋಡ್ ಆಗುತ್ತಿದೆ…"
+  },
+  "phase_fetching": {
+    "message": "ಮಾದರಿ ತೂಕಗಳನ್ನು ತರಲಾಗುತ್ತಿದೆ"
+  },
+  "phase_decoding": {
+    "message": "ಚಿತ್ರ ಡೀಕೋಡ್ ಆಗುತ್ತಿದೆ…"
+  },
+  "phase_loading_model": {
+    "message": "ಮಾದರಿ ಲೋಡ್ ಆಗುತ್ತಿದೆ…"
+  },
+  "phase_compiling_shaders": {
+    "message": "ಶೇಡರ್‌ಗಳನ್ನು ಸಂಕಲಿಸಲಾಗುತ್ತಿದೆ…"
+  },
+  "workspace_page_title": {
+    "message": "AI ಆಫ್‌ಲೈನ್ ಚಿತ್ರ ಜನರೇಟರ್ ಕಾರ್ಯಸ್ಥಳ"
+  },
+  "workspace_brand": {
+    "message": "AI ಆಫ್‌ಲೈನ್ ಚಿತ್ರ ಜನರೇಟರ್"
+  },
+  "workspace_label": {
+    "message": "ಕಾರ್ಯಸ್ಥಳ"
+  },
+  "tab_gallery": {
+    "message": "ಗ್ಯಾಲರಿ"
+  },
+  "tab_diagnostics": {
+    "message": "ರೋಗನಿರ್ಣಯ"
+  },
+  "tab_settings": {
+    "message": "ಸೆಟ್ಟಿಂಗ್‌ಗಳು"
+  },
+  "your_generations": {
+    "message": "ನಿಮ್ಮ ರಚನೆಗಳು"
+  },
+  "gallery_lede": {
+    "message": "ಎಲ್ಲವೂ ಈ ಸಾಧನದಲ್ಲಿ ಉಳಿಯುತ್ತದೆ. ಸಂಪೂರ್ಣ ರೆಸಲ್ಯೂಶನ್‌ಗಾಗಿ ಟೈಲ್ ಕ್ಲಿಕ್ ಮಾಡಿ."
+  },
+  "filter_model": {
+    "message": "ಮಾದರಿ"
+  },
+  "all_models": {
+    "message": "ಎಲ್ಲ ಮಾದರಿಗಳು"
+  },
+  "filter_engine": {
+    "message": "ಎಂಜಿನ್"
+  },
+  "any_engine": {
+    "message": "ಯಾವುದೇ ಎಂಜಿನ್"
+  },
+  "engine_browser": {
+    "message": "ಬ್ರೌಸರ್ · WebGPU"
+  },
+  "filter_window": {
+    "message": "ಅವಧಿ"
+  },
+  "time_all": {
+    "message": "ಎಲ್ಲ ಸಮಯ"
+  },
+  "time_24h": {
+    "message": "ಕಳೆದ 24 ಗಂಟೆ"
+  },
+  "time_7d": {
+    "message": "ಕಳೆದ 7 ದಿನಗಳು"
+  },
+  "time_30d": {
+    "message": "ಕಳೆದ 30 ದಿನಗಳು"
+  },
+  "btn_select": {
+    "message": "ಆಯ್ಕೆ ಮಾಡಿ"
+  },
+  "no_images_title": {
+    "message": "ಇನ್ನೂ ಚಿತ್ರಗಳಿಲ್ಲ"
+  },
+  "no_images_lede": {
+    "message": "Alt+Shift+D ನಿಂದ ಪಾಪ್ಅಪ್ ತೆರೆಯಿರಿ, ಪ್ರಾಂಪ್ಟ್ ಬರೆಯಿರಿ, ರಚಿಸಿ ಕ್ಲಿಕ್ ಮಾಡಿ. ಫಲಿತಾಂಶಗಳು ಇಲ್ಲಿ ಕಾಣಿಸುತ್ತವೆ."
+  },
+  "no_matches_title": {
+    "message": "ಹೊಂದಾಣಿಕೆ ಇಲ್ಲ"
+  },
+  "no_matches_lede": {
+    "message": "ಈ ಅವಧಿಯಲ್ಲಿ ಏನೂ ಇಲ್ಲ. ಫಿಲ್ಟರ್ ವಿಸ್ತರಿಸಿ ಪ್ರಯತ್ನಿಸಿ."
+  },
+  "compare_kicker": {
+    "message": "ಹೋಲಿಸಿ · ಹ್ಯಾಂಡಲ್ ಎಳೆಯಿರಿ"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "ಮುಚ್ಚಿ"
+  },
+  "loading_fullres": {
+    "message": "ಪೂರ್ಣ ರೆಸಲ್ಯೂಶನ್ ಲೋಡ್ ಆಗುತ್ತಿದೆ…"
+  },
+  "label_prompt": {
+    "message": "ಪ್ರಾಂಪ್ಟ್"
+  },
+  "label_avoid": {
+    "message": "ತಪ್ಪಿಸಿ"
+  },
+  "label_seed": {
+    "message": "ಬೀಜ"
+  },
+  "label_steps": {
+    "message": "ಹಂತಗಳು"
+  },
+  "label_guidance": {
+    "message": "ಮಾರ್ಗದರ್ಶನ"
+  },
+  "label_engine": {
+    "message": "ಎಂಜಿನ್"
+  },
+  "label_duration": {
+    "message": "ಅವಧಿ"
+  },
+  "label_generated": {
+    "message": "ರಚಿಸಲಾಗಿದೆ"
+  },
+  "label_path": {
+    "message": "ಪಾತ್"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ ಬೀಜ ಮರುಬಳಕೆ"
+  },
+  "btn_copy_prompt": {
+    "message": "ಪ್ರಾಂಪ್ಟ್ ನಕಲಿಸಿ"
+  },
+  "btn_copy_seed": {
+    "message": "ಬೀಜ ನಕಲಿಸಿ"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG ಡೌನ್‌ಲೋಡ್"
+  },
+  "btn_delete": {
+    "message": "ಅಳಿಸಿ"
+  },
+  "danger_zone": {
+    "message": "ಅಪಾಯ ವಲಯ"
+  },
+  "clear_data_title": {
+    "message": "ಎಲ್ಲ ಎಕ್ಸ್‌ಟೆನ್ಶನ್ ಡೇಟಾ ತೆರವುಗೊಳಿಸಿ"
+  },
+  "clear_data_hint": {
+    "message": "ಎಲ್ಲ ಕ್ಯಾಶ್ ಮಾದರಿಗಳು ಮತ್ತು ರಚಿಸಿದ ಚಿತ್ರಗಳನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ರದ್ದು ಮಾಡಲಾಗುವುದಿಲ್ಲ."
+  },
+  "btn_clear_data": {
+    "message": "ಡೇಟಾ ತೆರವುಗೊಳಿಸಿ"
+  },
+  "diag_title": {
+    "message": "ರೋಗನಿರ್ಣಯ"
+  },
+  "diag_lede": {
+    "message": "ಎಕ್ಸ್‌ಟೆನ್ಶನ್ ನಿಮ್ಮ ಬ್ರೌಸರ್ ಮತ್ತು ಯಂತ್ರದ ಬಗ್ಗೆ ನೋಡುವುದು. ಏನಾದರೂ ಕೆಲಸ ಮಾಡದಿದ್ದರೆ ಈ ಬ್ಲಾಕ್ ಅನ್ನು issue ನಲ್ಲಿ ನಕಲಿಸಿ."
+  },
+  "diag_engine": {
+    "message": "ಸಕ್ರಿಯ ಎಂಜಿನ್"
+  },
+  "diag_preferred": {
+    "message": "ಆದ್ಯತೆಯ"
+  },
+  "diag_device": {
+    "message": "ಸಾಧನ"
+  },
+  "diag_adapter": {
+    "message": "ಅಡಾಪ್ಟರ್"
+  },
+  "diag_vendor": {
+    "message": "ಮಾರಾಟಗಾರ"
+  },
+  "diag_vram": {
+    "message": "VRAM ಅಂದಾಜು"
+  },
+  "diag_browser": {
+    "message": "ಬ್ರೌಸರ್ ಪಾತ್"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS ಕೋಟಾ"
+  },
+  "diag_storage": {
+    "message": "ಸಂಗ್ರಹಣೆ"
+  },
+  "diag_installed": {
+    "message": "ಸ್ಥಾಪಿಸಿದ ಮಾದರಿಗಳು"
+  },
+  "diag_recent": {
+    "message": "ಇತ್ತೀಚಿನ ಚಿತ್ರಗಳು"
+  },
+  "diag_active": {
+    "message": "ಸಕ್ರಿಯ ಮಾದರಿ"
+  },
+  "btn_copy_json": {
+    "message": "JSON ಆಗಿ ನಕಲಿಸಿ"
+  },
+  "btn_reprobe": {
+    "message": "ಪ್ರೋಬ್‌ಗಳನ್ನು ಮತ್ತೆ ರನ್ ಮಾಡಿ"
+  },
+  "btn_compare": {
+    "message": "ಹೋಲಿಸಿ"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP ರಫ್ತು"
+  },
+  "btn_bulk_delete": {
+    "message": "ಅಳಿಸಿ"
+  },
+  "btn_cancel_select": {
+    "message": "ರದ್ದು"
+  },
+  "confirm_clear_data": {
+    "message": "ಎಲ್ಲ ಕ್ಯಾಶ್ ಮಾದರಿಗಳು ಮತ್ತು ಚಿತ್ರಗಳನ್ನು ಅಳಿಸಬೇಕೇ?\n\nಇದನ್ನು ರದ್ದು ಮಾಡಲಾಗುವುದಿಲ್ಲ."
+  },
+  "clearing": {
+    "message": "ತೆರವುಗೊಳಿಸಲಾಗುತ್ತಿದೆ…"
+  },
+  "status_done": {
+    "message": "✓ ಮುಗಿಯಿತು"
+  },
+  "status_saved": {
+    "message": "✓ ಉಳಿಸಲಾಗಿದೆ"
+  },
+  "status_copied": {
+    "message": "✓ ನಕಲಿಸಲಾಗಿದೆ"
+  },
+  "confirm_delete_image": {
+    "message": "ಈ ಚಿತ್ರ ಅಳಿಸಬೇಕೇ?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ ಅಳಿಸಬೇಕೇ?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "ಚಿತ್ರಗಳು"
+  },
+  "image_noun": {
+    "message": "ಚಿತ್ರ"
+  },
+  "no_prompt": {
+    "message": "(ಪ್ರಾಂಪ್ಟ್ ಇಲ್ಲ)"
+  },
+  "none_selected": {
+    "message": "(ಏನೂ ಆಯ್ಕೆ ಮಾಡಿಲ್ಲ)"
+  },
+  "in_memory_only": {
+    "message": "(ಮೆಮೊರಿಯಲ್ಲಿ ಮಾತ್ರ)"
+  },
+  "btn_exit_select": {
+    "message": "ಆಯ್ಕೆ ಬಿಟ್ಟು ಹೊರಡಿ"
+  },
+  "n_selected": {
+    "message": "$COUNT$ ಆಯ್ಕೆ ಮಾಡಲಾಗಿದೆ",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ ಚಿತ್ರಗಳನ್ನು ಪ್ಯಾಕ್ ಮಾಡಲಾಗುತ್ತಿದೆ…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ ಚಿತ್ರಗಳನ್ನು ರಫ್ತು ಮಾಡಲಾಗಿದೆ",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "ಅದೇ ಬೀಜದೊಂದಿಗೆ ಮತ್ತೆ ರನ್ ಮಾಡಲಾಗುತ್ತಿದೆ…"
+  },
+  "err_no_engine": {
+    "message": "ಯಾವುದೇ ಜನರೇಶನ್ ಎಂಜಿನ್ ಲಭ್ಯವಿಲ್ಲ"
+  },
+  "err_engine_start": {
+    "message": "ಬ್ರೌಸರ್ ಎಂಜಿನ್ ಪ್ರಾರಂಭಿಸಲಾಗಲಿಲ್ಲ"
+  },
+  "err_inference_failed": {
+    "message": "ಬ್ರೌಸರ್‌ನಲ್ಲಿ ರಚನೆ ವಿಫಲವಾಗಿದೆ"
+  },
+  "err_generation_failed": {
+    "message": "ರಚನೆ ವಿಫಲವಾಯಿತು"
+  },
+  "no_model_sub": {
+    "message": "ಪ್ರಾರಂಭಿಸಲು ಮಾದರಿಗಳು ಟ್ಯಾಬ್‌ನಲ್ಲಿ ಮಾದರಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ"
+  },
+  "mb_pick_model": {
+    "message": "↓ ಮಾದರಿ ಆರಿಸಿ"
+  },
+  "popup_tab_generate": {
+    "message": "ರಚಿಸಿ"
+  },
+  "popup_tab_models": {
+    "message": "ಮಾದರಿಗಳು"
+  },
+  "models_intro": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಮಾದರಿಯನ್ನು ಆಯ್ಕೆಮಾಡಿ. ಸ್ಥಾಪಿಸಿದ ನಂತರ ನೀವು ಯಾವಾಗ ಬೇಕಾದರೂ ಬದಲಾಯಿಸಬಹುದು."
+  },
+  "sec_downloading": {
+    "message": "ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ"
+  },
+  "sec_installed": {
+    "message": "ಸ್ಥಾಪಿಸಲಾಗಿದೆ"
+  },
+  "sec_available": {
+    "message": "ಲಭ್ಯ"
+  },
+  "available_popular": {
+    "message": "ಜನಪ್ರಿಯ"
+  },
+  "empty_models_title": {
+    "message": "ಇನ್ನೂ ಯಾವುದೇ ಮಾದರಿ ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ"
+  },
+  "empty_models_sub_html": {
+    "message": "ಕೆಳಗಿನಿಂದ ಒಂದನ್ನು ಆರಿಸಿ <b>↓ ಪಡೆಯಿರಿ</b> ಒತ್ತಿ."
+  },
+  "storage_label": {
+    "message": "ಸಂಗ್ರಹಣೆ"
+  },
+  "dl_tag_fetching": {
+    "message": "ತರಲಾಗುತ್ತಿದೆ"
+  },
+  "dl_paused_sub": {
+    "message": "ವಿರಾಮಗೊಂಡಿದೆ — ಮುಂದುವರಿಸಲು ಪುನಃ ಆರಂಭಿಸಿ"
+  },
+  "dl_meta_got": {
+    "message": "ಪಡೆದಿದೆ"
+  },
+  "dl_meta_speed": {
+    "message": "ವೇಗ"
+  },
+  "dl_meta_left": {
+    "message": "ಬಾಕಿ"
+  },
+  "dl_btn_pause": {
+    "message": "‖ ವಿರಾಮ"
+  },
+  "dl_btn_resume": {
+    "message": "▶ ಪುನಃ ಆರಂಭಿಸಿ"
+  },
+  "dl_btn_hide": {
+    "message": "↓ ಮರೆಮಾಡಿ"
+  },
+  "dl_btn_cancel_title": {
+    "message": "ರದ್ದು"
+  },
+  "mdl_btn_use": {
+    "message": "ಬಳಸಿ"
+  },
+  "mdl_btn_in_use": {
+    "message": "ಬಳಕೆಯಲ್ಲಿ"
+  },
+  "mdl_btn_get": {
+    "message": "ಪಡೆಯಿರಿ"
+  },
+  "mdl_btn_token": {
+    "message": "ಟೋಕನ್"
+  },
+  "mdl_btn_na": {
+    "message": "ಲ.ಇ."
+  },
+  "mdl_loading_sub": {
+    "message": "ಸಾಧನಕ್ಕೆ ಡೌನ್‌ಲೋಡ್ ಆಗುತ್ತಿದೆ…"
+  }
+}

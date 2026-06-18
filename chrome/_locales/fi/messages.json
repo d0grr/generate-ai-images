@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI-kuvageneraattori - Luo AI-kuvia"
+  },
+  "shortName": {
+    "message": "AI kuvat"
+  },
+  "shortDesc": {
+    "message": "Käytä AI-kuvageneraattoria luodaksesi AI-kuvia tekstistä, generoidaksesi realistisia AI-valokuvia hetkessä Chromessa."
+  },
+  "action_title": {
+    "message": "Luo AI-kuvia"
+  },
+  "open_workspace": {
+    "message": "Avaa työtila"
+  },
+  "settings": {
+    "message": "Asetukset"
+  },
+  "error_title": {
+    "message": "Jokin meni pieleen"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostiikka ↗"
+  },
+  "btn_dismiss": {
+    "message": "Sulje"
+  },
+  "no_model_selected": {
+    "message": "Mallia ei valittu"
+  },
+  "mb_get": {
+    "message": "↓ Hae"
+  },
+  "mb_downloading": {
+    "message": "Ladataan…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "Peruuta lataus"
+  },
+  "mb_installing": {
+    "message": "Asennetaan…"
+  },
+  "mb_verifying": {
+    "message": "Tarkistetaan painoja · melkein valmis"
+  },
+  "ready": {
+    "message": "Valmis"
+  },
+  "prompt_placeholder": {
+    "message": "Kuvaile mitä haluat luoda…"
+  },
+  "btn_clear_title": {
+    "message": "Tyhjennä"
+  },
+  "btn_clear_aria": {
+    "message": "Tyhjennä kehote"
+  },
+  "surprise_me": {
+    "message": "Yllätä minut"
+  },
+  "param_steps": {
+    "message": "Askeleet"
+  },
+  "param_guidance": {
+    "message": "Ohjaus"
+  },
+  "param_seed": {
+    "message": "Siemen"
+  },
+  "seed_random": {
+    "message": "satunnainen"
+  },
+  "neg_prompt_label": {
+    "message": "Negatiivinen kehote"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Vältettävät asiat…"
+  },
+  "btn_parameters": {
+    "message": "Parametrit ▾"
+  },
+  "btn_generate": {
+    "message": "Luo"
+  },
+  "install_model_hint": {
+    "message": "Asenna malli ottaaksesi Luo-toiminnon käyttöön."
+  },
+  "img_placeholder": {
+    "message": "Kuvasi näkyy tässä"
+  },
+  "generating_eyebrow": {
+    "message": "LUODAAN"
+  },
+  "phase_encoding": {
+    "message": "Koodataan kehote"
+  },
+  "btn_cancel_gen": {
+    "message": "× peruuta"
+  },
+  "btn_save": {
+    "message": "↓ Tallenna"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopioi"
+  },
+  "btn_retry": {
+    "message": "↺ Yritä uudelleen"
+  },
+  "img_generated_alt": {
+    "message": "Luotu kuva"
+  },
+  "recent_eyebrow": {
+    "message": "VIIMEISIMMÄT"
+  },
+  "view_all": {
+    "message": "Näytä kaikki ↗"
+  },
+  "clear_history": {
+    "message": "Tyhjennä historia"
+  },
+  "loading_model": {
+    "message": "Ladataan mallia…"
+  },
+  "compiling": {
+    "message": "Käännetään…"
+  },
+  "generating_pct": {
+    "message": "Luodaan · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Valmistellaan…"
+  },
+  "phase_compiling_first": {
+    "message": "Käännetään varjostimia · ensimmäinen käynnistys"
+  },
+  "phase_loading": {
+    "message": "Ladataan…"
+  },
+  "phase_fetching": {
+    "message": "Noudetaan mallin painot"
+  },
+  "phase_decoding": {
+    "message": "Puretaan kuvaa…"
+  },
+  "phase_loading_model": {
+    "message": "Ladataan mallia…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Käännetään varjostimia…"
+  },
+  "workspace_page_title": {
+    "message": "AI-offline-kuvageneraattorin työtila"
+  },
+  "workspace_brand": {
+    "message": "AI Offline -kuvageneraattori"
+  },
+  "workspace_label": {
+    "message": "työtila"
+  },
+  "tab_gallery": {
+    "message": "Galleria"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostiikka"
+  },
+  "tab_settings": {
+    "message": "Asetukset"
+  },
+  "your_generations": {
+    "message": "Luomuksesi"
+  },
+  "gallery_lede": {
+    "message": "Kaikki pysyy tällä laitteella. Napsauta ruutua täyden resoluution ja alkuperän näkemiseksi."
+  },
+  "filter_model": {
+    "message": "Malli"
+  },
+  "all_models": {
+    "message": "Kaikki mallit"
+  },
+  "filter_engine": {
+    "message": "Moottori"
+  },
+  "any_engine": {
+    "message": "Mikä tahansa moottori"
+  },
+  "engine_browser": {
+    "message": "Selain · WebGPU"
+  },
+  "filter_window": {
+    "message": "Ajanjakso"
+  },
+  "time_all": {
+    "message": "Kaikki aika"
+  },
+  "time_24h": {
+    "message": "Viimeiset 24 tuntia"
+  },
+  "time_7d": {
+    "message": "Viimeiset 7 päivää"
+  },
+  "time_30d": {
+    "message": "Viimeiset 30 päivää"
+  },
+  "btn_select": {
+    "message": "Valitse"
+  },
+  "no_images_title": {
+    "message": "Ei kuvia vielä"
+  },
+  "no_images_lede": {
+    "message": "Avaa ponnahdusikkuna Alt+Shift+D:llä, kirjoita kehote, napsauta Luo. Tulokset ilmestyvät tähän."
+  },
+  "no_matches_title": {
+    "message": "Ei osumia"
+  },
+  "no_matches_lede": {
+    "message": "Tällä ajanjaksolla ei mitään. Yritä laajentaa suodatinta."
+  },
+  "compare_kicker": {
+    "message": "Vertaile · vedä kahvaa"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "sulje"
+  },
+  "loading_fullres": {
+    "message": "ladataan täyttä resoluutiota…"
+  },
+  "label_prompt": {
+    "message": "Kehote"
+  },
+  "label_avoid": {
+    "message": "Vältä"
+  },
+  "label_seed": {
+    "message": "Siemen"
+  },
+  "label_steps": {
+    "message": "Askeleet"
+  },
+  "label_guidance": {
+    "message": "Ohjaus"
+  },
+  "label_engine": {
+    "message": "Moottori"
+  },
+  "label_duration": {
+    "message": "Kesto"
+  },
+  "label_generated": {
+    "message": "Luotu"
+  },
+  "label_path": {
+    "message": "Polku"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Käytä siemen uudelleen"
+  },
+  "btn_copy_prompt": {
+    "message": "Kopioi kehote"
+  },
+  "btn_copy_seed": {
+    "message": "Kopioi siemen"
+  },
+  "btn_download_png": {
+    "message": "↓ Lataa PNG"
+  },
+  "btn_delete": {
+    "message": "Poista"
+  },
+  "danger_zone": {
+    "message": "Vaaravyöhyke"
+  },
+  "clear_data_title": {
+    "message": "Tyhjennä kaikki laajennuksen tiedot"
+  },
+  "clear_data_hint": {
+    "message": "Poistaa kaikki välimuistissa olevat mallit ja luodut kuvat. Ei voi peruuttaa."
+  },
+  "btn_clear_data": {
+    "message": "Tyhjennä tiedot"
+  },
+  "diag_title": {
+    "message": "Diagnostiikka"
+  },
+  "diag_lede": {
+    "message": "Mitä laajennus näkee selaimestasi ja koneestasi. Kopioi tämä lohko issueen, jos jokin ei toimi."
+  },
+  "diag_engine": {
+    "message": "Aktiivinen moottori"
+  },
+  "diag_preferred": {
+    "message": "Ensisijainen"
+  },
+  "diag_device": {
+    "message": "Laite"
+  },
+  "diag_adapter": {
+    "message": "Adapteri"
+  },
+  "diag_vendor": {
+    "message": "Toimittaja"
+  },
+  "diag_vram": {
+    "message": "VRAM arvio"
+  },
+  "diag_browser": {
+    "message": "Selainpolku"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS-kiintiö"
+  },
+  "diag_storage": {
+    "message": "Tallennustila"
+  },
+  "diag_installed": {
+    "message": "Asennetut mallit"
+  },
+  "diag_recent": {
+    "message": "Viimeisimmät kuvat"
+  },
+  "diag_active": {
+    "message": "Aktiivinen malli"
+  },
+  "btn_copy_json": {
+    "message": "Kopioi JSONina"
+  },
+  "btn_reprobe": {
+    "message": "Suorita tarkistukset uudelleen"
+  },
+  "btn_compare": {
+    "message": "Vertaile"
+  },
+  "btn_export_zip": {
+    "message": "↓ Vie ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Poista"
+  },
+  "btn_cancel_select": {
+    "message": "Peruuta"
+  },
+  "confirm_clear_data": {
+    "message": "Poistetaanko kaikki välimuistissa olevat mallit ja luodut kuvat?\n\nTätä ei voi peruuttaa."
+  },
+  "clearing": {
+    "message": "Tyhjennetään…"
+  },
+  "status_done": {
+    "message": "✓ Valmis"
+  },
+  "status_saved": {
+    "message": "✓ Tallennettu"
+  },
+  "status_copied": {
+    "message": "✓ Kopioitu"
+  },
+  "confirm_delete_image": {
+    "message": "Poistetaanko tämä kuva?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Poistetaanko $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "kuvaa"
+  },
+  "image_noun": {
+    "message": "kuva"
+  },
+  "no_prompt": {
+    "message": "(ei kehotetta)"
+  },
+  "none_selected": {
+    "message": "(ei valittua)"
+  },
+  "in_memory_only": {
+    "message": "(vain muistissa)"
+  },
+  "btn_exit_select": {
+    "message": "Poistu valinnasta"
+  },
+  "n_selected": {
+    "message": "$COUNT$ valittu",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Pakataan $COUNT$ kuvaa…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Viety $COUNT$ kuvaa",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Ajetaan uudelleen samalla siemenellä…"
+  },
+  "err_no_engine": {
+    "message": "Luomismoottoria ei ole saatavilla"
+  },
+  "err_engine_start": {
+    "message": "Selainmoottoria ei voitu käynnistää"
+  },
+  "err_inference_failed": {
+    "message": "Selaimessa luominen epäonnistui"
+  },
+  "err_generation_failed": {
+    "message": "Luonti epäonnistui"
+  },
+  "no_model_sub": {
+    "message": "Aloita valitsemalla malli Mallit-välilehdeltä"
+  },
+  "mb_pick_model": {
+    "message": "↓ Valitse malli"
+  },
+  "popup_tab_generate": {
+    "message": "Luo"
+  },
+  "popup_tab_models": {
+    "message": "Mallit"
+  },
+  "models_intro": {
+    "message": "Valitse ladattava malli. Asennuksen jälkeen voit vaihtaa niiden välillä milloin tahansa."
+  },
+  "sec_downloading": {
+    "message": "Ladataan"
+  },
+  "sec_installed": {
+    "message": "Asennetut"
+  },
+  "sec_available": {
+    "message": "Saatavilla"
+  },
+  "available_popular": {
+    "message": "suositut"
+  },
+  "empty_models_title": {
+    "message": "Ei vielä asennettuja malleja"
+  },
+  "empty_models_sub_html": {
+    "message": "Valitse alta ja napauta <b>↓ Hae</b>."
+  },
+  "storage_label": {
+    "message": "Tallennustila"
+  },
+  "dl_tag_fetching": {
+    "message": "haetaan"
+  },
+  "dl_paused_sub": {
+    "message": "keskeytetty — jatka jatkaaksesi"
+  },
+  "dl_meta_got": {
+    "message": "Saatu"
+  },
+  "dl_meta_speed": {
+    "message": "Nopeus"
+  },
+  "dl_meta_left": {
+    "message": "Jäljellä"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Tauko"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Jatka"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Piilota"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Peruuta"
+  },
+  "mdl_btn_use": {
+    "message": "Käytä"
+  },
+  "mdl_btn_in_use": {
+    "message": "Käytössä"
+  },
+  "mdl_btn_get": {
+    "message": "Hae"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "ei saatavilla"
+  },
+  "mdl_loading_sub": {
+    "message": "Ladataan laitteeseen…"
+  }
+}

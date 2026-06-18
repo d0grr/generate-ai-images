@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "Generador d'imatges IA - Crea fotos IA"
+  },
+  "shortName": {
+    "message": "IA Imatges"
+  },
+  "shortDesc": {
+    "message": "Utilitza el generador d'imatges IA per crear imatges IA des de text, generar fotos IA i imatges realistes al moment."
+  },
+  "action_title": {
+    "message": "Genera imatges IA"
+  },
+  "open_workspace": {
+    "message": "Obre l'espai de treball"
+  },
+  "settings": {
+    "message": "Configuració"
+  },
+  "error_title": {
+    "message": "Alguna cosa ha anat malament"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnòstic ↗"
+  },
+  "btn_dismiss": {
+    "message": "Tanca"
+  },
+  "no_model_selected": {
+    "message": "Cap model seleccionat"
+  },
+  "mb_get": {
+    "message": "↓ Descarregar"
+  },
+  "mb_downloading": {
+    "message": "S'està baixant…"
+  },
+  "mb_of": {
+    "message": "de"
+  },
+  "cancel_download": {
+    "message": "Cancel·la la baixada"
+  },
+  "mb_installing": {
+    "message": "S'està instal·lant…"
+  },
+  "mb_verifying": {
+    "message": "Verificant pesos · quasi llest"
+  },
+  "ready": {
+    "message": "Llest"
+  },
+  "prompt_placeholder": {
+    "message": "Descriu el que vols crear…"
+  },
+  "btn_clear_title": {
+    "message": "Neteja"
+  },
+  "btn_clear_aria": {
+    "message": "Neteja el prompt"
+  },
+  "surprise_me": {
+    "message": "Sorprèn-me"
+  },
+  "param_steps": {
+    "message": "Passos"
+  },
+  "param_guidance": {
+    "message": "Guia"
+  },
+  "param_seed": {
+    "message": "Llavor"
+  },
+  "seed_random": {
+    "message": "aleatòria"
+  },
+  "neg_prompt_label": {
+    "message": "Prompt negatiu"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Coses a evitar…"
+  },
+  "btn_parameters": {
+    "message": "Paràmetres ▾"
+  },
+  "btn_generate": {
+    "message": "Genera"
+  },
+  "install_model_hint": {
+    "message": "Instal·la un model per activar Genera."
+  },
+  "img_placeholder": {
+    "message": "La teva imatge apareixerà aquí"
+  },
+  "generating_eyebrow": {
+    "message": "GENERANT"
+  },
+  "phase_encoding": {
+    "message": "Codificant prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× cancel·la"
+  },
+  "btn_save": {
+    "message": "↓ Desa"
+  },
+  "btn_copy": {
+    "message": "⎘ Copia"
+  },
+  "btn_retry": {
+    "message": "↺ Torna a provar"
+  },
+  "img_generated_alt": {
+    "message": "Imatge generada"
+  },
+  "recent_eyebrow": {
+    "message": "RECENT"
+  },
+  "view_all": {
+    "message": "Veure tot ↗"
+  },
+  "clear_history": {
+    "message": "Esborra l'historial"
+  },
+  "loading_model": {
+    "message": "Carregant model…"
+  },
+  "compiling": {
+    "message": "Compilant…"
+  },
+  "generating_pct": {
+    "message": "Generant · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Preparant…"
+  },
+  "phase_compiling_first": {
+    "message": "Compilant shaders · primera execució"
+  },
+  "phase_loading": {
+    "message": "Carregant…"
+  },
+  "phase_fetching": {
+    "message": "Obtenint pesos del model"
+  },
+  "phase_decoding": {
+    "message": "Descodificant imatge…"
+  },
+  "phase_loading_model": {
+    "message": "Carregant model…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Compilant shaders…"
+  },
+  "workspace_page_title": {
+    "message": "Espai de treball del generador d'imatges IA offline"
+  },
+  "workspace_brand": {
+    "message": "Generador d'imatges IA Offline"
+  },
+  "workspace_label": {
+    "message": "espai de treball"
+  },
+  "tab_gallery": {
+    "message": "Galeria"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnòstic"
+  },
+  "tab_settings": {
+    "message": "Configuració"
+  },
+  "your_generations": {
+    "message": "Les teves generacions"
+  },
+  "gallery_lede": {
+    "message": "Tot es queda en aquest dispositiu. Clica una rajola per a la resolució completa i procedència."
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "Tots els models"
+  },
+  "filter_engine": {
+    "message": "Motor"
+  },
+  "any_engine": {
+    "message": "Qualsevol motor"
+  },
+  "engine_browser": {
+    "message": "Navegador · WebGPU"
+  },
+  "filter_window": {
+    "message": "Període"
+  },
+  "time_all": {
+    "message": "Tot el temps"
+  },
+  "time_24h": {
+    "message": "Últimes 24 hores"
+  },
+  "time_7d": {
+    "message": "Últims 7 dies"
+  },
+  "time_30d": {
+    "message": "Últims 30 dies"
+  },
+  "btn_select": {
+    "message": "Selecciona"
+  },
+  "no_images_title": {
+    "message": "Encara no hi ha imatges"
+  },
+  "no_images_lede": {
+    "message": "Obre el popup amb Alt+Shift+D, escriu un prompt, clica Genera. Els resultats apareixeran aquí."
+  },
+  "no_matches_title": {
+    "message": "Sense coincidències"
+  },
+  "no_matches_lede": {
+    "message": "Res en aquest període. Prova d'ampliar el filtre."
+  },
+  "compare_kicker": {
+    "message": "Compara · arrossega el mànec"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "tanca"
+  },
+  "loading_fullres": {
+    "message": "carregant resolució completa…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Evitar"
+  },
+  "label_seed": {
+    "message": "Llavor"
+  },
+  "label_steps": {
+    "message": "Passos"
+  },
+  "label_guidance": {
+    "message": "Guia"
+  },
+  "label_engine": {
+    "message": "Motor"
+  },
+  "label_duration": {
+    "message": "Durada"
+  },
+  "label_generated": {
+    "message": "Generat"
+  },
+  "label_path": {
+    "message": "Ruta"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Reutilitza la llavor"
+  },
+  "btn_copy_prompt": {
+    "message": "Copia el prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Copia la llavor"
+  },
+  "btn_download_png": {
+    "message": "↓ Baixa PNG"
+  },
+  "btn_delete": {
+    "message": "Elimina"
+  },
+  "danger_zone": {
+    "message": "Zona de perill"
+  },
+  "clear_data_title": {
+    "message": "Esborra totes les dades de l'extensió"
+  },
+  "clear_data_hint": {
+    "message": "Elimina tots els models en memòria cau i imatges generades. No es pot desfer."
+  },
+  "btn_clear_data": {
+    "message": "Esborra dades"
+  },
+  "diag_title": {
+    "message": "Diagnòstic"
+  },
+  "diag_lede": {
+    "message": "El que l'extensió veu sobre el teu navegador i màquina. Copia aquest bloc a un issue si alguna cosa no funciona."
+  },
+  "diag_engine": {
+    "message": "Motor actiu"
+  },
+  "diag_preferred": {
+    "message": "Preferit"
+  },
+  "diag_device": {
+    "message": "Dispositiu"
+  },
+  "diag_adapter": {
+    "message": "Adaptador"
+  },
+  "diag_vendor": {
+    "message": "Fabricant"
+  },
+  "diag_vram": {
+    "message": "VRAM est."
+  },
+  "diag_browser": {
+    "message": "Ruta del navegador"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Quota OPFS"
+  },
+  "diag_storage": {
+    "message": "Emmagatzematge"
+  },
+  "diag_installed": {
+    "message": "Models instal·lats"
+  },
+  "diag_recent": {
+    "message": "Imatges recents"
+  },
+  "diag_active": {
+    "message": "Model actiu"
+  },
+  "btn_copy_json": {
+    "message": "Copia com a JSON"
+  },
+  "btn_reprobe": {
+    "message": "Tornar a verificar"
+  },
+  "btn_compare": {
+    "message": "Compara"
+  },
+  "btn_export_zip": {
+    "message": "↓ Exporta ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Elimina"
+  },
+  "btn_cancel_select": {
+    "message": "Cancel·la"
+  },
+  "confirm_clear_data": {
+    "message": "Eliminar tots els models en memòria cau i imatges generades?\n\nAixò no es pot desfer."
+  },
+  "clearing": {
+    "message": "Esborrant…"
+  },
+  "status_done": {
+    "message": "✓ Fet"
+  },
+  "status_saved": {
+    "message": "✓ Desat"
+  },
+  "status_copied": {
+    "message": "✓ Copiat"
+  },
+  "confirm_delete_image": {
+    "message": "Eliminar aquesta imatge?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Eliminar $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "imatges"
+  },
+  "image_noun": {
+    "message": "imatge"
+  },
+  "no_prompt": {
+    "message": "(sense prompt)"
+  },
+  "none_selected": {
+    "message": "(res seleccionat)"
+  },
+  "in_memory_only": {
+    "message": "(només a memòria)"
+  },
+  "btn_exit_select": {
+    "message": "Surt de la selecció"
+  },
+  "n_selected": {
+    "message": "$COUNT$ seleccionat/s",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Empaquetant $COUNT$ imatges…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ imatges exportades",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Tornant a executar amb la mateixa llavor…"
+  },
+  "err_no_engine": {
+    "message": "Cap motor de generació disponible"
+  },
+  "err_engine_start": {
+    "message": "No s'ha pogut iniciar el motor del navegador"
+  },
+  "err_inference_failed": {
+    "message": "La generació al navegador ha fallat"
+  },
+  "err_generation_failed": {
+    "message": "La generació ha fallat"
+  },
+  "no_model_sub": {
+    "message": "Tria un model a la pestanya Models per començar"
+  },
+  "mb_pick_model": {
+    "message": "↓ Tria model"
+  },
+  "popup_tab_generate": {
+    "message": "Generar"
+  },
+  "popup_tab_models": {
+    "message": "Models"
+  },
+  "models_intro": {
+    "message": "Tria un model per descarregar. Un cop instal·lats, pots canviar entre ells en qualsevol moment."
+  },
+  "sec_downloading": {
+    "message": "Descarregant"
+  },
+  "sec_installed": {
+    "message": "Instal·lats"
+  },
+  "sec_available": {
+    "message": "Disponibles"
+  },
+  "available_popular": {
+    "message": "populars"
+  },
+  "empty_models_title": {
+    "message": "Encara no hi ha models instal·lats"
+  },
+  "empty_models_sub_html": {
+    "message": "Tria'n un a sota i toca <b>↓ Obtenir</b>."
+  },
+  "storage_label": {
+    "message": "Emmagatzematge"
+  },
+  "dl_tag_fetching": {
+    "message": "obtenint"
+  },
+  "dl_paused_sub": {
+    "message": "pausat — reprèn per continuar"
+  },
+  "dl_meta_got": {
+    "message": "Rebut"
+  },
+  "dl_meta_speed": {
+    "message": "Velocitat"
+  },
+  "dl_meta_left": {
+    "message": "Resta"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pausa"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Reprendre"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Amagar"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Cancel·lar"
+  },
+  "mdl_btn_use": {
+    "message": "Usar"
+  },
+  "mdl_btn_in_use": {
+    "message": "En ús"
+  },
+  "mdl_btn_get": {
+    "message": "Descarregar"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n/d"
+  },
+  "mdl_loading_sub": {
+    "message": "Descarregant al dispositiu…"
+  }
+}

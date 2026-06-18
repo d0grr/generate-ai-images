@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - Tengeneza picha AI"
+  },
+  "shortName": {
+    "message": "Picha za AI"
+  },
+  "shortDesc": {
+    "message": "Tumia AI image generator kutengeneza picha za AI kutoka kwa maandishi, unda picha za kweli mara moja."
+  },
+  "action_title": {
+    "message": "Unda Picha za AI"
+  },
+  "open_workspace": {
+    "message": "Fungua nafasi ya kazi"
+  },
+  "settings": {
+    "message": "Mipangilio"
+  },
+  "error_title": {
+    "message": "Kitu fulani kimeenda vibaya"
+  },
+  "btn_diagnostics": {
+    "message": "Uchunguzi ↗"
+  },
+  "btn_dismiss": {
+    "message": "Funga"
+  },
+  "no_model_selected": {
+    "message": "Hakuna mfano uliochaguliwa"
+  },
+  "mb_get": {
+    "message": "↓ Pata"
+  },
+  "mb_downloading": {
+    "message": "Inapakua…"
+  },
+  "mb_of": {
+    "message": "ya"
+  },
+  "cancel_download": {
+    "message": "Ghairi upakuaji"
+  },
+  "mb_installing": {
+    "message": "Inaweka…"
+  },
+  "mb_verifying": {
+    "message": "Inathibitisha uzito · karibu kwisha"
+  },
+  "ready": {
+    "message": "Tayari"
+  },
+  "prompt_placeholder": {
+    "message": "Elezea unachotaka kuunda…"
+  },
+  "btn_clear_title": {
+    "message": "Futa"
+  },
+  "btn_clear_aria": {
+    "message": "Futa prompt"
+  },
+  "surprise_me": {
+    "message": "Nishangaze"
+  },
+  "param_steps": {
+    "message": "Hatua"
+  },
+  "param_guidance": {
+    "message": "Mwongozo"
+  },
+  "param_seed": {
+    "message": "Mbegu"
+  },
+  "seed_random": {
+    "message": "nasibu"
+  },
+  "neg_prompt_label": {
+    "message": "Prompt hasi"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Mambo ya kuepuka…"
+  },
+  "btn_parameters": {
+    "message": "Vigezo ▾"
+  },
+  "btn_generate": {
+    "message": "Unda"
+  },
+  "install_model_hint": {
+    "message": "Sakinisha mfano ili kuwezesha Unda."
+  },
+  "img_placeholder": {
+    "message": "Picha yako itaonekana hapa"
+  },
+  "generating_eyebrow": {
+    "message": "INAUNDA"
+  },
+  "phase_encoding": {
+    "message": "Inasimba prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× ghairi"
+  },
+  "btn_save": {
+    "message": "↓ Hifadhi"
+  },
+  "btn_copy": {
+    "message": "⎘ Nakili"
+  },
+  "btn_retry": {
+    "message": "↺ Jaribu tena"
+  },
+  "img_generated_alt": {
+    "message": "Picha iliyoundwa"
+  },
+  "recent_eyebrow": {
+    "message": "ZA HIVI KARIBUNI"
+  },
+  "view_all": {
+    "message": "Angalia zote ↗"
+  },
+  "clear_history": {
+    "message": "Futa historia"
+  },
+  "loading_model": {
+    "message": "Inapakia mfano…"
+  },
+  "compiling": {
+    "message": "Inakusanya…"
+  },
+  "generating_pct": {
+    "message": "Inaunda · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Inajiandaa…"
+  },
+  "phase_compiling_first": {
+    "message": "Inakusanya shaders · mara ya kwanza"
+  },
+  "phase_loading": {
+    "message": "Inapakia…"
+  },
+  "phase_fetching": {
+    "message": "Inapata uzito wa mfano"
+  },
+  "phase_decoding": {
+    "message": "Inasimbuliwa picha…"
+  },
+  "phase_loading_model": {
+    "message": "Inapakia mfano…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Inakusanya shaders…"
+  },
+  "workspace_page_title": {
+    "message": "Nafasi ya Kazi ya AI Image Generator bila Mtandao"
+  },
+  "workspace_brand": {
+    "message": "AI Image Generator bila Mtandao"
+  },
+  "workspace_label": {
+    "message": "nafasi ya kazi"
+  },
+  "tab_gallery": {
+    "message": "Matunzio"
+  },
+  "tab_diagnostics": {
+    "message": "Uchunguzi"
+  },
+  "tab_settings": {
+    "message": "Mipangilio"
+  },
+  "your_generations": {
+    "message": "Picha zako"
+  },
+  "gallery_lede": {
+    "message": "Kila kitu kinabaki kwenye kifaa hiki. Bonyeza kidakuzi kuona ubora kamili na chanzo."
+  },
+  "filter_model": {
+    "message": "Mfano"
+  },
+  "all_models": {
+    "message": "Mifano yote"
+  },
+  "filter_engine": {
+    "message": "Injini"
+  },
+  "any_engine": {
+    "message": "Injini yoyote"
+  },
+  "engine_browser": {
+    "message": "Kivinjari · WebGPU"
+  },
+  "filter_window": {
+    "message": "Kipindi"
+  },
+  "time_all": {
+    "message": "Wakati wote"
+  },
+  "time_24h": {
+    "message": "Masaa 24 yaliyopita"
+  },
+  "time_7d": {
+    "message": "Siku 7 zilizopita"
+  },
+  "time_30d": {
+    "message": "Siku 30 zilizopita"
+  },
+  "btn_select": {
+    "message": "Chagua"
+  },
+  "no_images_title": {
+    "message": "Bado hakuna picha"
+  },
+  "no_images_lede": {
+    "message": "Fungua popup na Alt+Shift+D, andika prompt, bonyeza Unda. Matokeo yataonekana hapa."
+  },
+  "no_matches_title": {
+    "message": "Hakuna mechi"
+  },
+  "no_matches_lede": {
+    "message": "Hakuna kitu katika kipindi hiki. Jaribu kupanua kichujio."
+  },
+  "compare_kicker": {
+    "message": "Linganisha · vuta mpini"
+  },
+  "compare_vs": {
+    "message": "A dhidi ya B"
+  },
+  "close_aria": {
+    "message": "funga"
+  },
+  "loading_fullres": {
+    "message": "inapakia ubora kamili…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Epuka"
+  },
+  "label_seed": {
+    "message": "Mbegu"
+  },
+  "label_steps": {
+    "message": "Hatua"
+  },
+  "label_guidance": {
+    "message": "Mwongozo"
+  },
+  "label_engine": {
+    "message": "Injini"
+  },
+  "label_duration": {
+    "message": "Muda"
+  },
+  "label_generated": {
+    "message": "Iliundwa"
+  },
+  "label_path": {
+    "message": "Njia"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Tumia mbegu tena"
+  },
+  "btn_copy_prompt": {
+    "message": "Nakili prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Nakili mbegu"
+  },
+  "btn_download_png": {
+    "message": "↓ Pakua PNG"
+  },
+  "btn_delete": {
+    "message": "Futa"
+  },
+  "danger_zone": {
+    "message": "Eneo hatari"
+  },
+  "clear_data_title": {
+    "message": "Futa data yote ya ugani"
+  },
+  "clear_data_hint": {
+    "message": "Huondoa mifano yote iliyohifadhiwa na picha zilizoundwa. Haiwezi kutenduliwa."
+  },
+  "btn_clear_data": {
+    "message": "Futa data"
+  },
+  "diag_title": {
+    "message": "Uchunguzi"
+  },
+  "diag_lede": {
+    "message": "Kinachoonekana na ugani kuhusu kivinjari na mashine yako. Nakili kiota hiki kwenye tatizo ikiwa kitu hakifanyi kazi."
+  },
+  "diag_engine": {
+    "message": "Injini inayotumika"
+  },
+  "diag_preferred": {
+    "message": "Inayopendelewa"
+  },
+  "diag_device": {
+    "message": "Kifaa"
+  },
+  "diag_adapter": {
+    "message": "Kirekebishi"
+  },
+  "diag_vendor": {
+    "message": "Muuzaji"
+  },
+  "diag_vram": {
+    "message": "Makadirio ya VRAM"
+  },
+  "diag_browser": {
+    "message": "Njia ya kivinjari"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Kota ya OPFS"
+  },
+  "diag_storage": {
+    "message": "Hifadhi"
+  },
+  "diag_installed": {
+    "message": "Mifano iliyosakinishwa"
+  },
+  "diag_recent": {
+    "message": "Picha za hivi karibuni"
+  },
+  "diag_active": {
+    "message": "Mfano unaotumika"
+  },
+  "btn_copy_json": {
+    "message": "Nakili kama JSON"
+  },
+  "btn_reprobe": {
+    "message": "Endesha uchunguzi tena"
+  },
+  "btn_compare": {
+    "message": "Linganisha"
+  },
+  "btn_export_zip": {
+    "message": "↓ Hamisha ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Futa"
+  },
+  "btn_cancel_select": {
+    "message": "Ghairi"
+  },
+  "confirm_clear_data": {
+    "message": "Futa mifano yote iliyohifadhiwa na picha zilizoundwa?\n\nHii haiwezi kutenduliwa."
+  },
+  "clearing": {
+    "message": "Inafuta…"
+  },
+  "status_done": {
+    "message": "✓ Imekamilika"
+  },
+  "status_saved": {
+    "message": "✓ Imehifadhiwa"
+  },
+  "status_copied": {
+    "message": "✓ Imenakiliwa"
+  },
+  "confirm_delete_image": {
+    "message": "Futa picha hii?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Futa $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "picha"
+  },
+  "image_noun": {
+    "message": "picha"
+  },
+  "no_prompt": {
+    "message": "(bila prompt)"
+  },
+  "none_selected": {
+    "message": "(hakuna kilichochaguliwa)"
+  },
+  "in_memory_only": {
+    "message": "(katika kumbukumbu tu)"
+  },
+  "btn_exit_select": {
+    "message": "Toka uchaguzi"
+  },
+  "n_selected": {
+    "message": "$COUNT$ zilizochaguliwa",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Inafunga $COUNT$ picha…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Zimehamisharwa $COUNT$ picha",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Inatekeleza tena na mbegu ile ile…"
+  },
+  "err_no_engine": {
+    "message": "Hakuna injini ya utengenezaji inayopatikana"
+  },
+  "err_engine_start": {
+    "message": "Injini ya kivinjari haikuweza kuanza"
+  },
+  "err_inference_failed": {
+    "message": "Utengenezaji katika kivinjari umeshindwa"
+  },
+  "err_generation_failed": {
+    "message": "Uundaji umeshindwa"
+  },
+  "no_model_sub": {
+    "message": "Chagua modeli kwenye kichupo cha Modeli ili kuanza"
+  },
+  "mb_pick_model": {
+    "message": "↓ Chagua modeli"
+  },
+  "popup_tab_generate": {
+    "message": "Tengeneza"
+  },
+  "popup_tab_models": {
+    "message": "Modeli"
+  },
+  "models_intro": {
+    "message": "Chagua modeli ya kupakua. Baada ya kusakinishwa, unaweza kubadilisha wakati wowote."
+  },
+  "sec_downloading": {
+    "message": "Inapakua"
+  },
+  "sec_installed": {
+    "message": "Iliyosakinishwa"
+  },
+  "sec_available": {
+    "message": "Inapatikana"
+  },
+  "available_popular": {
+    "message": "maarufu"
+  },
+  "empty_models_title": {
+    "message": "Hakuna modeli iliyosakinishwa bado"
+  },
+  "empty_models_sub_html": {
+    "message": "Chagua moja hapa chini na ugonge <b>↓ Pata</b>."
+  },
+  "storage_label": {
+    "message": "Hifadhi"
+  },
+  "dl_tag_fetching": {
+    "message": "inaleta"
+  },
+  "dl_paused_sub": {
+    "message": "imesitishwa — endelea ili uendelee"
+  },
+  "dl_meta_got": {
+    "message": "Imepatikana"
+  },
+  "dl_meta_speed": {
+    "message": "Kasi"
+  },
+  "dl_meta_left": {
+    "message": "Imebaki"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Sitisha"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Endelea"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Ficha"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Ghairi"
+  },
+  "mdl_btn_use": {
+    "message": "Tumia"
+  },
+  "mdl_btn_in_use": {
+    "message": "Inatumika"
+  },
+  "mdl_btn_get": {
+    "message": "Pata"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "haipatikani"
+  },
+  "mdl_loading_sub": {
+    "message": "Inapakua kwenye kifaa…"
+  }
+}

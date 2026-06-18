@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI генератор слика - Kreator AI slika"
+  },
+  "shortName": {
+    "message": "AI slike"
+  },
+  "shortDesc": {
+    "message": "AI генератор слика из текста: стварај реалистичне AI слике, AI фотографије и илустрације тренутно у Chrome-у."
+  },
+  "action_title": {
+    "message": "Генериши ВИ слике"
+  },
+  "open_workspace": {
+    "message": "Отвори радни простор"
+  },
+  "settings": {
+    "message": "Подешавања"
+  },
+  "error_title": {
+    "message": "Нешто је пошло наопако"
+  },
+  "btn_diagnostics": {
+    "message": "Дијагностика ↗"
+  },
+  "btn_dismiss": {
+    "message": "Затвори"
+  },
+  "no_model_selected": {
+    "message": "Није одабран ниједан модел"
+  },
+  "mb_get": {
+    "message": "↓ Преузми"
+  },
+  "mb_downloading": {
+    "message": "Преузимање…"
+  },
+  "mb_of": {
+    "message": "од"
+  },
+  "cancel_download": {
+    "message": "Откажи преузимање"
+  },
+  "mb_installing": {
+    "message": "Инсталирање…"
+  },
+  "mb_verifying": {
+    "message": "Провера тежина · скоро готово"
+  },
+  "ready": {
+    "message": "Спремно"
+  },
+  "prompt_placeholder": {
+    "message": "Опишите шта желите да направите…"
+  },
+  "btn_clear_title": {
+    "message": "Обриши"
+  },
+  "btn_clear_aria": {
+    "message": "Обриши упит"
+  },
+  "surprise_me": {
+    "message": "Изненади ме"
+  },
+  "param_steps": {
+    "message": "Кораци"
+  },
+  "param_guidance": {
+    "message": "Усмеравање"
+  },
+  "param_seed": {
+    "message": "Семе"
+  },
+  "seed_random": {
+    "message": "насумично"
+  },
+  "neg_prompt_label": {
+    "message": "Негативни упит"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Ствари које треба избегавати…"
+  },
+  "btn_parameters": {
+    "message": "Параметри ▾"
+  },
+  "btn_generate": {
+    "message": "Генериши"
+  },
+  "install_model_hint": {
+    "message": "Инсталирај модел да би активирао Генерисање."
+  },
+  "img_placeholder": {
+    "message": "Ваша слика ће се приказати овде"
+  },
+  "generating_eyebrow": {
+    "message": "ГЕНЕРИСАЊЕ"
+  },
+  "phase_encoding": {
+    "message": "Кодирање упита"
+  },
+  "btn_cancel_gen": {
+    "message": "× откажи"
+  },
+  "btn_save": {
+    "message": "↓ Сачувај"
+  },
+  "btn_copy": {
+    "message": "⎘ Копирај"
+  },
+  "btn_retry": {
+    "message": "↺ Покушај поново"
+  },
+  "img_generated_alt": {
+    "message": "Генерисана слика"
+  },
+  "recent_eyebrow": {
+    "message": "НЕДАВНО"
+  },
+  "view_all": {
+    "message": "Прикажи све ↗"
+  },
+  "clear_history": {
+    "message": "Обриши историју"
+  },
+  "loading_model": {
+    "message": "Учитавање модела…"
+  },
+  "compiling": {
+    "message": "Компајлирање…"
+  },
+  "generating_pct": {
+    "message": "Генерисање · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Припрема…"
+  },
+  "phase_compiling_first": {
+    "message": "Компајлирање шејдера · прво покретање"
+  },
+  "phase_loading": {
+    "message": "Учитавање…"
+  },
+  "phase_fetching": {
+    "message": "Преузимање тежина модела"
+  },
+  "phase_decoding": {
+    "message": "Декодирање слике…"
+  },
+  "phase_loading_model": {
+    "message": "Учитавање модела…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Компајлирање шејдера…"
+  },
+  "workspace_page_title": {
+    "message": "Радни простор офлајн генератора ВИ слика"
+  },
+  "workspace_brand": {
+    "message": "ВИ Офлајн Генератор Слика"
+  },
+  "workspace_label": {
+    "message": "радни простор"
+  },
+  "tab_gallery": {
+    "message": "Галерија"
+  },
+  "tab_diagnostics": {
+    "message": "Дијагностика"
+  },
+  "tab_settings": {
+    "message": "Подешавања"
+  },
+  "your_generations": {
+    "message": "Ваше генерације"
+  },
+  "gallery_lede": {
+    "message": "Све остаје на овом уређају. Кликните на плочицу за пуну резолуцију и порекло."
+  },
+  "filter_model": {
+    "message": "Модел"
+  },
+  "all_models": {
+    "message": "Сви модели"
+  },
+  "filter_engine": {
+    "message": "Мотор"
+  },
+  "any_engine": {
+    "message": "Сваки мотор"
+  },
+  "engine_browser": {
+    "message": "Претраживач · WebGPU"
+  },
+  "filter_window": {
+    "message": "Период"
+  },
+  "time_all": {
+    "message": "Све време"
+  },
+  "time_24h": {
+    "message": "Последњих 24 сата"
+  },
+  "time_7d": {
+    "message": "Последњих 7 дана"
+  },
+  "time_30d": {
+    "message": "Последњих 30 дана"
+  },
+  "btn_select": {
+    "message": "Одабери"
+  },
+  "no_images_title": {
+    "message": "Још нема слика"
+  },
+  "no_images_lede": {
+    "message": "Отвори искачући прозор са Alt+Shift+D, напиши упит, кликни Генериши. Резултати се приказују овде."
+  },
+  "no_matches_title": {
+    "message": "Нема подударања"
+  },
+  "no_matches_lede": {
+    "message": "Ништа у овом периоду. Покушај да прошириш филтер."
+  },
+  "compare_kicker": {
+    "message": "Упореди · повуци ручку"
+  },
+  "compare_vs": {
+    "message": "A против B"
+  },
+  "close_aria": {
+    "message": "затвори"
+  },
+  "loading_fullres": {
+    "message": "учитавање пуне резолуције…"
+  },
+  "label_prompt": {
+    "message": "Упит"
+  },
+  "label_avoid": {
+    "message": "Избегавај"
+  },
+  "label_seed": {
+    "message": "Семе"
+  },
+  "label_steps": {
+    "message": "Кораци"
+  },
+  "label_guidance": {
+    "message": "Усмеравање"
+  },
+  "label_engine": {
+    "message": "Мотор"
+  },
+  "label_duration": {
+    "message": "Трајање"
+  },
+  "label_generated": {
+    "message": "Генерисано"
+  },
+  "label_path": {
+    "message": "Путања"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Поново употреби семе"
+  },
+  "btn_copy_prompt": {
+    "message": "Копирај упит"
+  },
+  "btn_copy_seed": {
+    "message": "Копирај семе"
+  },
+  "btn_download_png": {
+    "message": "↓ Преузми PNG"
+  },
+  "btn_delete": {
+    "message": "Избриши"
+  },
+  "danger_zone": {
+    "message": "Опасна зона"
+  },
+  "clear_data_title": {
+    "message": "Обриши све податке проширења"
+  },
+  "clear_data_hint": {
+    "message": "Уклања све кеширане моделе и генерисане слике. Не може се поништити."
+  },
+  "btn_clear_data": {
+    "message": "Обриши податке"
+  },
+  "diag_title": {
+    "message": "Дијагностика"
+  },
+  "diag_lede": {
+    "message": "Шта проширење види о вашем претраживачу и машини. Копирај овај блок у issue ако нешто не ради."
+  },
+  "diag_engine": {
+    "message": "Активни мотор"
+  },
+  "diag_preferred": {
+    "message": "Жељени"
+  },
+  "diag_device": {
+    "message": "Уређај"
+  },
+  "diag_adapter": {
+    "message": "Адаптер"
+  },
+  "diag_vendor": {
+    "message": "Добављач"
+  },
+  "diag_vram": {
+    "message": "VRAM пр."
+  },
+  "diag_browser": {
+    "message": "Путања претраживача"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS квота"
+  },
+  "diag_storage": {
+    "message": "Складиштење"
+  },
+  "diag_installed": {
+    "message": "Инсталирани модели"
+  },
+  "diag_recent": {
+    "message": "Недавне слике"
+  },
+  "diag_active": {
+    "message": "Активни модел"
+  },
+  "btn_copy_json": {
+    "message": "Копирај као JSON"
+  },
+  "btn_reprobe": {
+    "message": "Покрени провере поново"
+  },
+  "btn_compare": {
+    "message": "Упореди"
+  },
+  "btn_export_zip": {
+    "message": "↓ Извези ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Избриши"
+  },
+  "btn_cancel_select": {
+    "message": "Откажи"
+  },
+  "confirm_clear_data": {
+    "message": "Избрисати све кеширане моделе и генерисане слике?\n\nОво се не може поништити."
+  },
+  "clearing": {
+    "message": "Брисање…"
+  },
+  "status_done": {
+    "message": "✓ Готово"
+  },
+  "status_saved": {
+    "message": "✓ Сачувано"
+  },
+  "status_copied": {
+    "message": "✓ Копирано"
+  },
+  "confirm_delete_image": {
+    "message": "Избрисати ову слику?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Избрисати $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "слика"
+  },
+  "image_noun": {
+    "message": "слику"
+  },
+  "no_prompt": {
+    "message": "(без упита)"
+  },
+  "none_selected": {
+    "message": "(ништа није одабрано)"
+  },
+  "in_memory_only": {
+    "message": "(само у меморији)"
+  },
+  "btn_exit_select": {
+    "message": "Изађи из одабира"
+  },
+  "n_selected": {
+    "message": "$COUNT$ одабрано",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Паковање $COUNT$ слика…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Извезено $COUNT$ слика",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Поново покрећем са истим семеном…"
+  },
+  "err_no_engine": {
+    "message": "Нема доступног генеративног мотора"
+  },
+  "err_engine_start": {
+    "message": "Мотор претраживача се није могао покренути"
+  },
+  "err_inference_failed": {
+    "message": "Генерисање у прегледачу није успело"
+  },
+  "err_generation_failed": {
+    "message": "Генерисање није успело"
+  },
+  "no_model_sub": {
+    "message": "Изаберите модел на картици Модели да започнете"
+  },
+  "mb_pick_model": {
+    "message": "↓ Изабери модел"
+  },
+  "popup_tab_generate": {
+    "message": "Генериши"
+  },
+  "popup_tab_models": {
+    "message": "Модели"
+  },
+  "models_intro": {
+    "message": "Изаберите модел за преузимање. После инсталације можете прелазити између њих било кад."
+  },
+  "sec_downloading": {
+    "message": "Преузимање"
+  },
+  "sec_installed": {
+    "message": "Инсталирани"
+  },
+  "sec_available": {
+    "message": "Доступно"
+  },
+  "available_popular": {
+    "message": "популарно"
+  },
+  "empty_models_title": {
+    "message": "Још нема инсталираних модела"
+  },
+  "empty_models_sub_html": {
+    "message": "Изаберите један испод и додирните <b>↓ Преузми</b>."
+  },
+  "storage_label": {
+    "message": "Меморија"
+  },
+  "dl_tag_fetching": {
+    "message": "преузимање"
+  },
+  "dl_paused_sub": {
+    "message": "паузирано — наставите за наставак"
+  },
+  "dl_meta_got": {
+    "message": "Преузето"
+  },
+  "dl_meta_speed": {
+    "message": "Брзина"
+  },
+  "dl_meta_left": {
+    "message": "Преостало"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Пауза"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Настави"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Сакриј"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Откажи"
+  },
+  "mdl_btn_use": {
+    "message": "Користи"
+  },
+  "mdl_btn_in_use": {
+    "message": "У употреби"
+  },
+  "mdl_btn_get": {
+    "message": "Преузми"
+  },
+  "mdl_btn_token": {
+    "message": "Токен"
+  },
+  "mdl_btn_na": {
+    "message": "н/д"
+  },
+  "mdl_loading_sub": {
+    "message": "Преузимање на уређај…"
+  }
+}

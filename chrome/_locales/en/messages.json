@@ -1,0 +1,588 @@
+{
+  "appName": {
+    "message": "Generate AI Images"
+  },
+  "shortName": {
+    "message": "AI Images"
+  },
+  "shortDesc": {
+    "message": "Use the AI image generator to generate AI images from text, create ai pictures"
+  },
+  "action_title": {
+    "message": "Generate AI Images"
+  },
+  "open_workspace": {
+    "message": "Open workspace"
+  },
+  "settings": {
+    "message": "Settings"
+  },
+  "error_title": {
+    "message": "Something went wrong"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostics ↗"
+  },
+  "btn_dismiss": {
+    "message": "Dismiss"
+  },
+  "no_model_selected": {
+    "message": "No model selected"
+  },
+  "no_model_sub": {
+    "message": "Choose a model in the Models tab to get started"
+  },
+  "mb_pick_model": {
+    "message": "↓ Pick model"
+  },
+  "popup_tab_generate": {
+    "message": "Generate"
+  },
+  "popup_tab_models": {
+    "message": "Models"
+  },
+  "models_intro": {
+    "message": "Choose a model to download. Once installed, you can switch between them anytime."
+  },
+  "sec_downloading": {
+    "message": "Downloading"
+  },
+  "sec_installed": {
+    "message": "Installed"
+  },
+  "sec_available": {
+    "message": "Available models"
+  },
+  "available_popular": {
+    "message": "popular"
+  },
+  "empty_models_title": {
+    "message": "No models installed yet"
+  },
+  "empty_models_sub_html": {
+    "message": "Pick one below and tap <b>↓ Get</b>."
+  },
+  "storage_label": {
+    "message": "Storage"
+  },
+  "dl_tag_fetching": {
+    "message": "fetching"
+  },
+  "dl_paused_sub": {
+    "message": "paused — resume to continue"
+  },
+  "dl_meta_got": {
+    "message": "Got"
+  },
+  "dl_meta_speed": {
+    "message": "Speed"
+  },
+  "dl_meta_left": {
+    "message": "Left"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pause"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Resume"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Hide"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Cancel"
+  },
+  "mdl_btn_use": {
+    "message": "Use"
+  },
+  "mdl_btn_in_use": {
+    "message": "In use"
+  },
+  "mdl_unload_title": {
+    "message": "Clear model from memory"
+  },
+  "installed_models": {
+    "message": "Installed models"
+  },
+  "no_installed_models": {
+    "message": "No installed models yet."
+  },
+  "btn_delete_model": {
+    "message": "Delete"
+  },
+  "confirm_delete_model": {
+    "message": "Delete $NAME$? Its files will be removed from disk.",
+    "placeholders": {
+      "name": {
+        "content": "$1",
+        "example": "Realistic Vision"
+      }
+    }
+  },
+  "mdl_btn_get": {
+    "message": "Get"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n/a"
+  },
+  "mdl_loading_sub": {
+    "message": "Downloading to device…"
+  },
+  "mb_get": {
+    "message": "↓ Get"
+  },
+  "mb_downloading": {
+    "message": "Downloading…"
+  },
+  "mb_of": {
+    "message": "of"
+  },
+  "cancel_download": {
+    "message": "Cancel download"
+  },
+  "cancel_load": {
+    "message": "Cancel loading"
+  },
+  "mb_installing": {
+    "message": "Installing…"
+  },
+  "mb_verifying": {
+    "message": "Verifying weights · almost done"
+  },
+  "ready": {
+    "message": "Ready"
+  },
+  "prompt_placeholder": {
+    "message": "Describe what you want to create…"
+  },
+  "btn_clear_title": {
+    "message": "Clear"
+  },
+  "btn_clear_aria": {
+    "message": "Clear prompt"
+  },
+  "surprise_me": {
+    "message": "Surprise me"
+  },
+  "param_steps": {
+    "message": "Steps"
+  },
+  "param_guidance": {
+    "message": "Guidance"
+  },
+  "param_seed": {
+    "message": "Seed"
+  },
+  "param_face_restore": {
+    "message": "Restore faces (GFPGAN)"
+  },
+  "phase_upscaling": {
+    "message": "Upscaling…"
+  },
+  "phase_face_restore": {
+    "message": "Restoring faces…"
+  },
+  "seed_random": {
+    "message": "random"
+  },
+  "neg_prompt_label": {
+    "message": "Negative prompt"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Things to avoid…"
+  },
+  "btn_parameters": {
+    "message": "Parameters ▾"
+  },
+  "btn_generate": {
+    "message": "Generate"
+  },
+  "install_model_hint": {
+    "message": "Install a model to enable Generate."
+  },
+  "img_placeholder": {
+    "message": "Your image will appear here"
+  },
+  "generating_eyebrow": {
+    "message": "GENERATING"
+  },
+  "phase_encoding": {
+    "message": "Encoding prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× cancel"
+  },
+  "btn_save": {
+    "message": "↓ Save"
+  },
+  "btn_copy": {
+    "message": "⎘ Copy"
+  },
+  "btn_retry": {
+    "message": "↺ Retry"
+  },
+  "img_generated_alt": {
+    "message": "Generated image"
+  },
+  "recent_eyebrow": {
+    "message": "RECENT"
+  },
+  "view_all": {
+    "message": "View all ↗"
+  },
+  "clear_history": {
+    "message": "Clear history"
+  },
+  "loading_model": {
+    "message": "Loading model…"
+  },
+  "compiling": {
+    "message": "Compiling…"
+  },
+  "generating_pct": {
+    "message": "Generating · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Preparing…"
+  },
+  "phase_compiling_first": {
+    "message": "Compiling shaders · first run"
+  },
+  "phase_loading": {
+    "message": "Loading…"
+  },
+  "phase_fetching": {
+    "message": "Fetching model weights"
+  },
+  "phase_decoding": {
+    "message": "Decoding image…"
+  },
+  "phase_loading_model": {
+    "message": "Loading model…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Compiling shaders…"
+  },
+  "workspace_page_title": {
+    "message": "AI Offline Image Generator Workspace"
+  },
+  "workspace_brand": {
+    "message": "AI Offline Image Generator"
+  },
+  "workspace_label": {
+    "message": "workspace"
+  },
+  "tab_gallery": {
+    "message": "Gallery"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostics"
+  },
+  "tab_settings": {
+    "message": "Settings"
+  },
+  "your_generations": {
+    "message": "Your generations"
+  },
+  "gallery_lede": {
+    "message": "Everything stays on this device. Click a tile for full resolution and provenance."
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "All models"
+  },
+  "filter_engine": {
+    "message": "Engine"
+  },
+  "any_engine": {
+    "message": "Any engine"
+  },
+  "engine_browser": {
+    "message": "Browser · WebGPU"
+  },
+  "filter_window": {
+    "message": "Window"
+  },
+  "time_all": {
+    "message": "All time"
+  },
+  "time_24h": {
+    "message": "Last 24 hours"
+  },
+  "time_7d": {
+    "message": "Last 7 days"
+  },
+  "time_30d": {
+    "message": "Last 30 days"
+  },
+  "btn_select": {
+    "message": "Select"
+  },
+  "no_images_title": {
+    "message": "No images yet"
+  },
+  "no_images_lede": {
+    "message": "Open the popup with Alt+Shift+D, write a prompt, hit Generate. Results land here."
+  },
+  "no_matches_title": {
+    "message": "No matches"
+  },
+  "no_matches_lede": {
+    "message": "Nothing in this window. Try widening the filter."
+  },
+  "compare_kicker": {
+    "message": "Compare · drag the handle"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "close"
+  },
+  "loading_fullres": {
+    "message": "loading full-res…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Avoid"
+  },
+  "label_seed": {
+    "message": "Seed"
+  },
+  "label_steps": {
+    "message": "Steps"
+  },
+  "label_guidance": {
+    "message": "Guidance"
+  },
+  "label_scheduler": {
+    "message": "Scheduler"
+  },
+  "label_engine": {
+    "message": "Engine"
+  },
+  "label_duration": {
+    "message": "Duration"
+  },
+  "label_generated": {
+    "message": "Generated"
+  },
+  "label_path": {
+    "message": "Path"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Re-use seed"
+  },
+  "btn_copy_prompt": {
+    "message": "Copy prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Copy seed"
+  },
+  "btn_download_png": {
+    "message": "↓ Download PNG"
+  },
+  "btn_delete": {
+    "message": "Delete"
+  },
+  "dev_lang_label": {
+    "message": "UI language (Dev)"
+  },
+  "dev_lang_hint": {
+    "message": "Dev-only override for the interface language. Reloads the page."
+  },
+  "dev_lang_browser": {
+    "message": "Browser default"
+  },
+  "danger_zone": {
+    "message": "Danger zone"
+  },
+  "clear_data_title": {
+    "message": "Clear all extension data"
+  },
+  "clear_data_hint": {
+    "message": "Removes all cached models and generated images. Cannot be undone."
+  },
+  "btn_clear_data": {
+    "message": "Clear data"
+  },
+  "diag_title": {
+    "message": "Diagnostics"
+  },
+  "diag_lede": {
+    "message": "What the extension sees about your browser and machine. Copy this block into an issue if something isn't working right."
+  },
+  "diag_engine": {
+    "message": "Active engine"
+  },
+  "diag_preferred": {
+    "message": "Preferred"
+  },
+  "diag_device": {
+    "message": "Device"
+  },
+  "diag_adapter": {
+    "message": "Adapter"
+  },
+  "diag_vendor": {
+    "message": "Vendor"
+  },
+  "diag_vram": {
+    "message": "VRAM est."
+  },
+  "diag_browser": {
+    "message": "Browser path"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS quota"
+  },
+  "diag_storage": {
+    "message": "Storage"
+  },
+  "diag_installed": {
+    "message": "Installed models"
+  },
+  "diag_recent": {
+    "message": "Recent images"
+  },
+  "diag_active": {
+    "message": "Active model"
+  },
+  "btn_copy_json": {
+    "message": "Copy as JSON"
+  },
+  "btn_reprobe": {
+    "message": "Re-run probes"
+  },
+  "btn_compare": {
+    "message": "Compare"
+  },
+  "btn_export_zip": {
+    "message": "↓ Export ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Delete"
+  },
+  "btn_cancel_select": {
+    "message": "Cancel"
+  },
+  "confirm_clear_data": {
+    "message": "Delete all cached models and generated images?\n\nThis cannot be undone."
+  },
+  "clearing": {
+    "message": "Clearing…"
+  },
+  "status_done": {
+    "message": "✓ Done"
+  },
+  "status_saved": {
+    "message": "✓ Saved"
+  },
+  "status_copied": {
+    "message": "✓ Copied"
+  },
+  "confirm_delete_image": {
+    "message": "Delete this image?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Delete $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "images"
+  },
+  "image_noun": {
+    "message": "image"
+  },
+  "no_prompt": {
+    "message": "(no prompt)"
+  },
+  "none_selected": {
+    "message": "(none selected)"
+  },
+  "in_memory_only": {
+    "message": "(in-memory only)"
+  },
+  "btn_exit_select": {
+    "message": "Exit selection"
+  },
+  "n_selected": {
+    "message": "$COUNT$ selected",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Packing $COUNT$ images…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Exported $COUNT$ images",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Re-running with same seed…"
+  },
+  "err_no_engine": {
+    "message": "No inference engine available"
+  },
+  "err_no_engine_detail": {
+    "message": "WebGPU is unavailable in this browser."
+  },
+  "err_engine_start": {
+    "message": "Couldn't start browser engine"
+  },
+  "err_no_browser_model": {
+    "message": "This model has no WebGPU/ONNX variant."
+  },
+  "err_inference_failed": {
+    "message": "Browser inference failed"
+  },
+  "err_generation_failed": {
+    "message": "Generation failed"
+  }
+}

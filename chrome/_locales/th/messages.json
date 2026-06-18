@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI สร้างรูปภาพ - สร้าง AI Image ฟรี"
+  },
+  "shortName": {
+    "message": "AI รูปภาพ"
+  },
+  "shortDesc": {
+    "message": "ใช้ AI สร้างรูปภาพจากข้อความ สร้าง AI picture และ image แบบสมจริงได้ทันทีในเบราว์เซอร์ Chrome."
+  },
+  "action_title": {
+    "message": "สร้างภาพ AI"
+  },
+  "open_workspace": {
+    "message": "เปิดพื้นที่ทำงาน"
+  },
+  "settings": {
+    "message": "การตั้งค่า"
+  },
+  "error_title": {
+    "message": "เกิดข้อผิดพลาด"
+  },
+  "btn_diagnostics": {
+    "message": "การวินิจฉัย ↗"
+  },
+  "btn_dismiss": {
+    "message": "ปิด"
+  },
+  "no_model_selected": {
+    "message": "ยังไม่ได้เลือกโมเดล"
+  },
+  "mb_get": {
+    "message": "↓ ดาวน์โหลด"
+  },
+  "mb_downloading": {
+    "message": "กำลังดาวน์โหลด…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "ยกเลิกการดาวน์โหลด"
+  },
+  "mb_installing": {
+    "message": "กำลังติดตั้ง…"
+  },
+  "mb_verifying": {
+    "message": "กำลังตรวจสอบน้ำหนัก · เกือบเสร็จแล้ว"
+  },
+  "ready": {
+    "message": "พร้อมแล้ว"
+  },
+  "prompt_placeholder": {
+    "message": "อธิบายสิ่งที่ต้องการสร้าง…"
+  },
+  "btn_clear_title": {
+    "message": "ล้าง"
+  },
+  "btn_clear_aria": {
+    "message": "ล้างพรอมต์"
+  },
+  "surprise_me": {
+    "message": "ทำให้ฉันประหลาดใจ"
+  },
+  "param_steps": {
+    "message": "ขั้นตอน"
+  },
+  "param_guidance": {
+    "message": "การแนะนำ"
+  },
+  "param_seed": {
+    "message": "ซีด"
+  },
+  "seed_random": {
+    "message": "สุ่ม"
+  },
+  "neg_prompt_label": {
+    "message": "พรอมต์เชิงลบ"
+  },
+  "neg_prompt_placeholder": {
+    "message": "สิ่งที่ต้องการหลีกเลี่ยง…"
+  },
+  "btn_parameters": {
+    "message": "พารามิเตอร์ ▾"
+  },
+  "btn_generate": {
+    "message": "สร้าง"
+  },
+  "install_model_hint": {
+    "message": "ติดตั้งโมเดลเพื่อเปิดใช้งานการสร้าง"
+  },
+  "img_placeholder": {
+    "message": "ภาพของคุณจะปรากฏที่นี่"
+  },
+  "generating_eyebrow": {
+    "message": "กำลังสร้าง"
+  },
+  "phase_encoding": {
+    "message": "กำลังเข้ารหัสพรอมต์"
+  },
+  "btn_cancel_gen": {
+    "message": "× ยกเลิก"
+  },
+  "btn_save": {
+    "message": "↓ บันทึก"
+  },
+  "btn_copy": {
+    "message": "⎘ คัดลอก"
+  },
+  "btn_retry": {
+    "message": "↺ ลองอีกครั้ง"
+  },
+  "img_generated_alt": {
+    "message": "ภาพที่สร้างขึ้น"
+  },
+  "recent_eyebrow": {
+    "message": "ล่าสุด"
+  },
+  "view_all": {
+    "message": "ดูทั้งหมด ↗"
+  },
+  "clear_history": {
+    "message": "ล้างประวัติ"
+  },
+  "loading_model": {
+    "message": "กำลังโหลดโมเดล…"
+  },
+  "compiling": {
+    "message": "กำลังคอมไพล์…"
+  },
+  "generating_pct": {
+    "message": "กำลังสร้าง · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "กำลังเตรียม…"
+  },
+  "phase_compiling_first": {
+    "message": "กำลังคอมไพล์ shader · ครั้งแรก"
+  },
+  "phase_loading": {
+    "message": "กำลังโหลด…"
+  },
+  "phase_fetching": {
+    "message": "กำลังดึงน้ำหนักโมเดล"
+  },
+  "phase_decoding": {
+    "message": "กำลังถอดรหัสภาพ…"
+  },
+  "phase_loading_model": {
+    "message": "กำลังโหลดโมเดล…"
+  },
+  "phase_compiling_shaders": {
+    "message": "กำลังคอมไพล์ shader…"
+  },
+  "workspace_page_title": {
+    "message": "พื้นที่ทำงานเครื่องสร้างภาพ AI ออฟไลน์"
+  },
+  "workspace_brand": {
+    "message": "เครื่องสร้างภาพ AI ออฟไลน์"
+  },
+  "workspace_label": {
+    "message": "พื้นที่ทำงาน"
+  },
+  "tab_gallery": {
+    "message": "แกลเลอรี"
+  },
+  "tab_diagnostics": {
+    "message": "การวินิจฉัย"
+  },
+  "tab_settings": {
+    "message": "การตั้งค่า"
+  },
+  "your_generations": {
+    "message": "ภาพที่คุณสร้าง"
+  },
+  "gallery_lede": {
+    "message": "ทุกอย่างอยู่บนอุปกรณ์นี้ คลิกที่ไทล์เพื่อดูความละเอียดเต็มและแหล่งที่มา"
+  },
+  "filter_model": {
+    "message": "โมเดล"
+  },
+  "all_models": {
+    "message": "โมเดลทั้งหมด"
+  },
+  "filter_engine": {
+    "message": "เอนจิน"
+  },
+  "any_engine": {
+    "message": "เอนจินใดก็ได้"
+  },
+  "engine_browser": {
+    "message": "เบราว์เซอร์ · WebGPU"
+  },
+  "filter_window": {
+    "message": "ช่วงเวลา"
+  },
+  "time_all": {
+    "message": "ทุกเวลา"
+  },
+  "time_24h": {
+    "message": "24 ชั่วโมงที่ผ่านมา"
+  },
+  "time_7d": {
+    "message": "7 วันที่ผ่านมา"
+  },
+  "time_30d": {
+    "message": "30 วันที่ผ่านมา"
+  },
+  "btn_select": {
+    "message": "เลือก"
+  },
+  "no_images_title": {
+    "message": "ยังไม่มีภาพ"
+  },
+  "no_images_lede": {
+    "message": "เปิดป๊อปอัปด้วย Alt+Shift+D พิมพ์พรอมต์ กดสร้าง ผลลัพธ์จะปรากฏที่นี่"
+  },
+  "no_matches_title": {
+    "message": "ไม่พบผลลัพธ์"
+  },
+  "no_matches_lede": {
+    "message": "ไม่มีอะไรในช่วงเวลานี้ ลองขยายตัวกรอง"
+  },
+  "compare_kicker": {
+    "message": "เปรียบเทียบ · ลากแฮนเดิล"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "ปิด"
+  },
+  "loading_fullres": {
+    "message": "กำลังโหลดความละเอียดเต็ม…"
+  },
+  "label_prompt": {
+    "message": "พรอมต์"
+  },
+  "label_avoid": {
+    "message": "หลีกเลี่ยง"
+  },
+  "label_seed": {
+    "message": "ซีด"
+  },
+  "label_steps": {
+    "message": "ขั้นตอน"
+  },
+  "label_guidance": {
+    "message": "การแนะนำ"
+  },
+  "label_engine": {
+    "message": "เอนจิน"
+  },
+  "label_duration": {
+    "message": "ระยะเวลา"
+  },
+  "label_generated": {
+    "message": "สร้างเมื่อ"
+  },
+  "label_path": {
+    "message": "เส้นทาง"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ ใช้ซีดซ้ำ"
+  },
+  "btn_copy_prompt": {
+    "message": "คัดลอกพรอมต์"
+  },
+  "btn_copy_seed": {
+    "message": "คัดลอกซีด"
+  },
+  "btn_download_png": {
+    "message": "↓ ดาวน์โหลด PNG"
+  },
+  "btn_delete": {
+    "message": "ลบ"
+  },
+  "danger_zone": {
+    "message": "โซนอันตราย"
+  },
+  "clear_data_title": {
+    "message": "ล้างข้อมูลส่วนขยายทั้งหมด"
+  },
+  "clear_data_hint": {
+    "message": "ลบโมเดลแคชและภาพที่สร้างทั้งหมด ไม่สามารถยกเลิกได้"
+  },
+  "btn_clear_data": {
+    "message": "ล้างข้อมูล"
+  },
+  "diag_title": {
+    "message": "การวินิจฉัย"
+  },
+  "diag_lede": {
+    "message": "สิ่งที่ส่วนขยายเห็นเกี่ยวกับเบราว์เซอร์และเครื่องของคุณ คัดลอกบล็อกนี้ใส่ issue ถ้ามีปัญหา"
+  },
+  "diag_engine": {
+    "message": "เอนจินที่ใช้งาน"
+  },
+  "diag_preferred": {
+    "message": "ที่ต้องการ"
+  },
+  "diag_device": {
+    "message": "อุปกรณ์"
+  },
+  "diag_adapter": {
+    "message": "อะแดปเตอร์"
+  },
+  "diag_vendor": {
+    "message": "ผู้จำหน่าย"
+  },
+  "diag_vram": {
+    "message": "ประมาณ VRAM"
+  },
+  "diag_browser": {
+    "message": "เส้นทางเบราว์เซอร์"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "โควตา OPFS"
+  },
+  "diag_storage": {
+    "message": "พื้นที่จัดเก็บ"
+  },
+  "diag_installed": {
+    "message": "โมเดลที่ติดตั้ง"
+  },
+  "diag_recent": {
+    "message": "ภาพล่าสุด"
+  },
+  "diag_active": {
+    "message": "โมเดลที่ใช้งาน"
+  },
+  "btn_copy_json": {
+    "message": "คัดลอกเป็น JSON"
+  },
+  "btn_reprobe": {
+    "message": "ตรวจสอบอีกครั้ง"
+  },
+  "btn_compare": {
+    "message": "เปรียบเทียบ"
+  },
+  "btn_export_zip": {
+    "message": "↓ ส่งออก ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "ลบ"
+  },
+  "btn_cancel_select": {
+    "message": "ยกเลิก"
+  },
+  "confirm_clear_data": {
+    "message": "ลบโมเดลแคชและภาพที่สร้างทั้งหมด?\n\nไม่สามารถยกเลิกได้"
+  },
+  "clearing": {
+    "message": "กำลังล้าง…"
+  },
+  "status_done": {
+    "message": "✓ เสร็จแล้ว"
+  },
+  "status_saved": {
+    "message": "✓ บันทึกแล้ว"
+  },
+  "status_copied": {
+    "message": "✓ คัดลอกแล้ว"
+  },
+  "confirm_delete_image": {
+    "message": "ลบภาพนี้?"
+  },
+  "confirm_bulk_delete": {
+    "message": "ลบ $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "ภาพ"
+  },
+  "image_noun": {
+    "message": "ภาพ"
+  },
+  "no_prompt": {
+    "message": "(ไม่มีพรอมต์)"
+  },
+  "none_selected": {
+    "message": "(ไม่ได้เลือกอะไร)"
+  },
+  "in_memory_only": {
+    "message": "(ในหน่วยความจำเท่านั้น)"
+  },
+  "btn_exit_select": {
+    "message": "ออกจากการเลือก"
+  },
+  "n_selected": {
+    "message": "เลือก $COUNT$ รายการ",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "กำลังจัดแพ็ก $COUNT$ ภาพ…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "ส่งออกแล้ว $COUNT$ ภาพ",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "กำลังรันใหม่ด้วยซีดเดิม…"
+  },
+  "err_no_engine": {
+    "message": "ไม่มีเครื่องมือสร้างที่ใช้ได้"
+  },
+  "err_engine_start": {
+    "message": "ไม่สามารถเริ่มต้นเอนจินเบราว์เซอร์ได้"
+  },
+  "err_inference_failed": {
+    "message": "การสร้างในเบราว์เซอร์ล้มเหลว"
+  },
+  "err_generation_failed": {
+    "message": "การสร้างล้มเหลว"
+  },
+  "no_model_sub": {
+    "message": "เลือกโมเดลในแท็บ โมเดล เพื่อเริ่มต้น"
+  },
+  "mb_pick_model": {
+    "message": "↓ เลือกโมเดล"
+  },
+  "popup_tab_generate": {
+    "message": "สร้าง"
+  },
+  "popup_tab_models": {
+    "message": "โมเดล"
+  },
+  "models_intro": {
+    "message": "เลือกโมเดลเพื่อดาวน์โหลด เมื่อติดตั้งแล้วคุณสามารถสลับได้ตลอดเวลา"
+  },
+  "sec_downloading": {
+    "message": "กำลังดาวน์โหลด"
+  },
+  "sec_installed": {
+    "message": "ติดตั้งแล้ว"
+  },
+  "sec_available": {
+    "message": "มีให้"
+  },
+  "available_popular": {
+    "message": "ยอดนิยม"
+  },
+  "empty_models_title": {
+    "message": "ยังไม่มีโมเดลที่ติดตั้ง"
+  },
+  "empty_models_sub_html": {
+    "message": "เลือกด้านล่างแล้วแตะ <b>↓ ดาวน์โหลด</b>"
+  },
+  "storage_label": {
+    "message": "ที่จัดเก็บ"
+  },
+  "dl_tag_fetching": {
+    "message": "กำลังดึง"
+  },
+  "dl_paused_sub": {
+    "message": "หยุดชั่วคราว — ดำเนินการต่อเพื่อทำต่อ"
+  },
+  "dl_meta_got": {
+    "message": "ได้แล้ว"
+  },
+  "dl_meta_speed": {
+    "message": "ความเร็ว"
+  },
+  "dl_meta_left": {
+    "message": "เหลือ"
+  },
+  "dl_btn_pause": {
+    "message": "‖ หยุด"
+  },
+  "dl_btn_resume": {
+    "message": "▶ ดำเนินต่อ"
+  },
+  "dl_btn_hide": {
+    "message": "↓ ซ่อน"
+  },
+  "dl_btn_cancel_title": {
+    "message": "ยกเลิก"
+  },
+  "mdl_btn_use": {
+    "message": "ใช้"
+  },
+  "mdl_btn_in_use": {
+    "message": "กำลังใช้"
+  },
+  "mdl_btn_get": {
+    "message": "ดาวน์โหลด"
+  },
+  "mdl_btn_token": {
+    "message": "โทเค็น"
+  },
+  "mdl_btn_na": {
+    "message": "ไม่มี"
+  },
+  "mdl_loading_sub": {
+    "message": "กำลังดาวน์โหลดไปยังอุปกรณ์…"
+  }
+}

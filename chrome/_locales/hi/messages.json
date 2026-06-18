@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - AI तस्वीरें बनाएं"
+  },
+  "shortName": {
+    "message": "AI चित्र"
+  },
+  "shortDesc": {
+    "message": "AI इमेज जनरेटर से टेक्स्ट से AI इमेज बनाएं, AI पिक्चर क्रिएट करें और रियलिस्टिक AI फोटो तुरंत जेनरेट करें।"
+  },
+  "action_title": {
+    "message": "AI इमेज जेनरेट करें"
+  },
+  "open_workspace": {
+    "message": "वर्कस्पेस खोलें"
+  },
+  "settings": {
+    "message": "सेटिंग्स"
+  },
+  "error_title": {
+    "message": "कुछ गड़बड़ हो गई"
+  },
+  "btn_diagnostics": {
+    "message": "डायग्नोस्टिक्स ↗"
+  },
+  "btn_dismiss": {
+    "message": "बंद करें"
+  },
+  "no_model_selected": {
+    "message": "कोई मॉडल नहीं चुना गया"
+  },
+  "mb_get": {
+    "message": "↓ डाउनलोड करें"
+  },
+  "mb_downloading": {
+    "message": "डाउनलोड हो रहा है…"
+  },
+  "mb_of": {
+    "message": "में से"
+  },
+  "cancel_download": {
+    "message": "डाउनलोड रद्द करें"
+  },
+  "mb_installing": {
+    "message": "इंस्टॉल हो रहा है…"
+  },
+  "mb_verifying": {
+    "message": "वेट्स की जांच हो रही है · लगभग हो गया"
+  },
+  "ready": {
+    "message": "तैयार"
+  },
+  "prompt_placeholder": {
+    "message": "बताएं आप क्या बनाना चाहते हैं…"
+  },
+  "btn_clear_title": {
+    "message": "साफ करें"
+  },
+  "btn_clear_aria": {
+    "message": "प्रॉम्प्ट साफ करें"
+  },
+  "surprise_me": {
+    "message": "मुझे चौंकाएं"
+  },
+  "param_steps": {
+    "message": "स्टेप्स"
+  },
+  "param_guidance": {
+    "message": "गाइडेंस"
+  },
+  "param_seed": {
+    "message": "सीड"
+  },
+  "seed_random": {
+    "message": "यादृच्छिक"
+  },
+  "neg_prompt_label": {
+    "message": "नेगेटिव प्रॉम्प्ट"
+  },
+  "neg_prompt_placeholder": {
+    "message": "जो न चाहिए वो लिखें…"
+  },
+  "btn_parameters": {
+    "message": "पैरामीटर्स ▾"
+  },
+  "btn_generate": {
+    "message": "जेनरेट करें"
+  },
+  "install_model_hint": {
+    "message": "जेनरेट सक्षम करने के लिए मॉडल इंस्टॉल करें।"
+  },
+  "img_placeholder": {
+    "message": "आपकी इमेज यहाँ दिखेगी"
+  },
+  "generating_eyebrow": {
+    "message": "जेनरेट हो रहा है"
+  },
+  "phase_encoding": {
+    "message": "प्रॉम्प्ट एनकोड हो रहा है"
+  },
+  "btn_cancel_gen": {
+    "message": "× रद्द करें"
+  },
+  "btn_save": {
+    "message": "↓ सेव करें"
+  },
+  "btn_copy": {
+    "message": "⎘ कॉपी करें"
+  },
+  "btn_retry": {
+    "message": "↺ फिर से कोशिश करें"
+  },
+  "img_generated_alt": {
+    "message": "जेनरेट की गई इमेज"
+  },
+  "recent_eyebrow": {
+    "message": "हालिया"
+  },
+  "view_all": {
+    "message": "सभी देखें ↗"
+  },
+  "clear_history": {
+    "message": "इतिहास साफ करें"
+  },
+  "loading_model": {
+    "message": "मॉडल लोड हो रहा है…"
+  },
+  "compiling": {
+    "message": "कंपाइल हो रहा है…"
+  },
+  "generating_pct": {
+    "message": "जेनरेट हो रहा है · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "तैयारी हो रही है…"
+  },
+  "phase_compiling_first": {
+    "message": "शेडर कंपाइल हो रहे हैं · पहली बार"
+  },
+  "phase_loading": {
+    "message": "लोड हो रहा है…"
+  },
+  "phase_fetching": {
+    "message": "मॉडल वेट्स प्राप्त हो रहे हैं"
+  },
+  "phase_decoding": {
+    "message": "इमेज डिकोड हो रही है…"
+  },
+  "phase_loading_model": {
+    "message": "मॉडल लोड हो रहा है…"
+  },
+  "phase_compiling_shaders": {
+    "message": "शेडर कंपाइल हो रहे हैं…"
+  },
+  "workspace_page_title": {
+    "message": "AI ऑफलाइन इमेज जेनरेटर वर्कस्पेस"
+  },
+  "workspace_brand": {
+    "message": "AI ऑफलाइन इमेज जेनरेटर"
+  },
+  "workspace_label": {
+    "message": "वर्कस्पेस"
+  },
+  "tab_gallery": {
+    "message": "गैलरी"
+  },
+  "tab_diagnostics": {
+    "message": "डायग्नोस्टिक्स"
+  },
+  "tab_settings": {
+    "message": "सेटिंग्स"
+  },
+  "your_generations": {
+    "message": "आपकी जेनरेशन"
+  },
+  "gallery_lede": {
+    "message": "सब कुछ इस डिवाइस पर रहता है। पूरी रिज़ॉल्यूशन के लिए टाइल पर क्लिक करें।"
+  },
+  "filter_model": {
+    "message": "मॉडल"
+  },
+  "all_models": {
+    "message": "सभी मॉडल"
+  },
+  "filter_engine": {
+    "message": "इंजन"
+  },
+  "any_engine": {
+    "message": "कोई भी इंजन"
+  },
+  "engine_browser": {
+    "message": "ब्राउज़र · WebGPU"
+  },
+  "filter_window": {
+    "message": "समय अवधि"
+  },
+  "time_all": {
+    "message": "सारा समय"
+  },
+  "time_24h": {
+    "message": "पिछले 24 घंटे"
+  },
+  "time_7d": {
+    "message": "पिछले 7 दिन"
+  },
+  "time_30d": {
+    "message": "पिछले 30 दिन"
+  },
+  "btn_select": {
+    "message": "चुनें"
+  },
+  "no_images_title": {
+    "message": "अभी कोई इमेज नहीं"
+  },
+  "no_images_lede": {
+    "message": "Alt+Shift+D से पॉपअप खोलें, प्रॉम्प्ट लिखें और जेनरेट करें पर क्लिक करें। परिणाम यहाँ दिखेंगे।"
+  },
+  "no_matches_title": {
+    "message": "कोई मिलान नहीं"
+  },
+  "no_matches_lede": {
+    "message": "इस अवधि में कुछ नहीं। फ़िल्टर को विस्तृत करें।"
+  },
+  "compare_kicker": {
+    "message": "तुलना करें · हैंडल खींचें"
+  },
+  "compare_vs": {
+    "message": "A बनाम B"
+  },
+  "close_aria": {
+    "message": "बंद करें"
+  },
+  "loading_fullres": {
+    "message": "पूरी रिज़ॉल्यूशन लोड हो रही है…"
+  },
+  "label_prompt": {
+    "message": "प्रॉम्प्ट"
+  },
+  "label_avoid": {
+    "message": "बचाएं"
+  },
+  "label_seed": {
+    "message": "सीड"
+  },
+  "label_steps": {
+    "message": "स्टेप्स"
+  },
+  "label_guidance": {
+    "message": "गाइडेंस"
+  },
+  "label_engine": {
+    "message": "इंजन"
+  },
+  "label_duration": {
+    "message": "अवधि"
+  },
+  "label_generated": {
+    "message": "जेनरेट किया"
+  },
+  "label_path": {
+    "message": "पाथ"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ सीड फिर उपयोग करें"
+  },
+  "btn_copy_prompt": {
+    "message": "प्रॉम्प्ट कॉपी करें"
+  },
+  "btn_copy_seed": {
+    "message": "सीड कॉपी करें"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG डाउनलोड करें"
+  },
+  "btn_delete": {
+    "message": "हटाएं"
+  },
+  "danger_zone": {
+    "message": "खतरनाक ज़ोन"
+  },
+  "clear_data_title": {
+    "message": "सभी एक्सटेंशन डेटा साफ करें"
+  },
+  "clear_data_hint": {
+    "message": "सभी कैश मॉडल और जेनरेट इमेज हटाता है। वापस नहीं लाया जा सकता।"
+  },
+  "btn_clear_data": {
+    "message": "डेटा साफ करें"
+  },
+  "diag_title": {
+    "message": "डायग्नोस्टिक्स"
+  },
+  "diag_lede": {
+    "message": "एक्सटेंशन आपके ब्राउज़र और मशीन के बारे में क्या देख सकता है। अगर कुछ काम नहीं कर रहा तो यह ब्लॉक issue में कॉपी करें।"
+  },
+  "diag_engine": {
+    "message": "एक्टिव इंजन"
+  },
+  "diag_preferred": {
+    "message": "प्रिफर्ड"
+  },
+  "diag_device": {
+    "message": "डिवाइस"
+  },
+  "diag_adapter": {
+    "message": "अडैप्टर"
+  },
+  "diag_vendor": {
+    "message": "वेंडर"
+  },
+  "diag_vram": {
+    "message": "VRAM अनुमान"
+  },
+  "diag_browser": {
+    "message": "ब्राउज़र पाथ"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS कोटा"
+  },
+  "diag_storage": {
+    "message": "स्टोरेज"
+  },
+  "diag_installed": {
+    "message": "इंस्टॉल मॉडल"
+  },
+  "diag_recent": {
+    "message": "हालिया इमेजें"
+  },
+  "diag_active": {
+    "message": "एक्टिव मॉडल"
+  },
+  "btn_copy_json": {
+    "message": "JSON के रूप में कॉपी करें"
+  },
+  "btn_reprobe": {
+    "message": "प्रोब्स फिर चलाएं"
+  },
+  "btn_compare": {
+    "message": "तुलना करें"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP एक्सपोर्ट करें"
+  },
+  "btn_bulk_delete": {
+    "message": "हटाएं"
+  },
+  "btn_cancel_select": {
+    "message": "रद्द करें"
+  },
+  "confirm_clear_data": {
+    "message": "सभी कैश मॉडल और जेनरेट इमेज हटाएं?\n\nयह वापस नहीं लाया जा सकता।"
+  },
+  "clearing": {
+    "message": "साफ हो रहा है…"
+  },
+  "status_done": {
+    "message": "✓ हो गया"
+  },
+  "status_saved": {
+    "message": "✓ सेव हो गया"
+  },
+  "status_copied": {
+    "message": "✓ कॉपी हो गया"
+  },
+  "confirm_delete_image": {
+    "message": "यह इमेज हटाएं?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ हटाएं?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "इमेजें"
+  },
+  "image_noun": {
+    "message": "इमेज"
+  },
+  "no_prompt": {
+    "message": "(कोई प्रॉम्प्ट नहीं)"
+  },
+  "none_selected": {
+    "message": "(कुछ नहीं चुना)"
+  },
+  "in_memory_only": {
+    "message": "(केवल मेमोरी में)"
+  },
+  "btn_exit_select": {
+    "message": "चयन से बाहर निकलें"
+  },
+  "n_selected": {
+    "message": "$COUNT$ चुने गए",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ इमेजें पैक हो रही हैं…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ इमेजें एक्सपोर्ट हुईं",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "उसी सीड से फिर चलाया जा रहा है…"
+  },
+  "err_no_engine": {
+    "message": "कोई जनरेशन इंजन उपलब्ध नहीं"
+  },
+  "err_engine_start": {
+    "message": "ब्राउज़र इंजन शुरू नहीं हो सका"
+  },
+  "err_inference_failed": {
+    "message": "ब्राउज़र में जनरेशन विफल"
+  },
+  "err_generation_failed": {
+    "message": "जेनरेशन विफल रही"
+  },
+  "no_model_sub": {
+    "message": "शुरू करने के लिए मॉडल टैब में एक मॉडल चुनें"
+  },
+  "mb_pick_model": {
+    "message": "↓ मॉडल चुनें"
+  },
+  "popup_tab_generate": {
+    "message": "बनाएं"
+  },
+  "popup_tab_models": {
+    "message": "मॉडल"
+  },
+  "models_intro": {
+    "message": "डाउनलोड करने के लिए एक मॉडल चुनें। इंस्टॉल के बाद आप कभी भी स्विच कर सकते हैं।"
+  },
+  "sec_downloading": {
+    "message": "डाउनलोड हो रहा है"
+  },
+  "sec_installed": {
+    "message": "इंस्टॉल किए गए"
+  },
+  "sec_available": {
+    "message": "उपलब्ध"
+  },
+  "available_popular": {
+    "message": "लोकप्रिय"
+  },
+  "empty_models_title": {
+    "message": "अभी तक कोई मॉडल इंस्टॉल नहीं है"
+  },
+  "empty_models_sub_html": {
+    "message": "नीचे से एक चुनें और <b>↓ प्राप्त करें</b> पर टैप करें।"
+  },
+  "storage_label": {
+    "message": "स्टोरेज"
+  },
+  "dl_tag_fetching": {
+    "message": "ला रहा है"
+  },
+  "dl_paused_sub": {
+    "message": "रोका गया — जारी रखने के लिए फिर से शुरू करें"
+  },
+  "dl_meta_got": {
+    "message": "मिला"
+  },
+  "dl_meta_speed": {
+    "message": "गति"
+  },
+  "dl_meta_left": {
+    "message": "बाकी"
+  },
+  "dl_btn_pause": {
+    "message": "‖ रोकें"
+  },
+  "dl_btn_resume": {
+    "message": "▶ फिर शुरू करें"
+  },
+  "dl_btn_hide": {
+    "message": "↓ छिपाएं"
+  },
+  "dl_btn_cancel_title": {
+    "message": "रद्द करें"
+  },
+  "mdl_btn_use": {
+    "message": "उपयोग"
+  },
+  "mdl_btn_in_use": {
+    "message": "उपयोग में"
+  },
+  "mdl_btn_get": {
+    "message": "प्राप्त करें"
+  },
+  "mdl_btn_token": {
+    "message": "टोकन"
+  },
+  "mdl_btn_na": {
+    "message": "लागू नहीं"
+  },
+  "mdl_loading_sub": {
+    "message": "डिवाइस पर डाउनलोड हो रहा है…"
+  }
+}

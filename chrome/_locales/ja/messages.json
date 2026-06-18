@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "画像生成AI - AIで画像を作成"
+  },
+  "shortName": {
+    "message": "AI画像生成"
+  },
+  "shortDesc": {
+    "message": "画像生成AIツール：テキストからAI画像を生成し、リアルなAI写真・AIイラストを瞬時に作成できます。"
+  },
+  "action_title": {
+    "message": "AI画像を生成"
+  },
+  "open_workspace": {
+    "message": "ワークスペースを開く"
+  },
+  "settings": {
+    "message": "設定"
+  },
+  "error_title": {
+    "message": "エラーが発生しました"
+  },
+  "btn_diagnostics": {
+    "message": "診断 ↗"
+  },
+  "btn_dismiss": {
+    "message": "閉じる"
+  },
+  "no_model_selected": {
+    "message": "モデルが選択されていません"
+  },
+  "mb_get": {
+    "message": "↓ ダウンロード"
+  },
+  "mb_downloading": {
+    "message": "ダウンロード中…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "ダウンロードをキャンセル"
+  },
+  "mb_installing": {
+    "message": "インストール中…"
+  },
+  "mb_verifying": {
+    "message": "重みを確認中 · もうすぐ完了"
+  },
+  "ready": {
+    "message": "準備完了"
+  },
+  "prompt_placeholder": {
+    "message": "作りたいものを説明してください…"
+  },
+  "btn_clear_title": {
+    "message": "クリア"
+  },
+  "btn_clear_aria": {
+    "message": "プロンプトをクリア"
+  },
+  "surprise_me": {
+    "message": "サプライズ"
+  },
+  "param_steps": {
+    "message": "ステップ"
+  },
+  "param_guidance": {
+    "message": "ガイダンス"
+  },
+  "param_seed": {
+    "message": "シード"
+  },
+  "seed_random": {
+    "message": "ランダム"
+  },
+  "neg_prompt_label": {
+    "message": "ネガティブプロンプト"
+  },
+  "neg_prompt_placeholder": {
+    "message": "除外する要素…"
+  },
+  "btn_parameters": {
+    "message": "パラメータ ▾"
+  },
+  "btn_generate": {
+    "message": "生成"
+  },
+  "install_model_hint": {
+    "message": "生成を有効にするにはモデルをインストールしてください。"
+  },
+  "img_placeholder": {
+    "message": "ここに画像が表示されます"
+  },
+  "generating_eyebrow": {
+    "message": "生成中"
+  },
+  "phase_encoding": {
+    "message": "プロンプトをエンコード中"
+  },
+  "btn_cancel_gen": {
+    "message": "× キャンセル"
+  },
+  "btn_save": {
+    "message": "↓ 保存"
+  },
+  "btn_copy": {
+    "message": "⎘ コピー"
+  },
+  "btn_retry": {
+    "message": "↺ 再試行"
+  },
+  "img_generated_alt": {
+    "message": "生成された画像"
+  },
+  "recent_eyebrow": {
+    "message": "最近"
+  },
+  "view_all": {
+    "message": "すべて表示 ↗"
+  },
+  "clear_history": {
+    "message": "履歴をクリア"
+  },
+  "loading_model": {
+    "message": "モデルを読み込み中…"
+  },
+  "compiling": {
+    "message": "コンパイル中…"
+  },
+  "generating_pct": {
+    "message": "生成中 · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "準備中…"
+  },
+  "phase_compiling_first": {
+    "message": "シェーダーをコンパイル中 · 初回起動"
+  },
+  "phase_loading": {
+    "message": "読み込み中…"
+  },
+  "phase_fetching": {
+    "message": "モデルの重みを取得中"
+  },
+  "phase_decoding": {
+    "message": "画像をデコード中…"
+  },
+  "phase_loading_model": {
+    "message": "モデルを読み込み中…"
+  },
+  "phase_compiling_shaders": {
+    "message": "シェーダーをコンパイル中…"
+  },
+  "workspace_page_title": {
+    "message": "AI オフライン画像生成ワークスペース"
+  },
+  "workspace_brand": {
+    "message": "AI オフライン画像生成"
+  },
+  "workspace_label": {
+    "message": "ワークスペース"
+  },
+  "tab_gallery": {
+    "message": "ギャラリー"
+  },
+  "tab_diagnostics": {
+    "message": "診断"
+  },
+  "tab_settings": {
+    "message": "設定"
+  },
+  "your_generations": {
+    "message": "生成履歴"
+  },
+  "gallery_lede": {
+    "message": "すべてこのデバイスに保存されます。タイルをクリックすると全解像度と出典が表示されます。"
+  },
+  "filter_model": {
+    "message": "モデル"
+  },
+  "all_models": {
+    "message": "すべてのモデル"
+  },
+  "filter_engine": {
+    "message": "エンジン"
+  },
+  "any_engine": {
+    "message": "すべてのエンジン"
+  },
+  "engine_browser": {
+    "message": "ブラウザ · WebGPU"
+  },
+  "filter_window": {
+    "message": "期間"
+  },
+  "time_all": {
+    "message": "すべての期間"
+  },
+  "time_24h": {
+    "message": "過去24時間"
+  },
+  "time_7d": {
+    "message": "過去7日間"
+  },
+  "time_30d": {
+    "message": "過去30日間"
+  },
+  "btn_select": {
+    "message": "選択"
+  },
+  "no_images_title": {
+    "message": "画像がまだありません"
+  },
+  "no_images_lede": {
+    "message": "Alt+Shift+Dでポップアップを開き、プロンプトを入力して生成をクリックしてください。結果はここに表示されます。"
+  },
+  "no_matches_title": {
+    "message": "一致なし"
+  },
+  "no_matches_lede": {
+    "message": "この期間に何もありません。フィルターを広げてみてください。"
+  },
+  "compare_kicker": {
+    "message": "比較 · ハンドルをドラッグ"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "閉じる"
+  },
+  "loading_fullres": {
+    "message": "フル解像度を読み込み中…"
+  },
+  "label_prompt": {
+    "message": "プロンプト"
+  },
+  "label_avoid": {
+    "message": "除外"
+  },
+  "label_seed": {
+    "message": "シード"
+  },
+  "label_steps": {
+    "message": "ステップ"
+  },
+  "label_guidance": {
+    "message": "ガイダンス"
+  },
+  "label_engine": {
+    "message": "エンジン"
+  },
+  "label_duration": {
+    "message": "所要時間"
+  },
+  "label_generated": {
+    "message": "生成日時"
+  },
+  "label_path": {
+    "message": "パス"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ シードを再利用"
+  },
+  "btn_copy_prompt": {
+    "message": "プロンプトをコピー"
+  },
+  "btn_copy_seed": {
+    "message": "シードをコピー"
+  },
+  "btn_download_png": {
+    "message": "↓ PNGをダウンロード"
+  },
+  "btn_delete": {
+    "message": "削除"
+  },
+  "danger_zone": {
+    "message": "危険ゾーン"
+  },
+  "clear_data_title": {
+    "message": "拡張機能のデータをすべて削除"
+  },
+  "clear_data_hint": {
+    "message": "キャッシュされたモデルと生成した画像をすべて削除します。元に戻せません。"
+  },
+  "btn_clear_data": {
+    "message": "データを削除"
+  },
+  "diag_title": {
+    "message": "診断"
+  },
+  "diag_lede": {
+    "message": "拡張機能がブラウザとマシンについて確認できる情報です。問題がある場合はこのブロックをissueにコピーしてください。"
+  },
+  "diag_engine": {
+    "message": "アクティブエンジン"
+  },
+  "diag_preferred": {
+    "message": "優先"
+  },
+  "diag_device": {
+    "message": "デバイス"
+  },
+  "diag_adapter": {
+    "message": "アダプター"
+  },
+  "diag_vendor": {
+    "message": "ベンダー"
+  },
+  "diag_vram": {
+    "message": "VRAM推定"
+  },
+  "diag_browser": {
+    "message": "ブラウザパス"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFSクォータ"
+  },
+  "diag_storage": {
+    "message": "ストレージ"
+  },
+  "diag_installed": {
+    "message": "インストール済みモデル"
+  },
+  "diag_recent": {
+    "message": "最近の画像"
+  },
+  "diag_active": {
+    "message": "アクティブモデル"
+  },
+  "btn_copy_json": {
+    "message": "JSONとしてコピー"
+  },
+  "btn_reprobe": {
+    "message": "再チェック"
+  },
+  "btn_compare": {
+    "message": "比較"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIPをエクスポート"
+  },
+  "btn_bulk_delete": {
+    "message": "削除"
+  },
+  "btn_cancel_select": {
+    "message": "キャンセル"
+  },
+  "confirm_clear_data": {
+    "message": "キャッシュされたモデルと生成した画像をすべて削除しますか？\n\nこの操作は元に戻せません。"
+  },
+  "clearing": {
+    "message": "削除中…"
+  },
+  "status_done": {
+    "message": "✓ 完了"
+  },
+  "status_saved": {
+    "message": "✓ 保存済み"
+  },
+  "status_copied": {
+    "message": "✓ コピー済み"
+  },
+  "confirm_delete_image": {
+    "message": "この画像を削除しますか？"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ 件の$NOUN$を削除しますか？",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "画像"
+  },
+  "image_noun": {
+    "message": "画像"
+  },
+  "no_prompt": {
+    "message": "(プロンプトなし)"
+  },
+  "none_selected": {
+    "message": "(未選択)"
+  },
+  "in_memory_only": {
+    "message": "(メモリのみ)"
+  },
+  "btn_exit_select": {
+    "message": "選択を終了"
+  },
+  "n_selected": {
+    "message": "$COUNT$ 件選択中",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ 件の画像をパッキング中…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ 件の画像をエクスポートしました",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "同じシードで再実行中…"
+  },
+  "err_no_engine": {
+    "message": "利用可能な生成エンジンがありません"
+  },
+  "err_engine_start": {
+    "message": "ブラウザエンジンを起動できませんでした"
+  },
+  "err_inference_failed": {
+    "message": "ブラウザでの生成に失敗しました"
+  },
+  "err_generation_failed": {
+    "message": "生成に失敗しました"
+  },
+  "no_model_sub": {
+    "message": "「モデル」タブからモデルを選択して開始"
+  },
+  "mb_pick_model": {
+    "message": "↓ モデルを選択"
+  },
+  "popup_tab_generate": {
+    "message": "生成"
+  },
+  "popup_tab_models": {
+    "message": "モデル"
+  },
+  "models_intro": {
+    "message": "ダウンロードするモデルを選んでください。インストール後はいつでも切り替えられます。"
+  },
+  "sec_downloading": {
+    "message": "ダウンロード中"
+  },
+  "sec_installed": {
+    "message": "インストール済み"
+  },
+  "sec_available": {
+    "message": "利用可能"
+  },
+  "available_popular": {
+    "message": "人気"
+  },
+  "empty_models_title": {
+    "message": "まだモデルがインストールされていません"
+  },
+  "empty_models_sub_html": {
+    "message": "下から選び <b>↓ 取得</b> をタップしてください。"
+  },
+  "storage_label": {
+    "message": "ストレージ"
+  },
+  "dl_tag_fetching": {
+    "message": "取得中"
+  },
+  "dl_paused_sub": {
+    "message": "一時停止中 — 再開で続行"
+  },
+  "dl_meta_got": {
+    "message": "取得済"
+  },
+  "dl_meta_speed": {
+    "message": "速度"
+  },
+  "dl_meta_left": {
+    "message": "残り"
+  },
+  "dl_btn_pause": {
+    "message": "‖ 一時停止"
+  },
+  "dl_btn_resume": {
+    "message": "▶ 再開"
+  },
+  "dl_btn_hide": {
+    "message": "↓ 非表示"
+  },
+  "dl_btn_cancel_title": {
+    "message": "キャンセル"
+  },
+  "mdl_btn_use": {
+    "message": "使用"
+  },
+  "mdl_btn_in_use": {
+    "message": "使用中"
+  },
+  "mdl_btn_get": {
+    "message": "ダウンロード"
+  },
+  "mdl_btn_token": {
+    "message": "トークン"
+  },
+  "mdl_btn_na": {
+    "message": "なし"
+  },
+  "mdl_loading_sub": {
+    "message": "デバイスへダウンロード中…"
+  }
+}

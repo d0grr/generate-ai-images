@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - AI ചിത്രം നിർമ്മിക്കുക"
+  },
+  "shortName": {
+    "message": "AI ചിത്രം"
+  },
+  "shortDesc": {
+    "message": "AI ഇമേജ് ജനറേറ്റർ ഉപയോഗിച്ച് ടെക്സ്റ്റിൽ നിന്ന് AI ചിത്രങ്ങൾ നിർമ്മിക്കുക, AI ഫോട്ടോകൾ ഉടനടി ലഭിക്കും."
+  },
+  "action_title": {
+    "message": "AI ചിത്രങ്ങൾ സൃഷ്ടിക്കുക"
+  },
+  "open_workspace": {
+    "message": "വർക്ക്‌സ്‌പേസ് തുറക്കുക"
+  },
+  "settings": {
+    "message": "ക്രമീകരണങ്ങൾ"
+  },
+  "error_title": {
+    "message": "എന്തോ തകരാറ് സംഭവിച്ചു"
+  },
+  "btn_diagnostics": {
+    "message": "ഡയഗ്‌നോസ്റ്റിക്‌സ് ↗"
+  },
+  "btn_dismiss": {
+    "message": "അടയ്ക്കുക"
+  },
+  "no_model_selected": {
+    "message": "ഒരു മോഡലും തിരഞ്ഞെടുത്തിട്ടില്ല"
+  },
+  "mb_get": {
+    "message": "↓ ഡൗൺലോഡ്"
+  },
+  "mb_downloading": {
+    "message": "ഡൗൺലോഡ് ചെയ്യുന്നു…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "ഡൗൺലോഡ് റദ്ദ് ചെയ്യുക"
+  },
+  "mb_installing": {
+    "message": "ഇൻസ്‌റ്റാൾ ചെയ്യുന്നു…"
+  },
+  "mb_verifying": {
+    "message": "ഭാരം പരിശോധിക്കുന്നു · ഏതാണ്ട് പൂർത്തിയായി"
+  },
+  "ready": {
+    "message": "തയ്യാർ"
+  },
+  "prompt_placeholder": {
+    "message": "നിങ്ങൾ എന്ത് സൃഷ്ടിക്കാൻ ആഗ്രഹിക്കുന്നുവെന്ന് വിവരിക്കൂ…"
+  },
+  "btn_clear_title": {
+    "message": "മായ്ക്കുക"
+  },
+  "btn_clear_aria": {
+    "message": "പ്രോംപ്റ്റ് മായ്ക്കുക"
+  },
+  "surprise_me": {
+    "message": "എന്നെ അദ്ഭുതപ്പെടുത്തൂ"
+  },
+  "param_steps": {
+    "message": "ഘട്ടങ്ങൾ"
+  },
+  "param_guidance": {
+    "message": "മാർഗ്ഗനിർദ്ദേശം"
+  },
+  "param_seed": {
+    "message": "വിത്ത്"
+  },
+  "seed_random": {
+    "message": "ക്രമരഹിതം"
+  },
+  "neg_prompt_label": {
+    "message": "നെഗറ്റീവ് പ്രോംപ്റ്റ്"
+  },
+  "neg_prompt_placeholder": {
+    "message": "ഒഴിവാക്കേണ്ട കാര്യങ്ങൾ…"
+  },
+  "btn_parameters": {
+    "message": "പാരാമീറ്ററുകൾ ▾"
+  },
+  "btn_generate": {
+    "message": "സൃഷ്ടിക്കുക"
+  },
+  "install_model_hint": {
+    "message": "സൃഷ്ടിക്കൽ സക്രിയമാക്കാൻ ഒരു മോഡൽ ഇൻസ്‌റ്റാൾ ചെയ്യുക."
+  },
+  "img_placeholder": {
+    "message": "നിങ്ങളുടെ ചിത്രം ഇവിടെ ദൃശ്യമാകും"
+  },
+  "generating_eyebrow": {
+    "message": "സൃഷ്ടിക്കുന്നു"
+  },
+  "phase_encoding": {
+    "message": "പ്രോംപ്റ്റ് എൻകോഡ് ചെയ്യുന്നു"
+  },
+  "btn_cancel_gen": {
+    "message": "× റദ്ദ് ചെയ്യുക"
+  },
+  "btn_save": {
+    "message": "↓ സേവ് ചെയ്യുക"
+  },
+  "btn_copy": {
+    "message": "⎘ പകർത്തുക"
+  },
+  "btn_retry": {
+    "message": "↺ വീണ്ടും ശ്രമിക്കുക"
+  },
+  "img_generated_alt": {
+    "message": "സൃഷ്ടിച്ച ചിത്രം"
+  },
+  "recent_eyebrow": {
+    "message": "സമീപകാലം"
+  },
+  "view_all": {
+    "message": "എല്ലാം കാണുക ↗"
+  },
+  "clear_history": {
+    "message": "ചരിത്രം മായ്ക്കുക"
+  },
+  "loading_model": {
+    "message": "മോഡൽ ലോഡ് ചെയ്യുന്നു…"
+  },
+  "compiling": {
+    "message": "കംപൈൽ ചെയ്യുന്നു…"
+  },
+  "generating_pct": {
+    "message": "സൃഷ്ടിക്കുന്നു · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "ഒരുക്കുന്നു…"
+  },
+  "phase_compiling_first": {
+    "message": "ഷേഡറുകൾ കംപൈൽ ചെയ്യുന്നു · ആദ്യ റൺ"
+  },
+  "phase_loading": {
+    "message": "ലോഡ് ചെയ്യുന്നു…"
+  },
+  "phase_fetching": {
+    "message": "മോഡൽ ഭാരം ശേഖരിക്കുന്നു"
+  },
+  "phase_decoding": {
+    "message": "ചിത്രം ഡീകോഡ് ചെയ്യുന്നു…"
+  },
+  "phase_loading_model": {
+    "message": "മോഡൽ ലോഡ് ചെയ്യുന്നു…"
+  },
+  "phase_compiling_shaders": {
+    "message": "ഷേഡറുകൾ കംപൈൽ ചെയ്യുന്നു…"
+  },
+  "workspace_page_title": {
+    "message": "AI ഓഫ്‌ലൈൻ ഇമേജ് ജനറേറ്റർ വർക്ക്‌സ്‌പേസ്"
+  },
+  "workspace_brand": {
+    "message": "AI ഓഫ്‌ലൈൻ ഇമേജ് ജനറേറ്റർ"
+  },
+  "workspace_label": {
+    "message": "വർക്ക്‌സ്‌പേസ്"
+  },
+  "tab_gallery": {
+    "message": "ഗ്യാലറി"
+  },
+  "tab_diagnostics": {
+    "message": "ഡയഗ്‌നോസ്റ്റിക്‌സ്"
+  },
+  "tab_settings": {
+    "message": "ക്രമീകരണങ്ങൾ"
+  },
+  "your_generations": {
+    "message": "നിങ്ങളുടെ സൃഷ്ടികൾ"
+  },
+  "gallery_lede": {
+    "message": "എല്ലാം ഈ ഉപകരണത്തിൽ നിലനിൽക്കുന്നു. മുഴുവൻ റെസലൂഷനായി ടൈൽ ക്ലിക്ക് ചെയ്യുക."
+  },
+  "filter_model": {
+    "message": "മോഡൽ"
+  },
+  "all_models": {
+    "message": "എല്ലാ മോഡലുകളും"
+  },
+  "filter_engine": {
+    "message": "എഞ്ചിൻ"
+  },
+  "any_engine": {
+    "message": "ഏത് എഞ്ചിനും"
+  },
+  "engine_browser": {
+    "message": "ബ്രൗസർ · WebGPU"
+  },
+  "filter_window": {
+    "message": "കാലയളവ്"
+  },
+  "time_all": {
+    "message": "എല്ലാ സമയവും"
+  },
+  "time_24h": {
+    "message": "കഴിഞ്ഞ 24 മണിക്കൂർ"
+  },
+  "time_7d": {
+    "message": "കഴിഞ്ഞ 7 ദിവസം"
+  },
+  "time_30d": {
+    "message": "കഴിഞ്ഞ 30 ദിവസം"
+  },
+  "btn_select": {
+    "message": "തിരഞ്ഞെടുക്കുക"
+  },
+  "no_images_title": {
+    "message": "ഇതുവരെ ചിത്രങ്ങളില്ല"
+  },
+  "no_images_lede": {
+    "message": "Alt+Shift+D ഉപയോഗിച്ച് പോപ്പ്അപ്പ് തുറക്കൂ, ഒരു പ്രോംപ്റ്റ് എഴുതൂ, സൃഷ്ടിക്കുക ക്ലിക്ക് ചെയ്യൂ. ഫലങ്ങൾ ഇവിടെ ദൃശ്യമാകും."
+  },
+  "no_matches_title": {
+    "message": "യോജിപ്പൊന്നുമില്ല"
+  },
+  "no_matches_lede": {
+    "message": "ഈ കാലയളവിൽ ഒന്നുമില്ല. ഫിൽട്ടർ വിശാലമാക്കി നോക്കൂ."
+  },
+  "compare_kicker": {
+    "message": "താരതമ്യം ചെയ്യുക · ഹാൻഡിൽ വലിക്കുക"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "അടയ്ക്കുക"
+  },
+  "loading_fullres": {
+    "message": "മുഴുവൻ റെസലൂഷൻ ലോഡ് ചെയ്യുന്നു…"
+  },
+  "label_prompt": {
+    "message": "പ്രോംപ്റ്റ്"
+  },
+  "label_avoid": {
+    "message": "ഒഴിവാക്കുക"
+  },
+  "label_seed": {
+    "message": "വിത്ത്"
+  },
+  "label_steps": {
+    "message": "ഘട്ടങ്ങൾ"
+  },
+  "label_guidance": {
+    "message": "മാർഗ്ഗനിർദ്ദേശം"
+  },
+  "label_engine": {
+    "message": "എഞ്ചിൻ"
+  },
+  "label_duration": {
+    "message": "ദൈർഘ്യം"
+  },
+  "label_generated": {
+    "message": "സൃഷ്ടിച്ചത്"
+  },
+  "label_path": {
+    "message": "പാത"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ വിത്ത് വീണ്ടും ഉപയോഗിക്കുക"
+  },
+  "btn_copy_prompt": {
+    "message": "പ്രോംപ്റ്റ് പകർത്തുക"
+  },
+  "btn_copy_seed": {
+    "message": "വിത്ത് പകർത്തുക"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG ഡൗൺലോഡ്"
+  },
+  "btn_delete": {
+    "message": "ഇല്ലാതാക്കുക"
+  },
+  "danger_zone": {
+    "message": "അപകട മേഖല"
+  },
+  "clear_data_title": {
+    "message": "എല്ലാ എക്‌സ്‌റ്റൻഷൻ ഡേറ്റയും മായ്ക്കുക"
+  },
+  "clear_data_hint": {
+    "message": "എല്ലാ കാഷ്ഡ് മോഡലുകളും സൃഷ്ടിച്ച ചിത്രങ്ങളും നീക്കംചെയ്യുന്നു. പഴയ നിലയിലേക്ക് മടക്കാനാകില്ല."
+  },
+  "btn_clear_data": {
+    "message": "ഡേറ്റ മായ്ക്കുക"
+  },
+  "diag_title": {
+    "message": "ഡയഗ്‌നോസ്റ്റിക്‌സ്"
+  },
+  "diag_lede": {
+    "message": "നിങ്ങളുടെ ബ്രൗസറിനെയും മെഷീനിനെയും കുറിച്ച് എക്‌സ്‌റ്റൻഷൻ കാണുന്നത്. എന്തെങ്കിലും പ്രവർത്തിക്കുന്നില്ലെങ്കിൽ ഈ ബ്ലോക്ക് issue ൽ പകർത്തുക."
+  },
+  "diag_engine": {
+    "message": "സജീവ എഞ്ചിൻ"
+  },
+  "diag_preferred": {
+    "message": "മുൻഗണന"
+  },
+  "diag_device": {
+    "message": "ഉപകരണം"
+  },
+  "diag_adapter": {
+    "message": "അഡാപ്റ്റർ"
+  },
+  "diag_vendor": {
+    "message": "വിൽക്കുന്നവർ"
+  },
+  "diag_vram": {
+    "message": "VRAM അനുമാനം"
+  },
+  "diag_browser": {
+    "message": "ബ്രൗസർ പാത"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS ക്വോട്ട"
+  },
+  "diag_storage": {
+    "message": "സ്‌റ്റോറേജ്"
+  },
+  "diag_installed": {
+    "message": "ഇൻസ്‌റ്റാൾ ചെയ്ത മോഡലുകൾ"
+  },
+  "diag_recent": {
+    "message": "സമീപകാല ചിത്രങ്ങൾ"
+  },
+  "diag_active": {
+    "message": "സജീവ മോഡൽ"
+  },
+  "btn_copy_json": {
+    "message": "JSON ആയി പകർത്തുക"
+  },
+  "btn_reprobe": {
+    "message": "പ്രോബുകൾ വീണ്ടും റൺ ചെയ്യുക"
+  },
+  "btn_compare": {
+    "message": "താരതമ്യം ചെയ്യുക"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP എക്‌സ്‌പോർട്ട്"
+  },
+  "btn_bulk_delete": {
+    "message": "ഇല്ലാതാക്കുക"
+  },
+  "btn_cancel_select": {
+    "message": "റദ്ദ് ചെയ്യുക"
+  },
+  "confirm_clear_data": {
+    "message": "എല്ലാ കാഷ്ഡ് മോഡലുകളും ചിത്രങ്ങളും ഇല്ലാതാക്കണോ?\n\nഇത് പഴയ നിലയിലേക്ക് മടക്കാനാകില്ല."
+  },
+  "clearing": {
+    "message": "മായ്ക്കുന്നു…"
+  },
+  "status_done": {
+    "message": "✓ പൂർത്തിയായി"
+  },
+  "status_saved": {
+    "message": "✓ സേവ് ചെയ്തു"
+  },
+  "status_copied": {
+    "message": "✓ പകർത്തി"
+  },
+  "confirm_delete_image": {
+    "message": "ഈ ചിത്രം ഇല്ലാതാക്കണോ?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ ഇല്ലാതാക്കണോ?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "ചിത്രങ്ങൾ"
+  },
+  "image_noun": {
+    "message": "ചിത്രം"
+  },
+  "no_prompt": {
+    "message": "(പ്രോംപ്റ്റ് ഇല്ല)"
+  },
+  "none_selected": {
+    "message": "(ഒന്നും തിരഞ്ഞെടുത്തിട്ടില്ല)"
+  },
+  "in_memory_only": {
+    "message": "(മെമ്മറിയിൽ മാത്രം)"
+  },
+  "btn_exit_select": {
+    "message": "തിരഞ്ഞെടുക്കൽ അവസാനിപ്പിക്കുക"
+  },
+  "n_selected": {
+    "message": "$COUNT$ തിരഞ്ഞെടുത്തു",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ ചിത്രങ്ങൾ പ്രാക്ക് ചെയ്യുന്നു…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ ചിത്രങ്ങൾ എക്‌സ്‌പോർട്ട് ചെയ്തു",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "അതേ വിത്ത് ഉപയോഗിച്ച് വീണ്ടും റൺ ചെയ്യുന്നു…"
+  },
+  "err_no_engine": {
+    "message": "ജനറേഷൻ എഞ്ചിൻ ലഭ്യമല്ല"
+  },
+  "err_engine_start": {
+    "message": "ബ്രൗസർ എഞ്ചിൻ ആരംഭിക്കാനായില്ല"
+  },
+  "err_inference_failed": {
+    "message": "ബ്രൗസറിൽ ജനറേഷൻ പരാജയപ്പെട്ടു"
+  },
+  "err_generation_failed": {
+    "message": "സൃഷ്ടി പരാജയപ്പെട്ടു"
+  },
+  "no_model_sub": {
+    "message": "ആരംഭിക്കാൻ മോഡൽസ് ടാബിൽ നിന്ന് ഒരു മോഡൽ തിരഞ്ഞെടുക്കുക"
+  },
+  "mb_pick_model": {
+    "message": "↓ മോഡൽ തിരഞ്ഞെടുക്കുക"
+  },
+  "popup_tab_generate": {
+    "message": "സൃഷ്ടിക്കുക"
+  },
+  "popup_tab_models": {
+    "message": "മോഡലുകൾ"
+  },
+  "models_intro": {
+    "message": "ഡൗൺലോഡ് ചെയ്യാൻ ഒരു മോഡൽ തിരഞ്ഞെടുക്കുക. ഇൻസ്റ്റാൾ ചെയ്ത ശേഷം എപ്പോൾ വേണമെങ്കിലും മാറ്റാം."
+  },
+  "sec_downloading": {
+    "message": "ഡൗൺലോഡ് ചെയ്യുന്നു"
+  },
+  "sec_installed": {
+    "message": "ഇൻസ്റ്റാൾ ചെയ്തവ"
+  },
+  "sec_available": {
+    "message": "ലഭ്യം"
+  },
+  "available_popular": {
+    "message": "ജനപ്രിയം"
+  },
+  "empty_models_title": {
+    "message": "ഇതുവരെ മോഡൽ ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല"
+  },
+  "empty_models_sub_html": {
+    "message": "താഴെ നിന്ന് തിരഞ്ഞെടുത്ത് <b>↓ നേടുക</b> ടാപ്പ് ചെയ്യുക."
+  },
+  "storage_label": {
+    "message": "സംഭരണം"
+  },
+  "dl_tag_fetching": {
+    "message": "ലഭ്യമാക്കുന്നു"
+  },
+  "dl_paused_sub": {
+    "message": "നിർത്തി — തുടരാൻ പുനരാരംഭിക്കുക"
+  },
+  "dl_meta_got": {
+    "message": "ലഭിച്ചു"
+  },
+  "dl_meta_speed": {
+    "message": "വേഗത"
+  },
+  "dl_meta_left": {
+    "message": "ബാക്കി"
+  },
+  "dl_btn_pause": {
+    "message": "‖ നിർത്തുക"
+  },
+  "dl_btn_resume": {
+    "message": "▶ പുനരാരംഭിക്കുക"
+  },
+  "dl_btn_hide": {
+    "message": "↓ മറയ്ക്കുക"
+  },
+  "dl_btn_cancel_title": {
+    "message": "റദ്ദാക്കുക"
+  },
+  "mdl_btn_use": {
+    "message": "ഉപയോഗിക്കുക"
+  },
+  "mdl_btn_in_use": {
+    "message": "ഉപയോഗത്തിൽ"
+  },
+  "mdl_btn_get": {
+    "message": "നേടുക"
+  },
+  "mdl_btn_token": {
+    "message": "ടോക്കൺ"
+  },
+  "mdl_btn_na": {
+    "message": "ലഭ്യമല്ല"
+  },
+  "mdl_loading_sub": {
+    "message": "ഉപകരണത്തിലേക്ക് ഡൗൺലോഡ് ചെയ്യുന്നു…"
+  }
+}

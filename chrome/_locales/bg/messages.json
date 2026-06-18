@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI генератор на изображения"
+  },
+  "shortName": {
+    "message": "AI Снимки"
+  },
+  "shortDesc": {
+    "message": "AI генератор на изображения от текст: създавайте реалистични AI снимки и картини мгновено с едно кликване."
+  },
+  "action_title": {
+    "message": "Генерирай изображения с ИИ"
+  },
+  "open_workspace": {
+    "message": "Отвори работното пространство"
+  },
+  "settings": {
+    "message": "Настройки"
+  },
+  "error_title": {
+    "message": "Нещо се обърка"
+  },
+  "btn_diagnostics": {
+    "message": "Диагностика ↗"
+  },
+  "btn_dismiss": {
+    "message": "Затвори"
+  },
+  "no_model_selected": {
+    "message": "Не е избран модел"
+  },
+  "mb_get": {
+    "message": "↓ Изтегли"
+  },
+  "mb_downloading": {
+    "message": "Изтегляне…"
+  },
+  "mb_of": {
+    "message": "от"
+  },
+  "cancel_download": {
+    "message": "Отмени изтеглянето"
+  },
+  "mb_installing": {
+    "message": "Инсталиране…"
+  },
+  "mb_verifying": {
+    "message": "Проверка на теглата · почти готово"
+  },
+  "ready": {
+    "message": "Готово"
+  },
+  "prompt_placeholder": {
+    "message": "Опишете какво искате да създадете…"
+  },
+  "btn_clear_title": {
+    "message": "Изчисти"
+  },
+  "btn_clear_aria": {
+    "message": "Изчисти промпта"
+  },
+  "surprise_me": {
+    "message": "Изненадай ме"
+  },
+  "param_steps": {
+    "message": "Стъпки"
+  },
+  "param_guidance": {
+    "message": "Насоки"
+  },
+  "param_seed": {
+    "message": "Начална стойност"
+  },
+  "seed_random": {
+    "message": "случайна"
+  },
+  "neg_prompt_label": {
+    "message": "Отрицателен промпт"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Неща за избягване…"
+  },
+  "btn_parameters": {
+    "message": "Параметри ▾"
+  },
+  "btn_generate": {
+    "message": "Генерирай"
+  },
+  "install_model_hint": {
+    "message": "Инсталирай модел за да активираш Генерирай."
+  },
+  "img_placeholder": {
+    "message": "Изображението ти ще се появи тук"
+  },
+  "generating_eyebrow": {
+    "message": "ГЕНЕРИРАНЕ"
+  },
+  "phase_encoding": {
+    "message": "Кодиране на промпта"
+  },
+  "btn_cancel_gen": {
+    "message": "× отмени"
+  },
+  "btn_save": {
+    "message": "↓ Запази"
+  },
+  "btn_copy": {
+    "message": "⎘ Копирай"
+  },
+  "btn_retry": {
+    "message": "↺ Опитай отново"
+  },
+  "img_generated_alt": {
+    "message": "Генерирано изображение"
+  },
+  "recent_eyebrow": {
+    "message": "ПОСЛЕДНИ"
+  },
+  "view_all": {
+    "message": "Виж всички ↗"
+  },
+  "clear_history": {
+    "message": "Изчисти историята"
+  },
+  "loading_model": {
+    "message": "Зареждане на модела…"
+  },
+  "compiling": {
+    "message": "Компилиране…"
+  },
+  "generating_pct": {
+    "message": "Генериране · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Подготвяне…"
+  },
+  "phase_compiling_first": {
+    "message": "Компилиране на шейдъри · първо стартиране"
+  },
+  "phase_loading": {
+    "message": "Зареждане…"
+  },
+  "phase_fetching": {
+    "message": "Изтегляне на теглата на модела"
+  },
+  "phase_decoding": {
+    "message": "Декодиране на изображението…"
+  },
+  "phase_loading_model": {
+    "message": "Зареждане на модела…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Компилиране на шейдъри…"
+  },
+  "workspace_page_title": {
+    "message": "Работно пространство на офлайн генератора на изображения с ИИ"
+  },
+  "workspace_brand": {
+    "message": "ИИ Офлайн Генератор на Изображения"
+  },
+  "workspace_label": {
+    "message": "работно пространство"
+  },
+  "tab_gallery": {
+    "message": "Галерия"
+  },
+  "tab_diagnostics": {
+    "message": "Диагностика"
+  },
+  "tab_settings": {
+    "message": "Настройки"
+  },
+  "your_generations": {
+    "message": "Твоите генерации"
+  },
+  "gallery_lede": {
+    "message": "Всичко остава на това устройство. Кликни върху плочка за пълна разделителна способност и произход."
+  },
+  "filter_model": {
+    "message": "Модел"
+  },
+  "all_models": {
+    "message": "Всички модели"
+  },
+  "filter_engine": {
+    "message": "Двигател"
+  },
+  "any_engine": {
+    "message": "Всеки двигател"
+  },
+  "engine_browser": {
+    "message": "Браузър · WebGPU"
+  },
+  "filter_window": {
+    "message": "Период"
+  },
+  "time_all": {
+    "message": "Цялото време"
+  },
+  "time_24h": {
+    "message": "Последните 24 часа"
+  },
+  "time_7d": {
+    "message": "Последните 7 дни"
+  },
+  "time_30d": {
+    "message": "Последните 30 дни"
+  },
+  "btn_select": {
+    "message": "Избери"
+  },
+  "no_images_title": {
+    "message": "Все още няма изображения"
+  },
+  "no_images_lede": {
+    "message": "Отвори изскачащия прозорец с Alt+Shift+D, напиши промпт, натисни Генерирай. Резултатите ще се появят тук."
+  },
+  "no_matches_title": {
+    "message": "Няма съвпадения"
+  },
+  "no_matches_lede": {
+    "message": "Нищо в този период. Опитай да разшириш филтъра."
+  },
+  "compare_kicker": {
+    "message": "Сравни · плъзни дръжката"
+  },
+  "compare_vs": {
+    "message": "A срещу B"
+  },
+  "close_aria": {
+    "message": "затвори"
+  },
+  "loading_fullres": {
+    "message": "зареждане на пълна разделителна способност…"
+  },
+  "label_prompt": {
+    "message": "Промпт"
+  },
+  "label_avoid": {
+    "message": "Избягвай"
+  },
+  "label_seed": {
+    "message": "Начална стойност"
+  },
+  "label_steps": {
+    "message": "Стъпки"
+  },
+  "label_guidance": {
+    "message": "Насоки"
+  },
+  "label_engine": {
+    "message": "Двигател"
+  },
+  "label_duration": {
+    "message": "Продължителност"
+  },
+  "label_generated": {
+    "message": "Генерирано"
+  },
+  "label_path": {
+    "message": "Път"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Повторно използване на начална стойност"
+  },
+  "btn_copy_prompt": {
+    "message": "Копирай промпта"
+  },
+  "btn_copy_seed": {
+    "message": "Копирай началната стойност"
+  },
+  "btn_download_png": {
+    "message": "↓ Изтегли PNG"
+  },
+  "btn_delete": {
+    "message": "Изтрий"
+  },
+  "danger_zone": {
+    "message": "Опасна зона"
+  },
+  "clear_data_title": {
+    "message": "Изчисти всички данни на разширението"
+  },
+  "clear_data_hint": {
+    "message": "Премахва всички кеширани модели и генерирани изображения. Не може да бъде отменено."
+  },
+  "btn_clear_data": {
+    "message": "Изчисти данните"
+  },
+  "diag_title": {
+    "message": "Диагностика"
+  },
+  "diag_lede": {
+    "message": "Какво вижда разширението за браузъра и машината ти. Копирай този блок в issue, ако нещо не работи."
+  },
+  "diag_engine": {
+    "message": "Активен двигател"
+  },
+  "diag_preferred": {
+    "message": "Предпочитан"
+  },
+  "diag_device": {
+    "message": "Устройство"
+  },
+  "diag_adapter": {
+    "message": "Адаптер"
+  },
+  "diag_vendor": {
+    "message": "Производител"
+  },
+  "diag_vram": {
+    "message": "VRAM оценка"
+  },
+  "diag_browser": {
+    "message": "Път на браузъра"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Квота OPFS"
+  },
+  "diag_storage": {
+    "message": "Хранилище"
+  },
+  "diag_installed": {
+    "message": "Инсталирани модели"
+  },
+  "diag_recent": {
+    "message": "Последни изображения"
+  },
+  "diag_active": {
+    "message": "Активен модел"
+  },
+  "btn_copy_json": {
+    "message": "Копирай като JSON"
+  },
+  "btn_reprobe": {
+    "message": "Повторна проверка"
+  },
+  "btn_compare": {
+    "message": "Сравни"
+  },
+  "btn_export_zip": {
+    "message": "↓ Експортирай ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Изтрий"
+  },
+  "btn_cancel_select": {
+    "message": "Отмени"
+  },
+  "confirm_clear_data": {
+    "message": "Изтрий всички кеширани модели и генерирани изображения?\n\nТова не може да бъде отменено."
+  },
+  "clearing": {
+    "message": "Изчистване…"
+  },
+  "status_done": {
+    "message": "✓ Готово"
+  },
+  "status_saved": {
+    "message": "✓ Запазено"
+  },
+  "status_copied": {
+    "message": "✓ Копирано"
+  },
+  "confirm_delete_image": {
+    "message": "Изтрий това изображение?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Изтрий $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "изображения"
+  },
+  "image_noun": {
+    "message": "изображение"
+  },
+  "no_prompt": {
+    "message": "(без промпт)"
+  },
+  "none_selected": {
+    "message": "(нищо не е избрано)"
+  },
+  "in_memory_only": {
+    "message": "(само в паметта)"
+  },
+  "btn_exit_select": {
+    "message": "Излез от избора"
+  },
+  "n_selected": {
+    "message": "$COUNT$ избрани",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Опаковане на $COUNT$ изображения…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Експортирани $COUNT$ изображения",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Повторно изпълнение с еднаква начална стойност…"
+  },
+  "err_no_engine": {
+    "message": "Няма наличен генериращ модул"
+  },
+  "err_engine_start": {
+    "message": "Двигателят на браузъра не можа да бъде стартиран"
+  },
+  "err_inference_failed": {
+    "message": "Генерирането в браузъра не успя"
+  },
+  "err_generation_failed": {
+    "message": "Генерирането се провали"
+  },
+  "no_model_sub": {
+    "message": "Изберете модел в раздел Модели, за да започнете"
+  },
+  "mb_pick_model": {
+    "message": "↓ Избор на модел"
+  },
+  "popup_tab_generate": {
+    "message": "Генериране"
+  },
+  "popup_tab_models": {
+    "message": "Модели"
+  },
+  "models_intro": {
+    "message": "Изберете модел за изтегляне. След инсталиране можете да превключвате по всяко време."
+  },
+  "sec_downloading": {
+    "message": "Изтегляне"
+  },
+  "sec_installed": {
+    "message": "Инсталирани"
+  },
+  "sec_available": {
+    "message": "Налични"
+  },
+  "available_popular": {
+    "message": "популярни"
+  },
+  "empty_models_title": {
+    "message": "Все още няма инсталирани модели"
+  },
+  "empty_models_sub_html": {
+    "message": "Изберете един отдолу и натиснете <b>↓ Вземи</b>."
+  },
+  "storage_label": {
+    "message": "Хранилище"
+  },
+  "dl_tag_fetching": {
+    "message": "извличане"
+  },
+  "dl_paused_sub": {
+    "message": "на пауза — възобновете за продължаване"
+  },
+  "dl_meta_got": {
+    "message": "Получено"
+  },
+  "dl_meta_speed": {
+    "message": "Скорост"
+  },
+  "dl_meta_left": {
+    "message": "Остава"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Пауза"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Възобновяване"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Скрий"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Отказ"
+  },
+  "mdl_btn_use": {
+    "message": "Използвай"
+  },
+  "mdl_btn_in_use": {
+    "message": "В употреба"
+  },
+  "mdl_btn_get": {
+    "message": "Вземи"
+  },
+  "mdl_btn_token": {
+    "message": "Токен"
+  },
+  "mdl_btn_na": {
+    "message": "н/д"
+  },
+  "mdl_loading_sub": {
+    "message": "Изтегляне на устройството…"
+  }
+}

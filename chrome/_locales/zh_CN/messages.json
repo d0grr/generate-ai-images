@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI图片生成 - AI绘画生成器"
+  },
+  "shortName": {
+    "message": "AI图片生成"
+  },
+  "shortDesc": {
+    "message": "AI图片生成工具：从文字生成AI图片，一键生成逼真AI照片和AI绘画，即时生成。"
+  },
+  "action_title": {
+    "message": "生成AI图片"
+  },
+  "open_workspace": {
+    "message": "打开工作区"
+  },
+  "settings": {
+    "message": "设置"
+  },
+  "error_title": {
+    "message": "出现错误"
+  },
+  "btn_diagnostics": {
+    "message": "诊断 ↗"
+  },
+  "btn_dismiss": {
+    "message": "关闭"
+  },
+  "no_model_selected": {
+    "message": "未选择模型"
+  },
+  "mb_get": {
+    "message": "↓ 下载"
+  },
+  "mb_downloading": {
+    "message": "下载中…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "取消下载"
+  },
+  "mb_installing": {
+    "message": "安装中…"
+  },
+  "mb_verifying": {
+    "message": "正在验证权重 · 即将完成"
+  },
+  "ready": {
+    "message": "就绪"
+  },
+  "prompt_placeholder": {
+    "message": "描述您想要创建的内容…"
+  },
+  "btn_clear_title": {
+    "message": "清除"
+  },
+  "btn_clear_aria": {
+    "message": "清除提示词"
+  },
+  "surprise_me": {
+    "message": "给我惊喜"
+  },
+  "param_steps": {
+    "message": "步数"
+  },
+  "param_guidance": {
+    "message": "引导"
+  },
+  "param_seed": {
+    "message": "种子"
+  },
+  "seed_random": {
+    "message": "随机"
+  },
+  "neg_prompt_label": {
+    "message": "负面提示词"
+  },
+  "neg_prompt_placeholder": {
+    "message": "要排除的内容…"
+  },
+  "btn_parameters": {
+    "message": "参数 ▾"
+  },
+  "btn_generate": {
+    "message": "生成"
+  },
+  "install_model_hint": {
+    "message": "安装模型以启用生成功能。"
+  },
+  "img_placeholder": {
+    "message": "您的图片将在此处显示"
+  },
+  "generating_eyebrow": {
+    "message": "生成中"
+  },
+  "phase_encoding": {
+    "message": "正在编码提示词"
+  },
+  "btn_cancel_gen": {
+    "message": "× 取消"
+  },
+  "btn_save": {
+    "message": "↓ 保存"
+  },
+  "btn_copy": {
+    "message": "⎘ 复制"
+  },
+  "btn_retry": {
+    "message": "↺ 重试"
+  },
+  "img_generated_alt": {
+    "message": "已生成图片"
+  },
+  "recent_eyebrow": {
+    "message": "最近"
+  },
+  "view_all": {
+    "message": "查看全部 ↗"
+  },
+  "clear_history": {
+    "message": "清除历史记录"
+  },
+  "loading_model": {
+    "message": "正在加载模型…"
+  },
+  "compiling": {
+    "message": "编译中…"
+  },
+  "generating_pct": {
+    "message": "生成中 · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "准备中…"
+  },
+  "phase_compiling_first": {
+    "message": "正在编译着色器 · 首次运行"
+  },
+  "phase_loading": {
+    "message": "加载中…"
+  },
+  "phase_fetching": {
+    "message": "正在获取模型权重"
+  },
+  "phase_decoding": {
+    "message": "正在解码图片…"
+  },
+  "phase_loading_model": {
+    "message": "正在加载模型…"
+  },
+  "phase_compiling_shaders": {
+    "message": "正在编译着色器…"
+  },
+  "workspace_page_title": {
+    "message": "AI离线图片生成工作区"
+  },
+  "workspace_brand": {
+    "message": "AI离线图片生成器"
+  },
+  "workspace_label": {
+    "message": "工作区"
+  },
+  "tab_gallery": {
+    "message": "图库"
+  },
+  "tab_diagnostics": {
+    "message": "诊断"
+  },
+  "tab_settings": {
+    "message": "设置"
+  },
+  "your_generations": {
+    "message": "您的生成作品"
+  },
+  "gallery_lede": {
+    "message": "所有内容保留在此设备上。单击图块可查看完整分辨率和来源信息。"
+  },
+  "filter_model": {
+    "message": "模型"
+  },
+  "all_models": {
+    "message": "所有模型"
+  },
+  "filter_engine": {
+    "message": "引擎"
+  },
+  "any_engine": {
+    "message": "任意引擎"
+  },
+  "engine_browser": {
+    "message": "浏览器 · WebGPU"
+  },
+  "filter_window": {
+    "message": "时间范围"
+  },
+  "time_all": {
+    "message": "全部时间"
+  },
+  "time_24h": {
+    "message": "最近24小时"
+  },
+  "time_7d": {
+    "message": "最近7天"
+  },
+  "time_30d": {
+    "message": "最近30天"
+  },
+  "btn_select": {
+    "message": "选择"
+  },
+  "no_images_title": {
+    "message": "暂无图片"
+  },
+  "no_images_lede": {
+    "message": "按Alt+Shift+D打开弹窗，输入提示词并点击生成。结果将显示在此处。"
+  },
+  "no_matches_title": {
+    "message": "无匹配结果"
+  },
+  "no_matches_lede": {
+    "message": "此时间范围内无内容。请尝试扩大筛选条件。"
+  },
+  "compare_kicker": {
+    "message": "对比 · 拖动分隔条"
+  },
+  "compare_vs": {
+    "message": "A 对比 B"
+  },
+  "close_aria": {
+    "message": "关闭"
+  },
+  "loading_fullres": {
+    "message": "正在加载原始分辨率…"
+  },
+  "label_prompt": {
+    "message": "提示词"
+  },
+  "label_avoid": {
+    "message": "排除"
+  },
+  "label_seed": {
+    "message": "种子"
+  },
+  "label_steps": {
+    "message": "步数"
+  },
+  "label_guidance": {
+    "message": "引导"
+  },
+  "label_engine": {
+    "message": "引擎"
+  },
+  "label_duration": {
+    "message": "时长"
+  },
+  "label_generated": {
+    "message": "生成时间"
+  },
+  "label_path": {
+    "message": "路径"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ 复用种子"
+  },
+  "btn_copy_prompt": {
+    "message": "复制提示词"
+  },
+  "btn_copy_seed": {
+    "message": "复制种子"
+  },
+  "btn_download_png": {
+    "message": "↓ 下载PNG"
+  },
+  "btn_delete": {
+    "message": "删除"
+  },
+  "danger_zone": {
+    "message": "危险区域"
+  },
+  "clear_data_title": {
+    "message": "清除所有扩展数据"
+  },
+  "clear_data_hint": {
+    "message": "删除所有缓存模型和生成图片，不可撤销。"
+  },
+  "btn_clear_data": {
+    "message": "清除数据"
+  },
+  "diag_title": {
+    "message": "诊断"
+  },
+  "diag_lede": {
+    "message": "扩展程序关于您的浏览器和设备的信息。如有问题，请将此块复制到issue中。"
+  },
+  "diag_engine": {
+    "message": "活跃引擎"
+  },
+  "diag_preferred": {
+    "message": "首选"
+  },
+  "diag_device": {
+    "message": "设备"
+  },
+  "diag_adapter": {
+    "message": "适配器"
+  },
+  "diag_vendor": {
+    "message": "厂商"
+  },
+  "diag_vram": {
+    "message": "VRAM估计"
+  },
+  "diag_browser": {
+    "message": "浏览器路径"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS配额"
+  },
+  "diag_storage": {
+    "message": "存储"
+  },
+  "diag_installed": {
+    "message": "已安装模型"
+  },
+  "diag_recent": {
+    "message": "最近图片"
+  },
+  "diag_active": {
+    "message": "活跃模型"
+  },
+  "btn_copy_json": {
+    "message": "复制为JSON"
+  },
+  "btn_reprobe": {
+    "message": "重新检测"
+  },
+  "btn_compare": {
+    "message": "对比"
+  },
+  "btn_export_zip": {
+    "message": "↓ 导出ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "删除"
+  },
+  "btn_cancel_select": {
+    "message": "取消"
+  },
+  "confirm_clear_data": {
+    "message": "删除所有缓存模型和生成图片？\n\n此操作不可撤销。"
+  },
+  "clearing": {
+    "message": "清除中…"
+  },
+  "status_done": {
+    "message": "✓ 完成"
+  },
+  "status_saved": {
+    "message": "✓ 已保存"
+  },
+  "status_copied": {
+    "message": "✓ 已复制"
+  },
+  "confirm_delete_image": {
+    "message": "删除此图片？"
+  },
+  "confirm_bulk_delete": {
+    "message": "删除$COUNT$张$NOUN$？",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "图片"
+  },
+  "image_noun": {
+    "message": "图片"
+  },
+  "no_prompt": {
+    "message": "（无提示词）"
+  },
+  "none_selected": {
+    "message": "（未选择）"
+  },
+  "in_memory_only": {
+    "message": "（仅在内存中）"
+  },
+  "btn_exit_select": {
+    "message": "退出选择"
+  },
+  "n_selected": {
+    "message": "已选择$COUNT$张",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "正在打包$COUNT$张图片…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "已导出$COUNT$张图片",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "使用相同种子重新运行中…"
+  },
+  "err_no_engine": {
+    "message": "没有可用的生成引擎"
+  },
+  "err_engine_start": {
+    "message": "无法启动浏览器引擎"
+  },
+  "err_inference_failed": {
+    "message": "浏览器生成失败"
+  },
+  "err_generation_failed": {
+    "message": "生成失败"
+  },
+  "no_model_sub": {
+    "message": "在「模型」标签中选择模型即可开始"
+  },
+  "mb_pick_model": {
+    "message": "↓ 选择模型"
+  },
+  "popup_tab_generate": {
+    "message": "生成"
+  },
+  "popup_tab_models": {
+    "message": "模型"
+  },
+  "models_intro": {
+    "message": "选择要下载的模型。安装后可随时切换。"
+  },
+  "sec_downloading": {
+    "message": "下载中"
+  },
+  "sec_installed": {
+    "message": "已安装"
+  },
+  "sec_available": {
+    "message": "可用"
+  },
+  "available_popular": {
+    "message": "热门"
+  },
+  "empty_models_title": {
+    "message": "尚未安装模型"
+  },
+  "empty_models_sub_html": {
+    "message": "在下方选择并点击 <b>↓ 获取</b>。"
+  },
+  "storage_label": {
+    "message": "存储"
+  },
+  "dl_tag_fetching": {
+    "message": "获取中"
+  },
+  "dl_paused_sub": {
+    "message": "已暂停 — 恢复以继续"
+  },
+  "dl_meta_got": {
+    "message": "已获取"
+  },
+  "dl_meta_speed": {
+    "message": "速度"
+  },
+  "dl_meta_left": {
+    "message": "剩余"
+  },
+  "dl_btn_pause": {
+    "message": "‖ 暂停"
+  },
+  "dl_btn_resume": {
+    "message": "▶ 继续"
+  },
+  "dl_btn_hide": {
+    "message": "↓ 隐藏"
+  },
+  "dl_btn_cancel_title": {
+    "message": "取消"
+  },
+  "mdl_btn_use": {
+    "message": "使用"
+  },
+  "mdl_btn_in_use": {
+    "message": "使用中"
+  },
+  "mdl_btn_get": {
+    "message": "下载"
+  },
+  "mdl_btn_token": {
+    "message": "令牌"
+  },
+  "mdl_btn_na": {
+    "message": "无"
+  },
+  "mdl_loading_sub": {
+    "message": "正在下载到设备…"
+  }
+}

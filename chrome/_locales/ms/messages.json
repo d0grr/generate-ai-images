@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - Jana Gambar AI"
+  },
+  "shortName": {
+    "message": "Gambar AI"
+  },
+  "shortDesc": {
+    "message": "Guna penjana gambar AI untuk mencipta gambar AI daripada teks, hasilkan foto AI realistik dan imej AI dengan serta-merta."
+  },
+  "action_title": {
+    "message": "Jana Gambar AI"
+  },
+  "open_workspace": {
+    "message": "Buka ruang kerja"
+  },
+  "settings": {
+    "message": "Tetapan"
+  },
+  "error_title": {
+    "message": "Sesuatu telah berlaku"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostik ↗"
+  },
+  "btn_dismiss": {
+    "message": "Tutup"
+  },
+  "no_model_selected": {
+    "message": "Tiada model dipilih"
+  },
+  "mb_get": {
+    "message": "↓ Muat turun"
+  },
+  "mb_downloading": {
+    "message": "Memuat turun…"
+  },
+  "mb_of": {
+    "message": "daripada"
+  },
+  "cancel_download": {
+    "message": "Batal muat turun"
+  },
+  "mb_installing": {
+    "message": "Memasang…"
+  },
+  "mb_verifying": {
+    "message": "Mengesahkan pemberat · hampir selesai"
+  },
+  "ready": {
+    "message": "Sedia"
+  },
+  "prompt_placeholder": {
+    "message": "Huraikan apa yang ingin dibuat…"
+  },
+  "btn_clear_title": {
+    "message": "Kosongkan"
+  },
+  "btn_clear_aria": {
+    "message": "Kosongkan arahan"
+  },
+  "surprise_me": {
+    "message": "Kejutkan saya"
+  },
+  "param_steps": {
+    "message": "Langkah"
+  },
+  "param_guidance": {
+    "message": "Panduan"
+  },
+  "param_seed": {
+    "message": "Benih"
+  },
+  "seed_random": {
+    "message": "rawak"
+  },
+  "neg_prompt_label": {
+    "message": "Arahan negatif"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Perkara yang perlu dielakkan…"
+  },
+  "btn_parameters": {
+    "message": "Parameter ▾"
+  },
+  "btn_generate": {
+    "message": "Jana"
+  },
+  "install_model_hint": {
+    "message": "Pasang model untuk mengaktifkan Jana."
+  },
+  "img_placeholder": {
+    "message": "Gambar anda akan muncul di sini"
+  },
+  "generating_eyebrow": {
+    "message": "MENJANA"
+  },
+  "phase_encoding": {
+    "message": "Mengekod arahan"
+  },
+  "btn_cancel_gen": {
+    "message": "× batal"
+  },
+  "btn_save": {
+    "message": "↓ Simpan"
+  },
+  "btn_copy": {
+    "message": "⎘ Salin"
+  },
+  "btn_retry": {
+    "message": "↺ Cuba lagi"
+  },
+  "img_generated_alt": {
+    "message": "Gambar yang dijana"
+  },
+  "recent_eyebrow": {
+    "message": "TERKINI"
+  },
+  "view_all": {
+    "message": "Lihat semua ↗"
+  },
+  "clear_history": {
+    "message": "Kosongkan sejarah"
+  },
+  "loading_model": {
+    "message": "Memuatkan model…"
+  },
+  "compiling": {
+    "message": "Mengkompil…"
+  },
+  "generating_pct": {
+    "message": "Menjana · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Menyediakan…"
+  },
+  "phase_compiling_first": {
+    "message": "Mengkompil shader · larian pertama"
+  },
+  "phase_loading": {
+    "message": "Memuatkan…"
+  },
+  "phase_fetching": {
+    "message": "Mendapatkan pemberat model"
+  },
+  "phase_decoding": {
+    "message": "Menyahkod gambar…"
+  },
+  "phase_loading_model": {
+    "message": "Memuatkan model…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Mengkompil shader…"
+  },
+  "workspace_page_title": {
+    "message": "Ruang Kerja Penjana Gambar AI Luar Talian"
+  },
+  "workspace_brand": {
+    "message": "Penjana Gambar AI Luar Talian"
+  },
+  "workspace_label": {
+    "message": "ruang kerja"
+  },
+  "tab_gallery": {
+    "message": "Galeri"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostik"
+  },
+  "tab_settings": {
+    "message": "Tetapan"
+  },
+  "your_generations": {
+    "message": "Jana anda"
+  },
+  "gallery_lede": {
+    "message": "Semua kekal pada peranti ini. Klik petak untuk resolusi penuh dan asal usul."
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "Semua model"
+  },
+  "filter_engine": {
+    "message": "Enjin"
+  },
+  "any_engine": {
+    "message": "Mana-mana enjin"
+  },
+  "engine_browser": {
+    "message": "Pelayar · WebGPU"
+  },
+  "filter_window": {
+    "message": "Tempoh"
+  },
+  "time_all": {
+    "message": "Sepanjang masa"
+  },
+  "time_24h": {
+    "message": "24 jam lepas"
+  },
+  "time_7d": {
+    "message": "7 hari lepas"
+  },
+  "time_30d": {
+    "message": "30 hari lepas"
+  },
+  "btn_select": {
+    "message": "Pilih"
+  },
+  "no_images_title": {
+    "message": "Tiada gambar lagi"
+  },
+  "no_images_lede": {
+    "message": "Buka popup dengan Alt+Shift+D, tulis arahan, klik Jana. Keputusan muncul di sini."
+  },
+  "no_matches_title": {
+    "message": "Tiada padanan"
+  },
+  "no_matches_lede": {
+    "message": "Tiada dalam tempoh ini. Cuba perluaskan penapis."
+  },
+  "compare_kicker": {
+    "message": "Bandingkan · seret pemegang"
+  },
+  "compare_vs": {
+    "message": "A lwn B"
+  },
+  "close_aria": {
+    "message": "tutup"
+  },
+  "loading_fullres": {
+    "message": "memuatkan resolusi penuh…"
+  },
+  "label_prompt": {
+    "message": "Arahan"
+  },
+  "label_avoid": {
+    "message": "Elakkan"
+  },
+  "label_seed": {
+    "message": "Benih"
+  },
+  "label_steps": {
+    "message": "Langkah"
+  },
+  "label_guidance": {
+    "message": "Panduan"
+  },
+  "label_engine": {
+    "message": "Enjin"
+  },
+  "label_duration": {
+    "message": "Tempoh"
+  },
+  "label_generated": {
+    "message": "Dijana"
+  },
+  "label_path": {
+    "message": "Laluan"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Guna semula benih"
+  },
+  "btn_copy_prompt": {
+    "message": "Salin arahan"
+  },
+  "btn_copy_seed": {
+    "message": "Salin benih"
+  },
+  "btn_download_png": {
+    "message": "↓ Muat turun PNG"
+  },
+  "btn_delete": {
+    "message": "Padam"
+  },
+  "danger_zone": {
+    "message": "Zon bahaya"
+  },
+  "clear_data_title": {
+    "message": "Kosongkan semua data sambungan"
+  },
+  "clear_data_hint": {
+    "message": "Membuang semua model cache dan gambar yang dijana. Tidak boleh dibuat asal."
+  },
+  "btn_clear_data": {
+    "message": "Kosongkan data"
+  },
+  "diag_title": {
+    "message": "Diagnostik"
+  },
+  "diag_lede": {
+    "message": "Apa yang sambungan lihat tentang pelayar dan mesin anda. Salin blok ini ke isu jika ada masalah."
+  },
+  "diag_engine": {
+    "message": "Enjin aktif"
+  },
+  "diag_preferred": {
+    "message": "Pilihan"
+  },
+  "diag_device": {
+    "message": "Peranti"
+  },
+  "diag_adapter": {
+    "message": "Penyesuai"
+  },
+  "diag_vendor": {
+    "message": "Vendor"
+  },
+  "diag_vram": {
+    "message": "Anggaran VRAM"
+  },
+  "diag_browser": {
+    "message": "Laluan pelayar"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Kuota OPFS"
+  },
+  "diag_storage": {
+    "message": "Storan"
+  },
+  "diag_installed": {
+    "message": "Model terpasang"
+  },
+  "diag_recent": {
+    "message": "Gambar terkini"
+  },
+  "diag_active": {
+    "message": "Model aktif"
+  },
+  "btn_copy_json": {
+    "message": "Salin sebagai JSON"
+  },
+  "btn_reprobe": {
+    "message": "Jalankan semakan semula"
+  },
+  "btn_compare": {
+    "message": "Bandingkan"
+  },
+  "btn_export_zip": {
+    "message": "↓ Eksport ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Padam"
+  },
+  "btn_cancel_select": {
+    "message": "Batal"
+  },
+  "confirm_clear_data": {
+    "message": "Padamkan semua model cache dan gambar yang dijana?\n\nTidak boleh dibuat asal."
+  },
+  "clearing": {
+    "message": "Mengosongkan…"
+  },
+  "status_done": {
+    "message": "✓ Selesai"
+  },
+  "status_saved": {
+    "message": "✓ Disimpan"
+  },
+  "status_copied": {
+    "message": "✓ Disalin"
+  },
+  "confirm_delete_image": {
+    "message": "Padamkan gambar ini?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Padamkan $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "gambar"
+  },
+  "image_noun": {
+    "message": "gambar"
+  },
+  "no_prompt": {
+    "message": "(tiada arahan)"
+  },
+  "none_selected": {
+    "message": "(tiada yang dipilih)"
+  },
+  "in_memory_only": {
+    "message": "(dalam memori sahaja)"
+  },
+  "btn_exit_select": {
+    "message": "Keluar dari pilihan"
+  },
+  "n_selected": {
+    "message": "$COUNT$ dipilih",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Mengemas $COUNT$ gambar…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Diekspor $COUNT$ gambar",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Menjalankan semula dengan benih yang sama…"
+  },
+  "err_no_engine": {
+    "message": "Tiada enjin penjanaan tersedia"
+  },
+  "err_engine_start": {
+    "message": "Enjin pelayar tidak dapat dimulakan"
+  },
+  "err_inference_failed": {
+    "message": "Penjanaan dalam pelayar gagal"
+  },
+  "err_generation_failed": {
+    "message": "Jana gagal"
+  },
+  "no_model_sub": {
+    "message": "Pilih model dalam tab Model untuk bermula"
+  },
+  "mb_pick_model": {
+    "message": "↓ Pilih model"
+  },
+  "popup_tab_generate": {
+    "message": "Hasilkan"
+  },
+  "popup_tab_models": {
+    "message": "Model"
+  },
+  "models_intro": {
+    "message": "Pilih model untuk dimuat turun. Selepas dipasang, anda boleh bertukar bila-bila masa."
+  },
+  "sec_downloading": {
+    "message": "Memuat turun"
+  },
+  "sec_installed": {
+    "message": "Dipasang"
+  },
+  "sec_available": {
+    "message": "Tersedia"
+  },
+  "available_popular": {
+    "message": "popular"
+  },
+  "empty_models_title": {
+    "message": "Belum ada model dipasang"
+  },
+  "empty_models_sub_html": {
+    "message": "Pilih satu di bawah dan ketik <b>↓ Dapatkan</b>."
+  },
+  "storage_label": {
+    "message": "Storan"
+  },
+  "dl_tag_fetching": {
+    "message": "mengambil"
+  },
+  "dl_paused_sub": {
+    "message": "dijeda — sambung untuk meneruskan"
+  },
+  "dl_meta_got": {
+    "message": "Dimuat turun"
+  },
+  "dl_meta_speed": {
+    "message": "Kelajuan"
+  },
+  "dl_meta_left": {
+    "message": "Tinggal"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Jeda"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Sambung"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Sembunyi"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Batal"
+  },
+  "mdl_btn_use": {
+    "message": "Guna"
+  },
+  "mdl_btn_in_use": {
+    "message": "Sedang digunakan"
+  },
+  "mdl_btn_get": {
+    "message": "Muat turun"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "t/a"
+  },
+  "mdl_loading_sub": {
+    "message": "Memuat turun ke peranti…"
+  }
+}

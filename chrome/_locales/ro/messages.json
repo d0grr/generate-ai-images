@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "Generator de imagini AI - Imagini AI"
+  },
+  "shortName": {
+    "message": "AI Imagini"
+  },
+  "shortDesc": {
+    "message": "Generator de imagini AI din text: creează imagini AI realiste, fotografii AI și ilustrații instant direct în Chrome."
+  },
+  "action_title": {
+    "message": "Generează imagini AI"
+  },
+  "open_workspace": {
+    "message": "Deschide spațiul de lucru"
+  },
+  "settings": {
+    "message": "Setări"
+  },
+  "error_title": {
+    "message": "Ceva a mers prost"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnosticare ↗"
+  },
+  "btn_dismiss": {
+    "message": "Închide"
+  },
+  "no_model_selected": {
+    "message": "Niciun model selectat"
+  },
+  "mb_get": {
+    "message": "↓ Descarcă"
+  },
+  "mb_downloading": {
+    "message": "Se descarcă…"
+  },
+  "mb_of": {
+    "message": "din"
+  },
+  "cancel_download": {
+    "message": "Anulează descărcarea"
+  },
+  "mb_installing": {
+    "message": "Se instalează…"
+  },
+  "mb_verifying": {
+    "message": "Verificare ponderi · aproape gata"
+  },
+  "ready": {
+    "message": "Gata"
+  },
+  "prompt_placeholder": {
+    "message": "Descrie ce vrei să creezi…"
+  },
+  "btn_clear_title": {
+    "message": "Șterge"
+  },
+  "btn_clear_aria": {
+    "message": "Șterge promptul"
+  },
+  "surprise_me": {
+    "message": "Surprinde-mă"
+  },
+  "param_steps": {
+    "message": "Pași"
+  },
+  "param_guidance": {
+    "message": "Ghidare"
+  },
+  "param_seed": {
+    "message": "Sămânță"
+  },
+  "seed_random": {
+    "message": "aleatoriu"
+  },
+  "neg_prompt_label": {
+    "message": "Prompt negativ"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Lucruri de evitat…"
+  },
+  "btn_parameters": {
+    "message": "Parametri ▾"
+  },
+  "btn_generate": {
+    "message": "Generează"
+  },
+  "install_model_hint": {
+    "message": "Instalează un model pentru a activa Generare."
+  },
+  "img_placeholder": {
+    "message": "Imaginea ta va apărea aici"
+  },
+  "generating_eyebrow": {
+    "message": "SE GENEREAZĂ"
+  },
+  "phase_encoding": {
+    "message": "Se codifică promptul"
+  },
+  "btn_cancel_gen": {
+    "message": "× anulează"
+  },
+  "btn_save": {
+    "message": "↓ Salvează"
+  },
+  "btn_copy": {
+    "message": "⎘ Copiază"
+  },
+  "btn_retry": {
+    "message": "↺ Încearcă din nou"
+  },
+  "img_generated_alt": {
+    "message": "Imagine generată"
+  },
+  "recent_eyebrow": {
+    "message": "RECENT"
+  },
+  "view_all": {
+    "message": "Vezi toate ↗"
+  },
+  "clear_history": {
+    "message": "Șterge istoricul"
+  },
+  "loading_model": {
+    "message": "Se încarcă modelul…"
+  },
+  "compiling": {
+    "message": "Se compilează…"
+  },
+  "generating_pct": {
+    "message": "Se generează · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Se pregătește…"
+  },
+  "phase_compiling_first": {
+    "message": "Se compilează shadere · prima rulare"
+  },
+  "phase_loading": {
+    "message": "Se încarcă…"
+  },
+  "phase_fetching": {
+    "message": "Se preiau ponderile modelului"
+  },
+  "phase_decoding": {
+    "message": "Se decodifică imaginea…"
+  },
+  "phase_loading_model": {
+    "message": "Se încarcă modelul…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Se compilează shadere…"
+  },
+  "workspace_page_title": {
+    "message": "Spațiu de lucru generator imagini AI offline"
+  },
+  "workspace_brand": {
+    "message": "Generator Imagini AI Offline"
+  },
+  "workspace_label": {
+    "message": "spațiu de lucru"
+  },
+  "tab_gallery": {
+    "message": "Galerie"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnosticare"
+  },
+  "tab_settings": {
+    "message": "Setări"
+  },
+  "your_generations": {
+    "message": "Generările tale"
+  },
+  "gallery_lede": {
+    "message": "Totul rămâne pe acest dispozitiv. Fă clic pe o placă pentru rezoluție completă și proveniență."
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "Toate modelele"
+  },
+  "filter_engine": {
+    "message": "Motor"
+  },
+  "any_engine": {
+    "message": "Orice motor"
+  },
+  "engine_browser": {
+    "message": "Browser · WebGPU"
+  },
+  "filter_window": {
+    "message": "Perioadă"
+  },
+  "time_all": {
+    "message": "Tot timpul"
+  },
+  "time_24h": {
+    "message": "Ultimele 24 ore"
+  },
+  "time_7d": {
+    "message": "Ultimele 7 zile"
+  },
+  "time_30d": {
+    "message": "Ultimele 30 zile"
+  },
+  "btn_select": {
+    "message": "Selectează"
+  },
+  "no_images_title": {
+    "message": "Nicio imagine încă"
+  },
+  "no_images_lede": {
+    "message": "Deschide popup-ul cu Alt+Shift+D, scrie un prompt, apasă Generează. Rezultatele apar aici."
+  },
+  "no_matches_title": {
+    "message": "Nicio potrivire"
+  },
+  "no_matches_lede": {
+    "message": "Nimic în această perioadă. Încearcă să lărgești filtrul."
+  },
+  "compare_kicker": {
+    "message": "Compară · trage mânerul"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "închide"
+  },
+  "loading_fullres": {
+    "message": "se încarcă rezoluția completă…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Evită"
+  },
+  "label_seed": {
+    "message": "Sămânță"
+  },
+  "label_steps": {
+    "message": "Pași"
+  },
+  "label_guidance": {
+    "message": "Ghidare"
+  },
+  "label_engine": {
+    "message": "Motor"
+  },
+  "label_duration": {
+    "message": "Durată"
+  },
+  "label_generated": {
+    "message": "Generat"
+  },
+  "label_path": {
+    "message": "Cale"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Reutilizează sămânța"
+  },
+  "btn_copy_prompt": {
+    "message": "Copiază promptul"
+  },
+  "btn_copy_seed": {
+    "message": "Copiază sămânța"
+  },
+  "btn_download_png": {
+    "message": "↓ Descarcă PNG"
+  },
+  "btn_delete": {
+    "message": "Șterge"
+  },
+  "danger_zone": {
+    "message": "Zonă periculoasă"
+  },
+  "clear_data_title": {
+    "message": "Șterge toate datele extensiei"
+  },
+  "clear_data_hint": {
+    "message": "Elimină toate modelele din cache și imaginile generate. Nu poate fi anulat."
+  },
+  "btn_clear_data": {
+    "message": "Șterge datele"
+  },
+  "diag_title": {
+    "message": "Diagnosticare"
+  },
+  "diag_lede": {
+    "message": "Ce vede extensia despre browser și mașina ta. Copiază acest bloc într-un issue dacă ceva nu funcționează."
+  },
+  "diag_engine": {
+    "message": "Motor activ"
+  },
+  "diag_preferred": {
+    "message": "Preferat"
+  },
+  "diag_device": {
+    "message": "Dispozitiv"
+  },
+  "diag_adapter": {
+    "message": "Adaptor"
+  },
+  "diag_vendor": {
+    "message": "Furnizor"
+  },
+  "diag_vram": {
+    "message": "VRAM est."
+  },
+  "diag_browser": {
+    "message": "Calea browserului"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Cotă OPFS"
+  },
+  "diag_storage": {
+    "message": "Stocare"
+  },
+  "diag_installed": {
+    "message": "Modele instalate"
+  },
+  "diag_recent": {
+    "message": "Imagini recente"
+  },
+  "diag_active": {
+    "message": "Model activ"
+  },
+  "btn_copy_json": {
+    "message": "Copiază ca JSON"
+  },
+  "btn_reprobe": {
+    "message": "Repetă verificările"
+  },
+  "btn_compare": {
+    "message": "Compară"
+  },
+  "btn_export_zip": {
+    "message": "↓ Exportă ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Șterge"
+  },
+  "btn_cancel_select": {
+    "message": "Anulează"
+  },
+  "confirm_clear_data": {
+    "message": "Șterge toate modelele din cache și imaginile generate?\n\nAceastă acțiune nu poate fi anulată."
+  },
+  "clearing": {
+    "message": "Se șterge…"
+  },
+  "status_done": {
+    "message": "✓ Gata"
+  },
+  "status_saved": {
+    "message": "✓ Salvat"
+  },
+  "status_copied": {
+    "message": "✓ Copiat"
+  },
+  "confirm_delete_image": {
+    "message": "Șterge această imagine?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Șterge $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "imagini"
+  },
+  "image_noun": {
+    "message": "imagine"
+  },
+  "no_prompt": {
+    "message": "(fără prompt)"
+  },
+  "none_selected": {
+    "message": "(nimic selectat)"
+  },
+  "in_memory_only": {
+    "message": "(doar în memorie)"
+  },
+  "btn_exit_select": {
+    "message": "Ieși din selecție"
+  },
+  "n_selected": {
+    "message": "$COUNT$ selectate",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Se împachetează $COUNT$ imagini…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ imagini exportate",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Se rulează din nou cu aceeași sămânță…"
+  },
+  "err_no_engine": {
+    "message": "Niciun motor de generare disponibil"
+  },
+  "err_engine_start": {
+    "message": "Motorul browserului nu a putut fi pornit"
+  },
+  "err_inference_failed": {
+    "message": "Generarea în browser a eșuat"
+  },
+  "err_generation_failed": {
+    "message": "Generarea a eșuat"
+  },
+  "no_model_sub": {
+    "message": "Alege un model din fila Modele pentru a începe"
+  },
+  "mb_pick_model": {
+    "message": "↓ Alege model"
+  },
+  "popup_tab_generate": {
+    "message": "Generează"
+  },
+  "popup_tab_models": {
+    "message": "Modele"
+  },
+  "models_intro": {
+    "message": "Alege un model pentru descărcare. După instalare, poți comuta între ele oricând."
+  },
+  "sec_downloading": {
+    "message": "Se descarcă"
+  },
+  "sec_installed": {
+    "message": "Instalate"
+  },
+  "sec_available": {
+    "message": "Disponibile"
+  },
+  "available_popular": {
+    "message": "populare"
+  },
+  "empty_models_title": {
+    "message": "Niciun model instalat încă"
+  },
+  "empty_models_sub_html": {
+    "message": "Alege unul mai jos și apasă <b>↓ Obține</b>."
+  },
+  "storage_label": {
+    "message": "Stocare"
+  },
+  "dl_tag_fetching": {
+    "message": "se obține"
+  },
+  "dl_paused_sub": {
+    "message": "în pauză — reia pentru a continua"
+  },
+  "dl_meta_got": {
+    "message": "Primit"
+  },
+  "dl_meta_speed": {
+    "message": "Viteză"
+  },
+  "dl_meta_left": {
+    "message": "Rămas"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pauză"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Reia"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Ascunde"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Anulează"
+  },
+  "mdl_btn_use": {
+    "message": "Folosește"
+  },
+  "mdl_btn_in_use": {
+    "message": "În uz"
+  },
+  "mdl_btn_get": {
+    "message": "Descarcă"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n/d"
+  },
+  "mdl_loading_sub": {
+    "message": "Se descarcă pe dispozitiv…"
+  }
+}

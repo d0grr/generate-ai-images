@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - Buat Gambar AI"
+  },
+  "shortName": {
+    "message": "Gambar AI"
+  },
+  "shortDesc": {
+    "message": "Gunakan AI image generator untuk membuat gambar AI dari teks, buat foto realistis dan pictures secara instan."
+  },
+  "action_title": {
+    "message": "Buat Gambar AI"
+  },
+  "open_workspace": {
+    "message": "Buka ruang kerja"
+  },
+  "settings": {
+    "message": "Pengaturan"
+  },
+  "error_title": {
+    "message": "Terjadi kesalahan"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostik ↗"
+  },
+  "btn_dismiss": {
+    "message": "Tutup"
+  },
+  "no_model_selected": {
+    "message": "Tidak ada model dipilih"
+  },
+  "mb_get": {
+    "message": "↓ Unduh"
+  },
+  "mb_downloading": {
+    "message": "Mengunduh…"
+  },
+  "mb_of": {
+    "message": "dari"
+  },
+  "cancel_download": {
+    "message": "Batalkan unduhan"
+  },
+  "mb_installing": {
+    "message": "Menginstal…"
+  },
+  "mb_verifying": {
+    "message": "Memverifikasi bobot · hampir selesai"
+  },
+  "ready": {
+    "message": "Siap"
+  },
+  "prompt_placeholder": {
+    "message": "Deskripsikan apa yang ingin dibuat…"
+  },
+  "btn_clear_title": {
+    "message": "Hapus"
+  },
+  "btn_clear_aria": {
+    "message": "Hapus prompt"
+  },
+  "surprise_me": {
+    "message": "Kejutkan saya"
+  },
+  "param_steps": {
+    "message": "Langkah"
+  },
+  "param_guidance": {
+    "message": "Panduan"
+  },
+  "param_seed": {
+    "message": "Benih"
+  },
+  "seed_random": {
+    "message": "acak"
+  },
+  "neg_prompt_label": {
+    "message": "Prompt negatif"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Hal yang harus dihindari…"
+  },
+  "btn_parameters": {
+    "message": "Parameter ▾"
+  },
+  "btn_generate": {
+    "message": "Buat"
+  },
+  "install_model_hint": {
+    "message": "Instal model untuk mengaktifkan Buat."
+  },
+  "img_placeholder": {
+    "message": "Gambar Anda akan muncul di sini"
+  },
+  "generating_eyebrow": {
+    "message": "MEMBUAT"
+  },
+  "phase_encoding": {
+    "message": "Mengenkode prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× batal"
+  },
+  "btn_save": {
+    "message": "↓ Simpan"
+  },
+  "btn_copy": {
+    "message": "⎘ Salin"
+  },
+  "btn_retry": {
+    "message": "↺ Coba lagi"
+  },
+  "img_generated_alt": {
+    "message": "Gambar yang dibuat"
+  },
+  "recent_eyebrow": {
+    "message": "TERBARU"
+  },
+  "view_all": {
+    "message": "Lihat semua ↗"
+  },
+  "clear_history": {
+    "message": "Hapus riwayat"
+  },
+  "loading_model": {
+    "message": "Memuat model…"
+  },
+  "compiling": {
+    "message": "Mengompilasi…"
+  },
+  "generating_pct": {
+    "message": "Membuat · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Mempersiapkan…"
+  },
+  "phase_compiling_first": {
+    "message": "Mengompilasi shader · pertama kali"
+  },
+  "phase_loading": {
+    "message": "Memuat…"
+  },
+  "phase_fetching": {
+    "message": "Mengambil bobot model"
+  },
+  "phase_decoding": {
+    "message": "Mendekode gambar…"
+  },
+  "phase_loading_model": {
+    "message": "Memuat model…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Mengompilasi shader…"
+  },
+  "workspace_page_title": {
+    "message": "Ruang Kerja Generator Gambar AI Offline"
+  },
+  "workspace_brand": {
+    "message": "Generator Gambar AI Offline"
+  },
+  "workspace_label": {
+    "message": "ruang kerja"
+  },
+  "tab_gallery": {
+    "message": "Galeri"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostik"
+  },
+  "tab_settings": {
+    "message": "Pengaturan"
+  },
+  "your_generations": {
+    "message": "Gambar buatan Anda"
+  },
+  "gallery_lede": {
+    "message": "Semua tersimpan di perangkat ini. Klik gambar untuk resolusi penuh dan sumber."
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "Semua model"
+  },
+  "filter_engine": {
+    "message": "Mesin"
+  },
+  "any_engine": {
+    "message": "Mesin apa pun"
+  },
+  "engine_browser": {
+    "message": "Browser · WebGPU"
+  },
+  "filter_window": {
+    "message": "Periode"
+  },
+  "time_all": {
+    "message": "Semua waktu"
+  },
+  "time_24h": {
+    "message": "24 jam terakhir"
+  },
+  "time_7d": {
+    "message": "7 hari terakhir"
+  },
+  "time_30d": {
+    "message": "30 hari terakhir"
+  },
+  "btn_select": {
+    "message": "Pilih"
+  },
+  "no_images_title": {
+    "message": "Belum ada gambar"
+  },
+  "no_images_lede": {
+    "message": "Buka popup dengan Alt+Shift+D, tulis prompt, klik Buat. Hasilnya muncul di sini."
+  },
+  "no_matches_title": {
+    "message": "Tidak ada yang cocok"
+  },
+  "no_matches_lede": {
+    "message": "Tidak ada di periode ini. Coba perluas filter."
+  },
+  "compare_kicker": {
+    "message": "Bandingkan · seret handel"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "tutup"
+  },
+  "loading_fullres": {
+    "message": "memuat resolusi penuh…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Hindari"
+  },
+  "label_seed": {
+    "message": "Benih"
+  },
+  "label_steps": {
+    "message": "Langkah"
+  },
+  "label_guidance": {
+    "message": "Panduan"
+  },
+  "label_engine": {
+    "message": "Mesin"
+  },
+  "label_duration": {
+    "message": "Durasi"
+  },
+  "label_generated": {
+    "message": "Dibuat"
+  },
+  "label_path": {
+    "message": "Jalur"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Gunakan ulang benih"
+  },
+  "btn_copy_prompt": {
+    "message": "Salin prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Salin benih"
+  },
+  "btn_download_png": {
+    "message": "↓ Unduh PNG"
+  },
+  "btn_delete": {
+    "message": "Hapus"
+  },
+  "danger_zone": {
+    "message": "Zona berbahaya"
+  },
+  "clear_data_title": {
+    "message": "Hapus semua data ekstensi"
+  },
+  "clear_data_hint": {
+    "message": "Menghapus semua model cache dan gambar yang dibuat. Tidak dapat dibatalkan."
+  },
+  "btn_clear_data": {
+    "message": "Hapus data"
+  },
+  "diag_title": {
+    "message": "Diagnostik"
+  },
+  "diag_lede": {
+    "message": "Apa yang dilihat ekstensi tentang browser dan mesin Anda. Salin blok ini ke issue jika ada masalah."
+  },
+  "diag_engine": {
+    "message": "Mesin aktif"
+  },
+  "diag_preferred": {
+    "message": "Disukai"
+  },
+  "diag_device": {
+    "message": "Perangkat"
+  },
+  "diag_adapter": {
+    "message": "Adaptor"
+  },
+  "diag_vendor": {
+    "message": "Vendor"
+  },
+  "diag_vram": {
+    "message": "Estimasi VRAM"
+  },
+  "diag_browser": {
+    "message": "Jalur browser"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Kuota OPFS"
+  },
+  "diag_storage": {
+    "message": "Penyimpanan"
+  },
+  "diag_installed": {
+    "message": "Model terpasang"
+  },
+  "diag_recent": {
+    "message": "Gambar terbaru"
+  },
+  "diag_active": {
+    "message": "Model aktif"
+  },
+  "btn_copy_json": {
+    "message": "Salin sebagai JSON"
+  },
+  "btn_reprobe": {
+    "message": "Jalankan ulang pemeriksaan"
+  },
+  "btn_compare": {
+    "message": "Bandingkan"
+  },
+  "btn_export_zip": {
+    "message": "↓ Ekspor ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Hapus"
+  },
+  "btn_cancel_select": {
+    "message": "Batal"
+  },
+  "confirm_clear_data": {
+    "message": "Hapus semua model cache dan gambar yang dibuat?\n\nTidak dapat dibatalkan."
+  },
+  "clearing": {
+    "message": "Menghapus…"
+  },
+  "status_done": {
+    "message": "✓ Selesai"
+  },
+  "status_saved": {
+    "message": "✓ Tersimpan"
+  },
+  "status_copied": {
+    "message": "✓ Tersalin"
+  },
+  "confirm_delete_image": {
+    "message": "Hapus gambar ini?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Hapus $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "gambar"
+  },
+  "image_noun": {
+    "message": "gambar"
+  },
+  "no_prompt": {
+    "message": "(tanpa prompt)"
+  },
+  "none_selected": {
+    "message": "(tidak ada yang dipilih)"
+  },
+  "in_memory_only": {
+    "message": "(hanya di memori)"
+  },
+  "btn_exit_select": {
+    "message": "Keluar pilihan"
+  },
+  "n_selected": {
+    "message": "$COUNT$ dipilih",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Mengemas $COUNT$ gambar…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Diekspor $COUNT$ gambar",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Menjalankan ulang dengan benih yang sama…"
+  },
+  "err_no_engine": {
+    "message": "Tidak ada mesin pembuatan yang tersedia"
+  },
+  "err_engine_start": {
+    "message": "Mesin browser tidak dapat dimulai"
+  },
+  "err_inference_failed": {
+    "message": "Pembuatan di browser gagal"
+  },
+  "err_generation_failed": {
+    "message": "Pembuatan gagal"
+  },
+  "no_model_sub": {
+    "message": "Pilih model di tab Model untuk memulai"
+  },
+  "mb_pick_model": {
+    "message": "↓ Pilih model"
+  },
+  "popup_tab_generate": {
+    "message": "Hasilkan"
+  },
+  "popup_tab_models": {
+    "message": "Model"
+  },
+  "models_intro": {
+    "message": "Pilih model untuk diunduh. Setelah terpasang, Anda dapat beralih kapan saja."
+  },
+  "sec_downloading": {
+    "message": "Mengunduh"
+  },
+  "sec_installed": {
+    "message": "Terpasang"
+  },
+  "sec_available": {
+    "message": "Tersedia"
+  },
+  "available_popular": {
+    "message": "populer"
+  },
+  "empty_models_title": {
+    "message": "Belum ada model terpasang"
+  },
+  "empty_models_sub_html": {
+    "message": "Pilih salah satu di bawah dan ketuk <b>↓ Ambil</b>."
+  },
+  "storage_label": {
+    "message": "Penyimpanan"
+  },
+  "dl_tag_fetching": {
+    "message": "mengambil"
+  },
+  "dl_paused_sub": {
+    "message": "dijeda — lanjutkan untuk melanjutkan"
+  },
+  "dl_meta_got": {
+    "message": "Diunduh"
+  },
+  "dl_meta_speed": {
+    "message": "Kecepatan"
+  },
+  "dl_meta_left": {
+    "message": "Sisa"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Jeda"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Lanjutkan"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Sembunyikan"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Batal"
+  },
+  "mdl_btn_use": {
+    "message": "Gunakan"
+  },
+  "mdl_btn_in_use": {
+    "message": "Digunakan"
+  },
+  "mdl_btn_get": {
+    "message": "Unduh"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "t/a"
+  },
+  "mdl_loading_sub": {
+    "message": "Mengunduh ke perangkat…"
+  }
+}

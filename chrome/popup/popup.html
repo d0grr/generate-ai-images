@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imagine</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <article class="popup" id="popup">
+
+    <!-- ═══════════ header ═══════════ -->
+    <header class="ph">
+      <div class="ph-brand">
+        <span class="ph-name" data-role="mb-model-name">Generate AI Images</span>
+        <span class="mb-size" data-role="mb-model-size"></span>
+        <div class="mb-ready-badge" id="ph-ready-badge" hidden>
+          <span class="mb-ok-dot" aria-hidden="true"></span>
+          <span data-i18n="ready">Ready</span>
+        </div>
+      </div>
+      <div class="ph-icons">
+        <button class="ph-ic" id="btn-open-workspace"
+                data-i18n-title="open_workspace" title="Open workspace"
+                data-i18n-aria="open_workspace" aria-label="Open workspace">
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2H3a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9"/>
+            <path d="M9 2h5v5"/><path d="M14 2 8 8"/>
+          </svg>
+        </button>
+        <button class="ph-ic" id="btn-settings"
+                data-i18n-title="settings" title="Settings"
+                data-i18n-aria="settings" aria-label="Settings">
+          <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="8" cy="8" r="2.5"/>
+            <path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M13 3l-1 1M4 12l-1 1"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- ═══════════ tab bar ═══════════ -->
+    <nav class="tab-bar">
+      <div class="ph-track" role="tablist">
+        <button class="ph-tab on" role="tab" data-tab="generate" aria-selected="true"
+                data-i18n="popup_tab_generate">Generate</button>
+        <button class="ph-tab" role="tab" data-tab="models" aria-selected="false">
+          <span data-i18n="popup_tab_models">Models</span>
+          <span class="tab-dot" data-role="downloading-dot" hidden></span>
+          <span class="tab-badge" data-role="downloading-count" hidden></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Inline error toast -->
+    <div class="toast toast-error" id="error-toast" hidden>
+      <div class="toast-body">
+        <div class="toast-title" data-role="toast-title" data-i18n="error_title">Something went wrong</div>
+        <div class="toast-msg" data-role="toast-msg"></div>
+      </div>
+      <div class="toast-actions">
+        <button class="toast-btn" id="toast-diagnostics" data-i18n="btn_diagnostics">Diagnostics ↗</button>
+        <button class="toast-close" id="toast-close"
+                data-i18n-aria="btn_dismiss" aria-label="Dismiss">×</button>
+      </div>
+    </div>
+
+    <!-- ═══════════ Generate tab ═══════════ -->
+    <section class="tab-pane" id="tab-generate" role="tabpanel">
+
+      <!-- Model status banner -->
+      <div class="mb" id="model-banner">
+
+        <!-- State: none (no model installed) -->
+        <div class="mb-row" id="mb-none">
+          <div class="mb-avatar mb-av-blank" aria-hidden="true">◆</div>
+          <div class="mb-info">
+            <div class="mb-title" data-i18n="no_model_selected">No model selected</div>
+            <div class="mb-sub" data-i18n="no_model_sub">Choose a model in the Models tab to get started</div>
+          </div>
+          <button class="mb-btn" data-action="switch-models"
+                  data-i18n="mb_pick_model">↓ Pick model</button>
+        </div>
+
+        <!-- State: downloading -->
+        <div class="mb-row" id="mb-downloading" hidden>
+          <div class="mb-avatar mb-av-spin" aria-hidden="true"></div>
+          <div class="mb-info">
+            <div class="mb-title" data-role="mb-dl-name" data-i18n="mb_downloading">Downloading…</div>
+            <div class="mb-sub mb-sub-dl">
+              <span data-role="mb-dl-got">0 MB</span>
+              <span class="mb-of" data-i18n="mb_of">of</span>
+              <span data-role="mb-dl-total">—</span>
+              <span class="mb-sep">·</span>
+              <b data-role="mb-dl-pct">0%</b>
+            </div>
+            <div class="mb-bar"><div class="mb-bar-fill" data-role="mb-dl-fill" style="width:0%"></div></div>
+          </div>
+          <button class="mb-cancel" data-action="cancel-download"
+                  data-i18n-aria="cancel_download" aria-label="Cancel download">✕</button>
+        </div>
+
+        <!-- State: installing / verifying / loading into RAM -->
+        <div class="mb-row" id="mb-installing" hidden>
+          <div class="mb-avatar mb-av-spin" aria-hidden="true"></div>
+          <div class="mb-info">
+            <div class="mb-title" data-role="mb-inst-name" data-i18n="mb_installing">Installing…</div>
+            <div class="mb-sub" data-role="mb-inst-sub" data-i18n="mb_verifying">Verifying weights · almost done</div>
+          </div>
+          <button class="mb-cancel" id="mb-warm-cancel" data-action="cancel-warmup" hidden
+                  data-i18n-aria="cancel_load" aria-label="Cancel loading">✕</button>
+        </div>
+
+        <!-- State: ready — name/size/badge moved to header -->
+        <div class="mb-row" id="mb-ready" hidden></div>
+
+      </div>
+
+      <!-- Prompt -->
+      <div class="sec">
+        <div class="pt">
+          <div class="pt-field">
+            <textarea id="prompt"
+                      spellcheck="false"
+                      maxlength="350"
+                      data-i18n-placeholder="prompt_placeholder"
+                      placeholder="Describe what you want to create…"></textarea>
+            <button type="button" class="pt-clear" id="btn-clear-prompt"
+                    data-i18n-title="btn_clear_title" title="Clear"
+                    data-i18n-aria="btn_clear_aria" aria-label="Clear prompt" hidden>
+              <svg viewBox="0 0 16 16" width="10" height="10" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+                <line x1="2" y1="2" x2="14" y2="14"/><line x1="14" y1="2" x2="2" y2="14"/>
+              </svg>
+            </button>
+          </div>
+          <div class="pt-foot">
+            <button type="button" class="surprise-btn" id="btn-examples">
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="12" height="12" x="2" y="10" rx="2" ry="2"/>
+                <path d="m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6"/>
+                <path d="M6 18h.01"/><path d="M10 14h.01"/><path d="M15 6h.01"/><path d="M18 9h.01"/>
+              </svg>
+              <span data-i18n="surprise_me">Surprise me</span>
+            </button>
+            <span class="char-count"><span data-role="char-count">0</span>/350</span>
+          </div>
+        </div>
+        <!-- Advanced / negative prompt -->
+        <div class="pt-advanced" id="advanced" hidden>
+          <div class="adv-params">
+            <label class="adv-param">
+              <span class="adv-param-lbl" data-i18n="param_steps">Steps</span>
+              <input id="param-steps" type="number" min="1" max="150" value="20">
+            </label>
+            <label class="adv-param">
+              <span class="adv-param-lbl" data-i18n="param_guidance">Guidance</span>
+              <input id="param-guidance" type="number" min="1" max="20" step="0.5" value="7.5">
+            </label>
+            <label class="adv-param">
+              <span class="adv-param-lbl" data-i18n="param_seed">Seed</span>
+              <input id="param-seed" type="number" min="0"
+                     data-i18n-placeholder="seed_random" placeholder="random">
+            </label>
+          </div>
+          <label class="adv-check">
+            <input id="param-face-restore" type="checkbox">
+            <span class="adv-param-lbl" data-i18n="param_face_restore">Restore faces (GFPGAN)</span>
+          </label>
+          <div class="adv-lbl adv-lbl-neg" data-i18n="neg_prompt_label">Negative prompt</div>
+          <div class="pt pt-neg">
+            <textarea id="negative-prompt" spellcheck="false"
+                      data-i18n-placeholder="neg_prompt_placeholder"
+                      placeholder="Things to avoid…"></textarea>
+          </div>
+        </div>
+        <button type="button" class="adv-toggle" id="btn-advanced" data-i18n="btn_parameters">Parameters ▾</button>
+      </div>
+
+      <!-- Generate button -->
+      <div class="sec sec-gen">
+        <button class="gen" id="btn-generate" disabled>
+          <span class="gen-inner">
+            <svg class="gen-icon" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
+            </svg>
+            <span data-role="generate-label" data-i18n="btn_generate">Generate</span>
+          </span>
+          <span class="kbd">⌘↵</span>
+        </button>
+        <div class="gen-disabled-hint" id="gen-disabled-hint" hidden
+             data-i18n="install_model_hint">Install a model to enable Generate.</div>
+      </div>
+
+      <!-- Result pane -->
+      <div class="sec sec-result">
+        <div class="rp" id="result-pane" data-state="empty">
+
+          <!-- empty -->
+          <div class="rp-empty" id="rp-empty">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
+            </svg>
+            <span data-i18n="img_placeholder">Your image will appear here</span>
+          </div>
+
+          <!-- running -->
+          <div class="rp-running" id="rp-running" hidden>
+            <img class="rp-preview-img" id="rp-preview-img" alt="">
+            <div class="rp-card">
+              <div class="rp-eyebrow" data-i18n="generating_eyebrow">GENERATING</div>
+              <div class="rp-counter">
+                <span data-role="rp-step">0</span><span class="rp-csep">/</span><span data-role="rp-total">30</span>
+              </div>
+              <div class="rp-bar"><div class="rp-bar-fill" data-role="rp-fill" style="width:0%"></div></div>
+              <div class="rp-phase" data-role="rp-phase" data-i18n="phase_encoding">Encoding prompt</div>
+              <button class="rp-cancel-btn" id="btn-cancel" data-i18n="btn_cancel_gen">× cancel</button>
+            </div>
+          </div>
+
+          <!-- result -->
+          <div class="rp-result" id="rp-result" hidden>
+            <img class="rp-img" id="result-img"
+                 data-i18n-alt="img_generated_alt" alt="Generated image">
+            <div class="rp-dims-chip" data-role="rp-dims">512 × 512</div>
+          </div>
+
+        </div>
+        <div class="rp-actions" id="rp-actions" hidden>
+          <button class="rp-btn" id="btn-save" data-i18n="btn_save">↓ Save</button>
+          <button class="rp-btn" id="btn-copy" data-i18n="btn_copy">⎘ Copy</button>
+          <button class="rp-btn rp-btn-sec" id="btn-retry" data-i18n="btn_retry">↺ Retry</button>
+        </div>
+      </div>
+
+      <!-- Recent strip -->
+      <div class="sec">
+        <div class="strip-head">
+          <span class="strip-eyebrow" data-i18n="recent_eyebrow">RECENT</span>
+          <div class="strip-acts">
+            <button class="strip-view-all" id="btn-view-all" data-i18n="view_all">View all ↗</button>
+            <button class="strip-clear" id="btn-clear-history"
+                    data-i18n-title="clear_history" title="Clear history"
+                    data-i18n-aria="clear_history" aria-label="Clear history">
+              <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2.5 4.5h11"/>
+                <path d="M6.5 4.5V3a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1.5"/>
+                <path d="M4 4.5l.7 8.1a1 1 0 0 0 1 .9h4.6a1 1 0 0 0 1-.9l.7-8.1"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="thumbs" id="recent-thumbs" role="list"></div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════ Models tab ═══════════ -->
+    <section class="tab-pane" id="tab-models" role="tabpanel" hidden>
+
+      <div class="sec">
+        <p class="models-intro" data-i18n="models_intro">Choose a model to download. Once installed, you can switch between them anytime.</p>
+      </div>
+
+      <!-- Downloading -->
+      <div class="sec" id="sec-downloading" hidden>
+        <div class="grp">
+          <span data-i18n="sec_downloading">Downloading</span>
+          <span class="cnt" data-role="download-rate">1 · — MB/s</span>
+        </div>
+        <div class="dl-card" id="dl-card">
+          <div class="dl-top">
+            <div class="dl-icon" aria-hidden="true"></div>
+            <div class="dl-info">
+              <div class="dl-tag" data-i18n="dl_tag_fetching">fetching</div>
+              <div class="dl-nm" data-role="dl-name">—</div>
+              <div class="dl-sub" data-role="dl-sub">—</div>
+            </div>
+            <div class="dl-pct"><em data-role="dl-pct">0</em>%</div>
+          </div>
+          <div class="dl-bar"><div class="dl-bar-fill" data-role="dl-fill" style="width:0%"></div></div>
+          <div class="dl-meta">
+            <div><div class="k" data-i18n="dl_meta_got">Got</div><div class="v" data-role="dl-got">—</div></div>
+            <div><div class="k" data-i18n="dl_meta_speed">Speed</div><div class="v ok" data-role="dl-speed">—</div></div>
+            <div><div class="k" data-i18n="dl_meta_left">Left</div><div class="v" data-role="dl-left">—</div></div>
+          </div>
+          <div class="dl-actions">
+            <button class="dl-btn" data-action="pause-download" data-i18n="dl_btn_pause">‖ Pause</button>
+            <button class="dl-btn" data-action="hide-download" data-i18n="dl_btn_hide">↓ Hide</button>
+            <button class="dl-btn dl-btn-stop" data-action="cancel-download"
+                    data-i18n-title="dl_btn_cancel_title" title="Cancel">×</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Installed -->
+      <div class="sec">
+        <div class="grp">
+          <span data-i18n="sec_installed">Installed</span>
+          <span class="cnt" data-role="installed-count">0 · 0.0 GB</span>
+        </div>
+        <div class="mdl-list" id="installed-list">
+          <div class="empty-state" data-role="installed-empty">
+            <div class="empty-title" data-i18n="empty_models_title">No models installed yet</div>
+            <div class="empty-sub" data-i18n-html="empty_models_sub_html">Pick one below and tap <b>↓ Get</b>.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Available -->
+      <div class="sec">
+        <div class="grp">
+          <span data-i18n="sec_available">Available models</span>
+          <span class="cnt" data-i18n="available_popular">popular</span>
+        </div>
+        <div class="mdl-list" id="available-list"></div>
+      </div>
+
+      <!-- Storage footer -->
+      <div class="models-foot">
+        <span class="st-lbl" data-i18n="storage_label">Storage</span>
+        <div class="storage-bar"><div class="storage-bar-fill" data-role="storage-fill" style="width:0%"></div></div>
+        <span class="st-val"><b data-role="storage-used">0.0</b> / <span data-role="storage-limit">20</span> GB</span>
+      </div>
+
+    </section>
+
+    <!-- ═══════════ footer ═══════════ -->
+
+  </article>
+
+  <!-- ─── templates ─── -->
+
+  <template id="tpl-model-installed">
+    <div class="mdl" data-role="model-row">
+      <div class="d" data-role="disc"></div>
+      <div class="info">
+        <div class="nm" data-role="name"></div>
+        <div class="sub" data-role="sub"></div>
+      </div>
+      <div class="sz" data-role="size"></div>
+      <button class="mdl-btn" data-role="action"></button>
+    </div>
+  </template>
+
+  <template id="tpl-model-available">
+    <div class="mdl" data-role="model-row">
+      <div class="d" data-role="disc"></div>
+      <div class="info">
+        <div class="nm" data-role="name"></div>
+        <div class="sub" data-role="sub"></div>
+      </div>
+      <div class="sz" data-role="size"></div>
+      <button class="mdl-btn" data-role="action"></button>
+    </div>
+  </template>
+
+  <script src="popup.js" type="module"></script>
+</body>
+</html>

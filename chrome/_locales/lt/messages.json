@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI paveikslėlių generatorius - AI vaizdai"
+  },
+  "shortName": {
+    "message": "AI vaizdai"
+  },
+  "shortDesc": {
+    "message": "Naudokite AI paveikslėlių generatorių AI vaizdams kurti iš teksto, generuoti realistiškas AI nuotraukas akimirksniu."
+  },
+  "action_title": {
+    "message": "Generuoti DI vaizdus"
+  },
+  "open_workspace": {
+    "message": "Atidaryti darbo sritį"
+  },
+  "settings": {
+    "message": "Nustatymai"
+  },
+  "error_title": {
+    "message": "Kažkas nutiko"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostika ↗"
+  },
+  "btn_dismiss": {
+    "message": "Uždaryti"
+  },
+  "no_model_selected": {
+    "message": "Modelis nepasirinktas"
+  },
+  "mb_get": {
+    "message": "↓ Gauti"
+  },
+  "mb_downloading": {
+    "message": "Atsisiunčiama…"
+  },
+  "mb_of": {
+    "message": "iš"
+  },
+  "cancel_download": {
+    "message": "Atšaukti atsisiuntimą"
+  },
+  "mb_installing": {
+    "message": "Diegiama…"
+  },
+  "mb_verifying": {
+    "message": "Tikrinami svoriai · beveik baigta"
+  },
+  "ready": {
+    "message": "Paruošta"
+  },
+  "prompt_placeholder": {
+    "message": "Aprašykite, ką norite sukurti…"
+  },
+  "btn_clear_title": {
+    "message": "Išvalyti"
+  },
+  "btn_clear_aria": {
+    "message": "Išvalyti raginimą"
+  },
+  "surprise_me": {
+    "message": "Nustebink mane"
+  },
+  "param_steps": {
+    "message": "Žingsniai"
+  },
+  "param_guidance": {
+    "message": "Gairės"
+  },
+  "param_seed": {
+    "message": "Sėkla"
+  },
+  "seed_random": {
+    "message": "atsitiktinė"
+  },
+  "neg_prompt_label": {
+    "message": "Neigiamas raginimas"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Dalykai, kurių reikia vengti…"
+  },
+  "btn_parameters": {
+    "message": "Parametrai ▾"
+  },
+  "btn_generate": {
+    "message": "Generuoti"
+  },
+  "install_model_hint": {
+    "message": "Įdiekite modelį, kad suaktyvintumėte Generavimą."
+  },
+  "img_placeholder": {
+    "message": "Jūsų vaizdas pasirodys čia"
+  },
+  "generating_eyebrow": {
+    "message": "GENERUOJAMA"
+  },
+  "phase_encoding": {
+    "message": "Užkoduojamas raginimas"
+  },
+  "btn_cancel_gen": {
+    "message": "× atšaukti"
+  },
+  "btn_save": {
+    "message": "↓ Išsaugoti"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopijuoti"
+  },
+  "btn_retry": {
+    "message": "↺ Bandyti dar kartą"
+  },
+  "img_generated_alt": {
+    "message": "Sugeneruotas vaizdas"
+  },
+  "recent_eyebrow": {
+    "message": "NESENIAI"
+  },
+  "view_all": {
+    "message": "Peržiūrėti viską ↗"
+  },
+  "clear_history": {
+    "message": "Išvalyti istoriją"
+  },
+  "loading_model": {
+    "message": "Įkeliamas modelis…"
+  },
+  "compiling": {
+    "message": "Kompiliuojama…"
+  },
+  "generating_pct": {
+    "message": "Generuojama · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Ruošiama…"
+  },
+  "phase_compiling_first": {
+    "message": "Kompiliuojami šaderiai · pirmasis paleidimas"
+  },
+  "phase_loading": {
+    "message": "Įkeliama…"
+  },
+  "phase_fetching": {
+    "message": "Gaunami modelio svoriai"
+  },
+  "phase_decoding": {
+    "message": "Dekoduojamas vaizdas…"
+  },
+  "phase_loading_model": {
+    "message": "Įkeliamas modelis…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Kompiliuojami šaderiai…"
+  },
+  "workspace_page_title": {
+    "message": "DI neprisijungusio vaizdų generatoriaus darbo sritis"
+  },
+  "workspace_brand": {
+    "message": "DI Neprisijungęs Vaizdų Generatorius"
+  },
+  "workspace_label": {
+    "message": "darbo sritis"
+  },
+  "tab_gallery": {
+    "message": "Galerija"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostika"
+  },
+  "tab_settings": {
+    "message": "Nustatymai"
+  },
+  "your_generations": {
+    "message": "Jūsų generacijos"
+  },
+  "gallery_lede": {
+    "message": "Viskas lieka šiame įrenginyje. Spustelėkite plytelę, kad pamatytumėte visą raišką ir kilmę."
+  },
+  "filter_model": {
+    "message": "Modelis"
+  },
+  "all_models": {
+    "message": "Visi modeliai"
+  },
+  "filter_engine": {
+    "message": "Variklis"
+  },
+  "any_engine": {
+    "message": "Bet koks variklis"
+  },
+  "engine_browser": {
+    "message": "Naršyklė · WebGPU"
+  },
+  "filter_window": {
+    "message": "Laikotarpis"
+  },
+  "time_all": {
+    "message": "Visas laikas"
+  },
+  "time_24h": {
+    "message": "Paskutinės 24 val."
+  },
+  "time_7d": {
+    "message": "Paskutinės 7 dienos"
+  },
+  "time_30d": {
+    "message": "Paskutinės 30 dienų"
+  },
+  "btn_select": {
+    "message": "Pasirinkti"
+  },
+  "no_images_title": {
+    "message": "Vaizdų dar nėra"
+  },
+  "no_images_lede": {
+    "message": "Atidarykite iššokantįjį langą Alt+Shift+D, parašykite raginimą, spustelėkite Generuoti. Rezultatai pasirodys čia."
+  },
+  "no_matches_title": {
+    "message": "Jokių atitikčių"
+  },
+  "no_matches_lede": {
+    "message": "Šiuo laikotarpiu nieko nėra. Pabandykite išplėsti filtrą."
+  },
+  "compare_kicker": {
+    "message": "Palyginti · vilkite rankenėlę"
+  },
+  "compare_vs": {
+    "message": "A prieš B"
+  },
+  "close_aria": {
+    "message": "uždaryti"
+  },
+  "loading_fullres": {
+    "message": "įkeliama visa raiška…"
+  },
+  "label_prompt": {
+    "message": "Raginimas"
+  },
+  "label_avoid": {
+    "message": "Vengti"
+  },
+  "label_seed": {
+    "message": "Sėkla"
+  },
+  "label_steps": {
+    "message": "Žingsniai"
+  },
+  "label_guidance": {
+    "message": "Gairės"
+  },
+  "label_engine": {
+    "message": "Variklis"
+  },
+  "label_duration": {
+    "message": "Trukmė"
+  },
+  "label_generated": {
+    "message": "Sugeneruota"
+  },
+  "label_path": {
+    "message": "Kelias"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Pakartotinai naudoti sėklą"
+  },
+  "btn_copy_prompt": {
+    "message": "Kopijuoti raginimą"
+  },
+  "btn_copy_seed": {
+    "message": "Kopijuoti sėklą"
+  },
+  "btn_download_png": {
+    "message": "↓ Atsisiųsti PNG"
+  },
+  "btn_delete": {
+    "message": "Ištrinti"
+  },
+  "danger_zone": {
+    "message": "Pavojinga zona"
+  },
+  "clear_data_title": {
+    "message": "Išvalyti visus plėtinio duomenis"
+  },
+  "clear_data_hint": {
+    "message": "Pašalina visus talpykloje esančius modelius ir sugeneruotus vaizdus. Negalima atšaukti."
+  },
+  "btn_clear_data": {
+    "message": "Išvalyti duomenis"
+  },
+  "diag_title": {
+    "message": "Diagnostika"
+  },
+  "diag_lede": {
+    "message": "Ką plėtinys mato apie jūsų naršyklę ir kompiuterį. Nukopijuokite šį bloką į klausimą, jei kas nors neveikia."
+  },
+  "diag_engine": {
+    "message": "Aktyvus variklis"
+  },
+  "diag_preferred": {
+    "message": "Pageidaujamas"
+  },
+  "diag_device": {
+    "message": "Įrenginys"
+  },
+  "diag_adapter": {
+    "message": "Adapteris"
+  },
+  "diag_vendor": {
+    "message": "Gamintojas"
+  },
+  "diag_vram": {
+    "message": "VRAM įvert."
+  },
+  "diag_browser": {
+    "message": "Naršyklės kelias"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS kvota"
+  },
+  "diag_storage": {
+    "message": "Saugykla"
+  },
+  "diag_installed": {
+    "message": "Įdiegti modeliai"
+  },
+  "diag_recent": {
+    "message": "Naujausi vaizdai"
+  },
+  "diag_active": {
+    "message": "Aktyvus modelis"
+  },
+  "btn_copy_json": {
+    "message": "Kopijuoti kaip JSON"
+  },
+  "btn_reprobe": {
+    "message": "Paleisti patikras iš naujo"
+  },
+  "btn_compare": {
+    "message": "Palyginti"
+  },
+  "btn_export_zip": {
+    "message": "↓ Eksportuoti ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Ištrinti"
+  },
+  "btn_cancel_select": {
+    "message": "Atšaukti"
+  },
+  "confirm_clear_data": {
+    "message": "Ištrinti visus talpykloje esančius modelius ir sugeneruotus vaizdus?\n\nTo negalima atšaukti."
+  },
+  "clearing": {
+    "message": "Valoma…"
+  },
+  "status_done": {
+    "message": "✓ Atlikta"
+  },
+  "status_saved": {
+    "message": "✓ Išsaugota"
+  },
+  "status_copied": {
+    "message": "✓ Nukopijuota"
+  },
+  "confirm_delete_image": {
+    "message": "Ištrinti šį vaizdą?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Ištrinti $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "vaizdų"
+  },
+  "image_noun": {
+    "message": "vaizdą"
+  },
+  "no_prompt": {
+    "message": "(be raginimo)"
+  },
+  "none_selected": {
+    "message": "(nieko nepasirinkta)"
+  },
+  "in_memory_only": {
+    "message": "(tik atmintyje)"
+  },
+  "btn_exit_select": {
+    "message": "Išeiti iš pasirinkimo"
+  },
+  "n_selected": {
+    "message": "$COUNT$ pasirinkta",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Pakuojama $COUNT$ vaizdų…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Eksportuota $COUNT$ vaizdų",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Paleidžiama iš naujo su ta pačia sėkla…"
+  },
+  "err_no_engine": {
+    "message": "Nėra prieinamo generavimo variklio"
+  },
+  "err_engine_start": {
+    "message": "Nepavyko paleisti naršyklės variklio"
+  },
+  "err_inference_failed": {
+    "message": "Generavimas naršyklėje nepavyko"
+  },
+  "err_generation_failed": {
+    "message": "Generavimas nepavyko"
+  },
+  "no_model_sub": {
+    "message": "Pradėkite pasirinkdami modelį skirtuke Modeliai"
+  },
+  "mb_pick_model": {
+    "message": "↓ Pasirinkti modelį"
+  },
+  "popup_tab_generate": {
+    "message": "Sukurti"
+  },
+  "popup_tab_models": {
+    "message": "Modeliai"
+  },
+  "models_intro": {
+    "message": "Pasirinkite atsisiunčiamą modelį. Įdiegus galite bet kada perjungti."
+  },
+  "sec_downloading": {
+    "message": "Atsisiunčiama"
+  },
+  "sec_installed": {
+    "message": "Įdiegti"
+  },
+  "sec_available": {
+    "message": "Pasiekiama"
+  },
+  "available_popular": {
+    "message": "populiarūs"
+  },
+  "empty_models_title": {
+    "message": "Modelių dar nėra įdiegta"
+  },
+  "empty_models_sub_html": {
+    "message": "Pasirinkite žemiau ir bakstelėkite <b>↓ Gauti</b>."
+  },
+  "storage_label": {
+    "message": "Saugykla"
+  },
+  "dl_tag_fetching": {
+    "message": "gaunama"
+  },
+  "dl_paused_sub": {
+    "message": "sustabdyta — tęskite, kad pratęstumėte"
+  },
+  "dl_meta_got": {
+    "message": "Gauta"
+  },
+  "dl_meta_speed": {
+    "message": "Greitis"
+  },
+  "dl_meta_left": {
+    "message": "Liko"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pauzė"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Tęsti"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Slėpti"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Atšaukti"
+  },
+  "mdl_btn_use": {
+    "message": "Naudoti"
+  },
+  "mdl_btn_in_use": {
+    "message": "Naudojama"
+  },
+  "mdl_btn_get": {
+    "message": "Gauti"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n/d"
+  },
+  "mdl_loading_sub": {
+    "message": "Atsisiunčiama į įrenginį…"
+  }
+}

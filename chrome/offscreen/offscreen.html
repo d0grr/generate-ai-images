@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Generate AI Images · WebGPU worker</title>
+</head>
+<body>
+  <!--
+    Runs in a hidden Chrome offscreen document because:
+      • Service workers in MV3 can't access WebGPU
+      • onnxruntime-web needs WebAssembly + Workers + WebGPU
+      • transformers.js needs DOM access for Canvas / ImageData
+
+    ORT 1.26 native WebGPU EP (ort.webgpu.bundle): an ES module that compiles
+    compute pipelines with createComputePipelineAsync, so the GPU-process shader
+    compile no longer freezes the browser (the synchronous 1.20 JSEP build froze
+    it ~14 s per load). It's ESM, so we import it and assign globalThis.ort
+    BEFORE offscreen.js's module runs — module scripts execute in document order.
+    transformers.min.js is lazy-imported by sd-pipeline.js for the tokenizer only.
+  -->
+  <script type="module" src="ort-init.js"></script>
+  <script type="module" src="offscreen.js"></script>
+</body>
+</html>

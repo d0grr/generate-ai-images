@@ -1,0 +1,6 @@
+.DS_Store
+*.swp
+*.swo
+
+# Packaged builds (all platforms collect here)
+release/

@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI tạo ảnh - Tạo ảnh AI miễn phí"
+  },
+  "shortName": {
+    "message": "Ảnh AI"
+  },
+  "shortDesc": {
+    "message": "Dùng công cụ AI tạo ảnh để tạo hình ảnh AI từ văn bản, tạo ảnh AI chân thực và hình ảnh đẹp ngay lập tức."
+  },
+  "action_title": {
+    "message": "Tạo ảnh AI"
+  },
+  "open_workspace": {
+    "message": "Mở không gian làm việc"
+  },
+  "settings": {
+    "message": "Cài đặt"
+  },
+  "error_title": {
+    "message": "Đã xảy ra lỗi"
+  },
+  "btn_diagnostics": {
+    "message": "Chẩn đoán ↗"
+  },
+  "btn_dismiss": {
+    "message": "Đóng"
+  },
+  "no_model_selected": {
+    "message": "Chưa chọn mô hình"
+  },
+  "mb_get": {
+    "message": "↓ Tải về"
+  },
+  "mb_downloading": {
+    "message": "Đang tải…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "Hủy tải về"
+  },
+  "mb_installing": {
+    "message": "Đang cài đặt…"
+  },
+  "mb_verifying": {
+    "message": "Đang xác minh trọng số · gần xong"
+  },
+  "ready": {
+    "message": "Sẵn sàng"
+  },
+  "prompt_placeholder": {
+    "message": "Mô tả những gì bạn muốn tạo…"
+  },
+  "btn_clear_title": {
+    "message": "Xóa"
+  },
+  "btn_clear_aria": {
+    "message": "Xóa prompt"
+  },
+  "surprise_me": {
+    "message": "Làm tôi ngạc nhiên"
+  },
+  "param_steps": {
+    "message": "Bước"
+  },
+  "param_guidance": {
+    "message": "Hướng dẫn"
+  },
+  "param_seed": {
+    "message": "Hạt giống"
+  },
+  "seed_random": {
+    "message": "ngẫu nhiên"
+  },
+  "neg_prompt_label": {
+    "message": "Prompt âm"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Những thứ cần tránh…"
+  },
+  "btn_parameters": {
+    "message": "Tham số ▾"
+  },
+  "btn_generate": {
+    "message": "Tạo"
+  },
+  "install_model_hint": {
+    "message": "Cài đặt mô hình để bật Tạo."
+  },
+  "img_placeholder": {
+    "message": "Ảnh của bạn sẽ xuất hiện ở đây"
+  },
+  "generating_eyebrow": {
+    "message": "ĐANG TẠO"
+  },
+  "phase_encoding": {
+    "message": "Đang mã hóa prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× hủy"
+  },
+  "btn_save": {
+    "message": "↓ Lưu"
+  },
+  "btn_copy": {
+    "message": "⎘ Sao chép"
+  },
+  "btn_retry": {
+    "message": "↺ Thử lại"
+  },
+  "img_generated_alt": {
+    "message": "Ảnh đã tạo"
+  },
+  "recent_eyebrow": {
+    "message": "GẦN ĐÂY"
+  },
+  "view_all": {
+    "message": "Xem tất cả ↗"
+  },
+  "clear_history": {
+    "message": "Xóa lịch sử"
+  },
+  "loading_model": {
+    "message": "Đang tải mô hình…"
+  },
+  "compiling": {
+    "message": "Đang biên dịch…"
+  },
+  "generating_pct": {
+    "message": "Đang tạo · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Đang chuẩn bị…"
+  },
+  "phase_compiling_first": {
+    "message": "Biên dịch shader · lần đầu chạy"
+  },
+  "phase_loading": {
+    "message": "Đang tải…"
+  },
+  "phase_fetching": {
+    "message": "Đang lấy trọng số mô hình"
+  },
+  "phase_decoding": {
+    "message": "Đang giải mã ảnh…"
+  },
+  "phase_loading_model": {
+    "message": "Đang tải mô hình…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Đang biên dịch shader…"
+  },
+  "workspace_page_title": {
+    "message": "Không gian làm việc tạo ảnh AI ngoại tuyến"
+  },
+  "workspace_brand": {
+    "message": "Tạo Ảnh AI Ngoại Tuyến"
+  },
+  "workspace_label": {
+    "message": "không gian làm việc"
+  },
+  "tab_gallery": {
+    "message": "Thư viện"
+  },
+  "tab_diagnostics": {
+    "message": "Chẩn đoán"
+  },
+  "tab_settings": {
+    "message": "Cài đặt"
+  },
+  "your_generations": {
+    "message": "Ảnh của bạn"
+  },
+  "gallery_lede": {
+    "message": "Mọi thứ ở lại trên thiết bị này. Nhấp vào ô để xem độ phân giải đầy đủ và nguồn gốc."
+  },
+  "filter_model": {
+    "message": "Mô hình"
+  },
+  "all_models": {
+    "message": "Tất cả mô hình"
+  },
+  "filter_engine": {
+    "message": "Công cụ"
+  },
+  "any_engine": {
+    "message": "Bất kỳ công cụ"
+  },
+  "engine_browser": {
+    "message": "Trình duyệt · WebGPU"
+  },
+  "filter_window": {
+    "message": "Thời gian"
+  },
+  "time_all": {
+    "message": "Tất cả thời gian"
+  },
+  "time_24h": {
+    "message": "24 giờ qua"
+  },
+  "time_7d": {
+    "message": "7 ngày qua"
+  },
+  "time_30d": {
+    "message": "30 ngày qua"
+  },
+  "btn_select": {
+    "message": "Chọn"
+  },
+  "no_images_title": {
+    "message": "Chưa có ảnh"
+  },
+  "no_images_lede": {
+    "message": "Mở popup bằng Alt+Shift+D, viết prompt, nhấn Tạo. Kết quả hiển thị ở đây."
+  },
+  "no_matches_title": {
+    "message": "Không có kết quả"
+  },
+  "no_matches_lede": {
+    "message": "Không có gì trong khoảng thời gian này. Thử mở rộng bộ lọc."
+  },
+  "compare_kicker": {
+    "message": "So sánh · kéo thanh điều khiển"
+  },
+  "compare_vs": {
+    "message": "A so với B"
+  },
+  "close_aria": {
+    "message": "đóng"
+  },
+  "loading_fullres": {
+    "message": "đang tải độ phân giải đầy đủ…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Tránh"
+  },
+  "label_seed": {
+    "message": "Hạt giống"
+  },
+  "label_steps": {
+    "message": "Bước"
+  },
+  "label_guidance": {
+    "message": "Hướng dẫn"
+  },
+  "label_engine": {
+    "message": "Công cụ"
+  },
+  "label_duration": {
+    "message": "Thời lượng"
+  },
+  "label_generated": {
+    "message": "Đã tạo"
+  },
+  "label_path": {
+    "message": "Đường dẫn"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Dùng lại hạt giống"
+  },
+  "btn_copy_prompt": {
+    "message": "Sao chép prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Sao chép hạt giống"
+  },
+  "btn_download_png": {
+    "message": "↓ Tải PNG"
+  },
+  "btn_delete": {
+    "message": "Xóa"
+  },
+  "danger_zone": {
+    "message": "Vùng nguy hiểm"
+  },
+  "clear_data_title": {
+    "message": "Xóa tất cả dữ liệu tiện ích"
+  },
+  "clear_data_hint": {
+    "message": "Xóa tất cả mô hình đã lưu cache và ảnh đã tạo. Không thể hoàn tác."
+  },
+  "btn_clear_data": {
+    "message": "Xóa dữ liệu"
+  },
+  "diag_title": {
+    "message": "Chẩn đoán"
+  },
+  "diag_lede": {
+    "message": "Những gì tiện ích thấy về trình duyệt và máy của bạn. Sao chép khối này vào issue nếu có vấn đề."
+  },
+  "diag_engine": {
+    "message": "Công cụ đang dùng"
+  },
+  "diag_preferred": {
+    "message": "Ưu tiên"
+  },
+  "diag_device": {
+    "message": "Thiết bị"
+  },
+  "diag_adapter": {
+    "message": "Bộ điều hợp"
+  },
+  "diag_vendor": {
+    "message": "Nhà cung cấp"
+  },
+  "diag_vram": {
+    "message": "Ước tính VRAM"
+  },
+  "diag_browser": {
+    "message": "Đường dẫn trình duyệt"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Hạn mức OPFS"
+  },
+  "diag_storage": {
+    "message": "Bộ nhớ"
+  },
+  "diag_installed": {
+    "message": "Mô hình đã cài đặt"
+  },
+  "diag_recent": {
+    "message": "Ảnh gần đây"
+  },
+  "diag_active": {
+    "message": "Mô hình đang dùng"
+  },
+  "btn_copy_json": {
+    "message": "Sao chép dạng JSON"
+  },
+  "btn_reprobe": {
+    "message": "Chạy lại các kiểm tra"
+  },
+  "btn_compare": {
+    "message": "So sánh"
+  },
+  "btn_export_zip": {
+    "message": "↓ Xuất ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Xóa"
+  },
+  "btn_cancel_select": {
+    "message": "Hủy"
+  },
+  "confirm_clear_data": {
+    "message": "Xóa tất cả mô hình đã lưu cache và ảnh đã tạo?\n\nKhông thể hoàn tác."
+  },
+  "clearing": {
+    "message": "Đang xóa…"
+  },
+  "status_done": {
+    "message": "✓ Xong"
+  },
+  "status_saved": {
+    "message": "✓ Đã lưu"
+  },
+  "status_copied": {
+    "message": "✓ Đã sao chép"
+  },
+  "confirm_delete_image": {
+    "message": "Xóa ảnh này?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Xóa $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "ảnh"
+  },
+  "image_noun": {
+    "message": "ảnh"
+  },
+  "no_prompt": {
+    "message": "(không có prompt)"
+  },
+  "none_selected": {
+    "message": "(chưa chọn gì)"
+  },
+  "in_memory_only": {
+    "message": "(chỉ trong bộ nhớ)"
+  },
+  "btn_exit_select": {
+    "message": "Thoát chọn"
+  },
+  "n_selected": {
+    "message": "$COUNT$ đã chọn",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Đang đóng gói $COUNT$ ảnh…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Đã xuất $COUNT$ ảnh",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Đang chạy lại với cùng hạt giống…"
+  },
+  "err_no_engine": {
+    "message": "Không có công cụ tạo ảnh khả dụng"
+  },
+  "err_engine_start": {
+    "message": "Không thể khởi động công cụ trình duyệt"
+  },
+  "err_inference_failed": {
+    "message": "Tạo ảnh trong trình duyệt thất bại"
+  },
+  "err_generation_failed": {
+    "message": "Tạo thất bại"
+  },
+  "no_model_sub": {
+    "message": "Chọn một mô hình trong tab Mô hình để bắt đầu"
+  },
+  "mb_pick_model": {
+    "message": "↓ Chọn mô hình"
+  },
+  "popup_tab_generate": {
+    "message": "Tạo"
+  },
+  "popup_tab_models": {
+    "message": "Mô hình"
+  },
+  "models_intro": {
+    "message": "Chọn một mô hình để tải xuống. Sau khi cài đặt, bạn có thể chuyển đổi bất cứ lúc nào."
+  },
+  "sec_downloading": {
+    "message": "Đang tải"
+  },
+  "sec_installed": {
+    "message": "Đã cài đặt"
+  },
+  "sec_available": {
+    "message": "Có sẵn"
+  },
+  "available_popular": {
+    "message": "phổ biến"
+  },
+  "empty_models_title": {
+    "message": "Chưa có mô hình nào được cài đặt"
+  },
+  "empty_models_sub_html": {
+    "message": "Chọn một mô hình bên dưới và nhấn <b>↓ Tải</b>."
+  },
+  "storage_label": {
+    "message": "Bộ nhớ"
+  },
+  "dl_tag_fetching": {
+    "message": "đang lấy"
+  },
+  "dl_paused_sub": {
+    "message": "tạm dừng — tiếp tục để tiếp tục"
+  },
+  "dl_meta_got": {
+    "message": "Đã nhận"
+  },
+  "dl_meta_speed": {
+    "message": "Tốc độ"
+  },
+  "dl_meta_left": {
+    "message": "Còn lại"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Tạm dừng"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Tiếp tục"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Ẩn"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Hủy"
+  },
+  "mdl_btn_use": {
+    "message": "Dùng"
+  },
+  "mdl_btn_in_use": {
+    "message": "Đang dùng"
+  },
+  "mdl_btn_get": {
+    "message": "Tải"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "k/d"
+  },
+  "mdl_loading_sub": {
+    "message": "Đang tải xuống thiết bị…"
+  }
+}

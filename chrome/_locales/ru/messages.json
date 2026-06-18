@@ -1,0 +1,546 @@
+{
+  "appName": {
+    "message": "Генератор изображений ИИ - AI картинки"
+  },
+  "shortName": {
+    "message": "ИИ Картинки"
+  },
+  "shortDesc": {
+    "message": "Генератор изображений ИИ: создавайте AI-картинки из текста, генерируйте реалистичные AI-фото мгновенно в Chrome."
+  },
+  "action_title": {
+    "message": "Генерировать ИИ-изображения"
+  },
+  "open_workspace": {
+    "message": "Открыть рабочее пространство"
+  },
+  "settings": {
+    "message": "Настройки"
+  },
+  "error_title": {
+    "message": "Что-то пошло не так"
+  },
+  "btn_diagnostics": {
+    "message": "Диагностика ↗"
+  },
+  "btn_dismiss": {
+    "message": "Закрыть"
+  },
+  "no_model_selected": {
+    "message": "Модель не выбрана"
+  },
+  "mb_get": {
+    "message": "↓ Скачать"
+  },
+  "mb_downloading": {
+    "message": "Загрузка…"
+  },
+  "mb_of": {
+    "message": "из"
+  },
+  "cancel_download": {
+    "message": "Отменить загрузку"
+  },
+  "mb_installing": {
+    "message": "Установка…"
+  },
+  "mb_verifying": {
+    "message": "Проверка весов · почти готово"
+  },
+  "ready": {
+    "message": "Готово"
+  },
+  "prompt_placeholder": {
+    "message": "Опишите, что вы хотите создать…"
+  },
+  "btn_clear_title": {
+    "message": "Очистить"
+  },
+  "btn_clear_aria": {
+    "message": "Очистить запрос"
+  },
+  "surprise_me": {
+    "message": "Удиви меня"
+  },
+  "param_steps": {
+    "message": "Шаги"
+  },
+  "param_guidance": {
+    "message": "Соответствие"
+  },
+  "param_seed": {
+    "message": "Сид"
+  },
+  "seed_random": {
+    "message": "случайный"
+  },
+  "neg_prompt_label": {
+    "message": "Негативный запрос"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Что исключить…"
+  },
+  "btn_parameters": {
+    "message": "Параметры ▾"
+  },
+  "btn_generate": {
+    "message": "Сгенерировать"
+  },
+  "install_model_hint": {
+    "message": "Установите модель для активации генерации."
+  },
+  "img_placeholder": {
+    "message": "Ваше изображение появится здесь"
+  },
+  "generating_eyebrow": {
+    "message": "ГЕНЕРАЦИЯ"
+  },
+  "phase_encoding": {
+    "message": "Кодирование запроса"
+  },
+  "btn_cancel_gen": {
+    "message": "× отмена"
+  },
+  "btn_save": {
+    "message": "↓ Сохранить"
+  },
+  "btn_copy": {
+    "message": "⎘ Копировать"
+  },
+  "btn_retry": {
+    "message": "↺ Повторить"
+  },
+  "img_generated_alt": {
+    "message": "Сгенерированное изображение"
+  },
+  "recent_eyebrow": {
+    "message": "НЕДАВНИЕ"
+  },
+  "view_all": {
+    "message": "Посмотреть все ↗"
+  },
+  "clear_history": {
+    "message": "Очистить историю"
+  },
+  "loading_model": {
+    "message": "Загрузка модели…"
+  },
+  "compiling": {
+    "message": "Компиляция…"
+  },
+  "generating_pct": {
+    "message": "Генерация · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Подготовка…"
+  },
+  "phase_compiling_first": {
+    "message": "Компиляция шейдеров · первый запуск"
+  },
+  "phase_loading": {
+    "message": "Загрузка…"
+  },
+  "phase_fetching": {
+    "message": "Скачивание весов модели"
+  },
+  "phase_decoding": {
+    "message": "Декодирование изображения…"
+  },
+  "phase_loading_model": {
+    "message": "Загрузка модели…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Компиляция шейдеров…"
+  },
+  "workspace_page_title": {
+    "message": "Рабочее пространство офлайн-генератора ИИ"
+  },
+  "workspace_brand": {
+    "message": "ИИ Офлайн-генератор изображений"
+  },
+  "workspace_label": {
+    "message": "рабочее пространство"
+  },
+  "tab_gallery": {
+    "message": "Галерея"
+  },
+  "tab_diagnostics": {
+    "message": "Диагностика"
+  },
+  "tab_settings": {
+    "message": "Настройки"
+  },
+  "your_generations": {
+    "message": "Ваши генерации"
+  },
+  "gallery_lede": {
+    "message": "Всё хранится на этом устройстве. Нажмите на плитку для полного разрешения и информации о происхождении."
+  },
+  "filter_model": {
+    "message": "Модель"
+  },
+  "all_models": {
+    "message": "Все модели"
+  },
+  "filter_engine": {
+    "message": "Движок"
+  },
+  "any_engine": {
+    "message": "Любой движок"
+  },
+  "engine_browser": {
+    "message": "Браузер · WebGPU"
+  },
+  "filter_window": {
+    "message": "Период"
+  },
+  "time_all": {
+    "message": "За всё время"
+  },
+  "time_24h": {
+    "message": "Последние 24 часа"
+  },
+  "time_7d": {
+    "message": "Последние 7 дней"
+  },
+  "time_30d": {
+    "message": "Последние 30 дней"
+  },
+  "btn_select": {
+    "message": "Выбрать"
+  },
+  "no_images_title": {
+    "message": "Изображений пока нет"
+  },
+  "no_images_lede": {
+    "message": "Откройте всплывающее окно Alt+Shift+D, напишите запрос и нажмите Сгенерировать. Результаты появятся здесь."
+  },
+  "no_matches_title": {
+    "message": "Ничего не найдено"
+  },
+  "no_matches_lede": {
+    "message": "За выбранный период ничего нет. Попробуйте расширить фильтр."
+  },
+  "compare_kicker": {
+    "message": "Сравнение · перетащите разделитель"
+  },
+  "compare_vs": {
+    "message": "A против B"
+  },
+  "close_aria": {
+    "message": "закрыть"
+  },
+  "loading_fullres": {
+    "message": "загрузка оригинала…"
+  },
+  "label_prompt": {
+    "message": "Запрос"
+  },
+  "label_avoid": {
+    "message": "Исключить"
+  },
+  "label_seed": {
+    "message": "Сид"
+  },
+  "label_steps": {
+    "message": "Шаги"
+  },
+  "label_guidance": {
+    "message": "Соответствие"
+  },
+  "label_engine": {
+    "message": "Движок"
+  },
+  "label_duration": {
+    "message": "Длительность"
+  },
+  "label_generated": {
+    "message": "Сгенерировано"
+  },
+  "label_path": {
+    "message": "Путь"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Тот же сид"
+  },
+  "btn_copy_prompt": {
+    "message": "Копировать запрос"
+  },
+  "btn_copy_seed": {
+    "message": "Копировать сид"
+  },
+  "btn_download_png": {
+    "message": "↓ Скачать PNG"
+  },
+  "btn_delete": {
+    "message": "Удалить"
+  },
+  "dev_lang_label": {
+    "message": "Язык интерфейса (Dev)"
+  },
+  "dev_lang_hint": {
+    "message": "Переопределение языка интерфейса только для Dev. Перезагружает страницу."
+  },
+  "dev_lang_browser": {
+    "message": "Язык браузера"
+  },
+  "danger_zone": {
+    "message": "Опасная зона"
+  },
+  "clear_data_title": {
+    "message": "Очистить все данные расширения"
+  },
+  "clear_data_hint": {
+    "message": "Удаляет все кэшированные модели и сгенерированные изображения. Отменить невозможно."
+  },
+  "btn_clear_data": {
+    "message": "Очистить данные"
+  },
+  "diag_title": {
+    "message": "Диагностика"
+  },
+  "diag_lede": {
+    "message": "Информация о браузере и машине, которую видит расширение. Скопируйте этот блок в issue, если что-то не работает."
+  },
+  "diag_engine": {
+    "message": "Активный движок"
+  },
+  "diag_preferred": {
+    "message": "Предпочтительный"
+  },
+  "diag_device": {
+    "message": "Устройство"
+  },
+  "diag_adapter": {
+    "message": "Адаптер"
+  },
+  "diag_vendor": {
+    "message": "Производитель"
+  },
+  "diag_vram": {
+    "message": "Объём VRAM"
+  },
+  "diag_browser": {
+    "message": "Путь браузера"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Квота OPFS"
+  },
+  "diag_storage": {
+    "message": "Хранилище"
+  },
+  "diag_installed": {
+    "message": "Установленные модели"
+  },
+  "diag_recent": {
+    "message": "Последние изображения"
+  },
+  "diag_active": {
+    "message": "Активная модель"
+  },
+  "btn_copy_json": {
+    "message": "Копировать как JSON"
+  },
+  "btn_reprobe": {
+    "message": "Перезапустить проверку"
+  },
+  "btn_compare": {
+    "message": "Сравнить"
+  },
+  "btn_export_zip": {
+    "message": "↓ Скачать ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Удалить"
+  },
+  "btn_cancel_select": {
+    "message": "Отмена"
+  },
+  "confirm_clear_data": {
+    "message": "Удалить все кэшированные модели и сгенерированные изображения?\n\nЭто действие невозможно отменить."
+  },
+  "clearing": {
+    "message": "Очистка…"
+  },
+  "status_done": {
+    "message": "✓ Готово"
+  },
+  "status_saved": {
+    "message": "✓ Сохранено"
+  },
+  "status_copied": {
+    "message": "✓ Скопировано"
+  },
+  "confirm_delete_image": {
+    "message": "Удалить это изображение?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Удалить $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "изображений"
+  },
+  "image_noun": {
+    "message": "изображение"
+  },
+  "no_prompt": {
+    "message": "(без запроса)"
+  },
+  "none_selected": {
+    "message": "(ничего не выбрано)"
+  },
+  "in_memory_only": {
+    "message": "(только в памяти)"
+  },
+  "btn_exit_select": {
+    "message": "Выйти из режима выбора"
+  },
+  "n_selected": {
+    "message": "$COUNT$ выбрано",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Упаковка $COUNT$ изображений…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Экспортировано $COUNT$ изображений",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Повтор с тем же сидом…"
+  },
+  "err_no_engine": {
+    "message": "Нет доступного движка генерации"
+  },
+  "err_engine_start": {
+    "message": "Не удалось запустить браузерный движок"
+  },
+  "err_inference_failed": {
+    "message": "Генерация в браузере не удалась"
+  },
+  "err_generation_failed": {
+    "message": "Генерация не удалась"
+  },
+  "no_model_sub": {
+    "message": "Выберите модель на вкладке Модели, чтобы начать"
+  },
+  "mb_pick_model": {
+    "message": "↓ Выбрать модель"
+  },
+  "popup_tab_generate": {
+    "message": "Создать"
+  },
+  "popup_tab_models": {
+    "message": "Модели"
+  },
+  "models_intro": {
+    "message": "Выберите модель для загрузки. После установки между ними можно переключаться в любой момент."
+  },
+  "sec_downloading": {
+    "message": "Загрузка"
+  },
+  "sec_installed": {
+    "message": "Установленные"
+  },
+  "sec_available": {
+    "message": "Доступные модели"
+  },
+  "available_popular": {
+    "message": "популярные"
+  },
+  "empty_models_title": {
+    "message": "Пока нет установленных моделей"
+  },
+  "empty_models_sub_html": {
+    "message": "Выберите ниже и нажмите <b>↓ Скачать</b>."
+  },
+  "storage_label": {
+    "message": "Хранилище"
+  },
+  "dl_tag_fetching": {
+    "message": "скачивание"
+  },
+  "dl_paused_sub": {
+    "message": "пауза — возобновите для продолжения"
+  },
+  "dl_meta_got": {
+    "message": "Скачано"
+  },
+  "dl_meta_speed": {
+    "message": "Скорость"
+  },
+  "dl_meta_left": {
+    "message": "Осталось"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Пауза"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Возобновить"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Скрыть"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Отмена"
+  },
+  "mdl_btn_use": {
+    "message": "Выбрать"
+  },
+  "mdl_btn_in_use": {
+    "message": "Используется"
+  },
+  "mdl_btn_get": {
+    "message": "Скачать"
+  },
+  "mdl_btn_token": {
+    "message": "Токен"
+  },
+  "mdl_btn_na": {
+    "message": "н/д"
+  },
+  "mdl_loading_sub": {
+    "message": "Скачивание на ваше устройство…"
+  }
+}

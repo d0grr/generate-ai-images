@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - AI ચિત્રો બનાવો"
+  },
+  "shortName": {
+    "message": "AI ચિત્ર"
+  },
+  "shortDesc": {
+    "message": "AI ઇમેજ જનરેટર વાપરો: ટેક્સ્ટમાંથી AI ચિત્રો બનાવો, AI ફોટો જનરેટ કરો અને AI ઇમેજ તરત મળે."
+  },
+  "action_title": {
+    "message": "AI ઇમેજ જનરેટ કરો"
+  },
+  "open_workspace": {
+    "message": "વર્કસ્પેસ ખોલો"
+  },
+  "settings": {
+    "message": "સેટિંગ્સ"
+  },
+  "error_title": {
+    "message": "કંઈક ખોટું થયું"
+  },
+  "btn_diagnostics": {
+    "message": "ડાયગ્નૉસ્ટિક્સ ↗"
+  },
+  "btn_dismiss": {
+    "message": "બંધ કરો"
+  },
+  "no_model_selected": {
+    "message": "કોઈ મૉડલ પસંદ નથી"
+  },
+  "mb_get": {
+    "message": "↓ મેળવો"
+  },
+  "mb_downloading": {
+    "message": "ડાઉનલોડ થઈ રહ્યું છે…"
+  },
+  "mb_of": {
+    "message": "નું"
+  },
+  "cancel_download": {
+    "message": "ડાઉનલોડ રદ કરો"
+  },
+  "mb_installing": {
+    "message": "ઇન્સ્ટૉલ થઈ રહ્યું છે…"
+  },
+  "mb_verifying": {
+    "message": "વેઇટ્સ ચકાસી રહ્યા છીએ · લગભગ થઈ ગયું"
+  },
+  "ready": {
+    "message": "તૈયાર"
+  },
+  "prompt_placeholder": {
+    "message": "તમે શું બનાવવા ઇચ્છો છો તે વર્ણવો…"
+  },
+  "btn_clear_title": {
+    "message": "સાફ"
+  },
+  "btn_clear_aria": {
+    "message": "પ્રોમ્પ્ટ સાફ"
+  },
+  "surprise_me": {
+    "message": "મને આશ્ચર્ય પ્રદ"
+  },
+  "param_steps": {
+    "message": "સ્ટેપ્સ"
+  },
+  "param_guidance": {
+    "message": "ગાઇડન્સ"
+  },
+  "param_seed": {
+    "message": "સીડ"
+  },
+  "seed_random": {
+    "message": "રૅન્ડમ"
+  },
+  "neg_prompt_label": {
+    "message": "નકારાત્મક પ્રોમ્પ્ટ"
+  },
+  "neg_prompt_placeholder": {
+    "message": "ટાળવા જેવી વિગતો…"
+  },
+  "btn_parameters": {
+    "message": "પૅરામિટર ▾"
+  },
+  "btn_generate": {
+    "message": "જનરેટ કરો"
+  },
+  "install_model_hint": {
+    "message": "જનરેટ ચાલુ કરવા માટે મૉડલ ઇન્સ્ટૉલ કરો."
+  },
+  "img_placeholder": {
+    "message": "તમારી ઇમેજ અહીં દેખાશે"
+  },
+  "generating_eyebrow": {
+    "message": "જનરેટ થઈ રહ્યું છે"
+  },
+  "phase_encoding": {
+    "message": "પ્રોમ્પ્ટ એન્કોડ કરી રહ્યા છીએ"
+  },
+  "btn_cancel_gen": {
+    "message": "× રદ"
+  },
+  "btn_save": {
+    "message": "↓ સાચવો"
+  },
+  "btn_copy": {
+    "message": "⎘ કૉપિ"
+  },
+  "btn_retry": {
+    "message": "↺ ફરી"
+  },
+  "img_generated_alt": {
+    "message": "જનરેટ થયેલ ઇમેજ"
+  },
+  "recent_eyebrow": {
+    "message": "તાજેતરના"
+  },
+  "view_all": {
+    "message": "બધા જુઓ ↗"
+  },
+  "clear_history": {
+    "message": "ઇતિહાસ સાફ"
+  },
+  "loading_model": {
+    "message": "મૉડલ લોડ થઈ રહ્યું છે…"
+  },
+  "compiling": {
+    "message": "કૉમ્પાઇલ થઈ રહ્યું છે…"
+  },
+  "generating_pct": {
+    "message": "$PERCENT$% રેન્ડર થઈ રહ્યું છે…",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "તૈયારી કરી રહ્યા છીએ…"
+  },
+  "phase_compiling_first": {
+    "message": "શેડર્સ કૉમ્પાઇલ · પ્રથમ સ્ટાર્ટ"
+  },
+  "phase_loading": {
+    "message": "લોડ થઈ રહ્યું છે…"
+  },
+  "phase_fetching": {
+    "message": "મૉડલ વેઇટ્સ ફેચ કરી રહ્યા છીએ"
+  },
+  "phase_decoding": {
+    "message": "ઇમેજ ડીકોડ કરી રહ્યા છીએ"
+  },
+  "phase_loading_model": {
+    "message": "મૉડલ લોડ થઈ રહ્યું છે…"
+  },
+  "phase_compiling_shaders": {
+    "message": "શેડર્સ કૉમ્પાઇલ થઈ રહ્યા છે…"
+  },
+  "workspace_page_title": {
+    "message": "AI ઇમેજ જનરેટર"
+  },
+  "workspace_brand": {
+    "message": "AI ઇમેજ"
+  },
+  "workspace_label": {
+    "message": "AI ઇમેજ જનરેટર"
+  },
+  "tab_gallery": {
+    "message": "ગૅલેરી"
+  },
+  "tab_diagnostics": {
+    "message": "ડાયગ્નૉસ્ટિક્સ"
+  },
+  "tab_settings": {
+    "message": "સેટિંગ્સ"
+  },
+  "your_generations": {
+    "message": "તમારી ઇમેજ"
+  },
+  "gallery_lede": {
+    "message": "તમે બનાવેલ બધું"
+  },
+  "filter_model": {
+    "message": "મૉડલ"
+  },
+  "all_models": {
+    "message": "બધા મૉડલ"
+  },
+  "filter_engine": {
+    "message": "એન્જિન"
+  },
+  "any_engine": {
+    "message": "કોઈ પણ એન્જિન"
+  },
+  "engine_browser": {
+    "message": "બ્રાઉઝર"
+  },
+  "filter_window": {
+    "message": "સમય"
+  },
+  "time_all": {
+    "message": "બધો સમય"
+  },
+  "time_24h": {
+    "message": "છેલ્લા 24 કલાક"
+  },
+  "time_7d": {
+    "message": "છેલ્લા 7 દિવસ"
+  },
+  "time_30d": {
+    "message": "છેલ્લા 30 દિવસ"
+  },
+  "btn_select": {
+    "message": "પસંદ"
+  },
+  "no_images_title": {
+    "message": "હજી કોઈ ઇમેજ નથી"
+  },
+  "no_images_lede": {
+    "message": "અહીં શરૂ કરવા પ્રથમ ઇમેજ જનરેટ કરો"
+  },
+  "no_matches_title": {
+    "message": "કોઈ પરિણામ નહિ"
+  },
+  "no_matches_lede": {
+    "message": "ઇમેજ શોધવા ફિલ્ટર બદલો"
+  },
+  "compare_kicker": {
+    "message": "સરખામણી · હૅન્ડલ ખેંચો"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "બંધ"
+  },
+  "loading_fullres": {
+    "message": "ફૂલ રિઝૉલ્યૂશન લોડ…"
+  },
+  "label_prompt": {
+    "message": "પ્રોમ્પ્ટ"
+  },
+  "label_avoid": {
+    "message": "ટાળો"
+  },
+  "label_seed": {
+    "message": "સીડ"
+  },
+  "label_steps": {
+    "message": "સ્ટેપ્સ"
+  },
+  "label_guidance": {
+    "message": "ગાઇડન્સ"
+  },
+  "label_engine": {
+    "message": "એન્જિન"
+  },
+  "label_duration": {
+    "message": "સમય"
+  },
+  "label_generated": {
+    "message": "જનરેટ"
+  },
+  "label_path": {
+    "message": "પાથ"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ સીડ ફરી વાપરો"
+  },
+  "btn_copy_prompt": {
+    "message": "પ્રોમ્પ્ટ કૉપિ"
+  },
+  "btn_copy_seed": {
+    "message": "સીડ કૉપિ"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG ડાઉનલોડ"
+  },
+  "btn_delete": {
+    "message": "ડિલીટ"
+  },
+  "danger_zone": {
+    "message": "ખતરનાક ઝોન"
+  },
+  "clear_data_title": {
+    "message": "બધો ડેટા સાફ"
+  },
+  "clear_data_hint": {
+    "message": "કૅશ્ડ મૉડલ્સ અને ઇમેજ ડિલીટ. પૂર્વવત્ થઈ શકે નહીં."
+  },
+  "btn_clear_data": {
+    "message": "ડેટા સાફ"
+  },
+  "diag_title": {
+    "message": "ડાયગ્નૉસ્ટિક્સ"
+  },
+  "diag_lede": {
+    "message": "સમસ્યા નિવારણ માટે સિસ્ટમ માહિતી"
+  },
+  "diag_engine": {
+    "message": "એન્જિન"
+  },
+  "diag_preferred": {
+    "message": "પ્રેફ્રરેન્સ"
+  },
+  "diag_device": {
+    "message": "ઉપકરણ"
+  },
+  "diag_adapter": {
+    "message": "અૅડૅપ્ટર"
+  },
+  "diag_vendor": {
+    "message": "વેન્ડર"
+  },
+  "diag_vram": {
+    "message": "VRAM"
+  },
+  "diag_browser": {
+    "message": "બ્રાઉઝર"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "ORT"
+  },
+  "diag_tj": {
+    "message": "Transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS"
+  },
+  "diag_storage": {
+    "message": "સ્ટોરેજ"
+  },
+  "diag_installed": {
+    "message": "ઇન્સ્ટૉલ્ડ મૉડલ"
+  },
+  "diag_recent": {
+    "message": "તાજેતરની ઇમેજ"
+  },
+  "diag_active": {
+    "message": "સક્રિય મૉડલ"
+  },
+  "btn_copy_json": {
+    "message": "JSON કૉપિ"
+  },
+  "btn_reprobe": {
+    "message": "ફરી ડિટેક્ટ"
+  },
+  "btn_compare": {
+    "message": "સરખામણી"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP નિકાસ"
+  },
+  "btn_bulk_delete": {
+    "message": "ડિલીટ"
+  },
+  "btn_cancel_select": {
+    "message": "રદ"
+  },
+  "confirm_clear_data": {
+    "message": "કૅશ્ડ મૉડલ્સ અને ઇમેજ ડિલીટ?\n\nઆ પૂર્વવત્ થઈ શકે નહીં."
+  },
+  "clearing": {
+    "message": "સાફ…"
+  },
+  "status_done": {
+    "message": "✓ થઈ ગયું"
+  },
+  "status_saved": {
+    "message": "✓ સાચવ્યું"
+  },
+  "status_copied": {
+    "message": "✓ કૉપિ"
+  },
+  "confirm_delete_image": {
+    "message": "આ ઇમેજ ડિલીટ?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ ડિલીટ?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "ઇમેજ"
+  },
+  "image_noun": {
+    "message": "ઇમેજ"
+  },
+  "no_prompt": {
+    "message": "(કોઈ પ્રોમ્પ્ટ નહી)"
+  },
+  "none_selected": {
+    "message": "કોઈ પસંદ નહી"
+  },
+  "in_memory_only": {
+    "message": "માત્ર મેમરીમાં"
+  },
+  "btn_exit_select": {
+    "message": "બહાર"
+  },
+  "n_selected": {
+    "message": "$COUNT$ પસંદ",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ ઇમેજ પૅક…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ ઇમેજ નિકાસ",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "સીડ ફરી વપરાઈ"
+  },
+  "err_no_engine": {
+    "message": "કોઈ જનરેશન એન્જિન ઉપલબ્ધ નથી"
+  },
+  "err_engine_start": {
+    "message": "એન્જિન શરૂ નહી"
+  },
+  "err_inference_failed": {
+    "message": "બ્રાઉઝરમાં જનરેશન નિષ્ફળ"
+  },
+  "err_generation_failed": {
+    "message": "જનરેશન ફ઼ેઇલ"
+  },
+  "no_model_sub": {
+    "message": "શરૂ કરવા માટે મોડેલ્સ ટેબમાંથી મોડેલ પસંદ કરો"
+  },
+  "mb_pick_model": {
+    "message": "↓ મોડેલ પસંદ કરો"
+  },
+  "popup_tab_generate": {
+    "message": "બનાવો"
+  },
+  "popup_tab_models": {
+    "message": "મોડેલ્સ"
+  },
+  "models_intro": {
+    "message": "ડાઉનલોડ કરવા માટે મોડેલ પસંદ કરો. ઇન્સ્ટોલ થયા પછી તમે ગમે ત્યારે સ્વિચ કરી શકો છો."
+  },
+  "sec_downloading": {
+    "message": "ડાઉનલોડ થઈ રહ્યું છે"
+  },
+  "sec_installed": {
+    "message": "ઇન્સ્ટોલ થયેલ"
+  },
+  "sec_available": {
+    "message": "ઉપલબ્ધ"
+  },
+  "available_popular": {
+    "message": "પ્રખ્યાત"
+  },
+  "empty_models_title": {
+    "message": "હજુ સુધી કોઈ મોડેલ ઇન્સ્ટોલ થયું નથી"
+  },
+  "empty_models_sub_html": {
+    "message": "નીચેથી પસંદ કરો અને <b>↓ મેળવો</b> પર ટેપ કરો."
+  },
+  "storage_label": {
+    "message": "સ્ટોરેજ"
+  },
+  "dl_tag_fetching": {
+    "message": "મેળવી રહ્યું છે"
+  },
+  "dl_paused_sub": {
+    "message": "થોભાવેલ — ચાલુ રાખવા માટે ફરી શરૂ કરો"
+  },
+  "dl_meta_got": {
+    "message": "મળ્યું"
+  },
+  "dl_meta_speed": {
+    "message": "ઝડપ"
+  },
+  "dl_meta_left": {
+    "message": "બાકી"
+  },
+  "dl_btn_pause": {
+    "message": "‖ થોભાવો"
+  },
+  "dl_btn_resume": {
+    "message": "▶ ફરી શરૂ"
+  },
+  "dl_btn_hide": {
+    "message": "↓ છુપાવો"
+  },
+  "dl_btn_cancel_title": {
+    "message": "રદ કરો"
+  },
+  "mdl_btn_use": {
+    "message": "ઉપયોગ"
+  },
+  "mdl_btn_in_use": {
+    "message": "ઉપયોગમાં"
+  },
+  "mdl_btn_get": {
+    "message": "મેળવો"
+  },
+  "mdl_btn_token": {
+    "message": "ટોકન"
+  },
+  "mdl_btn_na": {
+    "message": "ઉ.ન."
+  },
+  "mdl_loading_sub": {
+    "message": "ડિવાઇસ પર ડાઉનલોડ થઈ રહ્યું છે…"
+  }
+}

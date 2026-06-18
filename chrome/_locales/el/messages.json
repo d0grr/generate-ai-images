@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "Γεννήτρια εικόνων AI - Δωρεάν AI"
+  },
+  "shortName": {
+    "message": "AI Εικόνες"
+  },
+  "shortDesc": {
+    "message": "Χρησιμοποιήστε τη γεννήτρια εικόνων AI για να δημιουργήσετε AI εικόνες από κείμενο και ρεαλιστικές φωτογραφίες."
+  },
+  "action_title": {
+    "message": "Δημιουργία εικόνων AI"
+  },
+  "open_workspace": {
+    "message": "Άνοιγμα χώρου εργασίας"
+  },
+  "settings": {
+    "message": "Ρυθμίσεις"
+  },
+  "error_title": {
+    "message": "Κάτι πήγε στραβά"
+  },
+  "btn_diagnostics": {
+    "message": "Διαγνωστικά ↗"
+  },
+  "btn_dismiss": {
+    "message": "Κλείσιμο"
+  },
+  "no_model_selected": {
+    "message": "Δεν έχει επιλεγεί μοντέλο"
+  },
+  "mb_get": {
+    "message": "↓ Λήψη"
+  },
+  "mb_downloading": {
+    "message": "Λήψη…"
+  },
+  "mb_of": {
+    "message": "από"
+  },
+  "cancel_download": {
+    "message": "Ακύρωση λήψης"
+  },
+  "mb_installing": {
+    "message": "Εγκατάσταση…"
+  },
+  "mb_verifying": {
+    "message": "Επαλήθευση βαρών · σχεδόν έτοιμο"
+  },
+  "ready": {
+    "message": "Έτοιμο"
+  },
+  "prompt_placeholder": {
+    "message": "Περιγράψτε τι θέλετε να δημιουργήσετε…"
+  },
+  "btn_clear_title": {
+    "message": "Εκκαθάριση"
+  },
+  "btn_clear_aria": {
+    "message": "Εκκαθάριση prompt"
+  },
+  "surprise_me": {
+    "message": "Έκπληξε με"
+  },
+  "param_steps": {
+    "message": "Βήματα"
+  },
+  "param_guidance": {
+    "message": "Καθοδήγηση"
+  },
+  "param_seed": {
+    "message": "Σπόρος"
+  },
+  "seed_random": {
+    "message": "τυχαίο"
+  },
+  "neg_prompt_label": {
+    "message": "Αρνητικό prompt"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Στοιχεία για αποφυγή…"
+  },
+  "btn_parameters": {
+    "message": "Παράμετροι ▾"
+  },
+  "btn_generate": {
+    "message": "Δημιουργία"
+  },
+  "install_model_hint": {
+    "message": "Εγκαταστήστε ένα μοντέλο για να ενεργοποιήσετε τη Δημιουργία."
+  },
+  "img_placeholder": {
+    "message": "Η εικόνα σας θα εμφανιστεί εδώ"
+  },
+  "generating_eyebrow": {
+    "message": "ΔΗΜΙΟΥΡΓΙΑ"
+  },
+  "phase_encoding": {
+    "message": "Κωδικοποίηση prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× ακύρωση"
+  },
+  "btn_save": {
+    "message": "↓ Αποθήκευση"
+  },
+  "btn_copy": {
+    "message": "⎘ Αντιγραφή"
+  },
+  "btn_retry": {
+    "message": "↺ Επανάληψη"
+  },
+  "img_generated_alt": {
+    "message": "Εικόνα που δημιουργήθηκε"
+  },
+  "recent_eyebrow": {
+    "message": "ΠΡΟΣΦΑΤΑ"
+  },
+  "view_all": {
+    "message": "Προβολή όλων ↗"
+  },
+  "clear_history": {
+    "message": "Εκκαθάριση ιστορικού"
+  },
+  "loading_model": {
+    "message": "Φόρτωση μοντέλου…"
+  },
+  "compiling": {
+    "message": "Μεταγλώττιση…"
+  },
+  "generating_pct": {
+    "message": "Δημιουργία · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Προετοιμασία…"
+  },
+  "phase_compiling_first": {
+    "message": "Μεταγλώττιση shaders · πρώτη εκτέλεση"
+  },
+  "phase_loading": {
+    "message": "Φόρτωση…"
+  },
+  "phase_fetching": {
+    "message": "Ανάκτηση βαρών μοντέλου"
+  },
+  "phase_decoding": {
+    "message": "Αποκωδικοποίηση εικόνας…"
+  },
+  "phase_loading_model": {
+    "message": "Φόρτωση μοντέλου…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Μεταγλώττιση shaders…"
+  },
+  "workspace_page_title": {
+    "message": "Χώρος εργασίας γεννήτριας εικόνων AI offline"
+  },
+  "workspace_brand": {
+    "message": "Γεννήτρια Εικόνων AI Offline"
+  },
+  "workspace_label": {
+    "message": "χώρος εργασίας"
+  },
+  "tab_gallery": {
+    "message": "Γκαλερί"
+  },
+  "tab_diagnostics": {
+    "message": "Διαγνωστικά"
+  },
+  "tab_settings": {
+    "message": "Ρυθμίσεις"
+  },
+  "your_generations": {
+    "message": "Οι δημιουργίες σας"
+  },
+  "gallery_lede": {
+    "message": "Όλα παραμένουν σε αυτή τη συσκευή. Κάντε κλικ σε μια πλακέτα για πλήρη ανάλυση και προέλευση."
+  },
+  "filter_model": {
+    "message": "Μοντέλο"
+  },
+  "all_models": {
+    "message": "Όλα τα μοντέλα"
+  },
+  "filter_engine": {
+    "message": "Κινητήρας"
+  },
+  "any_engine": {
+    "message": "Οποιοσδήποτε κινητήρας"
+  },
+  "engine_browser": {
+    "message": "Browser · WebGPU"
+  },
+  "filter_window": {
+    "message": "Περίοδος"
+  },
+  "time_all": {
+    "message": "Πάντα"
+  },
+  "time_24h": {
+    "message": "Τελευταίες 24 ώρες"
+  },
+  "time_7d": {
+    "message": "Τελευταίες 7 ημέρες"
+  },
+  "time_30d": {
+    "message": "Τελευταίες 30 ημέρες"
+  },
+  "btn_select": {
+    "message": "Επιλογή"
+  },
+  "no_images_title": {
+    "message": "Δεν υπάρχουν εικόνες ακόμα"
+  },
+  "no_images_lede": {
+    "message": "Ανοίξτε το popup με Alt+Shift+D, γράψτε ένα prompt, πατήστε Δημιουργία. Τα αποτελέσματα εμφανίζονται εδώ."
+  },
+  "no_matches_title": {
+    "message": "Δεν βρέθηκαν αποτελέσματα"
+  },
+  "no_matches_lede": {
+    "message": "Τίποτα σε αυτή την περίοδο. Δοκιμάστε να διευρύνετε το φίλτρο."
+  },
+  "compare_kicker": {
+    "message": "Σύγκριση · σύρετε τη λαβή"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "κλείσιμο"
+  },
+  "loading_fullres": {
+    "message": "φόρτωση πλήρους ανάλυσης…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Αποφυγή"
+  },
+  "label_seed": {
+    "message": "Σπόρος"
+  },
+  "label_steps": {
+    "message": "Βήματα"
+  },
+  "label_guidance": {
+    "message": "Καθοδήγηση"
+  },
+  "label_engine": {
+    "message": "Κινητήρας"
+  },
+  "label_duration": {
+    "message": "Διάρκεια"
+  },
+  "label_generated": {
+    "message": "Δημιουργήθηκε"
+  },
+  "label_path": {
+    "message": "Διαδρομή"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Επαναχρησιμοποίηση σπόρου"
+  },
+  "btn_copy_prompt": {
+    "message": "Αντιγραφή prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Αντιγραφή σπόρου"
+  },
+  "btn_download_png": {
+    "message": "↓ Λήψη PNG"
+  },
+  "btn_delete": {
+    "message": "Διαγραφή"
+  },
+  "danger_zone": {
+    "message": "Επικίνδυνη ζώνη"
+  },
+  "clear_data_title": {
+    "message": "Εκκαθάριση όλων των δεδομένων επέκτασης"
+  },
+  "clear_data_hint": {
+    "message": "Αφαιρεί όλα τα αποθηκευμένα μοντέλα και τις εικόνες. Δεν μπορεί να αναιρεθεί."
+  },
+  "btn_clear_data": {
+    "message": "Εκκαθάριση δεδομένων"
+  },
+  "diag_title": {
+    "message": "Διαγνωστικά"
+  },
+  "diag_lede": {
+    "message": "Τι βλέπει η επέκταση για τον browser και τον υπολογιστή σας. Αντιγράψτε αυτό το μπλοκ σε issue αν κάτι δεν λειτουργεί."
+  },
+  "diag_engine": {
+    "message": "Ενεργός κινητήρας"
+  },
+  "diag_preferred": {
+    "message": "Προτιμώμενος"
+  },
+  "diag_device": {
+    "message": "Συσκευή"
+  },
+  "diag_adapter": {
+    "message": "Προσαρμογέας"
+  },
+  "diag_vendor": {
+    "message": "Κατασκευαστής"
+  },
+  "diag_vram": {
+    "message": "VRAM εκτίμηση"
+  },
+  "diag_browser": {
+    "message": "Διαδρομή browser"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Όριο OPFS"
+  },
+  "diag_storage": {
+    "message": "Αποθήκευση"
+  },
+  "diag_installed": {
+    "message": "Εγκατεστημένα μοντέλα"
+  },
+  "diag_recent": {
+    "message": "Πρόσφατες εικόνες"
+  },
+  "diag_active": {
+    "message": "Ενεργό μοντέλο"
+  },
+  "btn_copy_json": {
+    "message": "Αντιγραφή ως JSON"
+  },
+  "btn_reprobe": {
+    "message": "Επανάληψη ελέγχων"
+  },
+  "btn_compare": {
+    "message": "Σύγκριση"
+  },
+  "btn_export_zip": {
+    "message": "↓ Εξαγωγή ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Διαγραφή"
+  },
+  "btn_cancel_select": {
+    "message": "Ακύρωση"
+  },
+  "confirm_clear_data": {
+    "message": "Διαγραφή όλων των αποθηκευμένων μοντέλων και εικόνων;\n\nΑυτό δεν μπορεί να αναιρεθεί."
+  },
+  "clearing": {
+    "message": "Εκκαθάριση…"
+  },
+  "status_done": {
+    "message": "✓ Έγινε"
+  },
+  "status_saved": {
+    "message": "✓ Αποθηκεύτηκε"
+  },
+  "status_copied": {
+    "message": "✓ Αντιγράφηκε"
+  },
+  "confirm_delete_image": {
+    "message": "Διαγραφή αυτής της εικόνας;"
+  },
+  "confirm_bulk_delete": {
+    "message": "Διαγραφή $COUNT$ $NOUN$;",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "εικόνες"
+  },
+  "image_noun": {
+    "message": "εικόνα"
+  },
+  "no_prompt": {
+    "message": "(χωρίς prompt)"
+  },
+  "none_selected": {
+    "message": "(τίποτα δεν επιλέχθηκε)"
+  },
+  "in_memory_only": {
+    "message": "(μόνο στη μνήμη)"
+  },
+  "btn_exit_select": {
+    "message": "Έξοδος επιλογής"
+  },
+  "n_selected": {
+    "message": "$COUNT$ επιλεγμένα",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Συσκευασία $COUNT$ εικόνων…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Εξαχθήκαν $COUNT$ εικόνες",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Επανεκτέλεση με τον ίδιο σπόρο…"
+  },
+  "err_no_engine": {
+    "message": "Δεν υπάρχει διαθέσιμη μηχανή δημιουργίας"
+  },
+  "err_engine_start": {
+    "message": "Δεν ήταν δυνατή η εκκίνηση του κινητήρα browser"
+  },
+  "err_inference_failed": {
+    "message": "Η δημιουργία στο πρόγραμμα περιήγησης απέτυχε"
+  },
+  "err_generation_failed": {
+    "message": "Η δημιουργία απέτυχε"
+  },
+  "no_model_sub": {
+    "message": "Επιλέξτε ένα μοντέλο στην καρτέλα Μοντέλα για να ξεκινήσετε"
+  },
+  "mb_pick_model": {
+    "message": "↓ Επιλογή μοντέλου"
+  },
+  "popup_tab_generate": {
+    "message": "Δημιουργία"
+  },
+  "popup_tab_models": {
+    "message": "Μοντέλα"
+  },
+  "models_intro": {
+    "message": "Επιλέξτε ένα μοντέλο για λήψη. Μετά την εγκατάσταση μπορείτε να εναλλάσσεστε ανά πάσα στιγμή."
+  },
+  "sec_downloading": {
+    "message": "Λήψη"
+  },
+  "sec_installed": {
+    "message": "Εγκατεστημένα"
+  },
+  "sec_available": {
+    "message": "Διαθέσιμα"
+  },
+  "available_popular": {
+    "message": "δημοφιλή"
+  },
+  "empty_models_title": {
+    "message": "Δεν υπάρχουν εγκατεστημένα μοντέλα ακόμα"
+  },
+  "empty_models_sub_html": {
+    "message": "Επιλέξτε ένα παρακάτω και πατήστε <b>↓ Λήψη</b>."
+  },
+  "storage_label": {
+    "message": "Αποθήκευση"
+  },
+  "dl_tag_fetching": {
+    "message": "λήψη"
+  },
+  "dl_paused_sub": {
+    "message": "παύση — συνεχίστε για συνέχεια"
+  },
+  "dl_meta_got": {
+    "message": "Ελήφθη"
+  },
+  "dl_meta_speed": {
+    "message": "Ταχύτητα"
+  },
+  "dl_meta_left": {
+    "message": "Απομένουν"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Παύση"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Συνέχιση"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Απόκρυψη"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Άκυρο"
+  },
+  "mdl_btn_use": {
+    "message": "Χρήση"
+  },
+  "mdl_btn_in_use": {
+    "message": "Σε χρήση"
+  },
+  "mdl_btn_get": {
+    "message": "Λήψη"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "μ/δ"
+  },
+  "mdl_loading_sub": {
+    "message": "Λήψη στη συσκευή…"
+  }
+}

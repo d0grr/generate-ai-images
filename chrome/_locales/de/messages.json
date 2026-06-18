@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "KI Bildgenerator - AI Bilder erstellen"
+  },
+  "shortName": {
+    "message": "KI-Bilder"
+  },
+  "shortDesc": {
+    "message": "KI Bildgenerator: Erstelle KI-Bilder aus Text, generiere realistische KI-Fotos und AI-Bilder direkt im Browser."
+  },
+  "action_title": {
+    "message": "KI-Bilder generieren"
+  },
+  "open_workspace": {
+    "message": "Arbeitsbereich öffnen"
+  },
+  "settings": {
+    "message": "Einstellungen"
+  },
+  "error_title": {
+    "message": "Etwas ist schiefgelaufen"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnose ↗"
+  },
+  "btn_dismiss": {
+    "message": "Schließen"
+  },
+  "no_model_selected": {
+    "message": "Kein Modell ausgewählt"
+  },
+  "mb_get": {
+    "message": "↓ Laden"
+  },
+  "mb_downloading": {
+    "message": "Wird heruntergeladen…"
+  },
+  "mb_of": {
+    "message": "von"
+  },
+  "cancel_download": {
+    "message": "Download abbrechen"
+  },
+  "mb_installing": {
+    "message": "Wird installiert…"
+  },
+  "mb_verifying": {
+    "message": "Gewichte werden überprüft · fast fertig"
+  },
+  "ready": {
+    "message": "Bereit"
+  },
+  "prompt_placeholder": {
+    "message": "Beschreibe, was du erstellen möchtest…"
+  },
+  "btn_clear_title": {
+    "message": "Löschen"
+  },
+  "btn_clear_aria": {
+    "message": "Eingabe löschen"
+  },
+  "surprise_me": {
+    "message": "Überrasch mich"
+  },
+  "param_steps": {
+    "message": "Schritte"
+  },
+  "param_guidance": {
+    "message": "CFG"
+  },
+  "param_seed": {
+    "message": "Seed"
+  },
+  "seed_random": {
+    "message": "zufällig"
+  },
+  "neg_prompt_label": {
+    "message": "Negativer Prompt"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Zu vermeidende Elemente…"
+  },
+  "btn_parameters": {
+    "message": "Parameter ▾"
+  },
+  "btn_generate": {
+    "message": "Generieren"
+  },
+  "install_model_hint": {
+    "message": "Installiere ein Modell, um Generieren zu aktivieren."
+  },
+  "img_placeholder": {
+    "message": "Dein Bild erscheint hier"
+  },
+  "generating_eyebrow": {
+    "message": "WIRD GENERIERT"
+  },
+  "phase_encoding": {
+    "message": "Prompt wird kodiert"
+  },
+  "btn_cancel_gen": {
+    "message": "× Abbrechen"
+  },
+  "btn_save": {
+    "message": "↓ Speichern"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopieren"
+  },
+  "btn_retry": {
+    "message": "↺ Wiederholen"
+  },
+  "img_generated_alt": {
+    "message": "Generiertes Bild"
+  },
+  "recent_eyebrow": {
+    "message": "ZULETZT"
+  },
+  "view_all": {
+    "message": "Alle anzeigen ↗"
+  },
+  "clear_history": {
+    "message": "Verlauf löschen"
+  },
+  "loading_model": {
+    "message": "Modell wird geladen…"
+  },
+  "compiling": {
+    "message": "Wird kompiliert…"
+  },
+  "generating_pct": {
+    "message": "Wird generiert · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Wird vorbereitet…"
+  },
+  "phase_compiling_first": {
+    "message": "Shader werden kompiliert · erster Start"
+  },
+  "phase_loading": {
+    "message": "Wird geladen…"
+  },
+  "phase_fetching": {
+    "message": "Modellgewichte werden abgerufen"
+  },
+  "phase_decoding": {
+    "message": "Bild wird dekodiert…"
+  },
+  "phase_loading_model": {
+    "message": "Modell wird geladen…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Shader werden kompiliert…"
+  },
+  "workspace_page_title": {
+    "message": "KI Offline-Bildgenerator Arbeitsbereich"
+  },
+  "workspace_brand": {
+    "message": "KI Offline-Bildgenerator"
+  },
+  "workspace_label": {
+    "message": "Arbeitsbereich"
+  },
+  "tab_gallery": {
+    "message": "Galerie"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnose"
+  },
+  "tab_settings": {
+    "message": "Einstellungen"
+  },
+  "your_generations": {
+    "message": "Deine Generierungen"
+  },
+  "gallery_lede": {
+    "message": "Alles bleibt auf diesem Gerät. Klicke auf eine Kachel für volle Auflösung und Herkunft."
+  },
+  "filter_model": {
+    "message": "Modell"
+  },
+  "all_models": {
+    "message": "Alle Modelle"
+  },
+  "filter_engine": {
+    "message": "Engine"
+  },
+  "any_engine": {
+    "message": "Alle Engines"
+  },
+  "engine_browser": {
+    "message": "Browser · WebGPU"
+  },
+  "filter_window": {
+    "message": "Zeitfenster"
+  },
+  "time_all": {
+    "message": "Gesamte Zeit"
+  },
+  "time_24h": {
+    "message": "Letzte 24 Stunden"
+  },
+  "time_7d": {
+    "message": "Letzte 7 Tage"
+  },
+  "time_30d": {
+    "message": "Letzte 30 Tage"
+  },
+  "btn_select": {
+    "message": "Auswählen"
+  },
+  "no_images_title": {
+    "message": "Noch keine Bilder"
+  },
+  "no_images_lede": {
+    "message": "Öffne das Popup mit Alt+Shift+D, schreibe einen Prompt und klicke auf Generieren. Ergebnisse erscheinen hier."
+  },
+  "no_matches_title": {
+    "message": "Keine Treffer"
+  },
+  "no_matches_lede": {
+    "message": "Nichts in diesem Zeitfenster. Versuche, den Filter zu erweitern."
+  },
+  "compare_kicker": {
+    "message": "Vergleichen · Griff ziehen"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "Schließen"
+  },
+  "loading_fullres": {
+    "message": "Vollauflösung wird geladen…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Vermeiden"
+  },
+  "label_seed": {
+    "message": "Seed"
+  },
+  "label_steps": {
+    "message": "Schritte"
+  },
+  "label_guidance": {
+    "message": "CFG"
+  },
+  "label_engine": {
+    "message": "Engine"
+  },
+  "label_duration": {
+    "message": "Dauer"
+  },
+  "label_generated": {
+    "message": "Generiert"
+  },
+  "label_path": {
+    "message": "Pfad"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Seed wiederverwenden"
+  },
+  "btn_copy_prompt": {
+    "message": "Prompt kopieren"
+  },
+  "btn_copy_seed": {
+    "message": "Seed kopieren"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG herunterladen"
+  },
+  "btn_delete": {
+    "message": "Löschen"
+  },
+  "danger_zone": {
+    "message": "Gefahrenzone"
+  },
+  "clear_data_title": {
+    "message": "Alle Erweiterungsdaten löschen"
+  },
+  "clear_data_hint": {
+    "message": "Entfernt alle zwischengespeicherten Modelle und generierten Bilder. Kann nicht rückgängig gemacht werden."
+  },
+  "btn_clear_data": {
+    "message": "Daten löschen"
+  },
+  "diag_title": {
+    "message": "Diagnose"
+  },
+  "diag_lede": {
+    "message": "Was die Erweiterung über deinen Browser und dein Gerät sieht. Kopiere diesen Block in ein Issue, wenn etwas nicht funktioniert."
+  },
+  "diag_engine": {
+    "message": "Aktive Engine"
+  },
+  "diag_preferred": {
+    "message": "Bevorzugt"
+  },
+  "diag_device": {
+    "message": "Gerät"
+  },
+  "diag_adapter": {
+    "message": "Adapter"
+  },
+  "diag_vendor": {
+    "message": "Hersteller"
+  },
+  "diag_vram": {
+    "message": "VRAM gesch."
+  },
+  "diag_browser": {
+    "message": "Browserpfad"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS-Kontingent"
+  },
+  "diag_storage": {
+    "message": "Speicher"
+  },
+  "diag_installed": {
+    "message": "Installierte Modelle"
+  },
+  "diag_recent": {
+    "message": "Letzte Bilder"
+  },
+  "diag_active": {
+    "message": "Aktives Modell"
+  },
+  "btn_copy_json": {
+    "message": "Als JSON kopieren"
+  },
+  "btn_reprobe": {
+    "message": "Prüfungen erneut ausführen"
+  },
+  "btn_compare": {
+    "message": "Vergleichen"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP exportieren"
+  },
+  "btn_bulk_delete": {
+    "message": "Löschen"
+  },
+  "btn_cancel_select": {
+    "message": "Abbrechen"
+  },
+  "confirm_clear_data": {
+    "message": "Alle zwischengespeicherten Modelle und generierten Bilder löschen?\n\nDies kann nicht rückgängig gemacht werden."
+  },
+  "clearing": {
+    "message": "Wird gelöscht…"
+  },
+  "status_done": {
+    "message": "✓ Fertig"
+  },
+  "status_saved": {
+    "message": "✓ Gespeichert"
+  },
+  "status_copied": {
+    "message": "✓ Kopiert"
+  },
+  "confirm_delete_image": {
+    "message": "Dieses Bild löschen?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ $NOUN$ löschen?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "Bilder"
+  },
+  "image_noun": {
+    "message": "Bild"
+  },
+  "no_prompt": {
+    "message": "(kein Prompt)"
+  },
+  "none_selected": {
+    "message": "(keine Auswahl)"
+  },
+  "in_memory_only": {
+    "message": "(nur im Arbeitsspeicher)"
+  },
+  "btn_exit_select": {
+    "message": "Auswahl beenden"
+  },
+  "n_selected": {
+    "message": "$COUNT$ ausgewählt",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ Bilder werden verpackt…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ Bilder exportiert",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Wird mit demselben Seed wiederholt…"
+  },
+  "err_no_engine": {
+    "message": "Keine Generierungs-Engine verfügbar"
+  },
+  "err_engine_start": {
+    "message": "Browser-Engine konnte nicht gestartet werden"
+  },
+  "err_inference_failed": {
+    "message": "Generierung im Browser fehlgeschlagen"
+  },
+  "err_generation_failed": {
+    "message": "Generierung fehlgeschlagen"
+  },
+  "no_model_sub": {
+    "message": "Wähle ein Modell im Tab „Modelle“, um zu starten"
+  },
+  "mb_pick_model": {
+    "message": "↓ Modell wählen"
+  },
+  "popup_tab_generate": {
+    "message": "Generieren"
+  },
+  "popup_tab_models": {
+    "message": "Modelle"
+  },
+  "models_intro": {
+    "message": "Wähle ein Modell zum Herunterladen. Nach der Installation kannst du jederzeit wechseln."
+  },
+  "sec_downloading": {
+    "message": "Wird heruntergeladen"
+  },
+  "sec_installed": {
+    "message": "Installiert"
+  },
+  "sec_available": {
+    "message": "Verfügbar"
+  },
+  "available_popular": {
+    "message": "beliebt"
+  },
+  "empty_models_title": {
+    "message": "Noch keine Modelle installiert"
+  },
+  "empty_models_sub_html": {
+    "message": "Wähle unten eines aus und tippe auf <b>↓ Laden</b>."
+  },
+  "storage_label": {
+    "message": "Speicher"
+  },
+  "dl_tag_fetching": {
+    "message": "lädt"
+  },
+  "dl_paused_sub": {
+    "message": "pausiert — zum Fortsetzen tippen"
+  },
+  "dl_meta_got": {
+    "message": "Erhalten"
+  },
+  "dl_meta_speed": {
+    "message": "Tempo"
+  },
+  "dl_meta_left": {
+    "message": "Übrig"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pause"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Fortsetzen"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Ausblenden"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Abbrechen"
+  },
+  "mdl_btn_use": {
+    "message": "Nutzen"
+  },
+  "mdl_btn_in_use": {
+    "message": "Aktiv"
+  },
+  "mdl_btn_get": {
+    "message": "Laden"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n. v."
+  },
+  "mdl_loading_sub": {
+    "message": "Lädt auf dieses Gerät…"
+  }
+}

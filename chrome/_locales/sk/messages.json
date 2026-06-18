@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI generátor obrázkov - AI fotky zadarmo"
+  },
+  "shortName": {
+    "message": "AI obrázky"
+  },
+  "shortDesc": {
+    "message": "AI generátor obrázkov z textu: vytvárajte realistické AI snímky a fotografie okamžite pomocou rozšírenia Chrome."
+  },
+  "action_title": {
+    "message": "Generovať AI obrázky"
+  },
+  "open_workspace": {
+    "message": "Otvoriť pracovný priestor"
+  },
+  "settings": {
+    "message": "Nastavenia"
+  },
+  "error_title": {
+    "message": "Niečo sa pokazilo"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostika ↗"
+  },
+  "btn_dismiss": {
+    "message": "Zavrieť"
+  },
+  "no_model_selected": {
+    "message": "Nie je vybratý žiadny model"
+  },
+  "mb_get": {
+    "message": "↓ Stiahnuť"
+  },
+  "mb_downloading": {
+    "message": "Sťahuje sa…"
+  },
+  "mb_of": {
+    "message": "z"
+  },
+  "cancel_download": {
+    "message": "Zrušiť sťahovanie"
+  },
+  "mb_installing": {
+    "message": "Inštaluje sa…"
+  },
+  "mb_verifying": {
+    "message": "Overovanie váh · takmer hotovo"
+  },
+  "ready": {
+    "message": "Pripravené"
+  },
+  "prompt_placeholder": {
+    "message": "Opíšte, čo chcete vytvoriť…"
+  },
+  "btn_clear_title": {
+    "message": "Vymazať"
+  },
+  "btn_clear_aria": {
+    "message": "Vymazať prompt"
+  },
+  "surprise_me": {
+    "message": "Prekvapte ma"
+  },
+  "param_steps": {
+    "message": "Kroky"
+  },
+  "param_guidance": {
+    "message": "Riadenie"
+  },
+  "param_seed": {
+    "message": "Semeno"
+  },
+  "seed_random": {
+    "message": "náhodné"
+  },
+  "neg_prompt_label": {
+    "message": "Negatívny prompt"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Veci, ktorým sa vyhnúť…"
+  },
+  "btn_parameters": {
+    "message": "Parametre ▾"
+  },
+  "btn_generate": {
+    "message": "Generovať"
+  },
+  "install_model_hint": {
+    "message": "Nainštalujte model na aktivovanie Generovania."
+  },
+  "img_placeholder": {
+    "message": "Váš obrázok sa zobrazí tu"
+  },
+  "generating_eyebrow": {
+    "message": "GENEROVANIE"
+  },
+  "phase_encoding": {
+    "message": "Kódovanie promptu"
+  },
+  "btn_cancel_gen": {
+    "message": "× zrušiť"
+  },
+  "btn_save": {
+    "message": "↓ Uložiť"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopírovať"
+  },
+  "btn_retry": {
+    "message": "↺ Skúsiť znova"
+  },
+  "img_generated_alt": {
+    "message": "Vygenerovaný obrázok"
+  },
+  "recent_eyebrow": {
+    "message": "NEDÁVNE"
+  },
+  "view_all": {
+    "message": "Zobraziť všetky ↗"
+  },
+  "clear_history": {
+    "message": "Vymazať históriu"
+  },
+  "loading_model": {
+    "message": "Načítavanie modelu…"
+  },
+  "compiling": {
+    "message": "Kompilácia…"
+  },
+  "generating_pct": {
+    "message": "Generovanie · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Príprava…"
+  },
+  "phase_compiling_first": {
+    "message": "Kompilácia shaderov · prvé spustenie"
+  },
+  "phase_loading": {
+    "message": "Načítavanie…"
+  },
+  "phase_fetching": {
+    "message": "Načítavanie váh modelu"
+  },
+  "phase_decoding": {
+    "message": "Dekódovanie obrázka…"
+  },
+  "phase_loading_model": {
+    "message": "Načítavanie modelu…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Kompilácia shaderov…"
+  },
+  "workspace_page_title": {
+    "message": "Pracovný priestor offline generátora AI obrázkov"
+  },
+  "workspace_brand": {
+    "message": "AI Offline Generátor Obrázkov"
+  },
+  "workspace_label": {
+    "message": "pracovný priestor"
+  },
+  "tab_gallery": {
+    "message": "Galéria"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostika"
+  },
+  "tab_settings": {
+    "message": "Nastavenia"
+  },
+  "your_generations": {
+    "message": "Vaše generácie"
+  },
+  "gallery_lede": {
+    "message": "Všetko zostáva na tomto zariadení. Kliknite na dlaždicu pre plné rozlíšenie a pôvod."
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "Všetky modely"
+  },
+  "filter_engine": {
+    "message": "Motor"
+  },
+  "any_engine": {
+    "message": "Akýkoľvek motor"
+  },
+  "engine_browser": {
+    "message": "Prehliadač · WebGPU"
+  },
+  "filter_window": {
+    "message": "Obdobie"
+  },
+  "time_all": {
+    "message": "Vždy"
+  },
+  "time_24h": {
+    "message": "Posledných 24 hodín"
+  },
+  "time_7d": {
+    "message": "Posledných 7 dní"
+  },
+  "time_30d": {
+    "message": "Posledných 30 dní"
+  },
+  "btn_select": {
+    "message": "Vybrať"
+  },
+  "no_images_title": {
+    "message": "Zatiaľ žiadne obrázky"
+  },
+  "no_images_lede": {
+    "message": "Otvorte popup pomocou Alt+Shift+D, napíšte prompt, kliknite Generovať. Výsledky sa zobrazia tu."
+  },
+  "no_matches_title": {
+    "message": "Žiadne výsledky"
+  },
+  "no_matches_lede": {
+    "message": "V tomto období nič. Skúste rozšíriť filter."
+  },
+  "compare_kicker": {
+    "message": "Porovnať · potiahnite úchyt"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "zavrieť"
+  },
+  "loading_fullres": {
+    "message": "načítavanie plného rozlíšenia…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Vyhnúť sa"
+  },
+  "label_seed": {
+    "message": "Semeno"
+  },
+  "label_steps": {
+    "message": "Kroky"
+  },
+  "label_guidance": {
+    "message": "Riadenie"
+  },
+  "label_engine": {
+    "message": "Motor"
+  },
+  "label_duration": {
+    "message": "Trvanie"
+  },
+  "label_generated": {
+    "message": "Vygenerované"
+  },
+  "label_path": {
+    "message": "Cesta"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Znova použiť semeno"
+  },
+  "btn_copy_prompt": {
+    "message": "Kopírovať prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Kopírovať semeno"
+  },
+  "btn_download_png": {
+    "message": "↓ Stiahnuť PNG"
+  },
+  "btn_delete": {
+    "message": "Zmazať"
+  },
+  "danger_zone": {
+    "message": "Nebezpečná zóna"
+  },
+  "clear_data_title": {
+    "message": "Vymazať všetky dáta rozšírenia"
+  },
+  "clear_data_hint": {
+    "message": "Odstráni všetky uložené modely a vygenerované obrázky. Nie je možné vrátiť späť."
+  },
+  "btn_clear_data": {
+    "message": "Vymazať dáta"
+  },
+  "diag_title": {
+    "message": "Diagnostika"
+  },
+  "diag_lede": {
+    "message": "Čo rozšírenie vidí o vašom prehliadači a počítači. Skopírujte tento blok do issue, ak niečo nefunguje."
+  },
+  "diag_engine": {
+    "message": "Aktívny motor"
+  },
+  "diag_preferred": {
+    "message": "Preferovaný"
+  },
+  "diag_device": {
+    "message": "Zariadenie"
+  },
+  "diag_adapter": {
+    "message": "Adaptér"
+  },
+  "diag_vendor": {
+    "message": "Výrobca"
+  },
+  "diag_vram": {
+    "message": "VRAM odhad"
+  },
+  "diag_browser": {
+    "message": "Cesta prehliadača"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Kvóta OPFS"
+  },
+  "diag_storage": {
+    "message": "Úložisko"
+  },
+  "diag_installed": {
+    "message": "Nainštalované modely"
+  },
+  "diag_recent": {
+    "message": "Nedávne obrázky"
+  },
+  "diag_active": {
+    "message": "Aktívny model"
+  },
+  "btn_copy_json": {
+    "message": "Kopírovať ako JSON"
+  },
+  "btn_reprobe": {
+    "message": "Spustiť kontroly znova"
+  },
+  "btn_compare": {
+    "message": "Porovnať"
+  },
+  "btn_export_zip": {
+    "message": "↓ Exportovať ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Zmazať"
+  },
+  "btn_cancel_select": {
+    "message": "Zrušiť"
+  },
+  "confirm_clear_data": {
+    "message": "Zmazať všetky uložené modely a vygenerované obrázky?\n\nToto nie je možné vrátiť späť."
+  },
+  "clearing": {
+    "message": "Mazanie…"
+  },
+  "status_done": {
+    "message": "✓ Hotovo"
+  },
+  "status_saved": {
+    "message": "✓ Uložené"
+  },
+  "status_copied": {
+    "message": "✓ Skopírované"
+  },
+  "confirm_delete_image": {
+    "message": "Zmazať tento obrázok?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Zmazať $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "obrázkov"
+  },
+  "image_noun": {
+    "message": "obrázok"
+  },
+  "no_prompt": {
+    "message": "(bez promptu)"
+  },
+  "none_selected": {
+    "message": "(nič nie je vybrané)"
+  },
+  "in_memory_only": {
+    "message": "(iba v pamäti)"
+  },
+  "btn_exit_select": {
+    "message": "Ukončiť výber"
+  },
+  "n_selected": {
+    "message": "$COUNT$ vybraté",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Balenie $COUNT$ obrázkov…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Exportovaných $COUNT$ obrázkov",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Znova spúšťam s rovnakým semenom…"
+  },
+  "err_no_engine": {
+    "message": "Žiadny generátor nie je k dispozícii"
+  },
+  "err_engine_start": {
+    "message": "Motor prehliadača sa nedá spustiť"
+  },
+  "err_inference_failed": {
+    "message": "Generovanie v prehliadači zlyhalo"
+  },
+  "err_generation_failed": {
+    "message": "Generovanie zlyhalo"
+  },
+  "no_model_sub": {
+    "message": "Vyberte model na karte Modely a začnite"
+  },
+  "mb_pick_model": {
+    "message": "↓ Vybrať model"
+  },
+  "popup_tab_generate": {
+    "message": "Generovať"
+  },
+  "popup_tab_models": {
+    "message": "Modely"
+  },
+  "models_intro": {
+    "message": "Vyberte model na stiahnutie. Po inštalácii medzi nimi môžete kedykoľvek prepínať."
+  },
+  "sec_downloading": {
+    "message": "Sťahovanie"
+  },
+  "sec_installed": {
+    "message": "Nainštalované"
+  },
+  "sec_available": {
+    "message": "Dostupné"
+  },
+  "available_popular": {
+    "message": "populárne"
+  },
+  "empty_models_title": {
+    "message": "Zatiaľ žiadne nainštalované modely"
+  },
+  "empty_models_sub_html": {
+    "message": "Vyberte jeden nižšie a klepnite na <b>↓ Získať</b>."
+  },
+  "storage_label": {
+    "message": "Úložisko"
+  },
+  "dl_tag_fetching": {
+    "message": "získavanie"
+  },
+  "dl_paused_sub": {
+    "message": "pozastavené — pokračujte obnovením"
+  },
+  "dl_meta_got": {
+    "message": "Získané"
+  },
+  "dl_meta_speed": {
+    "message": "Rýchlosť"
+  },
+  "dl_meta_left": {
+    "message": "Zostáva"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pauza"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Obnoviť"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Skryť"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Zrušiť"
+  },
+  "mdl_btn_use": {
+    "message": "Použiť"
+  },
+  "mdl_btn_in_use": {
+    "message": "Používa sa"
+  },
+  "mdl_btn_get": {
+    "message": "Získať"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "n/d"
+  },
+  "mdl_loading_sub": {
+    "message": "Sťahuje sa do zariadenia…"
+  }
+}

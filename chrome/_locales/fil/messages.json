@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - Gumawa ng AI Pics"
+  },
+  "shortName": {
+    "message": "AI Larawan"
+  },
+  "shortDesc": {
+    "message": "Gamitin ang AI image generator para gumawa ng AI images mula sa text, lumikha ng realistic na pictures nang instant."
+  },
+  "action_title": {
+    "message": "Gumawa ng AI Images"
+  },
+  "open_workspace": {
+    "message": "Buksan ang workspace"
+  },
+  "settings": {
+    "message": "Mga Setting"
+  },
+  "error_title": {
+    "message": "May naganap na error"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostics ↗"
+  },
+  "btn_dismiss": {
+    "message": "Isara"
+  },
+  "no_model_selected": {
+    "message": "Walang model na pinili"
+  },
+  "mb_get": {
+    "message": "↓ I-download"
+  },
+  "mb_downloading": {
+    "message": "Dina-download…"
+  },
+  "mb_of": {
+    "message": "ng"
+  },
+  "cancel_download": {
+    "message": "Kanselahin ang download"
+  },
+  "mb_installing": {
+    "message": "Ina-install…"
+  },
+  "mb_verifying": {
+    "message": "Bine-verify ang mga weights · malapit na"
+  },
+  "ready": {
+    "message": "Handa na"
+  },
+  "prompt_placeholder": {
+    "message": "Ilarawan ang gusto mong gawin…"
+  },
+  "btn_clear_title": {
+    "message": "I-clear"
+  },
+  "btn_clear_aria": {
+    "message": "I-clear ang prompt"
+  },
+  "surprise_me": {
+    "message": "Sorpresahin mo ako"
+  },
+  "param_steps": {
+    "message": "Mga Hakbang"
+  },
+  "param_guidance": {
+    "message": "Gabay"
+  },
+  "param_seed": {
+    "message": "Seed"
+  },
+  "seed_random": {
+    "message": "random"
+  },
+  "neg_prompt_label": {
+    "message": "Negatibong prompt"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Mga bagay na iwasang lagyan…"
+  },
+  "btn_parameters": {
+    "message": "Mga Parameter ▾"
+  },
+  "btn_generate": {
+    "message": "Gumawa"
+  },
+  "install_model_hint": {
+    "message": "Mag-install ng model para ma-aktibo ang Gumawa."
+  },
+  "img_placeholder": {
+    "message": "Lalabas ang iyong imahe dito"
+  },
+  "generating_eyebrow": {
+    "message": "GUMAGAWA"
+  },
+  "phase_encoding": {
+    "message": "Ine-encode ang prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× kanselahin"
+  },
+  "btn_save": {
+    "message": "↓ I-save"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopyahin"
+  },
+  "btn_retry": {
+    "message": "↺ Subukan ulit"
+  },
+  "img_generated_alt": {
+    "message": "Ginawang imahe"
+  },
+  "recent_eyebrow": {
+    "message": "KAMAKAILANG"
+  },
+  "view_all": {
+    "message": "Tingnan lahat ↗"
+  },
+  "clear_history": {
+    "message": "I-clear ang kasaysayan"
+  },
+  "loading_model": {
+    "message": "Nilo-load ang model…"
+  },
+  "compiling": {
+    "message": "Kino-compile…"
+  },
+  "generating_pct": {
+    "message": "Gumagawa · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Naghahanda…"
+  },
+  "phase_compiling_first": {
+    "message": "Kino-compile ang mga shader · unang beses"
+  },
+  "phase_loading": {
+    "message": "Naglo-load…"
+  },
+  "phase_fetching": {
+    "message": "Kinukuha ang mga model weight"
+  },
+  "phase_decoding": {
+    "message": "Dine-decode ang imahe…"
+  },
+  "phase_loading_model": {
+    "message": "Nilo-load ang model…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Kino-compile ang mga shader…"
+  },
+  "workspace_page_title": {
+    "message": "AI Offline Image Generator Workspace"
+  },
+  "workspace_brand": {
+    "message": "AI Offline Image Generator"
+  },
+  "workspace_label": {
+    "message": "workspace"
+  },
+  "tab_gallery": {
+    "message": "Gallery"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostics"
+  },
+  "tab_settings": {
+    "message": "Mga Setting"
+  },
+  "your_generations": {
+    "message": "Iyong mga ginawa"
+  },
+  "gallery_lede": {
+    "message": "Lahat ay nananatili sa device na ito. I-click ang tile para sa buong resolution at pinagmulan."
+  },
+  "filter_model": {
+    "message": "Model"
+  },
+  "all_models": {
+    "message": "Lahat ng modelo"
+  },
+  "filter_engine": {
+    "message": "Engine"
+  },
+  "any_engine": {
+    "message": "Anumang engine"
+  },
+  "engine_browser": {
+    "message": "Browser · WebGPU"
+  },
+  "filter_window": {
+    "message": "Panahon"
+  },
+  "time_all": {
+    "message": "Lahat ng oras"
+  },
+  "time_24h": {
+    "message": "Nakalipas na 24 oras"
+  },
+  "time_7d": {
+    "message": "Nakalipas na 7 araw"
+  },
+  "time_30d": {
+    "message": "Nakalipas na 30 araw"
+  },
+  "btn_select": {
+    "message": "Pumili"
+  },
+  "no_images_title": {
+    "message": "Wala pang imahe"
+  },
+  "no_images_lede": {
+    "message": "Buksan ang popup gamit ang Alt+Shift+D, isulat ang prompt, pindutin ang Gumawa. Lalabas ang mga resulta dito."
+  },
+  "no_matches_title": {
+    "message": "Walang katugma"
+  },
+  "no_matches_lede": {
+    "message": "Walang nasa panahong ito. Subukang palawakin ang filter."
+  },
+  "compare_kicker": {
+    "message": "Ikumpara · i-drag ang handle"
+  },
+  "compare_vs": {
+    "message": "A kumpara sa B"
+  },
+  "close_aria": {
+    "message": "isara"
+  },
+  "loading_fullres": {
+    "message": "nilo-load ang buong resolution…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Iwasan"
+  },
+  "label_seed": {
+    "message": "Seed"
+  },
+  "label_steps": {
+    "message": "Mga Hakbang"
+  },
+  "label_guidance": {
+    "message": "Gabay"
+  },
+  "label_engine": {
+    "message": "Engine"
+  },
+  "label_duration": {
+    "message": "Tagal"
+  },
+  "label_generated": {
+    "message": "Ginawa"
+  },
+  "label_path": {
+    "message": "Path"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Gamitin ulit ang seed"
+  },
+  "btn_copy_prompt": {
+    "message": "Kopyahin ang prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Kopyahin ang seed"
+  },
+  "btn_download_png": {
+    "message": "↓ I-download ang PNG"
+  },
+  "btn_delete": {
+    "message": "Burahin"
+  },
+  "danger_zone": {
+    "message": "Delikadong zona"
+  },
+  "clear_data_title": {
+    "message": "I-clear ang lahat ng data ng extension"
+  },
+  "clear_data_hint": {
+    "message": "Inaalis ang lahat ng naka-cache na modelo at ginawang imahe. Hindi maaaring bawiin."
+  },
+  "btn_clear_data": {
+    "message": "I-clear ang data"
+  },
+  "diag_title": {
+    "message": "Diagnostics"
+  },
+  "diag_lede": {
+    "message": "Ang nakikita ng extension tungkol sa iyong browser at machine. Kopyahin ang block na ito sa issue kung may hindi gumagana."
+  },
+  "diag_engine": {
+    "message": "Aktibong engine"
+  },
+  "diag_preferred": {
+    "message": "Pinipili"
+  },
+  "diag_device": {
+    "message": "Device"
+  },
+  "diag_adapter": {
+    "message": "Adapter"
+  },
+  "diag_vendor": {
+    "message": "Vendor"
+  },
+  "diag_vram": {
+    "message": "Tinatayang VRAM"
+  },
+  "diag_browser": {
+    "message": "Path ng browser"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS quota"
+  },
+  "diag_storage": {
+    "message": "Storage"
+  },
+  "diag_installed": {
+    "message": "Mga naka-install na modelo"
+  },
+  "diag_recent": {
+    "message": "Mga kamakailang imahe"
+  },
+  "diag_active": {
+    "message": "Aktibong modelo"
+  },
+  "btn_copy_json": {
+    "message": "Kopyahin bilang JSON"
+  },
+  "btn_reprobe": {
+    "message": "Patakbuhin muli ang mga pagsusuri"
+  },
+  "btn_compare": {
+    "message": "Ikumpara"
+  },
+  "btn_export_zip": {
+    "message": "↓ I-export ang ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Burahin"
+  },
+  "btn_cancel_select": {
+    "message": "Kanselahin"
+  },
+  "confirm_clear_data": {
+    "message": "Burahin ang lahat ng naka-cache na modelo at ginawang imahe?\n\nHindi ito maaaring bawiin."
+  },
+  "clearing": {
+    "message": "Nili-clear…"
+  },
+  "status_done": {
+    "message": "✓ Tapos na"
+  },
+  "status_saved": {
+    "message": "✓ Na-save"
+  },
+  "status_copied": {
+    "message": "✓ Nakopya"
+  },
+  "confirm_delete_image": {
+    "message": "Burahin ang imaheng ito?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Burahin ang $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "mga imahe"
+  },
+  "image_noun": {
+    "message": "imahe"
+  },
+  "no_prompt": {
+    "message": "(walang prompt)"
+  },
+  "none_selected": {
+    "message": "(walang pinili)"
+  },
+  "in_memory_only": {
+    "message": "(sa memory lamang)"
+  },
+  "btn_exit_select": {
+    "message": "Lumabas sa pagpili"
+  },
+  "n_selected": {
+    "message": "$COUNT$ napili",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Nipa-pack ang $COUNT$ mga imahe…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Na-export ang $COUNT$ mga imahe",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Pinapatakbo ulit gamit ang parehong seed…"
+  },
+  "err_no_engine": {
+    "message": "Walang available na engine ng pagbuo"
+  },
+  "err_engine_start": {
+    "message": "Hindi masimulan ang browser engine"
+  },
+  "err_inference_failed": {
+    "message": "Nabigo ang pagbuo sa browser"
+  },
+  "err_generation_failed": {
+    "message": "Nabigo ang paggawa"
+  },
+  "no_model_sub": {
+    "message": "Pumili ng modelo sa tab na Mga Modelo upang magsimula"
+  },
+  "mb_pick_model": {
+    "message": "↓ Pumili ng modelo"
+  },
+  "popup_tab_generate": {
+    "message": "Bumuo"
+  },
+  "popup_tab_models": {
+    "message": "Mga Modelo"
+  },
+  "models_intro": {
+    "message": "Pumili ng modelo na ida-download. Pagkatapos ma-install, maaari kang lumipat anumang oras."
+  },
+  "sec_downloading": {
+    "message": "Nagda-download"
+  },
+  "sec_installed": {
+    "message": "Naka-install"
+  },
+  "sec_available": {
+    "message": "Available"
+  },
+  "available_popular": {
+    "message": "sikat"
+  },
+  "empty_models_title": {
+    "message": "Wala pang naka-install na modelo"
+  },
+  "empty_models_sub_html": {
+    "message": "Pumili ng isa sa ibaba at i-tap ang <b>↓ Kunin</b>."
+  },
+  "storage_label": {
+    "message": "Imbakan"
+  },
+  "dl_tag_fetching": {
+    "message": "kinukuha"
+  },
+  "dl_paused_sub": {
+    "message": "naka-pause — ipagpatuloy para magpatuloy"
+  },
+  "dl_meta_got": {
+    "message": "Nakuha"
+  },
+  "dl_meta_speed": {
+    "message": "Bilis"
+  },
+  "dl_meta_left": {
+    "message": "Natitira"
+  },
+  "dl_btn_pause": {
+    "message": "‖ I-pause"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Ipagpatuloy"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Itago"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Kanselahin"
+  },
+  "mdl_btn_use": {
+    "message": "Gamitin"
+  },
+  "mdl_btn_in_use": {
+    "message": "Ginagamit"
+  },
+  "mdl_btn_get": {
+    "message": "I-download"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "wala"
+  },
+  "mdl_loading_sub": {
+    "message": "Dina-download sa device…"
+  }
+}

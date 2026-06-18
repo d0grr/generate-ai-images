@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI Image Generator - مولد تصویر هوش"
+  },
+  "shortName": {
+    "message": "AI تصاویر"
+  },
+  "shortDesc": {
+    "message": "با مولد تصویر هوش مصنوعی، از متن تصویر بسازید، عکس‌های واقع‌گرایانه هوش مصنوعی تولید کنید، بلافاصله."
+  },
+  "action_title": {
+    "message": "تولید تصویر هوش مصنوعی"
+  },
+  "open_workspace": {
+    "message": "باز کردن فضای کاری"
+  },
+  "settings": {
+    "message": "تنظیمات"
+  },
+  "error_title": {
+    "message": "مشکلی پیش آمد"
+  },
+  "btn_diagnostics": {
+    "message": "تشخیص ↗"
+  },
+  "btn_dismiss": {
+    "message": "بستن"
+  },
+  "no_model_selected": {
+    "message": "مدلی انتخاب نشده"
+  },
+  "mb_get": {
+    "message": "↓ دریافت"
+  },
+  "mb_downloading": {
+    "message": "در حال دانلود…"
+  },
+  "mb_of": {
+    "message": "از"
+  },
+  "cancel_download": {
+    "message": "لغو دانلود"
+  },
+  "mb_installing": {
+    "message": "در حال نصب…"
+  },
+  "mb_verifying": {
+    "message": "تأیید وزن‌ها · تقریباً تمام"
+  },
+  "ready": {
+    "message": "آماده"
+  },
+  "prompt_placeholder": {
+    "message": "توضیح دهید چه می‌خواهید ایجاد کنید…"
+  },
+  "btn_clear_title": {
+    "message": "پاک کردن"
+  },
+  "btn_clear_aria": {
+    "message": "پاک کردن دستور"
+  },
+  "surprise_me": {
+    "message": "شگفت‌زده‌ام کن"
+  },
+  "param_steps": {
+    "message": "مراحل"
+  },
+  "param_guidance": {
+    "message": "راهنما"
+  },
+  "param_seed": {
+    "message": "دانه"
+  },
+  "seed_random": {
+    "message": "تصادفی"
+  },
+  "neg_prompt_label": {
+    "message": "دستور منفی"
+  },
+  "neg_prompt_placeholder": {
+    "message": "مواردی که باید اجتناب شود…"
+  },
+  "btn_parameters": {
+    "message": "پارامترها ▾"
+  },
+  "btn_generate": {
+    "message": "تولید"
+  },
+  "install_model_hint": {
+    "message": "یک مدل نصب کنید تا تولید فعال شود."
+  },
+  "img_placeholder": {
+    "message": "تصویر شما اینجا نمایش داده می‌شود"
+  },
+  "generating_eyebrow": {
+    "message": "در حال تولید"
+  },
+  "phase_encoding": {
+    "message": "کدگذاری دستور"
+  },
+  "btn_cancel_gen": {
+    "message": "× لغو"
+  },
+  "btn_save": {
+    "message": "↓ ذخیره"
+  },
+  "btn_copy": {
+    "message": "⎘ کپی"
+  },
+  "btn_retry": {
+    "message": "↺ تلاش مجدد"
+  },
+  "img_generated_alt": {
+    "message": "تصویر تولید شده"
+  },
+  "recent_eyebrow": {
+    "message": "اخیر"
+  },
+  "view_all": {
+    "message": "مشاهده همه ↗"
+  },
+  "clear_history": {
+    "message": "پاک کردن تاریخچه"
+  },
+  "loading_model": {
+    "message": "در حال بارگذاری مدل…"
+  },
+  "compiling": {
+    "message": "در حال کامپایل…"
+  },
+  "generating_pct": {
+    "message": "در حال تولید · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "در حال آماده‌سازی…"
+  },
+  "phase_compiling_first": {
+    "message": "کامپایل شیدرها · اجرای اول"
+  },
+  "phase_loading": {
+    "message": "در حال بارگذاری…"
+  },
+  "phase_fetching": {
+    "message": "دریافت وزن‌های مدل"
+  },
+  "phase_decoding": {
+    "message": "رمزگشایی تصویر…"
+  },
+  "phase_loading_model": {
+    "message": "در حال بارگذاری مدل…"
+  },
+  "phase_compiling_shaders": {
+    "message": "در حال کامپایل شیدرها…"
+  },
+  "workspace_page_title": {
+    "message": "فضای کاری تولیدکننده تصویر هوش مصنوعی آفلاین"
+  },
+  "workspace_brand": {
+    "message": "تولیدکننده تصویر هوش مصنوعی آفلاین"
+  },
+  "workspace_label": {
+    "message": "فضای کاری"
+  },
+  "tab_gallery": {
+    "message": "گالری"
+  },
+  "tab_diagnostics": {
+    "message": "تشخیص"
+  },
+  "tab_settings": {
+    "message": "تنظیمات"
+  },
+  "your_generations": {
+    "message": "تولیدات شما"
+  },
+  "gallery_lede": {
+    "message": "همه چیز در این دستگاه باقی می‌ماند. برای مشاهده وضوح کامل و منشأ روی یک کاشی کلیک کنید."
+  },
+  "filter_model": {
+    "message": "مدل"
+  },
+  "all_models": {
+    "message": "همه مدل‌ها"
+  },
+  "filter_engine": {
+    "message": "موتور"
+  },
+  "any_engine": {
+    "message": "هر موتوری"
+  },
+  "engine_browser": {
+    "message": "مرورگر · WebGPU"
+  },
+  "filter_window": {
+    "message": "دوره"
+  },
+  "time_all": {
+    "message": "همه زمان‌ها"
+  },
+  "time_24h": {
+    "message": "۲۴ ساعت گذشته"
+  },
+  "time_7d": {
+    "message": "۷ روز گذشته"
+  },
+  "time_30d": {
+    "message": "۳۰ روز گذشته"
+  },
+  "btn_select": {
+    "message": "انتخاب"
+  },
+  "no_images_title": {
+    "message": "هنوز تصویری وجود ندارد"
+  },
+  "no_images_lede": {
+    "message": "با Alt+Shift+D پنجره پاپ‌آپ را باز کنید، دستوری بنویسید و تولید را کلیک کنید. نتایج اینجا نمایش داده می‌شوند."
+  },
+  "no_matches_title": {
+    "message": "موردی پیدا نشد"
+  },
+  "no_matches_lede": {
+    "message": "در این دوره چیزی نیست. سعی کنید فیلتر را گسترش دهید."
+  },
+  "compare_kicker": {
+    "message": "مقایسه · دستگیره را بکشید"
+  },
+  "compare_vs": {
+    "message": "A در مقابل B"
+  },
+  "close_aria": {
+    "message": "بستن"
+  },
+  "loading_fullres": {
+    "message": "بارگذاری وضوح کامل…"
+  },
+  "label_prompt": {
+    "message": "دستور"
+  },
+  "label_avoid": {
+    "message": "اجتناب"
+  },
+  "label_seed": {
+    "message": "دانه"
+  },
+  "label_steps": {
+    "message": "مراحل"
+  },
+  "label_guidance": {
+    "message": "راهنما"
+  },
+  "label_engine": {
+    "message": "موتور"
+  },
+  "label_duration": {
+    "message": "مدت"
+  },
+  "label_generated": {
+    "message": "تاریخ تولید"
+  },
+  "label_path": {
+    "message": "مسیر"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ استفاده مجدد از دانه"
+  },
+  "btn_copy_prompt": {
+    "message": "کپی دستور"
+  },
+  "btn_copy_seed": {
+    "message": "کپی دانه"
+  },
+  "btn_download_png": {
+    "message": "↓ دانلود PNG"
+  },
+  "btn_delete": {
+    "message": "حذف"
+  },
+  "danger_zone": {
+    "message": "منطقه خطر"
+  },
+  "clear_data_title": {
+    "message": "پاک کردن همه داده‌های افزونه"
+  },
+  "clear_data_hint": {
+    "message": "همه مدل‌های کش شده و تصاویر تولید شده را حذف می‌کند. قابل برگشت نیست."
+  },
+  "btn_clear_data": {
+    "message": "پاک کردن داده‌ها"
+  },
+  "diag_title": {
+    "message": "تشخیص"
+  },
+  "diag_lede": {
+    "message": "آنچه افزونه درباره مرورگر و دستگاه شما می‌بیند. اگر مشکلی وجود دارد این بلوک را در یک issue کپی کنید."
+  },
+  "diag_engine": {
+    "message": "موتور فعال"
+  },
+  "diag_preferred": {
+    "message": "ترجیحی"
+  },
+  "diag_device": {
+    "message": "دستگاه"
+  },
+  "diag_adapter": {
+    "message": "آداپتور"
+  },
+  "diag_vendor": {
+    "message": "سازنده"
+  },
+  "diag_vram": {
+    "message": "تخمین VRAM"
+  },
+  "diag_browser": {
+    "message": "مسیر مرورگر"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "سهمیه OPFS"
+  },
+  "diag_storage": {
+    "message": "ذخیره‌سازی"
+  },
+  "diag_installed": {
+    "message": "مدل‌های نصب شده"
+  },
+  "diag_recent": {
+    "message": "تصاویر اخیر"
+  },
+  "diag_active": {
+    "message": "مدل فعال"
+  },
+  "btn_copy_json": {
+    "message": "کپی به عنوان JSON"
+  },
+  "btn_reprobe": {
+    "message": "اجرای مجدد آزمون‌ها"
+  },
+  "btn_compare": {
+    "message": "مقایسه"
+  },
+  "btn_export_zip": {
+    "message": "↓ صدور ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "حذف"
+  },
+  "btn_cancel_select": {
+    "message": "لغو"
+  },
+  "confirm_clear_data": {
+    "message": "همه مدل‌های کش شده و تصاویر تولید شده حذف شود؟\n\nاین عمل قابل برگشت نیست."
+  },
+  "clearing": {
+    "message": "در حال پاک کردن…"
+  },
+  "status_done": {
+    "message": "✓ انجام شد"
+  },
+  "status_saved": {
+    "message": "✓ ذخیره شد"
+  },
+  "status_copied": {
+    "message": "✓ کپی شد"
+  },
+  "confirm_delete_image": {
+    "message": "این تصویر حذف شود؟"
+  },
+  "confirm_bulk_delete": {
+    "message": "آیا $COUNT$ $NOUN$ حذف شود؟",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "تصویر"
+  },
+  "image_noun": {
+    "message": "تصویر"
+  },
+  "no_prompt": {
+    "message": "(بدون دستور)"
+  },
+  "none_selected": {
+    "message": "(چیزی انتخاب نشده)"
+  },
+  "in_memory_only": {
+    "message": "(فقط در حافظه)"
+  },
+  "btn_exit_select": {
+    "message": "خروج از انتخاب"
+  },
+  "n_selected": {
+    "message": "$COUNT$ انتخاب شده",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "بسته‌بندی $COUNT$ تصویر…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ تصویر صادر شد",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "اجرای مجدد با همان دانه…"
+  },
+  "err_no_engine": {
+    "message": "هیچ موتور ایجادی در دسترس نیست"
+  },
+  "err_engine_start": {
+    "message": "موتور مرورگر راه‌اندازی نشد"
+  },
+  "err_inference_failed": {
+    "message": "ایجاد در مرورگر شکست خورد"
+  },
+  "err_generation_failed": {
+    "message": "تولید ناموفق بود"
+  },
+  "no_model_sub": {
+    "message": "برای شروع، یک مدل از زبانهٔ مدل‌ها انتخاب کنید"
+  },
+  "mb_pick_model": {
+    "message": "↓ انتخاب مدل"
+  },
+  "popup_tab_generate": {
+    "message": "ایجاد"
+  },
+  "popup_tab_models": {
+    "message": "مدل‌ها"
+  },
+  "models_intro": {
+    "message": "یک مدل برای دانلود انتخاب کنید. پس از نصب می‌توانید هر زمان بین آن‌ها جابه‌جا شوید."
+  },
+  "sec_downloading": {
+    "message": "در حال دانلود"
+  },
+  "sec_installed": {
+    "message": "نصب‌شده"
+  },
+  "sec_available": {
+    "message": "موجود"
+  },
+  "available_popular": {
+    "message": "محبوب"
+  },
+  "empty_models_title": {
+    "message": "هنوز هیچ مدلی نصب نشده"
+  },
+  "empty_models_sub_html": {
+    "message": "یکی را از پایین انتخاب کرده و روی <b>↓ دریافت</b> بزنید."
+  },
+  "storage_label": {
+    "message": "ذخیره‌سازی"
+  },
+  "dl_tag_fetching": {
+    "message": "در حال دریافت"
+  },
+  "dl_paused_sub": {
+    "message": "متوقف — برای ادامه از سر بگیرید"
+  },
+  "dl_meta_got": {
+    "message": "دریافت"
+  },
+  "dl_meta_speed": {
+    "message": "سرعت"
+  },
+  "dl_meta_left": {
+    "message": "باقی‌مانده"
+  },
+  "dl_btn_pause": {
+    "message": "‖ مکث"
+  },
+  "dl_btn_resume": {
+    "message": "▶ ادامه"
+  },
+  "dl_btn_hide": {
+    "message": "↓ پنهان"
+  },
+  "dl_btn_cancel_title": {
+    "message": "لغو"
+  },
+  "mdl_btn_use": {
+    "message": "استفاده"
+  },
+  "mdl_btn_in_use": {
+    "message": "در حال استفاده"
+  },
+  "mdl_btn_get": {
+    "message": "دریافت"
+  },
+  "mdl_btn_token": {
+    "message": "توکن"
+  },
+  "mdl_btn_na": {
+    "message": "ن/د"
+  },
+  "mdl_loading_sub": {
+    "message": "دانلود به دستگاه…"
+  }
+}

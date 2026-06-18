@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "Générateur d'image IA - Créer images IA"
+  },
+  "shortName": {
+    "message": "IA Images"
+  },
+  "shortDesc": {
+    "message": "Générateur d'image IA : créez des images IA à partir de texte, générez des photos IA réalistes instantanément."
+  },
+  "action_title": {
+    "message": "Générer des images IA"
+  },
+  "open_workspace": {
+    "message": "Ouvrir l'espace de travail"
+  },
+  "settings": {
+    "message": "Paramètres"
+  },
+  "error_title": {
+    "message": "Une erreur s'est produite"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostics ↗"
+  },
+  "btn_dismiss": {
+    "message": "Fermer"
+  },
+  "no_model_selected": {
+    "message": "Aucun modèle sélectionné"
+  },
+  "mb_get": {
+    "message": "↓ Télécharger"
+  },
+  "mb_downloading": {
+    "message": "Téléchargement…"
+  },
+  "mb_of": {
+    "message": "sur"
+  },
+  "cancel_download": {
+    "message": "Annuler le téléchargement"
+  },
+  "mb_installing": {
+    "message": "Installation…"
+  },
+  "mb_verifying": {
+    "message": "Vérification des poids · presque terminé"
+  },
+  "ready": {
+    "message": "Prêt"
+  },
+  "prompt_placeholder": {
+    "message": "Décrivez ce que vous voulez créer…"
+  },
+  "btn_clear_title": {
+    "message": "Effacer"
+  },
+  "btn_clear_aria": {
+    "message": "Effacer le prompt"
+  },
+  "surprise_me": {
+    "message": "Surprenez-moi"
+  },
+  "param_steps": {
+    "message": "Étapes"
+  },
+  "param_guidance": {
+    "message": "Guidage"
+  },
+  "param_seed": {
+    "message": "Graine"
+  },
+  "seed_random": {
+    "message": "aléatoire"
+  },
+  "neg_prompt_label": {
+    "message": "Prompt négatif"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Éléments à éviter…"
+  },
+  "btn_parameters": {
+    "message": "Paramètres ▾"
+  },
+  "btn_generate": {
+    "message": "Générer"
+  },
+  "install_model_hint": {
+    "message": "Installez un modèle pour activer Générer."
+  },
+  "img_placeholder": {
+    "message": "Votre image apparaîtra ici"
+  },
+  "generating_eyebrow": {
+    "message": "GÉNÉRATION"
+  },
+  "phase_encoding": {
+    "message": "Encodage du prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× annuler"
+  },
+  "btn_save": {
+    "message": "↓ Enregistrer"
+  },
+  "btn_copy": {
+    "message": "⎘ Copier"
+  },
+  "btn_retry": {
+    "message": "↺ Réessayer"
+  },
+  "img_generated_alt": {
+    "message": "Image générée"
+  },
+  "recent_eyebrow": {
+    "message": "RÉCENT"
+  },
+  "view_all": {
+    "message": "Tout voir ↗"
+  },
+  "clear_history": {
+    "message": "Effacer l'historique"
+  },
+  "loading_model": {
+    "message": "Chargement du modèle…"
+  },
+  "compiling": {
+    "message": "Compilation…"
+  },
+  "generating_pct": {
+    "message": "Génération · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Préparation…"
+  },
+  "phase_compiling_first": {
+    "message": "Compilation des shaders · premier démarrage"
+  },
+  "phase_loading": {
+    "message": "Chargement…"
+  },
+  "phase_fetching": {
+    "message": "Récupération des poids du modèle"
+  },
+  "phase_decoding": {
+    "message": "Décodage de l'image…"
+  },
+  "phase_loading_model": {
+    "message": "Chargement du modèle…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Compilation des shaders…"
+  },
+  "workspace_page_title": {
+    "message": "Espace de travail du générateur d'images IA hors ligne"
+  },
+  "workspace_brand": {
+    "message": "Générateur d'images IA hors ligne"
+  },
+  "workspace_label": {
+    "message": "espace de travail"
+  },
+  "tab_gallery": {
+    "message": "Galerie"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostics"
+  },
+  "tab_settings": {
+    "message": "Paramètres"
+  },
+  "your_generations": {
+    "message": "Vos générations"
+  },
+  "gallery_lede": {
+    "message": "Tout reste sur cet appareil. Cliquez sur une vignette pour la pleine résolution et la provenance."
+  },
+  "filter_model": {
+    "message": "Modèle"
+  },
+  "all_models": {
+    "message": "Tous les modèles"
+  },
+  "filter_engine": {
+    "message": "Moteur"
+  },
+  "any_engine": {
+    "message": "Tout moteur"
+  },
+  "engine_browser": {
+    "message": "Navigateur · WebGPU"
+  },
+  "filter_window": {
+    "message": "Période"
+  },
+  "time_all": {
+    "message": "Tout le temps"
+  },
+  "time_24h": {
+    "message": "24 dernières heures"
+  },
+  "time_7d": {
+    "message": "7 derniers jours"
+  },
+  "time_30d": {
+    "message": "30 derniers jours"
+  },
+  "btn_select": {
+    "message": "Sélectionner"
+  },
+  "no_images_title": {
+    "message": "Pas encore d'images"
+  },
+  "no_images_lede": {
+    "message": "Ouvrez le popup avec Alt+Maj+D, écrivez un prompt, cliquez sur Générer. Les résultats apparaissent ici."
+  },
+  "no_matches_title": {
+    "message": "Aucun résultat"
+  },
+  "no_matches_lede": {
+    "message": "Rien dans cette période. Essayez d'élargir le filtre."
+  },
+  "compare_kicker": {
+    "message": "Comparer · faire glisser la poignée"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "fermer"
+  },
+  "loading_fullres": {
+    "message": "chargement pleine résolution…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Éviter"
+  },
+  "label_seed": {
+    "message": "Graine"
+  },
+  "label_steps": {
+    "message": "Étapes"
+  },
+  "label_guidance": {
+    "message": "Guidage"
+  },
+  "label_engine": {
+    "message": "Moteur"
+  },
+  "label_duration": {
+    "message": "Durée"
+  },
+  "label_generated": {
+    "message": "Généré"
+  },
+  "label_path": {
+    "message": "Chemin"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Réutiliser la graine"
+  },
+  "btn_copy_prompt": {
+    "message": "Copier le prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Copier la graine"
+  },
+  "btn_download_png": {
+    "message": "↓ Télécharger PNG"
+  },
+  "btn_delete": {
+    "message": "Supprimer"
+  },
+  "danger_zone": {
+    "message": "Zone dangereuse"
+  },
+  "clear_data_title": {
+    "message": "Effacer toutes les données de l'extension"
+  },
+  "clear_data_hint": {
+    "message": "Supprime tous les modèles en cache et les images générées. Irréversible."
+  },
+  "btn_clear_data": {
+    "message": "Effacer les données"
+  },
+  "diag_title": {
+    "message": "Diagnostics"
+  },
+  "diag_lede": {
+    "message": "Ce que l'extension voit de votre navigateur et de votre machine. Copiez ce bloc dans un problème si quelque chose ne fonctionne pas."
+  },
+  "diag_engine": {
+    "message": "Moteur actif"
+  },
+  "diag_preferred": {
+    "message": "Préféré"
+  },
+  "diag_device": {
+    "message": "Appareil"
+  },
+  "diag_adapter": {
+    "message": "Adaptateur"
+  },
+  "diag_vendor": {
+    "message": "Fabricant"
+  },
+  "diag_vram": {
+    "message": "VRAM est."
+  },
+  "diag_browser": {
+    "message": "Chemin du navigateur"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "Quota OPFS"
+  },
+  "diag_storage": {
+    "message": "Stockage"
+  },
+  "diag_installed": {
+    "message": "Modèles installés"
+  },
+  "diag_recent": {
+    "message": "Images récentes"
+  },
+  "diag_active": {
+    "message": "Modèle actif"
+  },
+  "btn_copy_json": {
+    "message": "Copier en JSON"
+  },
+  "btn_reprobe": {
+    "message": "Relancer les vérifications"
+  },
+  "btn_compare": {
+    "message": "Comparer"
+  },
+  "btn_export_zip": {
+    "message": "↓ Exporter ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Supprimer"
+  },
+  "btn_cancel_select": {
+    "message": "Annuler"
+  },
+  "confirm_clear_data": {
+    "message": "Supprimer tous les modèles en cache et les images générées ?\n\nCette action est irréversible."
+  },
+  "clearing": {
+    "message": "Suppression…"
+  },
+  "status_done": {
+    "message": "✓ Terminé"
+  },
+  "status_saved": {
+    "message": "✓ Enregistré"
+  },
+  "status_copied": {
+    "message": "✓ Copié"
+  },
+  "confirm_delete_image": {
+    "message": "Supprimer cette image ?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Supprimer $COUNT$ $NOUN$ ?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "images"
+  },
+  "image_noun": {
+    "message": "image"
+  },
+  "no_prompt": {
+    "message": "(aucun prompt)"
+  },
+  "none_selected": {
+    "message": "(aucune sélection)"
+  },
+  "in_memory_only": {
+    "message": "(en mémoire seulement)"
+  },
+  "btn_exit_select": {
+    "message": "Quitter la sélection"
+  },
+  "n_selected": {
+    "message": "$COUNT$ sélectionné(s)",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Empaquetage de $COUNT$ images…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ images exportées",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Relance avec la même graine…"
+  },
+  "err_no_engine": {
+    "message": "Aucun moteur de génération disponible"
+  },
+  "err_engine_start": {
+    "message": "Impossible de démarrer le moteur du navigateur"
+  },
+  "err_inference_failed": {
+    "message": "La génération dans le navigateur a échoué"
+  },
+  "err_generation_failed": {
+    "message": "La génération a échoué"
+  },
+  "no_model_sub": {
+    "message": "Choisissez un modèle dans l'onglet Modèles pour commencer"
+  },
+  "mb_pick_model": {
+    "message": "↓ Choisir un modèle"
+  },
+  "popup_tab_generate": {
+    "message": "Générer"
+  },
+  "popup_tab_models": {
+    "message": "Modèles"
+  },
+  "models_intro": {
+    "message": "Choisissez un modèle à télécharger. Une fois installé, vous pouvez basculer à tout moment."
+  },
+  "sec_downloading": {
+    "message": "Téléchargement"
+  },
+  "sec_installed": {
+    "message": "Installés"
+  },
+  "sec_available": {
+    "message": "Disponibles"
+  },
+  "available_popular": {
+    "message": "populaires"
+  },
+  "empty_models_title": {
+    "message": "Aucun modèle installé"
+  },
+  "empty_models_sub_html": {
+    "message": "Choisissez ci-dessous et appuyez sur <b>↓ Obtenir</b>."
+  },
+  "storage_label": {
+    "message": "Stockage"
+  },
+  "dl_tag_fetching": {
+    "message": "récupération"
+  },
+  "dl_paused_sub": {
+    "message": "en pause — reprenez pour continuer"
+  },
+  "dl_meta_got": {
+    "message": "Reçu"
+  },
+  "dl_meta_speed": {
+    "message": "Vitesse"
+  },
+  "dl_meta_left": {
+    "message": "Restant"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Pause"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Reprendre"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Masquer"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Annuler"
+  },
+  "mdl_btn_use": {
+    "message": "Utiliser"
+  },
+  "mdl_btn_in_use": {
+    "message": "En cours"
+  },
+  "mdl_btn_get": {
+    "message": "Télécharger"
+  },
+  "mdl_btn_token": {
+    "message": "Jeton"
+  },
+  "mdl_btn_na": {
+    "message": "n/d"
+  },
+  "mdl_loading_sub": {
+    "message": "Téléchargement sur l'appareil…"
+  }
+}

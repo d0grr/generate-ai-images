@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI 이미지 생성 - 무료 AI 그림 만들기"
+  },
+  "shortName": {
+    "message": "AI 이미지"
+  },
+  "shortDesc": {
+    "message": "AI 이미지 생성 무료 도구: 텍스트로 AI 이미지를 생성하고, 사실적인 AI 사진과 그림을 즉시 만들어 보세요."
+  },
+  "action_title": {
+    "message": "AI 이미지 생성"
+  },
+  "open_workspace": {
+    "message": "작업 공간 열기"
+  },
+  "settings": {
+    "message": "설정"
+  },
+  "error_title": {
+    "message": "오류가 발생했습니다"
+  },
+  "btn_diagnostics": {
+    "message": "진단 ↗"
+  },
+  "btn_dismiss": {
+    "message": "닫기"
+  },
+  "no_model_selected": {
+    "message": "선택된 모델 없음"
+  },
+  "mb_get": {
+    "message": "↓ 다운로드"
+  },
+  "mb_downloading": {
+    "message": "다운로드 중…"
+  },
+  "mb_of": {
+    "message": "/"
+  },
+  "cancel_download": {
+    "message": "다운로드 취소"
+  },
+  "mb_installing": {
+    "message": "설치 중…"
+  },
+  "mb_verifying": {
+    "message": "가중치 확인 중 · 거의 완료"
+  },
+  "ready": {
+    "message": "준비 완료"
+  },
+  "prompt_placeholder": {
+    "message": "만들고 싶은 것을 설명하세요…"
+  },
+  "btn_clear_title": {
+    "message": "지우기"
+  },
+  "btn_clear_aria": {
+    "message": "프롬프트 지우기"
+  },
+  "surprise_me": {
+    "message": "깜짝 놀라게 해줘"
+  },
+  "param_steps": {
+    "message": "스텝"
+  },
+  "param_guidance": {
+    "message": "가이던스"
+  },
+  "param_seed": {
+    "message": "시드"
+  },
+  "seed_random": {
+    "message": "무작위"
+  },
+  "neg_prompt_label": {
+    "message": "네거티브 프롬프트"
+  },
+  "neg_prompt_placeholder": {
+    "message": "제외할 요소…"
+  },
+  "btn_parameters": {
+    "message": "매개변수 ▾"
+  },
+  "btn_generate": {
+    "message": "생성"
+  },
+  "install_model_hint": {
+    "message": "생성을 활성화하려면 모델을 설치하세요."
+  },
+  "img_placeholder": {
+    "message": "이미지가 여기에 표시됩니다"
+  },
+  "generating_eyebrow": {
+    "message": "생성 중"
+  },
+  "phase_encoding": {
+    "message": "프롬프트 인코딩 중"
+  },
+  "btn_cancel_gen": {
+    "message": "× 취소"
+  },
+  "btn_save": {
+    "message": "↓ 저장"
+  },
+  "btn_copy": {
+    "message": "⎘ 복사"
+  },
+  "btn_retry": {
+    "message": "↺ 다시 시도"
+  },
+  "img_generated_alt": {
+    "message": "생성된 이미지"
+  },
+  "recent_eyebrow": {
+    "message": "최근"
+  },
+  "view_all": {
+    "message": "전체 보기 ↗"
+  },
+  "clear_history": {
+    "message": "기록 지우기"
+  },
+  "loading_model": {
+    "message": "모델 로딩 중…"
+  },
+  "compiling": {
+    "message": "컴파일 중…"
+  },
+  "generating_pct": {
+    "message": "생성 중 · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "준비 중…"
+  },
+  "phase_compiling_first": {
+    "message": "셰이더 컴파일 중 · 첫 실행"
+  },
+  "phase_loading": {
+    "message": "로딩 중…"
+  },
+  "phase_fetching": {
+    "message": "모델 가중치 가져오는 중"
+  },
+  "phase_decoding": {
+    "message": "이미지 디코딩 중…"
+  },
+  "phase_loading_model": {
+    "message": "모델 로딩 중…"
+  },
+  "phase_compiling_shaders": {
+    "message": "셰이더 컴파일 중…"
+  },
+  "workspace_page_title": {
+    "message": "AI 오프라인 이미지 생성기 작업 공간"
+  },
+  "workspace_brand": {
+    "message": "AI 오프라인 이미지 생성기"
+  },
+  "workspace_label": {
+    "message": "작업 공간"
+  },
+  "tab_gallery": {
+    "message": "갤러리"
+  },
+  "tab_diagnostics": {
+    "message": "진단"
+  },
+  "tab_settings": {
+    "message": "설정"
+  },
+  "your_generations": {
+    "message": "내 생성 이미지"
+  },
+  "gallery_lede": {
+    "message": "모든 것이 이 기기에 저장됩니다. 타일을 클릭하면 전체 해상도와 출처를 볼 수 있습니다."
+  },
+  "filter_model": {
+    "message": "모델"
+  },
+  "all_models": {
+    "message": "모든 모델"
+  },
+  "filter_engine": {
+    "message": "엔진"
+  },
+  "any_engine": {
+    "message": "모든 엔진"
+  },
+  "engine_browser": {
+    "message": "브라우저 · WebGPU"
+  },
+  "filter_window": {
+    "message": "기간"
+  },
+  "time_all": {
+    "message": "전체 기간"
+  },
+  "time_24h": {
+    "message": "최근 24시간"
+  },
+  "time_7d": {
+    "message": "최근 7일"
+  },
+  "time_30d": {
+    "message": "최근 30일"
+  },
+  "btn_select": {
+    "message": "선택"
+  },
+  "no_images_title": {
+    "message": "아직 이미지 없음"
+  },
+  "no_images_lede": {
+    "message": "Alt+Shift+D로 팝업을 열고 프롬프트를 입력한 후 생성을 클릭하세요. 결과가 여기에 표시됩니다."
+  },
+  "no_matches_title": {
+    "message": "일치 없음"
+  },
+  "no_matches_lede": {
+    "message": "이 기간에 아무것도 없습니다. 필터를 넓혀보세요."
+  },
+  "compare_kicker": {
+    "message": "비교 · 핸들을 드래그"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "닫기"
+  },
+  "loading_fullres": {
+    "message": "전체 해상도 로딩 중…"
+  },
+  "label_prompt": {
+    "message": "프롬프트"
+  },
+  "label_avoid": {
+    "message": "제외"
+  },
+  "label_seed": {
+    "message": "시드"
+  },
+  "label_steps": {
+    "message": "스텝"
+  },
+  "label_guidance": {
+    "message": "가이던스"
+  },
+  "label_engine": {
+    "message": "엔진"
+  },
+  "label_duration": {
+    "message": "소요 시간"
+  },
+  "label_generated": {
+    "message": "생성 일시"
+  },
+  "label_path": {
+    "message": "경로"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ 시드 재사용"
+  },
+  "btn_copy_prompt": {
+    "message": "프롬프트 복사"
+  },
+  "btn_copy_seed": {
+    "message": "시드 복사"
+  },
+  "btn_download_png": {
+    "message": "↓ PNG 다운로드"
+  },
+  "btn_delete": {
+    "message": "삭제"
+  },
+  "danger_zone": {
+    "message": "위험 구역"
+  },
+  "clear_data_title": {
+    "message": "모든 확장 프로그램 데이터 지우기"
+  },
+  "clear_data_hint": {
+    "message": "캐시된 모든 모델과 생성된 이미지를 제거합니다. 되돌릴 수 없습니다."
+  },
+  "btn_clear_data": {
+    "message": "데이터 지우기"
+  },
+  "diag_title": {
+    "message": "진단"
+  },
+  "diag_lede": {
+    "message": "확장 프로그램이 브라우저와 기기에 대해 확인할 수 있는 정보입니다. 문제가 있으면 이 블록을 이슈에 복사하세요."
+  },
+  "diag_engine": {
+    "message": "활성 엔진"
+  },
+  "diag_preferred": {
+    "message": "선호"
+  },
+  "diag_device": {
+    "message": "기기"
+  },
+  "diag_adapter": {
+    "message": "어댑터"
+  },
+  "diag_vendor": {
+    "message": "제조사"
+  },
+  "diag_vram": {
+    "message": "VRAM 추정"
+  },
+  "diag_browser": {
+    "message": "브라우저 경로"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS 할당량"
+  },
+  "diag_storage": {
+    "message": "저장소"
+  },
+  "diag_installed": {
+    "message": "설치된 모델"
+  },
+  "diag_recent": {
+    "message": "최근 이미지"
+  },
+  "diag_active": {
+    "message": "활성 모델"
+  },
+  "btn_copy_json": {
+    "message": "JSON으로 복사"
+  },
+  "btn_reprobe": {
+    "message": "다시 확인"
+  },
+  "btn_compare": {
+    "message": "비교"
+  },
+  "btn_export_zip": {
+    "message": "↓ ZIP 내보내기"
+  },
+  "btn_bulk_delete": {
+    "message": "삭제"
+  },
+  "btn_cancel_select": {
+    "message": "취소"
+  },
+  "confirm_clear_data": {
+    "message": "캐시된 모든 모델과 생성된 이미지를 삭제하시겠습니까?\n\n이 작업은 되돌릴 수 없습니다."
+  },
+  "clearing": {
+    "message": "삭제 중…"
+  },
+  "status_done": {
+    "message": "✓ 완료"
+  },
+  "status_saved": {
+    "message": "✓ 저장됨"
+  },
+  "status_copied": {
+    "message": "✓ 복사됨"
+  },
+  "confirm_delete_image": {
+    "message": "이 이미지를 삭제하시겠습니까?"
+  },
+  "confirm_bulk_delete": {
+    "message": "$COUNT$ 개의 $NOUN$을(를) 삭제하시겠습니까?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "이미지"
+  },
+  "image_noun": {
+    "message": "이미지"
+  },
+  "no_prompt": {
+    "message": "(프롬프트 없음)"
+  },
+  "none_selected": {
+    "message": "(선택 없음)"
+  },
+  "in_memory_only": {
+    "message": "(메모리에만 저장)"
+  },
+  "btn_exit_select": {
+    "message": "선택 종료"
+  },
+  "n_selected": {
+    "message": "$COUNT$ 개 선택됨",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "$COUNT$ 개 이미지 패킹 중…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "$COUNT$ 개 이미지 내보내기 완료",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "같은 시드로 다시 실행 중…"
+  },
+  "err_no_engine": {
+    "message": "사용 가능한 생성 엔진이 없습니다"
+  },
+  "err_engine_start": {
+    "message": "브라우저 엔진을 시작할 수 없습니다"
+  },
+  "err_inference_failed": {
+    "message": "브라우저 생성이 실패했습니다"
+  },
+  "err_generation_failed": {
+    "message": "생성에 실패했습니다"
+  },
+  "no_model_sub": {
+    "message": "시작하려면 모델 탭에서 모델을 선택하세요"
+  },
+  "mb_pick_model": {
+    "message": "↓ 모델 선택"
+  },
+  "popup_tab_generate": {
+    "message": "생성"
+  },
+  "popup_tab_models": {
+    "message": "모델"
+  },
+  "models_intro": {
+    "message": "다운로드할 모델을 선택하세요. 설치 후 언제든지 전환할 수 있습니다."
+  },
+  "sec_downloading": {
+    "message": "다운로드 중"
+  },
+  "sec_installed": {
+    "message": "설치됨"
+  },
+  "sec_available": {
+    "message": "사용 가능"
+  },
+  "available_popular": {
+    "message": "인기"
+  },
+  "empty_models_title": {
+    "message": "설치된 모델이 없습니다"
+  },
+  "empty_models_sub_html": {
+    "message": "아래에서 선택하고 <b>↓ 받기</b>를 누르세요."
+  },
+  "storage_label": {
+    "message": "저장 공간"
+  },
+  "dl_tag_fetching": {
+    "message": "가져오는 중"
+  },
+  "dl_paused_sub": {
+    "message": "일시중지 — 재개하여 계속"
+  },
+  "dl_meta_got": {
+    "message": "받음"
+  },
+  "dl_meta_speed": {
+    "message": "속도"
+  },
+  "dl_meta_left": {
+    "message": "남음"
+  },
+  "dl_btn_pause": {
+    "message": "‖ 일시중지"
+  },
+  "dl_btn_resume": {
+    "message": "▶ 재개"
+  },
+  "dl_btn_hide": {
+    "message": "↓ 숨기기"
+  },
+  "dl_btn_cancel_title": {
+    "message": "취소"
+  },
+  "mdl_btn_use": {
+    "message": "사용"
+  },
+  "mdl_btn_in_use": {
+    "message": "사용 중"
+  },
+  "mdl_btn_get": {
+    "message": "다운로드"
+  },
+  "mdl_btn_token": {
+    "message": "토큰"
+  },
+  "mdl_btn_na": {
+    "message": "없음"
+  },
+  "mdl_loading_sub": {
+    "message": "기기로 다운로드 중…"
+  }
+}

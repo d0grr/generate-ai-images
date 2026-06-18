@@ -1,0 +1,73 @@
+{
+  "manifest_version": 3,
+  "name": "Generate Images Public (Dev)",
+  "short_name": "Images Public (Dev)",
+  "description": "__MSG_shortDesc__",
+  "default_locale": "en",
+  "version": "1.2.0",
+  "author": "Mindix",
+
+  "action": {
+    "default_title": "Generate Images Public (Dev)",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "side_panel": {
+    "default_path": "popup/popup.html"
+  },
+
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "downloads",
+    "alarms",
+    "offscreen",
+    "sidePanel",
+    "windows"
+  ],
+
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src 'self' https: http://localhost:* http://127.0.0.1:*;"
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["workspace/workspace.html", "offscreen/offscreen.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "64": "icons/icon64.png",
+    "96": "icons/icon96.png",
+    "128": "icons/icon128.png"
+  },
+
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+Shift+D",
+        "mac": "Alt+Shift+D"
+      },
+      "description": "Open Generate AI Images"
+    }
+  }
+}

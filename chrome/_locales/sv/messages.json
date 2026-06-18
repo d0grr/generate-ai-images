@@ -1,0 +1,537 @@
+{
+  "appName": {
+    "message": "AI bild generator - Skapa AI-bilder"
+  },
+  "shortName": {
+    "message": "AI bilder"
+  },
+  "shortDesc": {
+    "message": "Använd AI bildgeneratorn för att generera AI-bilder från text, skapa AI-foton och realistiska bilder direkt i Chrome."
+  },
+  "action_title": {
+    "message": "Generera AI-bilder"
+  },
+  "open_workspace": {
+    "message": "Öppna arbetsyta"
+  },
+  "settings": {
+    "message": "Inställningar"
+  },
+  "error_title": {
+    "message": "Något gick fel"
+  },
+  "btn_diagnostics": {
+    "message": "Diagnostik ↗"
+  },
+  "btn_dismiss": {
+    "message": "Stäng"
+  },
+  "no_model_selected": {
+    "message": "Ingen modell vald"
+  },
+  "mb_get": {
+    "message": "↓ Hämta"
+  },
+  "mb_downloading": {
+    "message": "Laddar ner…"
+  },
+  "mb_of": {
+    "message": "av"
+  },
+  "cancel_download": {
+    "message": "Avbryt nedladdning"
+  },
+  "mb_installing": {
+    "message": "Installerar…"
+  },
+  "mb_verifying": {
+    "message": "Verifierar vikter · nästan klart"
+  },
+  "ready": {
+    "message": "Redo"
+  },
+  "prompt_placeholder": {
+    "message": "Beskriv vad du vill skapa…"
+  },
+  "btn_clear_title": {
+    "message": "Rensa"
+  },
+  "btn_clear_aria": {
+    "message": "Rensa prompt"
+  },
+  "surprise_me": {
+    "message": "Överraska mig"
+  },
+  "param_steps": {
+    "message": "Steg"
+  },
+  "param_guidance": {
+    "message": "Vägledning"
+  },
+  "param_seed": {
+    "message": "Frö"
+  },
+  "seed_random": {
+    "message": "slumpmässig"
+  },
+  "neg_prompt_label": {
+    "message": "Negativt prompt"
+  },
+  "neg_prompt_placeholder": {
+    "message": "Saker att undvika…"
+  },
+  "btn_parameters": {
+    "message": "Parametrar ▾"
+  },
+  "btn_generate": {
+    "message": "Generera"
+  },
+  "install_model_hint": {
+    "message": "Installera en modell för att aktivera Generera."
+  },
+  "img_placeholder": {
+    "message": "Din bild visas här"
+  },
+  "generating_eyebrow": {
+    "message": "GENERERAR"
+  },
+  "phase_encoding": {
+    "message": "Kodar prompt"
+  },
+  "btn_cancel_gen": {
+    "message": "× avbryt"
+  },
+  "btn_save": {
+    "message": "↓ Spara"
+  },
+  "btn_copy": {
+    "message": "⎘ Kopiera"
+  },
+  "btn_retry": {
+    "message": "↺ Försök igen"
+  },
+  "img_generated_alt": {
+    "message": "Genererad bild"
+  },
+  "recent_eyebrow": {
+    "message": "SENASTE"
+  },
+  "view_all": {
+    "message": "Visa alla ↗"
+  },
+  "clear_history": {
+    "message": "Rensa historik"
+  },
+  "loading_model": {
+    "message": "Laddar modell…"
+  },
+  "compiling": {
+    "message": "Kompilerar…"
+  },
+  "generating_pct": {
+    "message": "Genererar · $PERCENT$%",
+    "placeholders": {
+      "percent": {
+        "content": "$1",
+        "example": "42"
+      }
+    }
+  },
+  "phase_preparing": {
+    "message": "Förbereder…"
+  },
+  "phase_compiling_first": {
+    "message": "Kompilerar shaders · första körning"
+  },
+  "phase_loading": {
+    "message": "Laddar…"
+  },
+  "phase_fetching": {
+    "message": "Hämtar modellvikter"
+  },
+  "phase_decoding": {
+    "message": "Avkodar bild…"
+  },
+  "phase_loading_model": {
+    "message": "Laddar modell…"
+  },
+  "phase_compiling_shaders": {
+    "message": "Kompilerar shaders…"
+  },
+  "workspace_page_title": {
+    "message": "AI Offline-bildgenerator arbetsyta"
+  },
+  "workspace_brand": {
+    "message": "AI Offline-bildgenerator"
+  },
+  "workspace_label": {
+    "message": "arbetsyta"
+  },
+  "tab_gallery": {
+    "message": "Galleri"
+  },
+  "tab_diagnostics": {
+    "message": "Diagnostik"
+  },
+  "tab_settings": {
+    "message": "Inställningar"
+  },
+  "your_generations": {
+    "message": "Dina generationer"
+  },
+  "gallery_lede": {
+    "message": "Allt stannar på den här enheten. Klicka på en bricka för full upplösning och ursprung."
+  },
+  "filter_model": {
+    "message": "Modell"
+  },
+  "all_models": {
+    "message": "Alla modeller"
+  },
+  "filter_engine": {
+    "message": "Motor"
+  },
+  "any_engine": {
+    "message": "Valfri motor"
+  },
+  "engine_browser": {
+    "message": "Webbläsare · WebGPU"
+  },
+  "filter_window": {
+    "message": "Period"
+  },
+  "time_all": {
+    "message": "All tid"
+  },
+  "time_24h": {
+    "message": "Senaste 24 timmarna"
+  },
+  "time_7d": {
+    "message": "Senaste 7 dagarna"
+  },
+  "time_30d": {
+    "message": "Senaste 30 dagarna"
+  },
+  "btn_select": {
+    "message": "Välj"
+  },
+  "no_images_title": {
+    "message": "Inga bilder ännu"
+  },
+  "no_images_lede": {
+    "message": "Öppna popup med Alt+Shift+D, skriv ett prompt, klicka Generera. Resultaten hamnar här."
+  },
+  "no_matches_title": {
+    "message": "Inga träffar"
+  },
+  "no_matches_lede": {
+    "message": "Ingenting i den här perioden. Försök bredda filtret."
+  },
+  "compare_kicker": {
+    "message": "Jämför · dra handtaget"
+  },
+  "compare_vs": {
+    "message": "A vs B"
+  },
+  "close_aria": {
+    "message": "stäng"
+  },
+  "loading_fullres": {
+    "message": "laddar full upplösning…"
+  },
+  "label_prompt": {
+    "message": "Prompt"
+  },
+  "label_avoid": {
+    "message": "Undvik"
+  },
+  "label_seed": {
+    "message": "Frö"
+  },
+  "label_steps": {
+    "message": "Steg"
+  },
+  "label_guidance": {
+    "message": "Vägledning"
+  },
+  "label_engine": {
+    "message": "Motor"
+  },
+  "label_duration": {
+    "message": "Varaktighet"
+  },
+  "label_generated": {
+    "message": "Genererad"
+  },
+  "label_path": {
+    "message": "Sökväg"
+  },
+  "btn_reuse_seed": {
+    "message": "↻ Återanvänd frö"
+  },
+  "btn_copy_prompt": {
+    "message": "Kopiera prompt"
+  },
+  "btn_copy_seed": {
+    "message": "Kopiera frö"
+  },
+  "btn_download_png": {
+    "message": "↓ Ladda ner PNG"
+  },
+  "btn_delete": {
+    "message": "Ta bort"
+  },
+  "danger_zone": {
+    "message": "Farlig zon"
+  },
+  "clear_data_title": {
+    "message": "Rensa alla tilläggsdata"
+  },
+  "clear_data_hint": {
+    "message": "Tar bort alla cachade modeller och genererade bilder. Kan inte ångras."
+  },
+  "btn_clear_data": {
+    "message": "Rensa data"
+  },
+  "diag_title": {
+    "message": "Diagnostik"
+  },
+  "diag_lede": {
+    "message": "Vad tillägget ser om din webbläsare och maskin. Kopiera det här blocket till ett ärende om något inte fungerar."
+  },
+  "diag_engine": {
+    "message": "Aktiv motor"
+  },
+  "diag_preferred": {
+    "message": "Föredragen"
+  },
+  "diag_device": {
+    "message": "Enhet"
+  },
+  "diag_adapter": {
+    "message": "Adapter"
+  },
+  "diag_vendor": {
+    "message": "Tillverkare"
+  },
+  "diag_vram": {
+    "message": "VRAM upps."
+  },
+  "diag_browser": {
+    "message": "Webbläsarsökväg"
+  },
+  "diag_webgpu": {
+    "message": "WebGPU"
+  },
+  "diag_ort": {
+    "message": "onnxruntime-web"
+  },
+  "diag_tj": {
+    "message": "transformers.js"
+  },
+  "diag_opfs": {
+    "message": "OPFS-kvot"
+  },
+  "diag_storage": {
+    "message": "Lagring"
+  },
+  "diag_installed": {
+    "message": "Installerade modeller"
+  },
+  "diag_recent": {
+    "message": "Senaste bilder"
+  },
+  "diag_active": {
+    "message": "Aktiv modell"
+  },
+  "btn_copy_json": {
+    "message": "Kopiera som JSON"
+  },
+  "btn_reprobe": {
+    "message": "Kör kontroller igen"
+  },
+  "btn_compare": {
+    "message": "Jämför"
+  },
+  "btn_export_zip": {
+    "message": "↓ Exportera ZIP"
+  },
+  "btn_bulk_delete": {
+    "message": "Ta bort"
+  },
+  "btn_cancel_select": {
+    "message": "Avbryt"
+  },
+  "confirm_clear_data": {
+    "message": "Ta bort alla cachade modeller och genererade bilder?\n\nDetta kan inte ångras."
+  },
+  "clearing": {
+    "message": "Rensar…"
+  },
+  "status_done": {
+    "message": "✓ Klart"
+  },
+  "status_saved": {
+    "message": "✓ Sparat"
+  },
+  "status_copied": {
+    "message": "✓ Kopierat"
+  },
+  "confirm_delete_image": {
+    "message": "Ta bort den här bilden?"
+  },
+  "confirm_bulk_delete": {
+    "message": "Ta bort $COUNT$ $NOUN$?",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      },
+      "noun": {
+        "content": "$2",
+        "example": "images"
+      }
+    }
+  },
+  "images_noun": {
+    "message": "bilder"
+  },
+  "image_noun": {
+    "message": "bild"
+  },
+  "no_prompt": {
+    "message": "(inget prompt)"
+  },
+  "none_selected": {
+    "message": "(ingenting valt)"
+  },
+  "in_memory_only": {
+    "message": "(bara i minnet)"
+  },
+  "btn_exit_select": {
+    "message": "Avsluta markering"
+  },
+  "n_selected": {
+    "message": "$COUNT$ markerade",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "packing_images": {
+    "message": "Packar $COUNT$ bilder…",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "exported_images": {
+    "message": "Exporterade $COUNT$ bilder",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "reuse_seed_toast": {
+    "message": "Kör om med samma frö…"
+  },
+  "err_no_engine": {
+    "message": "Ingen genereringsmotor tillgänglig"
+  },
+  "err_engine_start": {
+    "message": "Kunde inte starta webbläsarmotorn"
+  },
+  "err_inference_failed": {
+    "message": "Generering i webbläsaren misslyckades"
+  },
+  "err_generation_failed": {
+    "message": "Generering misslyckades"
+  },
+  "no_model_sub": {
+    "message": "Välj en modell under fliken Modeller för att komma igång"
+  },
+  "mb_pick_model": {
+    "message": "↓ Välj modell"
+  },
+  "popup_tab_generate": {
+    "message": "Generera"
+  },
+  "popup_tab_models": {
+    "message": "Modeller"
+  },
+  "models_intro": {
+    "message": "Välj en modell att ladda ned. När den är installerad kan du växla mellan dem när som helst."
+  },
+  "sec_downloading": {
+    "message": "Hämtar"
+  },
+  "sec_installed": {
+    "message": "Installerade"
+  },
+  "sec_available": {
+    "message": "Tillgängliga"
+  },
+  "available_popular": {
+    "message": "populära"
+  },
+  "empty_models_title": {
+    "message": "Inga modeller installerade ännu"
+  },
+  "empty_models_sub_html": {
+    "message": "Välj en nedan och tryck på <b>↓ Hämta</b>."
+  },
+  "storage_label": {
+    "message": "Lagring"
+  },
+  "dl_tag_fetching": {
+    "message": "hämtar"
+  },
+  "dl_paused_sub": {
+    "message": "pausad — återuppta för att fortsätta"
+  },
+  "dl_meta_got": {
+    "message": "Hämtat"
+  },
+  "dl_meta_speed": {
+    "message": "Hastighet"
+  },
+  "dl_meta_left": {
+    "message": "Kvar"
+  },
+  "dl_btn_pause": {
+    "message": "‖ Paus"
+  },
+  "dl_btn_resume": {
+    "message": "▶ Återuppta"
+  },
+  "dl_btn_hide": {
+    "message": "↓ Dölj"
+  },
+  "dl_btn_cancel_title": {
+    "message": "Avbryt"
+  },
+  "mdl_btn_use": {
+    "message": "Använd"
+  },
+  "mdl_btn_in_use": {
+    "message": "Används"
+  },
+  "mdl_btn_get": {
+    "message": "Hämta"
+  },
+  "mdl_btn_token": {
+    "message": "Token"
+  },
+  "mdl_btn_na": {
+    "message": "saknas"
+  },
+  "mdl_loading_sub": {
+    "message": "Laddar ner till enheten…"
+  }
+}

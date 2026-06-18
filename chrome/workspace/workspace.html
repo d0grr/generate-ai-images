@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="workspace_page_title">AI Offline Image Generator Workspace</title>
+  <link rel="icon" type="image/svg+xml" href="../icons/icon.svg">
+  <link rel="stylesheet" href="workspace.css">
+</head>
+<body>
+  <header class="ws-topbar">
+    <div class="ws-brand">
+      <img class="m" src="../icons/icon.svg" alt="">
+      <span data-i18n="workspace_brand">AI Offline Image Generator</span>
+      <span class="sub" data-i18n="workspace_label">workspace</span>
+    </div>
+    <nav class="ws-tabs">
+      <a href="#gallery" class="on" data-i18n="tab_gallery">Gallery</a>
+      <a href="#diagnostics" data-i18n="tab_diagnostics">Diagnostics</a>
+      <a href="#settings" data-i18n="tab_settings">Settings</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Gallery view -->
+    <section class="view" id="view-gallery">
+      <div class="gal-top">
+        <div>
+          <h1 data-i18n="your_generations">Your generations</h1>
+          <p class="lede" data-i18n="gallery_lede">Everything stays on this device. Click a tile for full resolution and provenance.</p>
+        </div>
+        <div class="gal-count" data-role="gal-count">0</div>
+      </div>
+
+      <div class="gal-filters">
+        <label>
+          <span data-i18n="filter_model">Model</span>
+          <select id="filter-model">
+            <option value="" data-i18n="all_models">All models</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="filter_engine">Engine</span>
+          <select id="filter-engine">
+            <option value="" data-i18n="any_engine">Any engine</option>
+            <option value="browser" data-i18n="engine_browser">Browser · WebGPU</option>
+          </select>
+        </label>
+        <label>
+          <span data-i18n="filter_window">Window</span>
+          <select id="filter-time">
+            <option value="all" data-i18n="time_all">All time</option>
+            <option value="24h" data-i18n="time_24h">Last 24 hours</option>
+            <option value="7d" data-i18n="time_7d">Last 7 days</option>
+            <option value="30d" data-i18n="time_30d">Last 30 days</option>
+          </select>
+        </label>
+        <button class="gal-select-toggle" id="btn-toggle-select" data-i18n="btn_select">Select</button>
+      </div>
+
+      <div class="gal-grid" id="gal-grid"></div>
+
+      <div class="gal-empty" id="gal-empty" hidden>
+        <h2 data-i18n="no_images_title">No images yet</h2>
+        <p>
+          <span data-i18n="no_images_lede">Open the popup with</span>
+          <kbd>Alt+Shift+D</kbd>, write a prompt, hit <b>Generate</b>.
+          Results land here.
+        </p>
+      </div>
+
+      <div class="gal-empty" id="gal-empty-filtered" hidden>
+        <h2 data-i18n="no_matches_title">No matches</h2>
+        <p data-i18n="no_matches_lede">Nothing in this window. Try widening the filter.</p>
+      </div>
+    </section>
+
+    <!-- floating action bar — appears when selection mode is on -->
+    <div class="action-bar" id="action-bar" hidden>
+      <span class="action-bar-count" data-role="sel-count">0 selected</span>
+      <div class="action-bar-buttons">
+        <button class="btn-secondary" id="btn-compare" disabled data-i18n="btn_compare">Compare</button>
+        <button class="btn-secondary" id="btn-export-zip" disabled data-i18n="btn_export_zip">↓ Export ZIP</button>
+        <button class="btn-secondary danger" id="btn-bulk-delete" disabled data-i18n="btn_bulk_delete">Delete</button>
+        <button class="btn-secondary" id="btn-cancel-select" data-i18n="btn_cancel_select">Cancel</button>
+      </div>
+    </div>
+
+    <!-- compare modal -->
+    <div class="modal" id="compare-modal" hidden>
+      <div class="modal-backdrop" data-action="close-compare"></div>
+      <article class="modal-card compare-card">
+        <header class="modal-head">
+          <div class="modal-title">
+            <span class="modal-kicker" data-i18n="compare_kicker">Compare · drag the handle</span>
+            <h2 data-i18n="compare_vs">A vs B</h2>
+          </div>
+          <button class="modal-close" data-action="close-compare"
+                  data-i18n-aria="close_aria" aria-label="close">×</button>
+        </header>
+        <div class="compare-stage" id="compare-stage">
+          <img class="compare-img-a" data-role="cmp-img-a" alt="A">
+          <div class="compare-clip" data-role="cmp-clip">
+            <img class="compare-img-b" data-role="cmp-img-b" alt="B">
+          </div>
+          <div class="compare-handle" data-role="cmp-handle">
+            <div class="compare-handle-line"></div>
+            <div class="compare-handle-grip">↔</div>
+          </div>
+          <div class="compare-label compare-label-a">A</div>
+          <div class="compare-label compare-label-b">B</div>
+        </div>
+        <footer class="compare-foot">
+          <div class="compare-side">
+            <div class="compare-side-label">A</div>
+            <div class="compare-prompt" data-role="cmp-prompt-a">—</div>
+            <div class="compare-meta" data-role="cmp-meta-a">—</div>
+          </div>
+          <div class="compare-side">
+            <div class="compare-side-label">B</div>
+            <div class="compare-prompt" data-role="cmp-prompt-b">—</div>
+            <div class="compare-meta" data-role="cmp-meta-b">—</div>
+          </div>
+        </footer>
+      </article>
+    </div>
+
+    <!-- detail modal -->
+    <div class="modal" id="detail-modal" hidden>
+      <div class="modal-backdrop" data-action="close-modal"></div>
+      <article class="modal-card">
+        <header class="modal-head">
+          <div class="modal-title">
+            <span class="modal-kicker" data-role="md-kicker">Frame</span>
+            <h2 data-role="md-model">—</h2>
+          </div>
+          <button class="modal-close" data-action="close-modal"
+                  data-i18n-aria="close_aria" aria-label="close">×</button>
+        </header>
+
+        <div class="modal-body">
+          <div class="modal-image">
+            <div class="modal-image-frame" id="md-image-frame">
+              <div class="modal-image-loading" data-role="md-loading" data-i18n="loading_fullres">loading full-res…</div>
+              <img data-role="md-img" alt="" hidden>
+            </div>
+            <div class="modal-image-meta" data-role="md-dimensions">—</div>
+          </div>
+          <div class="modal-meta">
+            <div class="meta-section">
+              <div class="meta-label" data-i18n="label_prompt">Prompt</div>
+              <div class="meta-prompt" data-role="md-prompt"></div>
+            </div>
+            <div class="meta-section" data-role="md-neg-section" hidden>
+              <div class="meta-label" data-i18n="label_avoid">Avoid</div>
+              <div class="meta-prompt dim" data-role="md-neg"></div>
+            </div>
+
+            <dl class="meta-grid">
+              <dt data-i18n="label_seed">Seed</dt>      <dd><code data-role="md-seed">—</code></dd>
+              <dt data-i18n="label_steps">Steps</dt>     <dd data-role="md-steps">—</dd>
+              <dt data-i18n="label_guidance">Guidance</dt>  <dd data-role="md-guidance">—</dd>
+              <dt data-i18n="label_scheduler">Scheduler</dt> <dd data-role="md-scheduler">—</dd>
+              <dt data-i18n="label_engine">Engine</dt>    <dd data-role="md-engine">—</dd>
+              <dt data-i18n="label_duration">Duration</dt>  <dd data-role="md-duration">—</dd>
+              <dt data-i18n="label_generated">Generated</dt> <dd data-role="md-date">—</dd>
+              <dt data-i18n="label_path">Path</dt>      <dd><code class="path" data-role="md-path">—</code></dd>
+            </dl>
+          </div>
+        </div>
+
+        <footer class="modal-actions">
+          <button class="btn-primary" data-action="reuse" data-i18n="btn_reuse_seed">↻ Re-use seed</button>
+          <button class="btn-secondary" data-action="copy-prompt" data-i18n="btn_copy_prompt">Copy prompt</button>
+          <button class="btn-secondary" data-action="copy-seed" data-i18n="btn_copy_seed">Copy seed</button>
+          <button class="btn-secondary" data-action="download" data-i18n="btn_download_png">↓ Download PNG</button>
+          <button class="btn-secondary danger" data-action="delete" data-i18n="btn_delete">Delete</button>
+        </footer>
+      </article>
+    </div>
+
+    <!-- Settings stub -->
+    <section class="view" id="view-settings" hidden>
+      <h1 data-i18n="tab_settings">Settings</h1>
+
+      <div class="settings">
+        <label class="field" id="dev-lang-field" hidden>
+          <span class="k" data-i18n="dev_lang_label">UI language (Dev)</span>
+          <select id="dev-lang"></select>
+          <span class="hint" data-i18n="dev_lang_hint">Dev-only override for the interface language. Reloads the page.</span>
+        </label>
+      </div>
+
+      <div class="settings-models">
+        <div class="settings-section-label" data-i18n="installed_models">Installed models</div>
+        <div id="settings-models-list" class="settings-models-list"></div>
+        <div id="settings-models-empty" class="settings-models-empty"
+             data-i18n="no_installed_models" hidden>No installed models.</div>
+      </div>
+
+      <div class="danger-zone">
+        <div class="danger-zone-label" data-i18n="danger_zone">Danger zone</div>
+        <div class="danger-zone-row">
+          <div>
+            <div class="danger-zone-title" data-i18n="clear_data_title">Clear all extension data</div>
+            <div class="danger-zone-hint" data-i18n="clear_data_hint">Removes all cached models and generated images. Cannot be undone.</div>
+          </div>
+          <button id="btn-clear-all-data" class="btn-danger" data-i18n="btn_clear_data">Clear data</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagnostics -->
+    <section class="view" id="view-diagnostics" hidden>
+      <h1 data-i18n="diag_title">Diagnostics</h1>
+      <p class="lede" data-i18n="diag_lede">
+        What the extension sees about your browser and machine. Copy this block into an
+        issue if something isn&rsquo;t working right.
+      </p>
+
+      <div class="diag">
+        <div class="diag-card">
+          <div class="diag-head">
+            <span class="diag-kicker" data-i18n="diag_engine">Active engine</span>
+            <span class="diag-pill" data-role="diag-engine">—</span>
+          </div>
+          <dl class="diag-grid">
+            <dt data-i18n="diag_preferred">Preferred</dt>  <dd data-role="diag-pref">—</dd>
+            <dt data-i18n="diag_device">Device</dt>        <dd data-role="diag-device">—</dd>
+            <dt data-i18n="diag_adapter">Adapter</dt>      <dd data-role="diag-adapter">—</dd>
+            <dt data-i18n="diag_vendor">Vendor</dt>        <dd data-role="diag-vendor">—</dd>
+            <dt data-i18n="diag_vram">VRAM est.</dt>       <dd data-role="diag-vram">—</dd>
+          </dl>
+        </div>
+
+        <div class="diag-card">
+          <div class="diag-head">
+            <span class="diag-kicker" data-i18n="diag_browser">Browser path</span>
+            <span class="diag-pill" data-role="diag-browser-status">—</span>
+          </div>
+          <dl class="diag-grid">
+            <dt data-i18n="diag_webgpu">WebGPU</dt>            <dd data-role="diag-webgpu">—</dd>
+            <dt data-i18n="diag_ort">onnxruntime-web</dt>      <dd data-role="diag-ort">—</dd>
+            <dt data-i18n="diag_tj">transformers.js</dt>       <dd data-role="diag-tj">—</dd>
+            <dt data-i18n="diag_opfs">OPFS quota</dt>          <dd data-role="diag-opfs">—</dd>
+          </dl>
+        </div>
+
+        <div class="diag-card">
+          <div class="diag-head">
+            <span class="diag-kicker" data-i18n="diag_storage">Storage</span>
+            <span class="diag-pill" data-role="diag-models-count">—</span>
+          </div>
+          <dl class="diag-grid">
+            <dt data-i18n="diag_installed">Installed models</dt>  <dd data-role="diag-models">—</dd>
+            <dt data-i18n="diag_recent">Recent images</dt>         <dd data-role="diag-recent">—</dd>
+            <dt data-i18n="diag_active">Active model</dt>          <dd data-role="diag-active">—</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="diag-actions">
+        <button id="btn-copy-diag" class="btn-primary" data-i18n="btn_copy_json">Copy as JSON</button>
+        <button id="btn-reprobe" class="btn-secondary" data-i18n="btn_reprobe">Re-run probes</button>
+      </div>
+
+      <pre class="diag-raw" id="diag-raw" hidden></pre>
+    </section>
+  </main>
+
+  <script src="vendor/jszip.min.js"></script>
+  <script src="workspace.js" type="module"></script>
+</body>
+</html>
