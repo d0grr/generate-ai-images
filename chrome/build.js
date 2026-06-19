@@ -54,7 +54,7 @@ const RELEASE_DIR = path.resolve(SRC, "..", "release");
 const MANIFEST_PATH = FIREFOX ? path.join(OVERLAY, "manifest.json") : path.join(SRC, "manifest.json");
 const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf8"));
 const VERSION  = manifest.version;
-const ZIP_PATH = path.join(RELEASE_DIR, `${TARGET}-v${VERSION}.zip`);
+const ZIP_PATH = path.join(RELEASE_DIR, `generate-ai-images-${TARGET}_${VERSION}.zip`);
 
 const RELEASE = !DEV && !RAW;
 
