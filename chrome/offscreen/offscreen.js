@@ -53,6 +53,37 @@ let faceRestorer = null;
 let aborter = null;
 let lastDiagnostics = {};
 
+// (C) Live engine-pipeline count, for leak diagnostics. Each pipeline holds ~5 GB
+// of ORT/WebGPU sessions, so this must never exceed 1. ORT's native buffers are
+// NOT freed by GC — only session.release() (via pipeline.dispose) frees them — so
+// every pipeline MUST be routed through disposeActivePipeline()/swapPipeline()
+// below rather than having its reference overwritten or dropped.
+let livePipelines = 0;
+
+// Release the current pipeline's ORT sessions and clear the refs. Safe to call
+// when there is no pipeline. Use this everywhere instead of `pipeline = null`.
+async function disposeActivePipeline() {
+  if (!pipeline) return;
+  try { await pipeline.dispose(); }
+  catch (err) { console.warn("[offscreen] pipeline.dispose failed", err); }
+  pipeline = null;
+  pipelineRepoId = null;
+  livePipelines = Math.max(0, livePipelines - 1);
+  globalThis.__livePipelines = livePipelines;   // (C) readable in the bg-page console
+}
+
+// Build a fresh pipeline for `kind`, disposing the previous one first. This is the
+// fix for the model-switch leak: warmup()/generate() used to reassign `pipeline`
+// directly, orphaning the old model's sessions (unreachable, never released).
+async function swapPipeline(kind) {
+  await disposeActivePipeline();
+  pipeline = makePipeline(kind);
+  livePipelines++;
+  globalThis.__livePipelines = livePipelines;   // (C) readable in the bg-page console
+  if (livePipelines > 1) console.warn(`[offscreen] LEAK: ${livePipelines} live pipelines`);
+  return pipeline;
+}
+
 // ─────────────────────────────────────────────────────────────
 // Message routing
 // ─────────────────────────────────────────────────────────────
@@ -184,7 +215,7 @@ async function generate(payload) {
   // Load or reuse pipeline.
   if (!pipeline || pipelineRepoId !== browser_repo_id) {
     postProgress({ phase: "loading", step: 0, total: steps, file: "initialising" });
-    pipeline = makePipeline(browser_kind);
+    await swapPipeline(browser_kind);
     try {
       await pipeline.load(browser_repo_id, {
         signal,
@@ -206,10 +237,10 @@ async function generate(payload) {
         },
       });
     } catch (err) {
+      // Drop the half-built pipeline either way so its partial sessions are
+      // released (not leaked) and the next generate retries cleanly.
+      await disposeActivePipeline();
       if (signal.aborted || /aborted|cancel/i.test(String(err))) {
-        // Drop the half-built pipeline so the next generate retries cleanly.
-        pipeline = null;
-        pipelineRepoId = null;
         return { ok: false, error: "cancelled", cancelled: true };
       }
       throw err;
@@ -358,7 +389,7 @@ async function warmup(repoId, schedulerType = "euler", dtype = "float16", kind =
 
   aborter = new AbortController();
   const { signal } = aborter;
-  pipeline = makePipeline(kind);
+  await swapPipeline(kind);
   // Announce "preparing" and yield a beat so the popup paints the banner BEFORE
   // the synchronous WebGPU shader compile (esp. SDXL ~14 s) freezes the shared
   // GPU process — otherwise the freeze is a silent, unexplained hang. The last
@@ -376,8 +407,7 @@ async function warmup(repoId, schedulerType = "euler", dtype = "float16", kind =
     postProgress({ warming: "done" });
     return { ok: true };
   } catch (err) {
-    pipeline = null;
-    pipelineRepoId = null;
+    await disposeActivePipeline();
     aborter = null;
     postProgress({ warming: "done" });
     if (signal.aborted || /aborted|cancel/i.test(String(err))) {
@@ -506,9 +536,7 @@ function cancel() {
 }
 
 async function unload() {
-  if (pipeline) await pipeline.dispose();
-  pipeline = null;
-  pipelineRepoId = null;
+  await disposeActivePipeline();
   try { faceRestorer?.dispose(); } catch {}
   faceRestorer = null;
   try { upscaler?.dispose(); } catch {}

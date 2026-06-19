@@ -4,20 +4,27 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Imagine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="popup.css">
 </head>
 <body>
   <article class="popup" id="popup">
 
+    <!-- gradient accent bar -->
+    <div class="gradient-bar" aria-hidden="true"></div>
+
     <!-- ═══════════ header ═══════════ -->
     <header class="ph">
+      <img class="ph-logo" src="../icons/logo.png" alt="" width="28" height="28">
       <div class="ph-brand">
         <span class="ph-name" data-role="mb-model-name">Generate AI Images</span>
         <span class="mb-size" data-role="mb-model-size"></span>
-        <div class="mb-ready-badge" id="ph-ready-badge" hidden>
-          <span class="mb-ok-dot" aria-hidden="true"></span>
-          <span data-i18n="ready">Ready</span>
-        </div>
+      </div>
+      <div class="mb-ready-badge" id="ph-ready-badge" hidden>
+        <span class="mb-ok-dot" aria-hidden="true"></span>
+        <span data-i18n="ready">Ready</span>
       </div>
       <div class="ph-icons">
         <button class="ph-ic" id="btn-open-workspace"
@@ -67,6 +74,17 @@
 
     <!-- ═══════════ Generate tab ═══════════ -->
     <section class="tab-pane" id="tab-generate" role="tabpanel">
+
+      <!-- One-time freeze warning (dismissible, never shown again once closed) -->
+      <div class="freeze-note" id="freeze-note" hidden>
+        <svg class="freeze-ico" viewBox="0 0 24 24" width="15" height="15" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+          <path d="M12 9v4"/><path d="M12 17h.01"/>
+        </svg>
+        <span class="freeze-txt" data-i18n="freeze_warning">The browser can briefly freeze while the model loads and at the end of generation — this is a WebGPU limitation.</span>
+        <button class="freeze-close" id="freeze-close" type="button"
+                data-i18n-aria="btn_dismiss" aria-label="Dismiss">×</button>
+      </div>
 
       <!-- Model status banner -->
       <div class="mb" id="model-banner">
@@ -142,9 +160,10 @@
               </svg>
               <span data-i18n="surprise_me">Surprise me</span>
             </button>
-            <span class="char-count"><span data-role="char-count">0</span>/350</span>
+            <span class="char-count"><span data-role="char-count">0</span> / 350</span>
           </div>
         </div>
+        <button type="button" class="adv-toggle" id="btn-advanced" data-i18n="btn_parameters">Parameters ▾</button>
         <!-- Advanced / negative prompt -->
         <div class="pt-advanced" id="advanced" hidden>
           <div class="adv-params">
@@ -173,7 +192,6 @@
                       placeholder="Things to avoid…"></textarea>
           </div>
         </div>
-        <button type="button" class="adv-toggle" id="btn-advanced" data-i18n="btn_parameters">Parameters ▾</button>
       </div>
 
       <!-- Generate button -->
@@ -191,6 +209,9 @@
              data-i18n="install_model_hint">Install a model to enable Generate.</div>
       </div>
 
+      <!-- full-width divider -->
+      <div class="section-divider" aria-hidden="true"></div>
+
       <!-- Result pane -->
       <div class="sec sec-result">
         <div class="rp" id="result-pane" data-state="empty">
@@ -207,12 +228,40 @@
           <div class="rp-running" id="rp-running" hidden>
             <img class="rp-preview-img" id="rp-preview-img" alt="">
             <div class="rp-card">
-              <div class="rp-eyebrow" data-i18n="generating_eyebrow">GENERATING</div>
-              <div class="rp-counter">
-                <span data-role="rp-step">0</span><span class="rp-csep">/</span><span data-role="rp-total">30</span>
+              <div class="rp-ring">
+                <svg class="rp-ring-svg" viewBox="0 0 100 100" aria-hidden="true">
+                  <circle class="rp-ring-track" cx="50" cy="50" r="40"/>
+                  <circle class="rp-ring-arc" cx="50" cy="50" r="40"
+                          stroke="url(#rp-ring-grad)"
+                          stroke-linecap="round" stroke-dasharray="188 64"
+                          transform="rotate(-90 50 50)"/>
+                  <defs>
+                    <linearGradient id="rp-ring-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#1d4ed8"/>
+                    </linearGradient>
+                    <linearGradient id="rp-ring-grad-green" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#38bdf8"/><stop offset="100%" stop-color="#10b981"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="rp-ring-center">
+                  <svg class="rp-ring-ic rp-ring-spark" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m12 3 1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/>
+                  </svg>
+                  <svg class="rp-ring-ic rp-ring-gear" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+                  </svg>
+                  <svg class="rp-ring-ic rp-ring-img" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/>
+                  </svg>
+                  <div class="rp-counter">
+                    <span data-role="rp-step">0</span><span class="rp-csep">/</span><span data-role="rp-total">30</span>
+                  </div>
+                </div>
               </div>
-              <div class="rp-bar"><div class="rp-bar-fill" data-role="rp-fill" style="width:0%"></div></div>
+              <div class="rp-eyebrow" data-i18n="generating_eyebrow">GENERATING</div>
               <div class="rp-phase" data-role="rp-phase" data-i18n="phase_encoding">Encoding prompt</div>
+              <div class="rp-bar" hidden><div class="rp-bar-fill" data-role="rp-fill" style="width:0%"></div></div>
               <button class="rp-cancel-btn" id="btn-cancel" data-i18n="btn_cancel_gen">× cancel</button>
             </div>
           </div>
@@ -224,6 +273,12 @@
             <div class="rp-dims-chip" data-role="rp-dims">512 × 512</div>
           </div>
 
+        </div>
+        <div class="gen-time" id="gen-time" hidden>
+          <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+          </svg>
+          <span data-role="gen-time-val">1.2s</span>
         </div>
         <div class="rp-actions" id="rp-actions" hidden>
           <button class="rp-btn" id="btn-save" data-i18n="btn_save">↓ Save</button>
@@ -332,7 +387,11 @@
 
   <template id="tpl-model-installed">
     <div class="mdl" data-role="model-row">
-      <div class="d" data-role="disc"></div>
+      <div class="d" data-role="disc">
+        <svg class="mdl-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m12 3 1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/>
+        </svg>
+      </div>
       <div class="info">
         <div class="nm" data-role="name"></div>
         <div class="sub" data-role="sub"></div>
@@ -344,7 +403,11 @@
 
   <template id="tpl-model-available">
     <div class="mdl" data-role="model-row">
-      <div class="d" data-role="disc"></div>
+      <div class="d" data-role="disc">
+        <svg class="mdl-spark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m12 3 1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/>
+        </svg>
+      </div>
       <div class="info">
         <div class="nm" data-role="name"></div>
         <div class="sub" data-role="sub"></div>

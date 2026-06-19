@@ -597,13 +597,25 @@ async function markBrowserModelInstalled(modelId) {
 // Use / switch models
 // ─────────────────────────────────────────────────────────────
 async function useModel(modelId) {
+  const { activeModelId: prevActive } = await chrome.storage.local.get("activeModelId");
   await persist({ activeModelId: modelId });
   const model = findModel(modelId);
+  // Defense-in-depth against the model-switch RAM leak: when switching to a
+  // different model, proactively free the previous model's ORT sessions now.
+  // The engine also disposes-on-swap, but on Firefox the engine lives in a
+  // long-lived background page, so we don't want a switch to leave the old
+  // ~5 GB pipeline resident until the next warmup/generate happens to replace it.
+  if (prevActive && prevActive !== modelId) {
+    platform.engineTeardown().catch(() => {});
+  }
   if (model?.browserRepoId) {
     const { models = [] } = await chrome.storage.local.get("models");
     if (models.some((m) => m.id === modelId && m.status === "installed")) {
       // Already cached in OPFS — just activate.
       broadcastState();
+      // Re-warm into ORT sessions (the teardown above dropped any warm pipeline)
+      // so Generate stays instant after the switch.
+      if (popupIsOpen) scheduleBrowserWarmup();
       return { ok: true };
     }
     // Not yet downloaded — add as "loading" and start OPFS preload.

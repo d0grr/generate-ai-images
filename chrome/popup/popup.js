@@ -45,6 +45,11 @@ let latentPreviewB64 = null;
 // Intentionally not loaded from storage — result pane starts empty on every open.
 let currentResultImage = null;
 
+// True after the user clicks "clear from memory" (eject), until the engine is
+// warmed/used again. Drives immediate UI feedback (hide the "Ready" badge) so the
+// action is visibly confirmed on every platform.
+let engineCleared = false;
+
 // ─────────────────────────────────────────────────────────────
 // State
 // ─────────────────────────────────────────────────────────────
@@ -74,14 +79,38 @@ let state = {
 };
 
 const ORIENTATIONS = {
-  "1:1": { label: "square",    sqClass: "",          sdxl: [1024, 1024], sd15: [512, 512],  flux: [1024, 1024] },
-  "2:3": { label: "portrait",  sqClass: "portrait",  sdxl: [832,  1216], sd15: [512, 768],  flux: [1024, 1024] },
-  "3:2": { label: "landscape", sqClass: "landscape", sdxl: [1216, 832],  sd15: [768, 512],  flux: [1024, 1024] },
+  "1:1":  { label: "square",    sqClass: "",          sdxl: [1024, 1024], sd15: [512, 512],  flux: [1024, 1024] },
+  "2:3":  { label: "portrait",  sqClass: "portrait",  sdxl: [832,  1216], sd15: [512, 768],  flux: [1024, 1024] },
+  "3:2":  { label: "landscape", sqClass: "landscape", sdxl: [1216, 832],  sd15: [768, 512],  flux: [1024, 1024] },
+  "9:16": { label: "tall",      sqClass: "portrait",  sdxl: [768,  1344], sd15: [512, 896],  flux: [1024, 1024] },
 };
 
 // ─────────────────────────────────────────────────────────────
 // Bootstrap
 // ─────────────────────────────────────────────────────────────
+// Firefox renders this UI in sidebar_action, which opens at its own (~320px)
+// width that we can't set from the manifest and that isn't sized to content. The
+// CSS scales the fixed 400px design via `html { zoom: var(--ff-zoom, .8) }`; here
+// we make that scale adaptive — fit the design to the actual sidebar width (never
+// upscaling past 1×) and re-fit when the user drags the sidebar wider/narrower.
+// Chrome's side_panel keeps the native 400px (the @supports rule is Gecko-only).
+const FF_DESIGN_W = 400;
+function fitFirefoxSidebar() {
+  // window.innerWidth is the real sidebar width in CSS px and is NOT affected by
+  // our CSS `zoom`, so the scale is simply sidebarWidth / designWidth. No upper
+  // cap: the whole UI grows proportionally as the user widens the sidebar — drag
+  // it ~1.5× wider (~480px) and every block scales up 1.5× together. (Bounded at
+  // 3× only to guard against an absurdly wide window.)
+  document.documentElement.style.setProperty(
+    "--ff-zoom",
+    String(Math.min(3, window.innerWidth / FF_DESIGN_W)),
+  );
+}
+if (navigator.userAgent.includes("Firefox")) {
+  fitFirefoxSidebar();
+  window.addEventListener("resize", fitFirefoxSidebar);
+}
+
 document.addEventListener("DOMContentLoaded", init);
 
 async function init() {
@@ -144,6 +173,7 @@ function onMessageFromSW(msg) {
     }
     case "progress:generate":
       if (cancelling) break;
+      engineCleared = false;
       if (msg.preview) latentPreviewB64 = msg.preview;
       if (msg.step != null) {
         state.generating = {
@@ -158,6 +188,7 @@ function onMessageFromSW(msg) {
       break;
     case "browser:model-downloading":
       if (cancelling) break;
+      engineCleared = false;
       state.generating = {
         step: 0, total: 1,
         percent: msg.total ? Math.round((msg.downloaded / msg.total) * 100) : 0,
@@ -179,6 +210,7 @@ function onMessageFromSW(msg) {
       renderTabBadges();
       break;
     case "browser:model-preloading":
+      engineCleared = false;
       preloadProgress = { modelId: msg.modelId, phase: msg.phase, loaded: msg.loaded, total: msg.total, file: msg.file };
       renderModelBanner();
       renderGenerateButton();
@@ -188,6 +220,7 @@ function onMessageFromSW(msg) {
       // popup open). Show a banner so the one-time GPU freeze isn't a silent hang.
       state.warming = msg.phase !== "done";
       if (msg.phase === "done") cancelling = false;
+      else engineCleared = false;   // warming again → engine is loading back in
       renderModelBanner();
       renderGenerateButton();
       renderResultPane();
@@ -258,6 +291,14 @@ function bindEvents() {
   $("#toast-close")?.addEventListener("click", hideError);
   $("#toast-diagnostics")?.addEventListener("click", openWorkspace("#diagnostics"));
 
+  // Freeze warning — dismiss permanently
+  $("#freeze-close")?.addEventListener("click", () => {
+    state.freezeWarningDismissed = true;
+    const note = $("#freeze-note");
+    if (note) note.hidden = true;
+    try { chrome?.storage?.local?.set?.({ freezeWarningDismissed: true }); } catch {}
+  });
+
   // Prompt
   const prompt = $("#prompt");
   prompt.addEventListener("input", onPromptChange);
@@ -325,6 +366,11 @@ function bindEvents() {
   $("#param-face-restore")?.addEventListener("change", (e) => {
     state.faceRestore = !!e.target.checked;
     try { chrome?.storage?.local?.set?.({ faceRestore: state.faceRestore }); } catch {}
+  });
+
+  // Ratio chips — set output aspect (drives width/height via dimensionsFor)
+  $$(".ratio-chip").forEach((chip) => {
+    chip.addEventListener("click", () => setRatio(chip.dataset.ratio));
   });
 
   // Generate
@@ -421,23 +467,19 @@ function updateCharCount(text) {
 }
 
 // ─────────────────────────────────────────────────────────────
-// Orientation (hidden section — keep logic for when re-enabled)
+// Ratio / orientation chips
 // ─────────────────────────────────────────────────────────────
-function cycleOrientation() {
-  const keys = Object.keys(ORIENTATIONS);
-  const i = keys.indexOf(state.orientation);
-  state.orientation = keys[(i + 1) % keys.length];
-  renderOrientation();
+function setRatio(ratio) {
+  if (!ORIENTATIONS[ratio]) return;
+  state.orientation = ratio;
+  try { chrome?.storage?.local?.set?.({ orientation: ratio }); } catch {}
+  renderRatio();
 }
 
-function renderOrientation() {
-  const sqEl  = $("[data-role='orient-sq']");
-  const valEl = $("[data-role='orient-val']");
-  if (!sqEl || !valEl) return;
-  const def = ORIENTATIONS[state.orientation];
-  const [w, h] = dimensionsFor(state.orientation);
-  sqEl.className = `sq ${def.sqClass}`;
-  valEl.innerHTML = `${state.orientation} <small data-role="orient-sub">${def.label} · ${w} × ${h}</small>`;
+function renderRatio() {
+  $$(".ratio-chip").forEach((chip) => {
+    chip.classList.toggle("active", chip.dataset.ratio === state.orientation);
+  });
 }
 
 function dimensionsFor(orientation) {
@@ -469,6 +511,7 @@ function activeModelInfo() {
 // ─────────────────────────────────────────────────────────────
 function onGenerateClick() {
   if (!canGenerate()) return;
+  engineCleared = false;
   const promptText = $("#prompt").value;
   const userNeg = $("#negative-prompt")?.value?.trim() || "";
   // Order matters: user terms → quality terms → NSFW list. CLIP truncates the
@@ -598,8 +641,31 @@ function renderAll() {
   renderInstalledList();
   renderAvailableList();
   renderTabBadges();
-  renderOrientation();
+  renderRatio();
   renderParamsControls();
+  renderFreezeNote();
+}
+
+// One-time freeze warning — visible until the user dismisses it (persisted).
+function renderFreezeNote() {
+  const note = $("#freeze-note");
+  if (note) note.hidden = !!state.freezeWarningDismissed;
+}
+
+// Generation time row — shown under a finished result when timing is known.
+// elapsedMs is persisted on each image record by the background, so it survives
+// a popup reopen and is available for any recent image loaded back into view.
+function renderGenTime() {
+  const row = $("#gen-time");
+  if (!row) return;
+  const ms = currentResultImage?.elapsedMs;
+  const show = currentResultImage && !state.generating && ms != null && ms > 0;
+  if (show) {
+    setText("[data-role='gen-time-val']", `${(ms / 1000).toFixed(1)}s`);
+    row.hidden = false;
+  } else {
+    row.hidden = true;
+  }
 }
 
 function applyModelParamDefaults(modelId) {
@@ -658,7 +724,7 @@ function renderModelBanner() {
   const warming = installed && state.warming === true;
 
   const phBadge = $("#ph-ready-badge");
-  if (phBadge) phBadge.hidden = !installed || warming;
+  if (phBadge) phBadge.hidden = !installed || warming || engineCleared;
 
   // First-run preparation: shader/ONNX graph compilation after weights are local.
   // "downloading" phase is excluded — markBrowserModelInstalled runs before it starts,
@@ -676,12 +742,11 @@ function renderModelBanner() {
     (activeDownload.progress || 0) >= 1;
 
   // ── warming (one-time shader compile of an installed model) ────────────────
+  // The result-pane ring already shows the "Preparing / Compiling" state (with a
+  // cancel button), so collapse the top banner to avoid duplicating it.
   if (warming) {
-    noneEl.hidden = dlEl.hidden = readyEl.hidden = true;
-    instEl.hidden = false;
-    if (warmCancelBtn) warmCancelBtn.hidden = false;
-    setText("[data-role='mb-inst-name']", t("phase_preparing"));
-    setText("[data-role='mb-inst-sub']", t("phase_compiling_first"));
+    noneEl.hidden = dlEl.hidden = readyEl.hidden = instEl.hidden = true;
+    if (bannerEl) bannerEl.hidden = true;
     return;
   }
 
@@ -700,18 +765,11 @@ function renderModelBanner() {
   }
 
   // ── preparing (first-run setup) ────────────────────────────
+  // Same as warming: the result-pane ring shows this phase, so don't duplicate
+  // "Preparing…" in the top banner — collapse it.
   if (preparing) {
-    noneEl.hidden = dlEl.hidden = readyEl.hidden = true;
-    instEl.hidden = false;
-
-    if (state.generating?.phase === "compiling") {
-      if (warmCancelBtn) warmCancelBtn.hidden = false;
-      setText("[data-role='mb-inst-name']", t("phase_preparing"));
-      setText("[data-role='mb-inst-sub']", t("phase_compiling_first"));
-    } else {
-      setText("[data-role='mb-inst-name']", t("phase_loading"));
-      setText("[data-role='mb-inst-sub']", t("phase_fetching"));
-    }
+    noneEl.hidden = dlEl.hidden = readyEl.hidden = instEl.hidden = true;
+    if (bannerEl) bannerEl.hidden = true;
     return;
   }
 
@@ -812,6 +870,31 @@ function renderGenerateButton() {
   if (hint) hint.hidden = ready;
 }
 
+// Progress ring driver. kind: 'sparkle' | 'gear' | 'progress' | 'decoding'.
+// 'progress' draws a determinate arc from pct (0–100); the others are
+// indeterminate (CSS-animated) or full (decoding). r=40 → C = 2πr ≈ 251.33.
+const RING_C = 2 * Math.PI * 40;
+function setRing(kind, pct) {
+  const run = $("#rp-running");
+  const arc = $(".rp-ring-arc");
+  if (!run) return;
+  run.classList.remove("ring-sparkle", "ring-gear", "ring-progress", "ring-decoding");
+  run.classList.add(`ring-${kind}`);
+  if (!arc) return;
+  // Set the gradient stroke as an SVG attribute (resolves against the document;
+  // a CSS url(#id) from the external stylesheet would not).
+  arc.setAttribute("stroke", kind === "decoding" ? "url(#rp-ring-grad-green)" : "url(#rp-ring-grad)");
+  if (kind === "progress") {
+    const frac = Math.max(0, Math.min(1, (pct ?? 0) / 100));
+    arc.style.strokeDasharray = `${(RING_C * frac).toFixed(1)} ${RING_C.toFixed(1)}`;
+  } else if (kind === "decoding") {
+    arc.style.strokeDasharray = `${RING_C.toFixed(1)} 0`;
+  } else {
+    // indeterminate — clear inline override so the spinning preset dash applies
+    arc.style.strokeDasharray = "";
+  }
+}
+
 function renderResultPane() {
   const pane    = $("#result-pane");
   const emptyEl = $("#rp-empty");
@@ -819,6 +902,8 @@ function renderResultPane() {
   const resEl   = $("#rp-result");
   const acts    = $("#rp-actions");
   if (!pane) return;
+
+  renderGenTime();
 
   // Model loading — first download's compile, warm-keep compile, OR the pre-step
   // (load/compile) phases of a generation, including a reload after "clear from
@@ -843,6 +928,8 @@ function renderResultPane() {
     else if (gen.phase === "compiling") loadPhase = t("phase_compiling_shaders");
     else loadPhase = t("phase_preparing");                        // initial / encoding
     setText("[data-role='rp-phase']", loadPhase);
+    // Compiling shaders → gear; downloading/loading weights → sparkle.
+    setRing((!gen || gen.phase === "compiling") ? "gear" : "sparkle");
     const previewImg = $("#rp-preview-img");
     if (previewImg) previewImg.classList.remove("visible");
     pane.classList.remove("has-preview");
@@ -866,17 +953,34 @@ function renderResultPane() {
     }
     setProp("[data-role='rp-fill']", "style.width", `${g.percent ?? 0}%`);
 
+    // Post-denoise finalization phases the engine emits (SDXL VAE decode, then
+    // optional face-restore / upscale) — all happen after the last step, right
+    // before the result appears.
+    const finalizing = g.phase === "decoding" || g.phase === "upscaling" || g.phase === "face-restore";
+
     let phase;
     if (g.phase === "downloading") {
       phase = t("phase_loading_model");
     } else if (g.phase === "compiling") {
       phase = t("phase_compiling_shaders");
-    } else if (g.step >= (g.total - 2) && g.step > 0) {
+    } else if (g.phase === "decoding") {
       phase = t("phase_decoding");
+    } else if (g.phase === "upscaling") {
+      phase = t("phase_upscaling");
+    } else if (g.phase === "face-restore") {
+      phase = t("phase_face_restore");
     } else {
       phase = "";
     }
     setText("[data-role='rp-phase']", phase);
+
+    // Ring visual per phase: weights→sparkle, shaders→gear, finalizing→decoding,
+    // active denoising→determinate progress arc, otherwise→sparkle.
+    if (g.phase === "downloading")            setRing("sparkle");
+    else if (g.phase === "compiling")         setRing("gear");
+    else if (finalizing)                      setRing("decoding");
+    else if (showCounter)                     setRing("progress", g.percent);
+    else                                      setRing("sparkle");
 
     const previewImg = $("#rp-preview-img");
     if (latentPreviewB64 && previewImg) {
@@ -1093,6 +1197,13 @@ function renderModelRow(m, kind) {
       unload.addEventListener("click", (e) => {
         e.stopPropagation();
         sendSW({ type: "action:unload-model", modelId: m.id });
+        // Immediate, platform-agnostic feedback: confirm the click and reflect
+        // that the model is no longer held in memory (hide the Ready badge).
+        engineCleared = true;
+        unload.textContent = "✓";
+        unload.disabled = true;
+        const phBadge = $("#ph-ready-badge");
+        if (phBadge) phBadge.hidden = true;
       });
       node.appendChild(unload);
     } else {

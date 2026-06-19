@@ -155,6 +155,12 @@
   "ready": {
     "message": "Ready"
   },
+  "ratio_label": {
+    "message": "Ratio"
+  },
+  "freeze_warning": {
+    "message": "The browser can briefly freeze while the model loads and at the end of generation — this is a WebGPU limitation."
+  },
   "prompt_placeholder": {
     "message": "Describe what you want to create…"
   },
