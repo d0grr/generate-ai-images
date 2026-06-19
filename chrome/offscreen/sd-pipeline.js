@@ -17,7 +17,6 @@
 // ─────────────────────────────────────────────────────────────
 
 const HF_BASE = "https://huggingface.co";
-const TRANSFORMERS_URL = chrome.runtime.getURL("offscreen/vendor/transformers.min.js");
 
 let _ort = null;
 let _tokenizers = null;   // cached transformers module
@@ -89,8 +88,10 @@ async function smartFetchJson(url) {
 export async function loadTransformers() {
   if (_tokenizers) return _tokenizers;
   // transformers.min.js is a webpack ESM bundle — dynamic import exposes
-  // AutoTokenizer and friends as named exports.
-  const T = await import(/* @vite-ignore */ TRANSFORMERS_URL);
+  // AutoTokenizer and friends as named exports. A literal (relative) specifier
+  // keeps the lazy load but avoids AMO's "unsafe dynamic import" warning that a
+  // computed URL triggers; it resolves to offscreen/vendor/ relative to here.
+  const T = await import("./vendor/transformers.min.js");
   const module = T.default || T;
   if (!module.AutoTokenizer) {
     throw new Error(
