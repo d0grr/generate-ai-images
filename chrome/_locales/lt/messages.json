@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Įkeliant modelį ir generavimo pabaigoje naršyklė gali trumpam užstrigti — tai WebGPU apribojimas."
+  },
   "appName": {
     "message": "AI paveikslėlių generatorius - AI vaizdai"
   },

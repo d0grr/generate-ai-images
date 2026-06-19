@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "O navegador pode congelar por um instante enquanto o modelo carrega e ao final da geração — isso é uma limitação do WebGPU."
+  },
   "appName": {
     "message": "Gerador de imagens IA - Fotos com IA"
   },

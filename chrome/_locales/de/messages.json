@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Der Browser kann während des Ladens des Modells und am Ende der Generierung kurz einfrieren – das ist eine WebGPU-Einschränkung."
+  },
   "appName": {
     "message": "KI Bildgenerator - AI Bilder erstellen"
   },

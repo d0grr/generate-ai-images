@@ -23,6 +23,9 @@
   "btn_diagnostics": {
     "message": "Diagnostics ↗"
   },
+  "btn_report": {
+    "message": "Report ↗"
+  },
   "btn_dismiss": {
     "message": "Dismiss"
   },
@@ -131,6 +134,9 @@
   "mdl_loading_sub": {
     "message": "Downloading to device…"
   },
+  "mdl_cancel_dl": {
+    "message": "Cancel download"
+  },
   "mb_get": {
     "message": "↓ Get"
   },
@@ -154,6 +160,12 @@
   },
   "ready": {
     "message": "Ready"
+  },
+  "ratio_label": {
+    "message": "Ratio"
+  },
+  "freeze_warning": {
+    "message": "The browser can briefly freeze while the model loads and at the end of generation — this is a WebGPU limitation."
   },
   "prompt_placeholder": {
     "message": "Describe what you want to create…"

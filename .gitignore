@@ -4,3 +4,6 @@
 
 # Packaged builds (all platforms collect here)
 release/
+
+# Build output (chrome/dist is also ignored by chrome/.gitignore)
+dist/

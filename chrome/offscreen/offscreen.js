@@ -53,24 +53,63 @@ let faceRestorer = null;
 let aborter = null;
 let lastDiagnostics = {};
 
+// (C) Live engine-pipeline count, for leak diagnostics. Each pipeline holds ~5 GB
+// of ORT/WebGPU sessions, so this must never exceed 1. ORT's native buffers are
+// NOT freed by GC — only session.release() (via pipeline.dispose) frees them — so
+// every pipeline MUST be routed through disposeActivePipeline()/swapPipeline()
+// below rather than having its reference overwritten or dropped.
+let livePipelines = 0;
+
+// Release the current pipeline's ORT sessions and clear the refs. Safe to call
+// when there is no pipeline. Use this everywhere instead of `pipeline = null`.
+async function disposeActivePipeline() {
+  if (!pipeline) return;
+  try { await pipeline.dispose(); }
+  catch (err) { console.warn("[offscreen] pipeline.dispose failed", err); }
+  pipeline = null;
+  pipelineRepoId = null;
+  livePipelines = Math.max(0, livePipelines - 1);
+  globalThis.__livePipelines = livePipelines;   // (C) readable in the bg-page console
+}
+
+// Build a fresh pipeline for `kind`, disposing the previous one first. This is the
+// fix for the model-switch leak: warmup()/generate() used to reassign `pipeline`
+// directly, orphaning the old model's sessions (unreachable, never released).
+async function swapPipeline(kind) {
+  await disposeActivePipeline();
+  pipeline = makePipeline(kind);
+  livePipelines++;
+  globalThis.__livePipelines = livePipelines;   // (C) readable in the bg-page console
+  if (livePipelines > 1) console.warn(`[offscreen] LEAK: ${livePipelines} live pipelines`);
+  return pipeline;
+}
+
 // ─────────────────────────────────────────────────────────────
 // Message routing
 // ─────────────────────────────────────────────────────────────
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-  if (msg?.target !== "offscreen") return;
-  handle(msg).then(sendResponse).catch((err) => {
-    const msg = errorMessage(err);
-    if (/aborted|cancel/i.test(msg)) {
-      sendResponse({ ok: false, error: msg, cancelled: true });
-    } else {
-      console.error("[offscreen]", err);
-      sendResponse({ ok: false, error: msg, stack: err?.stack });
-    }
+// Chrome runs this engine in a separate offscreen document and talks to it over
+// chrome.runtime.sendMessage, so we register an onMessage listener. Firefox runs
+// the engine inside the (single) background page and calls handle() directly —
+// runtime.sendMessage doesn't round-trip to the sender's own context — so it sets
+// globalThis.__ENGINE_DIRECT__ (in background.html, before this module loads) to
+// skip the listener. handle() and setProgressSink() are exported for that path.
+if (!globalThis.__ENGINE_DIRECT__) {
+  chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+    if (msg?.target !== "offscreen") return;
+    handle(msg).then(sendResponse).catch((err) => {
+      const m = errorMessage(err);
+      if (/aborted|cancel/i.test(m)) {
+        sendResponse({ ok: false, error: m, cancelled: true });
+      } else {
+        console.error("[offscreen]", err);
+        sendResponse({ ok: false, error: m, stack: err?.stack });
+      }
+    });
+    return true;
   });
-  return true;
-});
+}
 
-async function handle(msg) {
+export async function handle(msg) {
   switch (msg.type) {
     case "probe":       return await probe();
     case "warmup":      return await warmup(msg.repoId, msg.schedulerType, msg.dtype, msg.kind, msg.encoderRepoId, msg.unetIO, msg.timestep, msg.unetFile);
@@ -176,7 +215,7 @@ async function generate(payload) {
   // Load or reuse pipeline.
   if (!pipeline || pipelineRepoId !== browser_repo_id) {
     postProgress({ phase: "loading", step: 0, total: steps, file: "initialising" });
-    pipeline = makePipeline(browser_kind);
+    await swapPipeline(browser_kind);
     try {
       await pipeline.load(browser_repo_id, {
         signal,
@@ -198,10 +237,10 @@ async function generate(payload) {
         },
       });
     } catch (err) {
+      // Drop the half-built pipeline either way so its partial sessions are
+      // released (not leaked) and the next generate retries cleanly.
+      await disposeActivePipeline();
       if (signal.aborted || /aborted|cancel/i.test(String(err))) {
-        // Drop the half-built pipeline so the next generate retries cleanly.
-        pipeline = null;
-        pipelineRepoId = null;
         return { ok: false, error: "cancelled", cancelled: true };
       }
       throw err;
@@ -350,7 +389,7 @@ async function warmup(repoId, schedulerType = "euler", dtype = "float16", kind =
 
   aborter = new AbortController();
   const { signal } = aborter;
-  pipeline = makePipeline(kind);
+  await swapPipeline(kind);
   // Announce "preparing" and yield a beat so the popup paints the banner BEFORE
   // the synchronous WebGPU shader compile (esp. SDXL ~14 s) freezes the shared
   // GPU process — otherwise the freeze is a silent, unexplained hang. The last
@@ -368,8 +407,7 @@ async function warmup(repoId, schedulerType = "euler", dtype = "float16", kind =
     postProgress({ warming: "done" });
     return { ok: true };
   } catch (err) {
-    pipeline = null;
-    pipelineRepoId = null;
+    await disposeActivePipeline();
     aborter = null;
     postProgress({ warming: "done" });
     if (signal.aborted || /aborted|cancel/i.test(String(err))) {
@@ -498,9 +536,7 @@ function cancel() {
 }
 
 async function unload() {
-  if (pipeline) await pipeline.dispose();
-  pipeline = null;
-  pipelineRepoId = null;
+  await disposeActivePipeline();
   try { faceRestorer?.dispose(); } catch {}
   faceRestorer = null;
   try { upscaler?.dispose(); } catch {}
@@ -548,8 +584,16 @@ function blobToBase64(blob) {
 // ─────────────────────────────────────────────────────────────
 // Utilities
 // ─────────────────────────────────────────────────────────────
-function postProgress(body) {
+// Progress is pushed through a sink. Chrome's default relays to the SW over
+// runtime.sendMessage; Firefox's background page injects a direct callback via
+// setProgressSink (same context — a message wouldn't reach the core).
+let progressSink = (body) => {
   chrome.runtime.sendMessage({ type: "offscreen:progress", body }).catch(() => {});
+};
+export function setProgressSink(fn) { progressSink = fn; }
+
+function postProgress(body) {
+  progressSink(body);
 }
 
 async function encodeLatentPreview(latents, lh, lw) {

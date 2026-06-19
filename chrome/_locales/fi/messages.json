@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Selain voi jäätyä hetkeksi mallin latautuessa ja luonnin lopussa – tämä on WebGPU:n rajoitus."
+  },
   "appName": {
     "message": "AI-kuvageneraattori - Luo AI-kuvia"
   },

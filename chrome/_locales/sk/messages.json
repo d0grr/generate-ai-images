@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Prehliadač sa môže na chvíľu zaseknúť počas načítania modelu a na konci generovania — je to obmedzenie WebGPU."
+  },
   "appName": {
     "message": "AI generátor obrázkov - AI fotky zadarmo"
   },

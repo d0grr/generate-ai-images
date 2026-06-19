@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Preglednik se može nakratko zamrznuti tijekom učitavanja modela i na kraju generiranja — to je ograničenje WebGPU-a."
+  },
   "appName": {
     "message": "AI generator slika - Besplatni AI alat"
   },

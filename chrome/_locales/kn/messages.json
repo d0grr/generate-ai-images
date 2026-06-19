@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "ಮಾದರಿ ಲೋಡ್ ಆಗುವಾಗ ಮತ್ತು ಜನರೇಶನ್ ಕೊನೆಯಲ್ಲಿ ಬ್ರೌಸರ್ ಸ್ವಲ್ಪ ಸಮಯ ಸ್ಥಗಿತಗೊಳ್ಳಬಹುದು — ಇದು WebGPU ಮಿತಿಯಾಗಿದೆ."
+  },
   "appName": {
     "message": "AI Image Generator - AI ಚಿತ್ರ ರಚಿಸಿ"
   },

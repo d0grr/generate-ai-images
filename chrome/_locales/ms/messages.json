@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Pelayar mungkin membeku seketika semasa model dimuatkan dan pada akhir penjanaan — ini ialah batasan WebGPU."
+  },
   "appName": {
     "message": "AI Image Generator - Jana Gambar AI"
   },

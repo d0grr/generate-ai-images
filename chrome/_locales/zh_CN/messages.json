@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "模型加载时和生成结束时，浏览器可能会短暂卡顿——这是 WebGPU 的限制。"
+  },
   "appName": {
     "message": "AI图片生成 - AI绘画生成器"
   },

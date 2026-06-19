@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "A böngésző rövid időre lefagyhat a modell betöltése közben és a generálás végén – ez a WebGPU korlátja."
+  },
   "appName": {
     "message": "AI képgenerátor - AI képek generálása"
   },

@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Browser dapat membeku sejenak saat model dimuat dan di akhir proses pembuatan — ini adalah keterbatasan WebGPU."
+  },
   "appName": {
     "message": "AI Image Generator - Buat Gambar AI"
   },

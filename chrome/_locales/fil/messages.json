@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Maaaring sandaling mag-freeze ang browser habang naglo-load ang modelo at sa dulo ng paggawa — limitasyon ito ng WebGPU."
+  },
   "appName": {
     "message": "AI Image Generator - Gumawa ng AI Pics"
   },

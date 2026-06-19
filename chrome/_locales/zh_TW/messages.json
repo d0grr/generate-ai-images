@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "模型載入時與生成結束時，瀏覽器可能會短暫凍結——這是 WebGPU 的限制。"
+  },
   "appName": {
     "message": "AI圖片生成 - AI繪圖生成器"
   },

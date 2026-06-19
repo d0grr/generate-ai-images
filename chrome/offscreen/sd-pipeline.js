@@ -165,7 +165,44 @@ async function swStorageGet(keys) {
   return resp?.result || {};
 }
 
+// Firefox runs the engine inside the background page (no separate offscreen
+// document), flagged by globalThis.__ENGINE_DIRECT__. There, runtime.sendMessage
+// loops to the same context, so the SW proxies (url-info, the fetch: stream port)
+// are unusable — but the background page can fetch directly. DIRECT switches those
+// two paths to in-page fetch. Chrome (offscreen) keeps the SW-proxied behaviour.
+const DIRECT = !!globalThis.__ENGINE_DIRECT__;
+
 async function urlInfo(url) {
+  if (DIRECT) {
+    // HF now serves LFS weights via a 302 redirect to a *presigned* Xet CDN URL
+    // whose signature is scoped to GET. A HEAD against it fails, so the old HEAD
+    // probe wrongly reported sidecars (e.g. model_q4.onnx_data) as missing — ORT
+    // then loaded the graph without its external weights and died with
+    // "Failed to load external data file … Module.MountedFiles is not available".
+    // Probe with a 1-byte ranged GET instead: it's identical to the real streamed
+    // download (which works), and we abort before reading the body so nothing
+    // large transfers even if the server ignores Range and answers 200.
+    const ctrl = new AbortController();
+    try {
+      const resp = await fetch(url, {
+        method: "GET",
+        headers: { Range: "bytes=0-0" },
+        credentials: "omit",
+        signal: ctrl.signal,
+      });
+      // Prefer the total from "Content-Range: bytes 0-0/<total>" (a 206); fall
+      // back to Content-Length (a 200 where Range was ignored).
+      let size = 0;
+      const m = /\/(\d+)\s*$/.exec(resp.headers.get("content-range") || "");
+      if (m) size = Number(m[1]);
+      if (!size) size = Number(resp.headers.get("content-length")) || 0;
+      return { ok: resp.ok || resp.status === 206, status: resp.status, size };
+    } catch {
+      return { ok: false };
+    } finally {
+      try { ctrl.abort(); } catch {}   // drop the connection without reading the body
+    }
+  }
   try {
     return await chrome.runtime.sendMessage({ type: "action:url-info", url });
   } catch {
@@ -457,6 +494,8 @@ async function fetchOnnxCachedImpl(url, onProgress, signal) {
  * It's only available inside dedicated workers, hence the indirection.
  */
 function streamOnnxToOpfs(url, fileName, rangeStart, onProgress, signal) {
+  // Firefox background page: fetch in-page (no SW stream proxy) into the worker.
+  if (DIRECT) return streamOnnxToOpfsDirect(url, fileName, rangeStart, onProgress, signal);
   return new Promise((resolve, reject) => {
     // Kill any stale writer still holding this file's handle from a prior
     // (cancelled/failed) attempt in this same long-lived offscreen document.
@@ -572,6 +611,71 @@ function streamOnnxToOpfs(url, fileName, rangeStart, onProgress, signal) {
     }
 
     port.postMessage({ type: "start", url, rangeStart });
+  });
+}
+
+/**
+ * Firefox path for streamOnnxToOpfs: fetch the (Range-resumed) response directly
+ * in the background page and write it to the OPFS cache file via the same worker
+ * (SyncAccessHandle), with no service-worker stream proxy. Mirrors the worker
+ * RPC of the Chrome path; only the byte source differs (in-page fetch vs SW port).
+ */
+function streamOnnxToOpfsDirect(url, fileName, rangeStart, onProgress, signal) {
+  return new Promise((resolve, reject) => {
+    const stale = _activeWriters.get(fileName);
+    if (stale) {
+      try { stale.terminate(); } catch {}
+      _activeWriters.delete(fileName);
+    }
+    const worker = new Worker(chrome.runtime.getURL("offscreen/workers/opfs-writer.js"));
+    _activeWriters.set(fileName, worker);
+
+    const callWorker = (msg) =>
+      new Promise((res, rej) => {
+        const onMsg = (e) => {
+          worker.removeEventListener("message", onMsg);
+          if (e.data?.type === "error") rej(new Error(e.data.error));
+          else res(e.data);
+        };
+        worker.addEventListener("message", onMsg);
+        worker.postMessage(msg);
+      });
+
+    const cleanup = async () => {
+      try { await callWorker({ type: "close" }); } catch {}
+      try { worker.terminate(); } catch {}
+      if (_activeWriters.get(fileName) === worker) _activeWriters.delete(fileName);
+    };
+
+    (async () => {
+      try {
+        const headers = {};
+        if (rangeStart > 0) headers["Range"] = `bytes=${rangeStart}-`;
+        const res = await fetch(url, { credentials: "omit", headers, signal });
+        if (!(res.ok || res.status === 206)) throw new Error(`HTTP ${res.status} for ${url}`);
+        // Range honoured → 206 resumes at rangeStart; a 200 means the server
+        // ignored Range, so truncate and start from 0.
+        const actualStart = res.status === 206 ? rangeStart : 0;
+        const total = actualStart + (Number(res.headers.get("content-length")) || 0);
+        await callWorker({ type: "open", dirName: ONNX_CACHE_DIR, fileName, truncate: actualStart === 0 });
+        let received = actualStart;
+        onProgress?.(received, total);
+        const reader = res.body.getReader();
+        for (;;) {
+          if (signal?.aborted) { try { await reader.cancel("aborted"); } catch {} throw new Error("aborted"); }
+          const { done, value } = await reader.read();
+          if (done) break;
+          await callWorker({ type: "write", chunk: value });
+          received += value.byteLength;
+          onProgress?.(received, total);
+        }
+        await cleanup();
+        resolve();
+      } catch (err) {
+        await cleanup();
+        reject(err?.name === "AbortError" ? new Error("aborted") : err);
+      }
+    })();
   });
 }
 

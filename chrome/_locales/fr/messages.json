@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Le navigateur peut se figer brièvement pendant le chargement du modèle et à la fin de la génération — il s’agit d’une limitation de WebGPU."
+  },
   "appName": {
     "message": "Générateur d'image IA - Créer images IA"
   },

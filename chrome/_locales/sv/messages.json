@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Webbläsaren kan frysa en kort stund medan modellen laddas och i slutet av genereringen – det här är en WebGPU-begränsning."
+  },
   "appName": {
     "message": "AI bild generator - Skapa AI-bilder"
   },

@@ -1,38 +1,80 @@
-# Generate AI Images — Firefox (planned)
+# Generate AI Images — Firefox
 
-Firefox port of the extension. The Chrome (MV3) version lives in [`../chrome`](../chrome)
-and is the source of truth for shared code (popup, offscreen pipeline, workspace, locales).
+Firefox (MV3) build of the extension. It reuses the engine, UI, locales, and assets
+from [`../chrome`](../chrome) — only the manifest and the background page live here.
 
-WebGPU SDXL generation runs fully client-side, so the engine itself is browser-agnostic —
-the work here is adapting the Chrome MV3 extension shell to Firefox.
+## How it differs from Chrome
 
-## TODO
+Chrome can't run WebGPU in a service worker, so it hosts the ONNX engine in a
+`chrome.offscreen` document. Firefox has no offscreen API, but its MV3 background is
+a **DOM event page** that *can* run WebGPU / Workers / OPFS — so the engine runs
+directly in the background page and the offscreen layer is dropped.
 
-### Manifest / packaging
-- [ ] Port `manifest.json` to Firefox MV3 (add `browser_specific_settings.gecko.id` + `strict_min_version`).
-- [ ] Replace `chrome.*` API calls with the `browser.*` (WebExtension) namespace or add a `webextension-polyfill`.
-- [ ] Decide how to share code with `../chrome` (symlink, copy step in `build.js`, or a shared `src/`).
+Shared orchestration lives in [`../chrome/background/core.js`](../chrome/background/core.js),
+parameterised by a small platform adapter:
 
-### Offscreen / background
-- [ ] Firefox has no `chrome.offscreen` API — replace the offscreen document with a hidden
-      extension page / tab or a background-page approach for running the ONNX pipeline.
-- [ ] Verify the service worker / background script model maps to Firefox's event pages.
+| Concern        | Chrome (`service-worker.js`)        | Firefox (`background/background.js`)         |
+| -------------- | ----------------------------------- | -------------------------------------------- |
+| Engine host    | `chrome.offscreen` document         | this background page (DOM)                   |
+| `engineSend`   | `runtime.sendMessage` → offscreen   | `handle()` called directly                   |
+| Engine progress| `offscreen:progress` message        | direct `setProgressSink` callback            |
+| UI surface     | `side_panel`                        | `sidebar_action`                             |
+| Big-file fetch | SW stream proxy + worker            | in-page fetch + worker (`__ENGINE_DIRECT__`) |
 
-### WebGPU / engine
-- [ ] Confirm WebGPU availability in the target Firefox version (flag vs. stable).
-- [ ] Test `onnxruntime-web` WebGPU EP + WASM threads (COOP/COEP / cross-origin isolation headers).
-- [ ] Verify OPFS model caching works (storage quota + persistence in Firefox).
+`globalThis.__ENGINE_DIRECT__` (set by [background/engine-direct.js](background/engine-direct.js)
+before the engine module evaluates) makes the shared engine skip its `runtime.onMessage`
+listener and fetch in-page instead of via the same-context (unreachable) SW proxy.
 
-### Models
-- [ ] Confirm model downloads from Hugging Face (`d0gr/sdxl-lightning-onnx-web-fp16`,
-      `d0gr/sdxl-lightning-onnx-web-small`) work under Firefox CSP / CORS.
+## Files here
 
-### Build & release
-- [ ] Add a Firefox build target to `build.js` (or a dedicated build script here).
-- [ ] Validate with `web-ext lint` and test via `web-ext run`.
-- [ ] Prepare AMO (addons.mozilla.org) submission.
+- [manifest.json](manifest.json) — MV3: `sidebar_action`, background **page**, `gecko` settings.
+- [background/background.html](background/background.html) — engine host page (mirrors Chrome's `offscreen.html`).
+- [background/background.js](background/background.js) — Firefox platform adapter → `startCore(...)`.
+- [background/engine-direct.js](background/engine-direct.js) — sets the in-page engine flag.
 
-### QA
-- [ ] Generate on both models (fp16 + small/q4) and compare output with the Chrome build.
-- [ ] Test upscale + face-restore pipelines.
-- [ ] Verify all locales load (`_locales`).
+Everything else is pulled from `../chrome` at build time.
+
+## Build
+
+From `../chrome`:
+
+```bash
+node build.js --firefox
+```
+
+Outputs the unpacked extension to `firefox/dist/` and packages `release/firefox-v<version>.zip`.
+The build overlays these `firefox/` files on the shared `chrome/` sources and excludes the
+Chrome-only `background/service-worker.js` and `offscreen/offscreen.html`.
+
+## Run / test
+
+```bash
+npx web-ext lint --source-dir dist --self-hosted    # 0 errors expected
+npx web-ext run  --source-dir dist                  # launch a WebGPU-enabled Firefox
+```
+
+Or load manually: `about:debugging` → This Firefox → Load Temporary Add-on → pick
+`firefox/dist/manifest.json`.
+
+End-to-end: open the sidebar → Models tab shows the two `d0gr` SDXL models → install
+(downloads to OPFS) → generate → image saves and the gallery window opens. Also exercise
+upscale, face-restore, cancel-during-load, locale switch, NSFW filter.
+
+## Status / remaining checks
+
+- [x] Manifest ported (sidebar_action, background page, gecko id + min version).
+- [x] Engine hosted in the background page; offscreen layer removed for Firefox.
+- [x] Shared core + platform adapter; Chrome build unchanged.
+- [x] In-page fetch path (no SW proxy) for url-info + big-file → OPFS streaming.
+- [x] `--firefox` build target; `web-ext lint` passes with 0 errors.
+- [ ] **Runtime smoke test on a real WebGPU-enabled Firefox** (≥ 141; WebGPU availability
+      is platform-dependent — the engine's `probe()` degrades gracefully if it's off).
+- [ ] Confirm **SharedArrayBuffer** is available in the background page for ORT's threaded
+      WASM (needs cross-origin isolation); if not, the WebGPU EP is the primary path and the
+      threaded WASM fallback may be unavailable.
+
+## Known lint warnings (not blockers)
+
+`UNSAFE_VAR_ASSIGNMENT` / `DANGEROUS_EVAL` come from the bundled `onnxruntime-web` and
+`transformers.js` (WASM glue using the `Function` constructor + dynamic `import`). They are
+inherent to those libraries and are warnings, not errors.
