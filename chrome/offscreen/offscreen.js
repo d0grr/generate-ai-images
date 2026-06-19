@@ -84,6 +84,51 @@ async function swapPipeline(kind) {
   return pipeline;
 }
 
+// Build a fresh pipeline and load `repoId`, retrying ONCE on a non-abort failure.
+// A cold WebGPU/wgpu init can panic on the first attempt ("index out of bounds",
+// "Buffer unmapped") and then succeed on a clean re-init — this makes that
+// recovery automatic instead of needing a manual reload. Each attempt disposes
+// the prior sessions first (fresh GPU state). `warmupPass` runs the dummy
+// shader-compile pass inside the retry. Sets pipelineRepoId on success.
+// Returns { ok } | { ok:false, cancelled } | { ok:false, error }.
+// Transient cold-start WebGPU/ORT failures that a clean re-init usually clears.
+// Anything else (bad model, real OOM) won't improve on reload, so we DON'T retry
+// it — reloading would just allocate another multi-GB copy for nothing.
+function isColdInitError(err) {
+  const m = String(err?.message || err).toLowerCase();
+  return /index out of bounds|out of bounds|buffer unmapped|mapasync|device\s*lost|lost.*device|wgpu|panic/.test(m);
+}
+
+async function initPipelineWithRetry(kind, repoId, loadOpts, { signal, warmupPass = false } = {}) {
+  const MAX = 2;
+  let lastErr;
+  for (let attempt = 1; attempt <= MAX; attempt++) {
+    await swapPipeline(kind);
+    try {
+      await pipeline.load(repoId, loadOpts);
+      if (warmupPass && pipeline.warmup) await pipeline.warmup();
+      pipelineRepoId = repoId;
+      return { ok: true };
+    } catch (err) {
+      await disposeActivePipeline();
+      if (signal?.aborted || /aborted|cancel/i.test(String(err))) {
+        return { ok: false, cancelled: true, error: "cancelled" };
+      }
+      lastErr = err;
+      if (attempt < MAX && isColdInitError(err)) {
+        console.warn(`[offscreen] cold engine init failed (attempt ${attempt}/${MAX}) — releasing GPU + retrying:`,
+          String(err?.message || err));
+        // Pause so Firefox's GPU process actually reclaims the just-released
+        // buffers before we load a fresh copy — otherwise peak RAM doubles.
+        await sleep(2000);
+        continue;
+      }
+      break;   // not a cold-init error (or out of attempts) — fail fast, no reload
+    }
+  }
+  return { ok: false, error: String(lastErr?.message || lastErr) };
+}
+
 // ─────────────────────────────────────────────────────────────
 // Message routing
 // ─────────────────────────────────────────────────────────────
@@ -215,37 +260,31 @@ async function generate(payload) {
   // Load or reuse pipeline.
   if (!pipeline || pipelineRepoId !== browser_repo_id) {
     postProgress({ phase: "loading", step: 0, total: steps, file: "initialising" });
-    await swapPipeline(browser_kind);
-    try {
-      await pipeline.load(browser_repo_id, {
-        signal,
-        schedulerType: browser_scheduler,
-        dtype: browser_dtype,
-        encoderRepoId: browser_encoder_repo_id,
-        unetIO: browser_unet_io,
-        timestepType: browser_timestep,
-        unetFile: browser_unet_file,
-        progress: (p) => {
-          postProgress({
-            phase: p.phase || "downloading",
-            step: 0,
-            total: steps,
-            file: p.file,
-            downloaded: p.loaded,
-            total_bytes: p.total,
-          });
-        },
-      });
-    } catch (err) {
-      // Drop the half-built pipeline either way so its partial sessions are
-      // released (not leaked) and the next generate retries cleanly.
-      await disposeActivePipeline();
-      if (signal.aborted || /aborted|cancel/i.test(String(err))) {
-        return { ok: false, error: "cancelled", cancelled: true };
-      }
-      throw err;
+    // Retry-once on a cold WebGPU init failure (mirrors warmup); sets
+    // pipelineRepoId on success and disposes partial sessions on failure.
+    const r = await initPipelineWithRetry(browser_kind, browser_repo_id, {
+      signal,
+      schedulerType: browser_scheduler,
+      dtype: browser_dtype,
+      encoderRepoId: browser_encoder_repo_id,
+      unetIO: browser_unet_io,
+      timestepType: browser_timestep,
+      unetFile: browser_unet_file,
+      progress: (p) => {
+        postProgress({
+          phase: p.phase || "downloading",
+          step: 0,
+          total: steps,
+          file: p.file,
+          downloaded: p.loaded,
+          total_bytes: p.total,
+        });
+      },
+    }, { signal });
+    if (!r.ok) {
+      if (r.cancelled) return { ok: false, error: "cancelled", cancelled: true };
+      throw new Error(r.error);
     }
-    pipelineRepoId = browser_repo_id;
   }
 
   const actualSeed = seed >= 0 ? seed : Math.floor(Math.random() * 2 ** 31);
@@ -389,32 +428,24 @@ async function warmup(repoId, schedulerType = "euler", dtype = "float16", kind =
 
   aborter = new AbortController();
   const { signal } = aborter;
-  await swapPipeline(kind);
   // Announce "preparing" and yield a beat so the popup paints the banner BEFORE
   // the synchronous WebGPU shader compile (esp. SDXL ~14 s) freezes the shared
   // GPU process — otherwise the freeze is a silent, unexplained hang. The last
   // painted frame (the banner) stays on screen through the freeze.
   postProgress({ warming: true });
   await sleep(250);
-  try {
-    await pipeline.load(repoId, { signal, schedulerType, dtype, encoderRepoId, unetIO, timestepType, unetFile, progress: () => {} });
-    // Run one dummy pass to compile the remaining shaders (notably the VAE,
-    // which otherwise compiles+freezes on the first real generation) here,
-    // inside the framed "Preparing" warmup. Real generations then stay smooth.
-    if (pipeline.warmup) await pipeline.warmup();
-    pipelineRepoId = repoId;
-    aborter = null;
-    postProgress({ warming: "done" });
-    return { ok: true };
-  } catch (err) {
-    await disposeActivePipeline();
-    aborter = null;
-    postProgress({ warming: "done" });
-    if (signal.aborted || /aborted|cancel/i.test(String(err))) {
-      return { ok: false, cancelled: true, error: "cancelled" };
-    }
-    return { ok: false, error: String(err) };
-  }
+  // warmupPass runs the dummy shader-compile pass; retry-once recovers a cold
+  // WebGPU init failure (e.g. wgpu "index out of bounds") transparently.
+  const r = await initPipelineWithRetry(
+    kind, repoId,
+    { signal, schedulerType, dtype, encoderRepoId, unetIO, timestepType, unetFile, progress: () => {} },
+    { signal, warmupPass: true },
+  );
+  aborter = null;
+  postProgress({ warming: "done" });
+  if (r.ok) return { ok: true };
+  if (r.cancelled) return { ok: false, cancelled: true, error: "cancelled" };
+  return { ok: false, error: r.error };
 }
 
 // ─────────────────────────────────────────────────────────────
