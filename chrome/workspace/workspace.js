@@ -164,11 +164,14 @@ async function setupDevLangSwitcher() {
     return n && n !== tag ? `${n} · ${code}` : code;
   };
 
-  const opts = [`<option value="__native__">${t("dev_lang_browser")}</option>`];
-  for (const code of AVAILABLE_LOCALES) {
-    opts.push(`<option value="${code}">${label(code)}</option>`);
-  }
-  sel.innerHTML = opts.join("");
+  const mkOpt = (value, text) => {
+    const o = document.createElement("option");
+    o.value = value;
+    o.textContent = text;
+    return o;
+  };
+  sel.replaceChildren(mkOpt("__native__", t("dev_lang_browser")));
+  for (const code of AVAILABLE_LOCALES) sel.append(mkOpt(code, label(code)));
   sel.value = await getStoredLocale();
 
   sel.addEventListener("change", async () => {
@@ -435,16 +438,24 @@ function renderCard(img) {
   checkbox.className = "gal-checkbox";
   card.appendChild(checkbox);
 
+  // Built via DOM (textContent auto-escapes) instead of innerHTML — keeps AMO's
+  // no-unsanitized happy and drops the manual escapeHtml.
   const overlay = document.createElement("div");
   overlay.className = "gal-overlay";
-  overlay.innerHTML = `
-    <div class="gal-prompt">${escapeHtml(img.prompt || t("no_prompt"))}</div>
-    <div class="gal-sub">
-      <span class="engine">${img.engine || "?"}</span>
-      <span>${img.width || "?"}×${img.height || "?"}</span>
-      <span>seed ${img.seed ?? "?"}</span>
-    </div>
-  `;
+  const promptEl = document.createElement("div");
+  promptEl.className = "gal-prompt";
+  promptEl.textContent = img.prompt || t("no_prompt");
+  const sub = document.createElement("div");
+  sub.className = "gal-sub";
+  const engEl = document.createElement("span");
+  engEl.className = "engine";
+  engEl.textContent = img.engine || "?";
+  const dimEl = document.createElement("span");
+  dimEl.textContent = `${img.width || "?"}×${img.height || "?"}`;
+  const seedEl = document.createElement("span");
+  seedEl.textContent = `seed ${img.seed ?? "?"}`;
+  sub.append(engEl, dimEl, seedEl);
+  overlay.append(promptEl, sub);
   card.appendChild(overlay);
 
   card.addEventListener("click", () => {
@@ -652,14 +663,6 @@ async function deleteImage(img) {
 function setText(role, text) {
   const el = document.querySelector(`[data-role='${role}']`);
   if (el) el.textContent = text;
-}
-
-function escapeHtml(s) {
-  return String(s)
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
 }
 
 // ─────────────────────────────────────────────────────────────

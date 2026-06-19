@@ -46,7 +46,7 @@ V3 sidebar).
 
 - A WebGPU-capable browser:
   - Chrome / Edge **122+** (WebGPU on by default).
-  - Firefox **141+** (WebGPU shipped; availability is platform-dependent — the
+  - Firefox **142+** (WebGPU shipped; availability is platform-dependent — the
     engine probes and degrades gracefully if it's off).
 - A GPU with enough VRAM for the chosen model (SDXL ≈ 8 GB recommended).
 

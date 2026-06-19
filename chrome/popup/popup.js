@@ -1107,7 +1107,7 @@ function renderDownloadCard() {
   const paused = current.status === "paused";
   const pct = Math.floor((current.progress || 0) * 100);
 
-  $("[data-role='dl-name']").innerHTML   = repoIdFmt(current.repoId);
+  setRepoName($("[data-role='dl-name']"), current.repoId);
   $("[data-role='dl-sub']").textContent  = paused
     ? t("dl_paused_sub")
     : `${current.totalShards || "—"} shards · SHA-256 verified`;
@@ -1172,8 +1172,14 @@ function renderModelRow(m, kind) {
 
   node.querySelector("[data-role='disc']").className =
     `d ${discFor(m) || discFor(cat)}${m.id === state.activeModelId ? " active" : ""}`;
-  node.querySelector("[data-role='name']").innerHTML =
-    `${cat.nameLead || m.nameLead || m.id} <em>${cat.nameTail ?? m.nameTail ?? ""}</em>`;
+  const nameEl = node.querySelector("[data-role='name']");
+  nameEl.textContent = `${cat.nameLead || m.nameLead || m.id} `;
+  const nameTail = cat.nameTail ?? m.nameTail ?? "";
+  if (nameTail) {
+    const em = document.createElement("em");
+    em.textContent = nameTail;
+    nameEl.append(em);
+  }
   node.querySelector("[data-role='sub']").textContent = cat.description || m.description || "";
 
   const browserSize = m.browserSizeGb ?? cat.browserSizeGb;
@@ -1330,10 +1336,15 @@ function setProp(sel, path, value) {
   target[parts[parts.length - 1]] = value;
 }
 
-function repoIdFmt(repoId = "") {
-  if (!repoId.includes("/")) return repoId;
+// Set "org / <em>repo</em>" without innerHTML (DOM build — AMO no-unsanitized).
+function setRepoName(el, repoId = "") {
+  if (!el) return;
+  if (!repoId.includes("/")) { el.textContent = repoId; return; }
   const [org, name] = repoId.split("/");
-  return `${org} / <em>${name}</em>`;
+  el.textContent = `${org} / `;
+  const em = document.createElement("em");
+  em.textContent = name;
+  el.append(em);
 }
 
 function fmtBytes(n) {

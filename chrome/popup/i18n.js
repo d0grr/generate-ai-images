@@ -101,6 +101,25 @@ function lookup(key, subs) {
   return chrome.i18n.getMessage(key, subs);
 }
 
+// Render a trusted locale string that may contain <b> emphasis (the only markup
+// our *_html messages use) WITHOUT innerHTML — split on <b>…</b> and build text
+// + <b> nodes. textContent escapes everything else, so it's injection-safe and
+// satisfies AMO's no-unsanitized check. Unknown tags degrade to literal text.
+function applyBold(el, str) {
+  el.textContent = "";
+  for (const part of String(str).split(/(<b>.*?<\/b>)/gi)) {
+    if (!part) continue;
+    const m = /^<b>(.*?)<\/b>$/i.exec(part);
+    if (m) {
+      const b = document.createElement("b");
+      b.textContent = m[1];
+      el.append(b);
+    } else {
+      el.append(document.createTextNode(part));
+    }
+  }
+}
+
 // Applies translations to DOM elements that carry data-i18n* attributes.
 // Call once after DOMContentLoaded; safe to call multiple times (idempotent per element).
 export function applyI18n(root = document) {
@@ -112,7 +131,7 @@ export function applyI18n(root = document) {
   });
   root.querySelectorAll("[data-i18n-html]").forEach((el) => {
     const m = msg(el.dataset.i18nHtml);
-    if (m) el.innerHTML = m;
+    if (m) applyBold(el, m);
   });
   root.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
     const m = msg(el.dataset.i18nPlaceholder);
