@@ -51,9 +51,9 @@ const DIST        = FIREFOX ? path.resolve(OVERLAY, "dist") : path.resolve(SRC, 
 // the zip is platform-prefixed so each target drops alongside the other.
 const RELEASE_DIR = path.resolve(SRC, "..", "release");
 
-const MANIFEST_PATH = FIREFOX ? path.join(OVERLAY, "manifest.json") : path.join(SRC, "manifest.json");
-const manifest = JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf8"));
-const VERSION  = manifest.version;
+// Single source of truth for the version: chrome/package.json. The build injects
+// it into each platform's manifest (see processJSON), so you bump it in one place.
+const VERSION = JSON.parse(fs.readFileSync(path.join(SRC, "package.json"), "utf8")).version;
 const ZIP_PATH = path.join(RELEASE_DIR, `generate-ai-images-${TARGET}_${VERSION}.zip`);
 
 const RELEASE = !DEV && !RAW;
@@ -203,6 +203,9 @@ function processJSON(relPath, srcPath, dstPath) {
   // release build restores the localized __MSG_* placeholders + a clean,
   // HTTPS-only CSP (the dev manifest whitelists http://localhost for local
   // model testing).
+  if (relPath === "manifest.json") {
+    obj.version = VERSION;   // from chrome/package.json — the one place to bump
+  }
   if (relPath === "manifest.json" && RELEASE) {
     obj.name       = "__MSG_appName__";
     obj.short_name = "__MSG_shortName__";
