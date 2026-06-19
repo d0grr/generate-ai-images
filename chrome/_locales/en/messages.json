@@ -23,6 +23,9 @@
   "btn_diagnostics": {
     "message": "Diagnostics ↗"
   },
+  "btn_report": {
+    "message": "Report ↗"
+  },
   "btn_dismiss": {
     "message": "Dismiss"
   },
@@ -130,6 +133,9 @@
   },
   "mdl_loading_sub": {
     "message": "Downloading to device…"
+  },
+  "mdl_cancel_dl": {
+    "message": "Cancel download"
   },
   "mb_get": {
     "message": "↓ Get"

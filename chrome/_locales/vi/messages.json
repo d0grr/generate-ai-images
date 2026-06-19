@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Trình duyệt có thể bị treo trong giây lát khi mô hình đang tải và ở cuối quá trình tạo — đây là một hạn chế của WebGPU."
+  },
   "appName": {
     "message": "AI tạo ảnh - Tạo ảnh AI miễn phí"
   },

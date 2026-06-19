@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Model yüklenirken ve oluşturmanın sonunda tarayıcı kısa süreliğine donabilir — bu, WebGPU'nun bir kısıtlamasıdır."
+  },
   "appName": {
     "message": "Yapay Zeka Görsel Oluşturma - AI Resim"
   },

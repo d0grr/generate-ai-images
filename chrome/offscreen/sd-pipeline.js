@@ -174,15 +174,33 @@ const DIRECT = !!globalThis.__ENGINE_DIRECT__;
 
 async function urlInfo(url) {
   if (DIRECT) {
+    // HF now serves LFS weights via a 302 redirect to a *presigned* Xet CDN URL
+    // whose signature is scoped to GET. A HEAD against it fails, so the old HEAD
+    // probe wrongly reported sidecars (e.g. model_q4.onnx_data) as missing — ORT
+    // then loaded the graph without its external weights and died with
+    // "Failed to load external data file … Module.MountedFiles is not available".
+    // Probe with a 1-byte ranged GET instead: it's identical to the real streamed
+    // download (which works), and we abort before reading the body so nothing
+    // large transfers even if the server ignores Range and answers 200.
+    const ctrl = new AbortController();
     try {
-      const resp = await fetch(url, { method: "HEAD", credentials: "omit" });
-      return {
-        ok: resp.ok || resp.status === 206,
-        status: resp.status,
-        size: Number(resp.headers.get("content-length")) || 0,
-      };
+      const resp = await fetch(url, {
+        method: "GET",
+        headers: { Range: "bytes=0-0" },
+        credentials: "omit",
+        signal: ctrl.signal,
+      });
+      // Prefer the total from "Content-Range: bytes 0-0/<total>" (a 206); fall
+      // back to Content-Length (a 200 where Range was ignored).
+      let size = 0;
+      const m = /\/(\d+)\s*$/.exec(resp.headers.get("content-range") || "");
+      if (m) size = Number(m[1]);
+      if (!size) size = Number(resp.headers.get("content-length")) || 0;
+      return { ok: resp.ok || resp.status === 206, status: resp.status, size };
     } catch {
       return { ok: false };
+    } finally {
+      try { ctrl.abort(); } catch {}   // drop the connection without reading the body
     }
   }
   try {

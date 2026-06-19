@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Brauser võib mudeli laadimise ajal ja genereerimise lõpus korraks hanguda — see on WebGPU piirang."
+  },
   "appName": {
     "message": "AI pildigeneraator - Loo AI pilte"
   },

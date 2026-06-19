@@ -400,6 +400,10 @@ async function handlePopupMessage(msg) {
       try { await platform.engineTeardown(); } catch {}
       browserGenerating = false;
       keepAlive(false);
+      // Eject = fully deselect: clear the active model so the UI returns to its
+      // first-run "select a model" state (header shows no model; the Models tab
+      // row reverts from "In use" to "Use"). OPFS weights stay cached.
+      await persist({ activeModelId: null });
       broadcast({ type: "browser:model-warming", phase: "done" });   // clear loading UI
       broadcastState();
       return { ok: true };

@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "મોડેલ લોડ થાય ત્યારે અને જનરેશનના અંતે બ્રાઉઝર થોડી વાર માટે અટકી શકે છે — આ WebGPU ની મર્યાદા છે."
+  },
   "appName": {
     "message": "AI Image Generator - AI ચિત્રો બનાવો"
   },

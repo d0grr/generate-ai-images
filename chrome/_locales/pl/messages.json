@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Przeglądarka może na chwilę się zawiesić podczas ładowania modelu i pod koniec generowania — to ograniczenie WebGPU."
+  },
   "appName": {
     "message": "Generator obrazów AI - Darmowy AI"
   },

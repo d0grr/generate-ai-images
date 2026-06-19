@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Browserul se poate bloca pentru scurt timp în timpul încărcării modelului și la finalul generării — este o limitare WebGPU."
+  },
   "appName": {
     "message": "Generator de imagini AI - Imagini AI"
   },

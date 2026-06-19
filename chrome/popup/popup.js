@@ -41,6 +41,10 @@ let cancelling = false;
 let preloadProgress = null;
 let latentPreviewB64 = null;
 
+// Last error surfaced in the toast — captured so the "Report" button can email
+// it (with system + model info) to support.
+let lastError = null;
+
 // Result of the most recent generation in this session only.
 // Intentionally not loaded from storage — result pane starts empty on every open.
 let currentResultImage = null;
@@ -214,6 +218,7 @@ function onMessageFromSW(msg) {
       preloadProgress = { modelId: msg.modelId, phase: msg.phase, loaded: msg.loaded, total: msg.total, file: msg.file };
       renderModelBanner();
       renderGenerateButton();
+      renderInstalledList();   // live-update the Models-tab download bar
       break;
     case "browser:model-warming":
       // Warm-keep shader compile of an already-installed model (e.g. SDXL on
@@ -289,7 +294,7 @@ function bindEvents() {
 
   // Error toast
   $("#toast-close")?.addEventListener("click", hideError);
-  $("#toast-diagnostics")?.addEventListener("click", openWorkspace("#diagnostics"));
+  $("#toast-report")?.addEventListener("click", reportError);
 
   // Freeze warning — dismiss permanently
   $("#freeze-close")?.addEventListener("click", () => {
@@ -823,6 +828,11 @@ function renderModelBanner() {
   // ── none ───────────────────────────────────────────────────
   noneEl.hidden = false;
   dlEl.hidden = instEl.hidden = readyEl.hidden = true;
+  // The top brand strip shows the model name/size once a model is ready; with no
+  // active model (first run, or after eject) restore the default brand so nothing
+  // stale lingers at the very top.
+  setText("[data-role='mb-model-name']", "Generate AI Images");
+  setText("[data-role='mb-model-size']", "");
 }
 
 function renderGenerateButton() {
@@ -1179,11 +1189,37 @@ function renderModelRow(m, kind) {
 
   if (kind === "installed") {
     if (m.status === "loading") {
-      action.className = "mdl-btn downloading";
-      action.textContent = "…";
-      action.disabled = true;
+      // This model is downloading to OPFS. Show a cancel (✕) button and a thin
+      // progress bar pinned to the card's bottom edge, fed by preloadProgress.
+      const p = (preloadProgress && preloadProgress.modelId === m.id) ? preloadProgress : null;
+      const pct = (p && p.total > 0)
+        ? Math.max(0, Math.min(100, Math.round((p.loaded / p.total) * 100)))
+        : null;
+
+      action.className = "mdl-btn cancel-dl";
+      action.textContent = "✕";
+      action.title = t("mdl_cancel_dl");
+      action.setAttribute("aria-label", t("mdl_cancel_dl"));
+      action.disabled = false;
+      action.addEventListener("click", (e) => {
+        e.stopPropagation();
+        sendSW({ type: "action:cancel-download" });
+        action.disabled = true;
+        action.textContent = "…";
+      });
+
       const subEl = node.querySelector("[data-role='sub']");
-      if (subEl) subEl.textContent = t("mdl_loading_sub");
+      if (subEl) subEl.textContent =
+        pct != null ? `${t("mdl_loading_sub")} ${pct}%` : t("mdl_loading_sub");
+
+      // Bottom-edge progress bar (determinate when total known, else indeterminate).
+      const bar = document.createElement("div");
+      bar.className = pct != null ? "mdl-dl-bar" : "mdl-dl-bar indeterminate";
+      const fill = document.createElement("div");
+      fill.className = "mdl-dl-fill";
+      if (pct != null) fill.style.width = `${pct}%`;
+      bar.appendChild(fill);
+      node.appendChild(bar);
     } else if (m.id === state.activeModelId) {
       action.className = "mdl-btn in-use";
       action.textContent = t("mdl_btn_in_use");
@@ -1197,13 +1233,15 @@ function renderModelRow(m, kind) {
       unload.addEventListener("click", (e) => {
         e.stopPropagation();
         sendSW({ type: "action:unload-model", modelId: m.id });
-        // Immediate, platform-agnostic feedback: confirm the click and reflect
-        // that the model is no longer held in memory (hide the Ready badge).
+        // Eject deselects the model (core clears activeModelId). Reflect it
+        // instantly: drop the active model locally and re-render so the header
+        // returns to "select a model" and this row reverts to "Use" — the SW
+        // broadcast then confirms the same state.
         engineCleared = true;
-        unload.textContent = "✓";
-        unload.disabled = true;
+        state.activeModelId = null;
         const phBadge = $("#ph-ready-badge");
         if (phBadge) phBadge.hidden = true;
+        renderAll();
       });
       node.appendChild(unload);
     } else {
@@ -1350,12 +1388,65 @@ function openWorkspace(hash = "") {
 }
 
 function showError(title, message) {
+  lastError = { title, message, at: new Date().toISOString() };
   const toast = $("#error-toast");
   if (!toast) { console.error("[popup]", title, message); return; }
   setText("[data-role='toast-title']", title);
   setText("[data-role='toast-msg']", message);
   toast.hidden = false;
   console.error("[popup]", title, "·", message);
+}
+
+// "Report" button — open the user's mail client (mailto) pre-filled with the
+// error plus system + model context so support can triage. mailto can't attach
+// files, so the model details go inline in the body.
+function reportError() {
+  const e = lastError || {};
+  const info = state.engineInfo || {};
+  const m = findModel(state.activeModelId) || {};
+  let version = "?";
+  try { version = chrome.runtime.getManifest().version; } catch {}
+
+  const body = [
+    "Please describe what you were doing when the error happened:",
+    "",
+    "",
+    "──────────── diagnostics (auto-filled) ────────────",
+    `When:     ${e.at || new Date().toISOString()}`,
+    `Error:    ${e.title || "(none)"}`,
+    `Details:  ${e.message || "(none)"}`,
+    "",
+    "System:",
+    `  Extension:  Generate AI Images v${version}`,
+    `  Browser:    ${navigator.userAgent}`,
+    `  WebGPU:     ${info.webgpu ? "yes" : "no"}`,
+    `  Device:     ${info.device || "?"}`,
+    `  Adapter:    ${info.adapter || "?"}${info.vendor ? ` (${info.vendor})` : ""}`,
+    `  Architecture: ${info.architecture || "?"}`,
+    `  VRAM (reported): ${info.vramGb ?? "?"} GB`,
+    "",
+    "Model:",
+    `  Id:        ${m.id || state.activeModelId || "(none selected)"}`,
+    `  Name:      ${[m.nameLead, m.nameTail].filter(Boolean).join(" ") || "?"}`,
+    `  Precision: ${m.precision || "?"}  ·  Kind: ${m.kind || "?"}`,
+    `  Repo:      ${m.browserRepoId || m.repoId || "?"}`,
+    `  Size:      ${m.browserSizeGb ?? m.sizeGb ?? "?"} GB`,
+    `  Params:    steps=${state.steps ?? "?"} · guidance=${state.guidance ?? "?"} · seed=${state.seed ?? "random"}`,
+    "────────────────────────────────────────────────",
+  ].join("\n");
+
+  const subject = `Error report — ${e.title || "Generate AI Images"}`;
+  const url = `mailto:support@mindix.space?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  // Open the mail client via a transient anchor so the sidebar itself doesn't
+  // navigate away (setting location.href would unload the popup).
+  const a = document.createElement("a");
+  a.href = url;
+  a.target = "_blank";
+  a.rel = "noopener";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
 }
 
 function hideError() {

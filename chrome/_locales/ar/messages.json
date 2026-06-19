@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "قد يتجمد المتصفح لفترة وجيزة أثناء تحميل النموذج وفي نهاية التوليد — هذا قيد في WebGPU."
+  },
   "appName": {
     "message": "AI Image Generator - مولد صور ذكاء"
   },

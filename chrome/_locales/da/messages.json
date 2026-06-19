@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Browseren kan kortvarigt fryse, mens modellen indlæses og i slutningen af genereringen – det er en WebGPU-begrænsning."
+  },
   "appName": {
     "message": "KI Bildgenerator - Generer AI-billeder"
   },

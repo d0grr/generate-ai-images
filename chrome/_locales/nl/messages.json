@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "De browser kan even vastlopen tijdens het laden van het model en aan het einde van de generatie — dit is een beperking van WebGPU."
+  },
   "appName": {
     "message": "AI afbeelding genereren - AI beeldmaker"
   },

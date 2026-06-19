@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Nettleseren kan fryse et øyeblikk mens modellen lastes inn og på slutten av genereringen – dette er en WebGPU-begrensning."
+  },
   "appName": {
     "message": "AI bildegenerator - Lag AI-bilder"
   },

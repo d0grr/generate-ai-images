@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Brskalnik se lahko za trenutek zaustavi med nalaganjem modela in ob koncu generiranja — to je omejitev WebGPU-ja."
+  },
   "appName": {
     "message": "AI generator slik - AI slike brezplačno"
   },

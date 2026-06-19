@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Pārlūks var uz brīdi sastingt, kamēr tiek ielādēts modelis, un ģenerēšanas beigās — tas ir WebGPU ierobežojums."
+  },
   "appName": {
     "message": "AI attēlu ģenerators - Bezmaksas AI bildes"
   },

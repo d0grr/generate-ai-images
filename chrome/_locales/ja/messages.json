@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "モデルの読み込み中と生成の終了時に、ブラウザが一時的にフリーズすることがあります。これは WebGPU の制限です。"
+  },
   "appName": {
     "message": "画像生成AI - AIで画像を作成"
   },

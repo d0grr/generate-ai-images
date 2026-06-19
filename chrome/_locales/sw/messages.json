@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "Kivinjari kinaweza kuganda kwa muda mfupi wakati modeli inapakia na mwishoni mwa uzalishaji — hili ni kikwazo cha WebGPU."
+  },
   "appName": {
     "message": "AI Image Generator - Tengeneza picha AI"
   },

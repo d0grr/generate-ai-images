@@ -61,12 +61,21 @@ const RAW_CATALOG = [
     avgSecondsPerFrame: null,
     avgSecondsBrowser: 14,
     gated: false,
+    // 4-bit MatMulNBits runs on Chrome's WebGPU but not Firefox's: Firefox can
+    // download/compile it, yet inference dies in the int4 kernel's buffer
+    // read-back ("Buffer unmapped" from OrtRun). Hidden on Firefox until Gecko's
+    // WebGPU matures — Firefox users get the fp16 "Quality" variant instead.
+    webgpuChromeOnly: true,
   },
 ];
 
 // Gated models (those requiring an access token) are never surfaced — the
-// catalog is token-free.
-export const MODEL_CATALOG = RAW_CATALOG.filter((m) => !m.gated);
+// catalog is token-free. `webgpuChromeOnly` models are also dropped on Firefox,
+// whose WebGPU can't run them (see the per-entry note).
+const IS_FIREFOX = typeof navigator !== "undefined" && /firefox/i.test(navigator.userAgent || "");
+export const MODEL_CATALOG = RAW_CATALOG.filter(
+  (m) => !m.gated && !(IS_FIREFOX && m.webgpuChromeOnly),
+);
 
 // ── Adding more SDXL models (multi-model) ─────────────────────────────────────
 // The SDXL text encoders + VAE are frozen (identical across every SDXL fine-tune),

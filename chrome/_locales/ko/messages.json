@@ -1,4 +1,7 @@
 {
+  "freeze_warning": {
+    "message": "모델을 불러오는 동안과 생성이 끝날 때 브라우저가 잠시 멈출 수 있습니다 — 이는 WebGPU의 제한 사항입니다."
+  },
   "appName": {
     "message": "AI 이미지 생성 - 무료 AI 그림 만들기"
   },
