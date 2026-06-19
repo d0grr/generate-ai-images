@@ -67,11 +67,31 @@ upscale, face-restore, cancel-during-load, locale switch, NSFW filter.
 - [x] Shared core + platform adapter; Chrome build unchanged.
 - [x] In-page fetch path (no SW proxy) for url-info + big-file → OPFS streaming.
 - [x] `--firefox` build target; `web-ext lint` passes with 0 errors.
-- [ ] **Runtime smoke test on a real WebGPU-enabled Firefox** (≥ 141; WebGPU availability
-      is platform-dependent — the engine's `probe()` degrades gracefully if it's off).
-- [ ] Confirm **SharedArrayBuffer** is available in the background page for ORT's threaded
-      WASM (needs cross-origin isolation); if not, the WebGPU EP is the primary path and the
-      threaded WASM fallback may be unavailable.
+- [x] **Runtime smoke test on Firefox 141** (WebGPU enabled): fp16 SDXL installs,
+      generates, and model-switch / eject / cancel-during-load all work.
+- [x] WebGPU EP is the primary (and working) path; ORT runs single-threaded WASM
+      glue (`numThreads = 1`, no `proxy`), so cross-origin isolation /
+      SharedArrayBuffer is not required.
+
+## Firefox-specific gotchas (fixed)
+
+- **int4 (q4) models are hidden on Firefox.** They download/compile but die in
+  inference (`Buffer unmapped` from ORT) — Gecko's WebGPU can't run the int4
+  `MatMulNBits` kernel yet. Gated via `webgpuChromeOnly` in `popup/catalog.js`.
+- **HF Xet redirects + HEAD.** External-weight discovery uses a ranged GET (not
+  HEAD) on the in-page path, because HF serves LFS weights via a GET-presigned
+  Xet CDN redirect a HEAD can't follow.
+- **CSS `zoom` quirks.** The sidebar scales the 400px design to its width with
+  `zoom`; under it `position: sticky` and `backdrop-filter` corrupt Gecko
+  hit-testing/compositing, so both are neutralised for Firefox in `popup.css`.
+- **Sidebar width** can't be set from the manifest — it's user-controlled and
+  persisted by Firefox; the UI fits itself to whatever width the sidebar opens at.
+
+## Testing
+
+Cross-browser UI tests (Playwright) run the popup in **real Firefox and Chromium**;
+logic tests (Vitest) cover state transitions. See
+[`../chrome/tests/README.md`](../chrome/tests/README.md).
 
 ## Known lint warnings (not blockers)
 
