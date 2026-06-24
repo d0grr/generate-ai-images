@@ -80,6 +80,11 @@ let state = {
   seed: null,
   faceRestore: false,
   savedPrompt: "",
+  // img2img / inpaint editing (session-only; not persisted)
+  mode: "create",          // "create" | "edit"
+  editImageB64: null,      // data-URL of the source image
+  editStrength: 0.75,
+  brushSize: 40,           // mask brush diameter, in displayed px
 };
 
 const ORIENTATIONS = {
@@ -378,6 +383,9 @@ function bindEvents() {
     chip.addEventListener("click", () => setRatio(chip.dataset.ratio));
   });
 
+  // Create / Edit mode + image picker (img2img)
+  bindEditMode();
+
   // Generate
   $("#btn-generate").addEventListener("click", onGenerateClick);
 
@@ -435,15 +443,24 @@ function bindEvents() {
 // ─────────────────────────────────────────────────────────────
 function switchTab(name) {
   state.activeTab = name;
+  // Generate and Edit share the same working pane (#tab-generate); Edit just adds
+  // the image+mask painter (#sec-edit) above the prompt. mode drives create vs edit.
+  state.mode = name === "edit" ? "edit" : "create";
+  const isWork = name === "generate" || name === "edit";
   document.body.classList.toggle("tab-models", name === "models");
-  document.body.classList.toggle("tab-generate", name === "generate");
+  document.body.classList.toggle("tab-generate", isWork);
+  document.body.classList.toggle("tab-edit", name === "edit");
   $$(".ph-tab").forEach((t) => {
     const on = t.dataset.tab === name;
     t.classList.toggle("on", on);
     t.setAttribute("aria-selected", on);
   });
-  $("#tab-generate").hidden = name !== "generate";
+  $("#tab-generate").hidden = !isWork;
   $("#tab-models").hidden   = name !== "models";
+  const secEdit = $("#sec-edit");
+  if (secEdit) secEdit.hidden = name !== "edit";
+
+  renderGenerateButton();   // label (Generate vs Edit image) + edit-mode gating
 
   if (name === "models") {
     renderInstalledList();
@@ -514,6 +531,191 @@ function activeModelInfo() {
 // ─────────────────────────────────────────────────────────────
 // Generate
 // ─────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────
+// Create / Edit mode (img2img + inpaint mask painter)
+// ─────────────────────────────────────────────────────────────
+// The mask canvas backing resolution is capped on the long side; strokes are
+// painted opaque-ish in brand cyan for feedback, and exported as white-on-black
+// (alpha-thresholded) at generate time. The offscreen engine downscales that to
+// latent res (128²) — which also feathers the seam.
+const MASK_MAX = 1024;
+let maskCtx = null;          // 2D context of #edit-mask-canvas
+let painting = false;
+let lastPt = null;           // last pointer position in canvas px
+
+function bindEditMode() {
+  const file = $("#edit-file");
+  const drop = $("#edit-drop");
+  drop?.addEventListener("click", () => file?.click());
+  drop?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); file?.click(); }
+  });
+  file?.addEventListener("change", (e) => {
+    const f = e.target.files?.[0];
+    if (f) loadEditFile(f);
+    e.target.value = "";   // allow re-picking the same file
+  });
+
+  // Drag & drop onto the zone.
+  ["dragenter", "dragover"].forEach((ev) =>
+    drop?.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.add("is-dragover"); }));
+  ["dragleave", "drop"].forEach((ev) =>
+    drop?.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.remove("is-dragover"); }));
+  drop?.addEventListener("drop", (e) => {
+    const f = e.dataTransfer?.files?.[0];
+    if (f && /^image\//.test(f.type)) loadEditFile(f);
+  });
+
+  $("#edit-replace")?.addEventListener("click", () => file?.click());
+  $("#edit-clear-mask")?.addEventListener("click", clearMask);
+
+  const brush = $("#edit-brush");
+  brush?.addEventListener("input", (e) => {
+    state.brushSize = Number(e.target.value);
+    const out = $("#edit-brush-val");
+    if (out) out.textContent = String(state.brushSize);
+  });
+
+  const strength = $("#edit-strength");
+  strength?.addEventListener("input", (e) => {
+    state.editStrength = Number(e.target.value);
+    const out = $("#edit-strength-val");
+    if (out) out.textContent = state.editStrength.toFixed(2);
+  });
+
+  bindMaskPainting();
+}
+
+function loadEditFile(file) {
+  const reader = new FileReader();
+  reader.onload = () => setEditImage(String(reader.result));
+  reader.onerror = () => console.warn("[popup] could not read edit image");
+  reader.readAsDataURL(file);
+}
+
+function setEditImage(dataUrl) {
+  state.editImageB64 = dataUrl;
+  const drop = $("#edit-drop");
+  const stage = $("#edit-stage");
+  const tools = $("#edit-tools");
+  const preview = $("#edit-preview");
+  if (!dataUrl) {
+    if (drop) drop.hidden = false;
+    if (stage) stage.hidden = true;
+    if (tools) tools.hidden = true;
+    if (preview) preview.removeAttribute("src");
+    maskCtx = null;
+    renderGenerateButton();
+    return;
+  }
+  // Load into the <img>, then size the mask canvas to the image's aspect.
+  if (preview) {
+    preview.onload = () => setupMaskCanvas(preview);
+    preview.src = dataUrl;
+  }
+  if (drop) drop.hidden = true;
+  if (stage) stage.hidden = false;
+  if (tools) tools.hidden = false;
+  renderGenerateButton();
+}
+
+// Size the mask canvas backing store to the source image's aspect (long side
+// capped at MASK_MAX). The stage uses the same aspect-ratio, so the canvas maps
+// 1:1 onto the displayed image — no letterbox, so pointer coords map cleanly.
+function setupMaskCanvas(img) {
+  const canvas = $("#edit-mask-canvas");
+  const stage = $("#edit-stage");
+  if (!canvas || !img.naturalWidth) return;
+  const nw = img.naturalWidth, nh = img.naturalHeight;
+  const scale = Math.min(1, MASK_MAX / Math.max(nw, nh));
+  canvas.width = Math.max(1, Math.round(nw * scale));
+  canvas.height = Math.max(1, Math.round(nh * scale));
+  if (stage) stage.style.aspectRatio = `${nw} / ${nh}`;
+  maskCtx = canvas.getContext("2d", { willReadFrequently: true });
+  maskCtx.clearRect(0, 0, canvas.width, canvas.height);
+  maskCtx.lineCap = maskCtx.lineJoin = "round";
+  maskCtx.strokeStyle = maskCtx.fillStyle = "rgba(56,189,248,0.55)";
+}
+
+function clearMask() {
+  const canvas = $("#edit-mask-canvas");
+  if (maskCtx && canvas) maskCtx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function bindMaskPainting() {
+  const canvas = $("#edit-mask-canvas");
+  if (!canvas) return;
+  const toCanvas = (e) => {
+    const r = canvas.getBoundingClientRect();
+    return {
+      x: (e.clientX - r.left) / r.width * canvas.width,
+      y: (e.clientY - r.top) / r.height * canvas.height,
+      // brush diameter in display px → canvas px
+      d: state.brushSize * (canvas.width / r.width),
+    };
+  };
+  const dot = (p) => {
+    maskCtx.beginPath();
+    maskCtx.arc(p.x, p.y, p.d / 2, 0, Math.PI * 2);
+    maskCtx.fill();
+  };
+  const lineTo = (a, b) => {
+    maskCtx.lineWidth = b.d;
+    maskCtx.beginPath();
+    maskCtx.moveTo(a.x, a.y);
+    maskCtx.lineTo(b.x, b.y);
+    maskCtx.stroke();
+  };
+  canvas.addEventListener("pointerdown", (e) => {
+    if (!maskCtx) return;
+    e.preventDefault();
+    canvas.setPointerCapture(e.pointerId);
+    painting = true;
+    lastPt = toCanvas(e);
+    dot(lastPt);
+  });
+  canvas.addEventListener("pointermove", (e) => {
+    if (!painting || !maskCtx) return;
+    const p = toCanvas(e);
+    lineTo(lastPt, p);
+    lastPt = p;
+  });
+  const end = () => { painting = false; lastPt = null; };
+  canvas.addEventListener("pointerup", end);
+  canvas.addEventListener("pointercancel", end);
+  canvas.addEventListener("pointerleave", end);
+}
+
+// True if any pixel of the mask canvas has been painted.
+function maskHasContent() {
+  const canvas = $("#edit-mask-canvas");
+  if (!maskCtx || !canvas) return false;
+  const { data } = maskCtx.getImageData(0, 0, canvas.width, canvas.height);
+  for (let i = 3; i < data.length; i += 4) if (data[i] > 12) return true;
+  return false;
+}
+
+// Export the painted mask as a white-on-black PNG data-URL (alpha-thresholded),
+// or null if nothing was painted.
+function exportMaskDataUrl() {
+  const canvas = $("#edit-mask-canvas");
+  if (!maskCtx || !canvas) return null;
+  const src = maskCtx.getImageData(0, 0, canvas.width, canvas.height);
+  const out = new ImageData(canvas.width, canvas.height);
+  let any = false;
+  for (let i = 0; i < src.data.length; i += 4) {
+    const on = src.data[i + 3] > 12;        // painted where stroke alpha present
+    if (on) any = true;
+    out.data[i] = out.data[i + 1] = out.data[i + 2] = on ? 255 : 0;
+    out.data[i + 3] = 255;
+  }
+  if (!any) return null;
+  const tmp = document.createElement("canvas");
+  tmp.width = canvas.width; tmp.height = canvas.height;
+  tmp.getContext("2d").putImageData(out, 0, 0);
+  return tmp.toDataURL("image/png");
+}
+
 function onGenerateClick() {
   if (!canGenerate()) return;
   engineCleared = false;
@@ -526,6 +728,8 @@ function onGenerateClick() {
     .filter(Boolean)
     .join(", ");
   const [w, h] = dimensionsFor(state.orientation);
+  const editing = state.mode === "edit" && !!state.editImageB64;
+  const editMask = editing ? exportMaskDataUrl() : null;
   sendSW({
     type: "action:generate",
     payload: {
@@ -539,6 +743,14 @@ function onGenerateClick() {
       seed: (state.seed != null && state.seed >= 0) ? state.seed : -1,
       upscale: 2,
       face_restore: !!state.faceRestore,
+      // img2img / inpaint — only present when editing a source image.
+      ...(editing ? {
+        mode: "edit",
+        init_image_b64: state.editImageB64,
+        strength: state.editStrength,
+        // Painted mask → localized inpaint; no paint → whole-image img2img.
+        ...(editMask ? { mask_b64: editMask } : {}),
+      } : {}),
     },
   });
   state.generating = { step: 0, total: state.steps, percent: 0 };
@@ -574,6 +786,7 @@ function canGenerateReason() {
   if (!hasBrowserVariant(model)) return "model has no browserRepoId";
   const installed = (state.models || []).some((m) => m.id === state.activeModelId && m.status === "installed");
   if (!installed) return `model "${state.activeModelId}" not status=installed in state.models`;
+  if (state.mode === "edit" && !state.editImageB64) return "edit mode: no source image uploaded";
   return "ok";
 }
 
@@ -871,7 +1084,7 @@ function renderGenerateButton() {
     return;
   }
 
-  lbl.textContent = t("btn_generate");
+  lbl.textContent = state.mode === "edit" ? "Edit image" : t("btn_generate");
 
   if (!model) {
     if (hint) hint.hidden = false;

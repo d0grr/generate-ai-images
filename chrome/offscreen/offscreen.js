@@ -228,6 +228,14 @@ async function generate(payload) {
     browser_unet_io = "float32",
     browser_timestep = "int64",
     browser_unet_file = "model",
+    // img2img / editing: VAE encoder repo (image → latent) + the source image
+    // (base64 PNG/data-URL) and edit strength.
+    browser_vae_encoder_repo_id = null,
+    browser_vae_encoder_file = "model",
+    browser_vae_encoder_io = "float32",
+    init_image_b64 = null,
+    mask_b64 = null,
+    strength = 0.6,
     width = 512,
     height = 512,
     steps = 20,
@@ -237,6 +245,8 @@ async function generate(payload) {
     face_restore = false,
     face_restore_strength = 0.8,
   } = payload;
+
+  const isEdit = !!init_image_b64;
 
   // SDXL renders at native 1024² — skip the Real-ESRGAN ×2 (would make 2048).
   const upscale = browser_kind === "sdxl" ? 1 : upscaleReq;
@@ -289,6 +299,28 @@ async function generate(payload) {
 
   const actualSeed = seed >= 0 ? seed : Math.floor(Math.random() * 2 ** 31);
 
+  // img2img: configure the VAE encoder on the (possibly reused) pipeline and
+  // decode the source image to a native-1024² ImageData before generating.
+  let initImageData = null;
+  let maskLatent = null;
+  if (isEdit) {
+    pipeline.vaeEncoderRepoId = browser_vae_encoder_repo_id;
+    pipeline.vaeEncoderFile = browser_vae_encoder_file;
+    pipeline.vaeEncoderIO = browser_vae_encoder_io;
+    try {
+      initImageData = await decodeInitImage(init_image_b64);
+    } catch (err) {
+      throw new Error(`Could not read the source image: ${err?.message || err}`);
+    }
+    if (mask_b64) {
+      try {
+        maskLatent = await decodeMaskToLatent(mask_b64);
+      } catch (err) {
+        console.warn("[offscreen] mask decode failed — falling back to global img2img:", err);
+      }
+    }
+  }
+
   let imageData;
   try {
     imageData = await pipeline.generate({
@@ -300,6 +332,19 @@ async function generate(payload) {
       height,
       seed: actualSeed,
       signal,
+      initImage: initImageData,
+      mask: maskLatent,
+      strength,
+      onEncodeProgress: (p) => {
+        postProgress({
+          phase: p.phase || "encoding",
+          step: 0,
+          total: steps,
+          file: p.file,
+          downloaded: p.loaded,
+          total_bytes: p.total,
+        });
+      },
       onStep: (step, total) => {
         postProgress({ phase: "denoising", step, total });
       },
@@ -321,6 +366,18 @@ async function generate(payload) {
       return { ok: false, error: "cancelled", cancelled: true };
     }
     throw err;
+  }
+
+  // Inpaint: paste the original pixels back into the UNPAINTED region so it stays
+  // bit-for-bit (the latent-blend keeps it coherent during denoise, but the global
+  // VAE round-trip still drifts it slightly). Feathered by the upscaled mask so the
+  // seam is soft. Only the painted region keeps the freshly generated pixels.
+  if (maskLatent && initImageData && !signal.aborted) {
+    try {
+      imageData = compositeInpaint(imageData, initImageData, maskLatent);
+    } catch (err) {
+      console.warn("[offscreen] inpaint composite failed — using raw output:", err);
+    }
   }
 
   // Optional GFPGAN face restoration. Runs BEFORE upscale so the model gets
@@ -484,6 +541,99 @@ async function preloadModel(repoId, modelId, encoderRepoId, unetFile = "model") 
     }
     throw err;
   }
+}
+
+// SDXL native side — the VAE encoder expects the source at the model's
+// resolution, so we cover-fit (scale to fill, centre-crop) the user's image
+// into a 1024² canvas. Cover (not contain) avoids letterbox bars that the model
+// would otherwise try to "paint over".
+const SDXL_SIDE = 1024;
+async function decodeInitImage(b64) {
+  // Decode the base64 ourselves — the extension-page CSP `connect-src` has no
+  // `data:` source, so fetch("data:…") is blocked. atob → bytes → Blob instead.
+  let mime = "image/png";
+  let raw = b64;
+  if (b64.startsWith("data:")) {
+    const comma = b64.indexOf(",");
+    const header = b64.slice(5, comma);          // e.g. "image/png;base64"
+    mime = header.split(";")[0] || mime;
+    raw = b64.slice(comma + 1);
+  }
+  const bin = atob(raw);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  const blob = new Blob([bytes], { type: mime });
+  const bmp = await createImageBitmap(blob);
+  const canvas = new OffscreenCanvas(SDXL_SIDE, SDXL_SIDE);
+  const ctx = canvas.getContext("2d");
+  const scale = Math.max(SDXL_SIDE / bmp.width, SDXL_SIDE / bmp.height);
+  const dw = bmp.width * scale, dh = bmp.height * scale;
+  ctx.drawImage(bmp, (SDXL_SIDE - dw) / 2, (SDXL_SIDE - dh) / 2, dw, dh);
+  bmp.close?.();
+  return ctx.getImageData(0, 0, SDXL_SIDE, SDXL_SIDE);
+}
+
+// Inpaint mask → single-channel Float32Array at latent resolution (128² = 1024/8),
+// values 0..1 where 1 = regenerate. The mask PNG (white strokes on black) is
+// cover-fit with the SAME centre-crop as decodeInitImage so it stays pixel-aligned
+// with the source. Downscaling to 128² also feathers the stroke edges, which
+// softens the inpaint seam.
+const LATENT_SIDE = SDXL_SIDE / 8;   // 128
+async function decodeMaskToLatent(b64) {
+  let raw = b64, mime = "image/png";
+  if (b64.startsWith("data:")) {
+    const comma = b64.indexOf(",");
+    mime = b64.slice(5, comma).split(";")[0] || mime;
+    raw = b64.slice(comma + 1);
+  }
+  const bin = atob(raw);
+  const bytes = new Uint8Array(bin.length);
+  for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+  const bmp = await createImageBitmap(new Blob([bytes], { type: mime }));
+  const canvas = new OffscreenCanvas(LATENT_SIDE, LATENT_SIDE);
+  const ctx = canvas.getContext("2d");
+  const scale = Math.max(LATENT_SIDE / bmp.width, LATENT_SIDE / bmp.height);
+  const dw = bmp.width * scale, dh = bmp.height * scale;
+  ctx.drawImage(bmp, (LATENT_SIDE - dw) / 2, (LATENT_SIDE - dh) / 2, dw, dh);
+  bmp.close?.();
+  const { data } = ctx.getImageData(0, 0, LATENT_SIDE, LATENT_SIDE);
+  const mask = new Float32Array(LATENT_SIDE * LATENT_SIDE);
+  // Use luminance of the red channel (white stroke → 1). Anything painted at all
+  // counts toward editing; the soft downscaled edge gives a gradient blend.
+  for (let i = 0; i < mask.length; i++) mask[i] = data[i * 4] / 255;
+  return mask;
+}
+
+// Blend generated over original by a feathered full-res mask (the 128² latent
+// mask upscaled smoothly to the image size). out = m·generated + (1−m)·original.
+function compositeInpaint(generated, original, maskLatent) {
+  const W = generated.width, H = generated.height;
+  // 128² mask → grayscale ImageData → upscale (smoothed) to W×H for soft edges.
+  const small = new OffscreenCanvas(LATENT_SIDE, LATENT_SIDE);
+  const mSmall = new ImageData(LATENT_SIDE, LATENT_SIDE);
+  for (let i = 0; i < maskLatent.length; i++) {
+    const v = Math.max(0, Math.min(255, Math.round(maskLatent[i] * 255)));
+    mSmall.data[i * 4] = mSmall.data[i * 4 + 1] = mSmall.data[i * 4 + 2] = v;
+    mSmall.data[i * 4 + 3] = 255;
+  }
+  small.getContext("2d").putImageData(mSmall, 0, 0);
+  const big = new OffscreenCanvas(W, H);
+  const bctx = big.getContext("2d");
+  bctx.imageSmoothingEnabled = true;
+  bctx.imageSmoothingQuality = "high";
+  bctx.drawImage(small, 0, 0, W, H);
+  const mFull = bctx.getImageData(0, 0, W, H).data;
+
+  const g = generated.data, o = original.data;
+  const out = new ImageData(W, H);
+  for (let p = 0; p < W * H; p++) {
+    const m = mFull[p * 4] / 255, k = 1 - m;
+    out.data[p * 4]     = g[p * 4]     * m + o[p * 4]     * k;
+    out.data[p * 4 + 1] = g[p * 4 + 1] * m + o[p * 4 + 1] * k;
+    out.data[p * 4 + 2] = g[p * 4 + 2] * m + o[p * 4 + 2] * k;
+    out.data[p * 4 + 3] = 255;
+  }
+  return out;
 }
 
 async function saveFullToOpfs(imageData) {

@@ -1,7 +1,7 @@
 // ─────────────────────────────────────────────────────────────
 // GFPGAN v1.4 face-restoration post-process.
 //
-//   model: Neus/GFPGANv1.4/GFPGANv1.4.onnx
+//   model: d0gr/GFPGAN/GFPGANv1.4.onnx
 //          ~324 MB, single file (no external-data sidecar), fp32 I/O,
 //          standard ONNX ops (no com.microsoft.* contrib ops), so the
 //          WebGPU EP runs it — anything it can't take falls back to WASM.
@@ -22,7 +22,7 @@ import { loadOrt, fetchOnnxCached } from "./sd-pipeline.js";
 const HF_BASE = "https://huggingface.co";
 
 const FACE_MODEL = {
-  repoId: "Neus/GFPGANv1.4",
+  repoId: "d0gr/GFPGAN",
   path:   "GFPGANv1.4.onnx",
   size:   512,          // fixed square input the model was exported with
   sizeMb: 324,

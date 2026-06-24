@@ -367,6 +367,13 @@ async function handlePopupMessage(msg) {
         // UNet ONNX filename stem (quantized exports use suffixed names, e.g.
         // "model_q4"); defaults to "model".
         browser_unet_file: modelEntry?.browserUnetFile || "model",
+        // img2img / editing: the VAE encoder (image → latent) lives in its own
+        // repo since the bundled Lightning model ships only a decoder. Passed
+        // through so the engine can lazy-load it on the first edit. The image
+        // itself + strength + mode ride along in `...payload` from the popup.
+        browser_vae_encoder_repo_id: modelEntry?.browserVaeEncoderRepoId || null,
+        browser_vae_encoder_file: modelEntry?.browserVaeEncoderFile || "model",
+        browser_vae_encoder_io: modelEntry?.browserVaeEncoderIO || "float32",
       });
       return { ok: true };
     }

@@ -1305,3 +1305,113 @@ body.tab-models #popup-foot { display: none; }
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 }
+
+/* ═══════════ Edit tab (img2img + inpaint) ═══════════ */
+.edit-panel { display: flex; flex-direction: column; gap: 12px; }
+
+.edit-drop {
+  position: relative;
+  width: 100%;
+  min-height: 132px;
+  padding: 0;
+  border: 1.5px dashed var(--bg-3);
+  border-radius: 14px;
+  background: var(--bg-1);
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .15s, background .15s;
+}
+.edit-drop:hover, .edit-drop.is-dragover {
+  border-color: var(--blue-sky);
+  background: var(--bg-2);
+}
+.edit-drop-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--txt-4);
+  font: 500 calc(12px + var(--fs-bump, 0px))/1.3 var(--font-ui);
+}
+.edit-preview {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  background: #0f172a;
+}
+.edit-clear {
+  position: absolute;
+  top: 7px; right: 7px;
+  width: 22px; height: 22px;
+  display: flex; align-items: center; justify-content: center;
+  border: 0; border-radius: 50%;
+  background: rgba(15,23,42,.62);
+  color: #fff;
+  cursor: pointer;
+}
+.edit-clear:hover { background: rgba(15,23,42,.85); }
+
+.edit-strength { display: flex; flex-direction: column; gap: 6px; }
+.edit-strength-lbl {
+  font: 600 calc(11px + var(--fs-bump, 0px))/1 var(--font-ui);
+  color: var(--txt-3);
+}
+.edit-strength-lbl #edit-strength-val {
+  color: var(--blue);
+  font-family: var(--font-mono);
+}
+.edit-strength input[type="range"] { width: 100%; accent-color: var(--blue); }
+
+.edit-hint {
+  font: 500 calc(10.5px + var(--fs-bump, 0px))/1.4 var(--font-ui);
+  color: var(--txt-5);
+}
+
+/* ── inpaint: paint stage + mask canvas + brush tools ── */
+.edit-stage {
+  position: relative;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0f172a;
+  touch-action: none;
+}
+.edit-stage-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;          /* stage box already matches image aspect → no distort */
+  user-select: none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+.edit-mask-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: crosshair;
+  touch-action: none;
+}
+.edit-tools {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+.edit-brush { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+.edit-brush input[type="range"] { width: 100%; accent-color: var(--blue); }
+.edit-tool-btn {
+  padding: 7px 12px;
+  border: 1px solid var(--bg-3);
+  border-radius: 9px;
+  background: var(--bg-1);
+  color: var(--txt-3);
+  font: 600 calc(11px + var(--fs-bump, 0px))/1 var(--font-ui);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.edit-tool-btn:hover { background: var(--bg-2); color: var(--txt-2); }

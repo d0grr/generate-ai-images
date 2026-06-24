@@ -15,6 +15,14 @@ const RAW_CATALOG = [
     browserSizeGb: 6.9,
     browserScheduler: "euler",          // Euler with trailing spacing (set by kind)
     browserDtype: "float32",            // SDXL ONNX has fp32 I/O (fp16 internals)
+    // img2img: the SDXL VAE is frozen, so a standalone SDXL VAE export pairs
+    // with our (Lightning) decoder. Clean pytorch ONNX export (standard Conv —
+    // ort-web has no kernel for Olive's NhwcConv) with fp32 I/O (fp16 VAE NaNs on
+    // WebGPU). Its `latent_parameters` output is 8-ch moments; the pipeline takes
+    // the mean (mode). ~137 MB, cached in OPFS after first use.
+    browserVaeEncoderRepoId: "d0gr/sdxl-vae-onnx",
+    browserVaeEncoderFile: "model",
+    browserVaeEncoderIO: "float32",
     browserDefaultSteps: 6,
     browserDefaultGuidance: 1.5,        // mild CFG (2nd UNet pass per step)
     nameLead: "SDXL Lightning",
@@ -47,6 +55,10 @@ const RAW_CATALOG = [
     browserSizeGb: 3.6,                  // 1.86 GB UNet + ~1.75 GB shared encoders/VAE
     browserScheduler: "euler",
     browserDtype: "float32",            // q4 export keeps fp32 I/O (weights only quantized)
+    // Same shared SDXL VAE encoder as the fp16 variant (frozen across SDXL).
+    browserVaeEncoderRepoId: "d0gr/sdxl-vae-onnx",
+    browserVaeEncoderFile: "model",
+    browserVaeEncoderIO: "float32",
     browserDefaultSteps: 4,             // light/fast: single-pass, no CFG
     browserDefaultGuidance: 0,
     nameLead: "SDXL Lightning",

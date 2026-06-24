@@ -56,6 +56,13 @@ export class SDXLPipeline {
     this.unet = null;
     this.vaeDecoder = null;
     this.scheduler = null;
+    // VAE encoder (image → latent) — loaded lazily on the first img2img edit so
+    // text-to-image users never pay its download/compile. Config is supplied per
+    // generate() call (the encoder repo is independent of the UNet repo).
+    this.vaeEncoder = null;
+    this.vaeEncoderRepoId = null;
+    this.vaeEncoderFile = "model";
+    this.vaeEncoderIO = "float32";   // standalone SDXL VAE export has fp32 I/O
   }
 
   /**
@@ -222,26 +229,57 @@ export class SDXLPipeline {
       onStep,
       onDecode,
       signal,
+      // img2img — when initImage (RGBA ImageData at native 1024²) is present, the
+      // pipeline encodes it to a latent and starts the denoise partway through.
+      initImage = null,
+      strength = 0.6,
+      onEncodeProgress,
+      // inpainting — mask is a single-channel Float32Array at latent resolution
+      // (LATENT²), 1 = regenerate, 0 = keep. When present, the kept region is
+      // re-pinned to the (noised) source latent after every denoise step.
+      mask = null,
     } = opts;
     const doCFG = guidance_scale > 1;
+    const isImg2Img = !!initImage;
+    const isInpaint = isImg2Img && !!mask;
 
     // 1-3. Text encode the prompt (and the negative prompt when guiding).
     const cond = await this._encode(prompt);
     const uncond = doCFG ? await this._encode(negative_prompt) : null;
 
-    // 4. scheduler + init latents
+    // 4. scheduler + init latents.
     this.scheduler.set_timesteps(steps);
-    let latents = randn(LCH * LATENT * LATENT, seed >>> 0);
-    const initSigma = this.scheduler.init_noise_sigma;
-    for (let i = 0; i < latents.length; i++) latents[i] *= initSigma;
+    let latents;
+    // startStep > 0 only for img2img: how much of the schedule we SKIP. Higher
+    // strength → start earlier (more noise, freer reinterpretation); lower
+    // strength → start later (closer to the source). 0 means "from scratch".
+    let startStep = 0;
+    // Kept across the loop for inpainting (re-pin the unmasked region each step).
+    let initLatents = null;
+    let noise = null;
+    if (isImg2Img) {
+      await this._ensureVaeEncoder({ progress: onEncodeProgress, signal });
+      if (signal?.aborted) throw new Error("cancelled");
+      initLatents = await this._encodeImageToLatents(initImage);
+      const s = Math.min(1, Math.max(0.02, strength));
+      // Run ≈ steps·strength denoise steps; keep at least one.
+      startStep = Math.min(steps - 1, Math.max(0, Math.round(steps * (1 - s))));
+      noise = randn(LCH * LATENT * LATENT, seed >>> 0);
+      latents = this.scheduler.add_noise(initLatents, noise, startStep);
+    } else {
+      latents = randn(LCH * LATENT * LATENT, seed >>> 0);
+      const initSigma = this.scheduler.init_noise_sigma;
+      for (let i = 0; i < latents.length; i++) latents[i] *= initSigma;
+    }
 
     const condT = this._condTensors(cond.ehs, cond.pooled);
     const uncondT = doCFG ? this._condTensors(uncond.ehs, uncond.pooled) : null;
     const timeIdsT = condT.timeIdsT;     // identical for both passes (native 1024²)
     const latShape = [1, LCH, LATENT, LATENT];
 
-    // 5. denoise
-    for (let i = 0; i < steps; i++) {
+    // 5. denoise (from startStep for img2img; from 0 for text2img)
+    const runSteps = steps - startStep;
+    for (let i = startStep; i < steps; i++) {
       if (signal?.aborted) throw new Error("cancelled");
       const scaled = this.scheduler.scale_model_input(latents, i);
       const tInt = this.scheduler.timesteps[i];
@@ -268,7 +306,26 @@ export class SDXLPipeline {
         noisePred = dataF32(out.out_sample);
       }
       latents = this.scheduler.step(noisePred, i, latents);
-      onStep?.(i + 1, steps);
+
+      // Inpainting: lock the unmasked region back to the source latent, noised to
+      // the NEXT step's level (sigmas[i+1]; the final step's sigma is 0, so the
+      // kept region lands exactly on the clean source). The masked region keeps
+      // the freshly denoised values → only it follows the prompt.
+      if (isInpaint) {
+        const plane = LATENT * LATENT;
+        const origNoised = this.scheduler.add_noise(initLatents, noise, i + 1);
+        for (let p = 0; p < plane; p++) {
+          const m = mask[p];
+          if (m >= 0.999) continue;            // fully editable — leave as denoised
+          const keep = 1 - m;
+          for (let c = 0; c < LCH; c++) {
+            const idx = c * plane + p;
+            latents[idx] = m * latents[idx] + keep * origNoised[idx];
+          }
+        }
+      }
+
+      onStep?.(i - startStep + 1, runSteps);
     }
 
     // 6. VAE decode (÷ scaling factor). The full SDXL VAE's 1024² decode is a
@@ -287,10 +344,79 @@ export class SDXLPipeline {
   }
 
   async dispose() {
-    for (const s of [this.textEncoder, this.textEncoder2, this.unet, this.vaeDecoder]) {
+    for (const s of [this.textEncoder, this.textEncoder2, this.unet, this.vaeDecoder, this.vaeEncoder]) {
       try { await s?.release?.(); } catch {}
     }
-    this.textEncoder = this.textEncoder2 = this.unet = this.vaeDecoder = null;
+    this.textEncoder = this.textEncoder2 = this.unet = this.vaeDecoder = this.vaeEncoder = null;
+  }
+
+  // ── img2img: VAE encoder (image → latent) ──────────────────────────────────
+  /**
+   * Lazily create the VAE-encoder ORT session. Loaded from a SEPARATE repo
+   * (vaeEncoderRepoId — e.g. the ONNX Runtime team's tlwu/sdxl-turbo-onnxruntime)
+   * because the bundled Lightning repo ships only a decoder. The SDXL VAE is
+   * frozen, so any standard SDXL vae_encoder pairs with our decoder. The export
+   * does the reparameterised sample (mean + std·ε) inside the graph, so its
+   * `latent_sample` output is already a drawn latent — we only apply VAE_SCALE.
+   */
+  async _ensureVaeEncoder({ progress, signal } = {}) {
+    if (this.vaeEncoder) return this.vaeEncoder;
+    if (!this.vaeEncoderRepoId) {
+      throw new Error("This model has no VAE encoder configured — image editing is unavailable.");
+    }
+    const ort = loadOrt();
+    const base = `${repoRoot(this.vaeEncoderRepoId)}/vae_encoder`;
+    const stem = this.vaeEncoderFile || "model";
+    const checkAbort = () => { if (signal?.aborted) throw new Error("aborted"); };
+    checkAbort();
+    const graphBuf = await fetchOnnxCached(`${base}/${stem}.onnx`,
+      (loaded, total) => progress?.({ file: "vae_encoder", loaded, total, phase: "downloading" }), signal);
+    checkAbort();
+    const externalData = [];
+    for (const name of await discoverShards(base, stem)) {
+      const buf = await fetchOnnxCached(`${base}/${name}`,
+        (loaded, total) => progress?.({ file: "vae_encoder weights", loaded, total, phase: "downloading" }), signal);
+      checkAbort();
+      externalData.push({ path: name, data: new Uint8Array(buf) });
+    }
+    progress?.({ file: "vae_encoder", loaded: 1, total: 1, phase: "compiling" });
+    const opts = { executionProviders: ["webgpu"], graphOptimizationLevel: "all" };
+    if (externalData.length) opts.externalData = externalData;
+    this.vaeEncoder = await ort.InferenceSession.create(graphBuf, opts);
+    return this.vaeEncoder;
+  }
+
+  /**
+   * RGBA ImageData at native 1024² → model-space latent Float32Array[4·128·128].
+   * Pixels → CHW in [-1,1] (the encoder's `sample` input), run, widen the fp16
+   * `latent_sample`, multiply by VAE_SCALE (the decoder divides by it).
+   */
+  async _encodeImageToLatents(imageData) {
+    const ort = loadOrt();
+    const plane = SIDE * SIDE;             // 1024²
+    const io = this.vaeEncoderIO === "float32" ? "float32" : "float16";
+    const A = io === "float16" ? Float16Array : Float32Array;
+    const chw = new A(3 * plane);
+    const px = imageData.data;
+    for (let i = 0; i < plane; i++) {
+      chw[i]           = px[i * 4]     / 127.5 - 1;
+      chw[i + plane]   = px[i * 4 + 1] / 127.5 - 1;
+      chw[i + 2 * plane] = px[i * 4 + 2] / 127.5 - 1;
+    }
+    const out = await this.vaeEncoder.run({
+      sample: new ort.Tensor(io, chw, [1, 3, SIDE, SIDE]),
+    });
+    // Two export conventions:
+    //   • `latent_sample` [1,4,h,w] — already a drawn latent (sampling baked in)
+    //   • `latent_parameters` [1,8,h,w] — raw moments (mean | logvar concatenated)
+    // We always take the FIRST LCH(=4) channels: for moments that's the mean (the
+    // distribution mode — deterministic, the standard img2img init), and for a
+    // 4-channel output it's the latent itself. Then scale (decoder divides back).
+    const raw = dataF32(out.latent_sample ?? out.latent_parameters ?? Object.values(out)[0]);
+    const n = LCH * LATENT * LATENT;
+    const scaled = new Float32Array(n);
+    for (let i = 0; i < n; i++) scaled[i] = raw[i] * VAE_SCALE;
+    return scaled;
   }
 }
 

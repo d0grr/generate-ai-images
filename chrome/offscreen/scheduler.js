@@ -96,6 +96,20 @@ export class EulerScheduler {
     this.init_noise_sigma = sigmas[0];
   }
 
+  /**
+   * img2img: noise an existing (clean) latent up to the sigma of `step_index`.
+   * Euler convention — the noised sample at sigma σ is x = x0 + σ·ε, so feeding
+   * the result into the denoise loop starting at the SAME step_index is exact
+   * (scale_model_input/step both read this.sigmas[step_index]). Caller picks
+   * step_index from the requested strength.
+   */
+  add_noise(latents, noise, step_index) {
+    const sigma = this.sigmas[step_index];
+    const out = new Float32Array(latents.length);
+    for (let i = 0; i < latents.length; i++) out[i] = latents[i] + sigma * noise[i];
+    return out;
+  }
+
   /** Scale model input according to current sigma (EulerDiscrete). */
   scale_model_input(sample, step_index) {
     const sigma = this.sigmas[step_index];
