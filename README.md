@@ -32,9 +32,37 @@ V3 sidebar).
   <sub><b>Workspace</b> — on-device gallery with metadata &amp; export</sub>
 </p>
 
+## Examples
+
+Generated locally on WebGPU (SDXL-Lightning, 1024x1024). Previews are web-optimized
+WebP — click any one for the full-resolution PNG.
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <a href="chrome/img/sample1.png"><img src="chrome/img/sample1.webp" width="320" alt="Example 1"></a><br>
+      <sub><a href="chrome/img/sample1.png">Sample 1 — original PNG</a></sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="chrome/img/sample2.png"><img src="chrome/img/sample2.webp" width="320" alt="Example 2"></a><br>
+      <sub><a href="chrome/img/sample2.png">Sample 2 — original PNG</a></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <a href="chrome/img/sample3.png"><img src="chrome/img/sample3.webp" width="320" alt="Example 3"></a><br>
+      <sub><a href="chrome/img/sample3.png">Sample 3 — original PNG</a></sub>
+    </td>
+    <td align="center" width="50%">
+      <a href="chrome/img/sample4.png"><img src="chrome/img/sample4.webp" width="320" alt="Example 4"></a><br>
+      <sub><a href="chrome/img/sample4.png">Sample 4 — original PNG</a></sub>
+    </td>
+  </tr>
+</table>
+
 ## Features
 
-- **Text → image** with SDXL-Lightning (1024², 4-step) running locally on WebGPU.
+- **Text → image** with SDXL-Lightning (1024x1024, 4-step) running locally on WebGPU.
 - **Fully offline & private** — models download once into the browser's OPFS cache
   and run with no network thereafter.
 - **Optional post-processing**: Real-ESRGAN upscale and GFPGAN face restoration.
