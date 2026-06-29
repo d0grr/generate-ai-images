@@ -50,9 +50,12 @@ self.onmessage = async (e) => {
         const fh = await dir.getFileHandle(fileName, { create: true });
         handle = await createHandleWithRetry(fh);
         const startSize = handle.getSize();
-        // If user requested a fresh write, truncate.
+        // If user requested a fresh write, truncate. When the final size is
+        // known (parallel segmented download), pre-extend to it so out-of-order
+        // blocks land at absolute offsets and a resume can re-fetch only the
+        // missing ones; the sequential path passes no size and truncates to 0.
         if (msg.truncate) {
-          handle.truncate(0);
+          handle.truncate(typeof msg.size === "number" ? msg.size : 0);
           handle.flush();
           written = 0;
         } else {
@@ -65,16 +68,21 @@ self.onmessage = async (e) => {
       }
       case "write": {
         if (!handle) throw new Error("handle not open");
-        // msg.chunk is a transferred Uint8Array
+        // msg.chunk is a transferred Uint8Array. `msg.at` lets the parallel
+        // segmented downloader write blocks out of order at absolute offsets;
+        // without it we append at the sequential cursor (legacy single stream).
         const chunk = msg.chunk;
-        const wrote = handle.write(chunk, { at: written });
-        written += wrote;
-        self.postMessage({ type: "wrote", total: written, last: wrote });
+        const at = typeof msg.at === "number" ? msg.at : written;
+        const wrote = handle.write(chunk, { at });
+        // Track the high-water mark, not a running sum — out-of-order writes
+        // would otherwise inflate it past the real file size.
+        written = Math.max(written, at + wrote);
+        self.postMessage({ type: "wrote", id: msg.id, total: written, last: wrote });
         break;
       }
       case "flush": {
         if (handle) handle.flush();
-        self.postMessage({ type: "flushed", total: written });
+        self.postMessage({ type: "flushed", id: msg.id, total: written });
         break;
       }
       case "close": {
@@ -83,14 +91,14 @@ self.onmessage = async (e) => {
           handle.close();
           handle = null;
         }
-        self.postMessage({ type: "closed", total: written });
+        self.postMessage({ type: "closed", id: msg.id, total: written });
         // self.close() not needed — offscreen will terminate the worker.
         break;
       }
       default:
-        self.postMessage({ type: "error", error: `unknown message: ${msg?.type}` });
+        self.postMessage({ type: "error", id: msg?.id, error: `unknown message: ${msg?.type}` });
     }
   } catch (err) {
-    self.postMessage({ type: "error", error: String(err?.message || err) });
+    self.postMessage({ type: "error", id: msg?.id, error: String(err?.message || err) });
   }
 };

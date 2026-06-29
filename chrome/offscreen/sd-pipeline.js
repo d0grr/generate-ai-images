@@ -147,6 +147,16 @@ function f16BitsToF32(h) {
 const ONNX_CACHE_DIR = "models-cache";
 const SIZE_KEY_PREFIX = "onnx-size:";
 
+// Parallel segmented download. HF's Xet CDN throttles then drops a single long
+// connection over a multi-GB shard, so instead of one open-ended `bytes=start-`
+// stream we slice each file into short, bounded byte ranges and fetch a few at
+// once. Short ranges complete before the CDN throttles; parallelism lifts the
+// aggregate rate; a dropped block costs only one cheap re-fetch, not the file.
+const DL_BLOCK_BYTES = 8 * 1024 * 1024;   // size of each ranged block
+const DL_CONCURRENCY = 4;                 // blocks fetched at once per file
+const DL_SEG_MAX_ATTEMPTS = 5;            // per-block retries before the file fails
+const SEG_KEY_PREFIX = "onnx-seg:";       // storage.local resume manifest per file
+
 // One OPFS SyncAccessHandle per file is allowed at a time. The offscreen
 // document is kept alive across generations while the popup is open (so the
 // loaded pipeline is reused), which means a worker from a cancelled/failed
@@ -424,6 +434,275 @@ async function fetchDirectToBuffer(url, onProgress, signal) {
   return out.buffer;
 }
 
+/** True for a user-initiated abort vs a network/server error. */
+function isAbortErr(err, signal) {
+  const msg = String(err?.message || err);
+  return !!signal?.aborted || err?.name === "AbortError" || /aborted/i.test(msg);
+}
+
+/** setTimeout as an abortable promise (rejects "aborted" if the signal fires). */
+function sleep(ms, signal) {
+  return new Promise((resolve, reject) => {
+    const onAbort = () => { clearTimeout(t); cleanup(); reject(new Error("aborted")); };
+    const cleanup = () => signal?.removeEventListener?.("abort", onAbort);
+    const t = setTimeout(() => { cleanup(); resolve(); }, ms);
+    if (signal) { if (signal.aborted) onAbort(); else signal.addEventListener("abort", onAbort, { once: true }); }
+  });
+}
+
+/**
+ * Probe a URL with a 1-byte ranged GET to learn its size AND whether the server
+ * honours Range (a 206). Mirrors urlInfo's DIRECT trick (HF's presigned Xet URLs
+ * reject HEAD), but also reports range support so the caller can pick the
+ * parallel segmented path vs a single sequential stream. Aborts the connection
+ * in `finally` so the body never transfers.
+ */
+async function probeRangeDirect(url, signal) {
+  const ctrl = new AbortController();
+  const onAbort = () => { try { ctrl.abort(); } catch {} };
+  if (signal) { if (signal.aborted) onAbort(); else signal.addEventListener("abort", onAbort, { once: true }); }
+  try {
+    const res = await fetch(url, {
+      method: "GET",
+      headers: { Range: "bytes=0-0" },
+      credentials: "omit",
+      signal: ctrl.signal,
+    });
+    if (res.status === 206) {
+      const m = /\/(\d+)\s*$/.exec(res.headers.get("content-range") || "");
+      return { ranges: true, size: m ? Number(m[1]) : 0 };
+    }
+    if (res.ok) return { ranges: false, size: Number(res.headers.get("content-length")) || 0 };
+    throw new Error(`HTTP ${res.status} for ${url}`);
+  } finally {
+    onAbort();
+    signal?.removeEventListener?.("abort", onAbort);
+  }
+}
+
+/**
+ * Fetch one inclusive byte range [start,end] straight from HF in the offscreen
+ * document and hand each piece to onChunk(chunk, absoluteOffset). Requires a 206
+ * — a 200 means the server ignored Range and would deliver the whole file, which
+ * is useless mid-parallel-download, so we reject and let the caller fall back.
+ */
+async function fetchRangeDirect(url, start, end, onChunk, signal) {
+  const res = await fetch(url, {
+    method: "GET",
+    headers: { Range: `bytes=${start}-${end}` },
+    credentials: "omit",
+    signal,
+  });
+  if (res.status !== 206) {
+    if (res.ok) throw new Error(`range-ignored (HTTP 200) for ${url}`);
+    throw new Error(`HTTP ${res.status} for ${url}`);
+  }
+  const reader = res.body.getReader();
+  let at = start;
+  for (;;) {
+    if (signal?.aborted) { try { await reader.cancel("aborted"); } catch {} throw new Error("aborted"); }
+    const { done, value } = await reader.read();
+    if (done) break;
+    await onChunk(value, at);
+    at += value.byteLength;
+  }
+}
+
+/**
+ * Open the OPFS cache file for a model and return a writer that accepts
+ * concurrent, out-of-order offset writes (one SyncAccessHandle worker per file —
+ * holding two on one file is illegal, so the parallel segments funnel through
+ * this single worker, which serialises them). Each write is id-matched to its
+ * ack so producers get real back-pressure instead of flooding the worker.
+ */
+async function openOpfsWriter(fileName, truncate, size) {
+  const stale = _activeWriters.get(fileName);
+  if (stale) { try { stale.terminate(); } catch {} _activeWriters.delete(fileName); }
+  const worker = new Worker(chrome.runtime.getURL("offscreen/workers/opfs-writer.js"));
+  _activeWriters.set(fileName, worker);
+
+  let seq = 0;
+  const pending = new Map();           // id → {resolve, reject}
+  let openResolve, openReject;
+  const opened = new Promise((res, rej) => { openResolve = res; openReject = rej; });
+
+  worker.addEventListener("message", (e) => {
+    const d = e.data || {};
+    if (d.type === "opened") { openResolve(d.size || 0); return; }
+    if (d.type === "error") {
+      if (d.id != null && pending.has(d.id)) { pending.get(d.id).reject(new Error(d.error)); pending.delete(d.id); }
+      else { openReject(new Error(d.error)); pending.forEach((p) => p.reject(new Error(d.error))); pending.clear(); }
+      return;
+    }
+    if (d.id != null && pending.has(d.id)) { pending.get(d.id).resolve(d); pending.delete(d.id); }
+  });
+
+  const call = (msg, transfer) => new Promise((resolve, reject) => {
+    const id = ++seq;
+    pending.set(id, { resolve, reject });
+    worker.postMessage({ ...msg, id }, transfer || []);
+  });
+
+  worker.postMessage({ type: "open", dirName: ONNX_CACHE_DIR, fileName, truncate, size });
+  await opened;
+
+  return {
+    writeAt: (chunk, at) => call({ type: "write", chunk, at }, [chunk.buffer]),
+    flush: () => call({ type: "flush" }),
+    async close() {
+      try { await call({ type: "close" }); } catch {}
+      try { worker.terminate(); } catch {}
+      if (_activeWriters.get(fileName) === worker) _activeWriters.delete(fileName);
+    },
+  };
+}
+
+/**
+ * Download `url` into the OPFS cache file as fixed-size blocks fetched
+ * DL_CONCURRENCY at a time, writing each at its absolute offset. A resume
+ * manifest (which blocks are done) is persisted so a reload re-fetches only the
+ * missing ones. `total` is the file size from a successful range probe.
+ */
+async function segmentedDownload(url, fileName, total, onProgress, signal) {
+  const block = DL_BLOCK_BYTES;
+  const segCount = Math.ceil(total / block);
+  const segKey = `${SEG_KEY_PREFIX}${fileName}`;
+  const segSize = (i) => Math.min((i + 1) * block, total) - i * block;
+
+  // Resume only if the manifest matches this exact geometry AND the on-disk file
+  // already spans `total` (so untouched blocks read back as real, not a hole).
+  let done = new Array(segCount).fill(false);
+  const man = (await swStorageGet(segKey))?.[segKey];
+  const canResume = man && man.total === total && man.block === block &&
+    Array.isArray(man.done) && man.done.length === segCount &&
+    (await opfsFileSize(fileName)) >= total;
+  if (canResume) done = man.done.map(Boolean);
+
+  const writer = await openOpfsWriter(fileName, /* truncate */ !canResume, total);
+
+  const segLoaded = new Array(segCount).fill(0);
+  for (let i = 0; i < segCount; i++) if (done[i]) segLoaded[i] = segSize(i);
+  const report = () => onProgress?.(segLoaded.reduce((a, b) => a + b, 0), total);
+  report();
+
+  let sinceSave = 0;
+  const saveManifest = async (force) => {
+    if (!force && ++sinceSave < DL_CONCURRENCY) return;
+    sinceSave = 0;
+    await swStorageSet({ [segKey]: { total, block, done } }).catch(() => {});
+  };
+
+  async function runSegment(i) {
+    const start = i * block;
+    const end = start + segSize(i) - 1;
+    let lastErr;
+    for (let attempt = 1; attempt <= DL_SEG_MAX_ATTEMPTS; attempt++) {
+      if (signal?.aborted) throw new Error("aborted");
+      segLoaded[i] = 0; report();          // a retry re-fetches the block from its start
+      try {
+        await fetchRangeDirect(url, start, end, async (chunk, at) => {
+          const n = chunk.byteLength;
+          await writer.writeAt(chunk, at);
+          segLoaded[i] += n; report();
+        }, signal);
+        return;
+      } catch (err) {
+        lastErr = err;
+        if (isAbortErr(err, signal) || attempt === DL_SEG_MAX_ATTEMPTS) throw err;
+        const delayMs = Math.min(1000 * 2 ** (attempt - 1), 15000);
+        console.warn(`[sd] block ${i}/${segCount} of ${fileName} failed (attempt ${attempt}): ` +
+          `${err?.message || err} — retry in ${delayMs} ms`);
+        await sleep(delayMs, signal);
+      }
+    }
+    throw lastErr;
+  }
+
+  const queue = [];
+  for (let i = 0; i < segCount; i++) if (!done[i]) queue.push(i);
+  let qi = 0, fatal = null;
+  async function pump() {
+    for (;;) {
+      const i = queue[qi++];
+      if (i === undefined || fatal) break;
+      try {
+        await runSegment(i);
+        done[i] = true;
+        await saveManifest(false);
+      } catch (err) { fatal = err; break; }
+    }
+  }
+
+  await Promise.all(Array.from({ length: Math.min(DL_CONCURRENCY, queue.length || 1) }, pump));
+  if (fatal) {
+    await saveManifest(true);            // keep progress so the next call resumes
+    await writer.close();
+    throw fatal;
+  }
+  await writer.flush();
+  await writer.close();
+  await swStorageSet({ [segKey]: null }).catch(() => {});   // complete — drop the manifest
+}
+
+/**
+ * Legacy single-stream download: one open-ended `bytes=start-` request via the
+ * SW proxy (or in-page on Firefox), resuming from the on-disk offset with
+ * exponential backoff. The fallback when range probing fails or the server
+ * won't honour Range — kept for robustness, no longer the default path.
+ */
+async function legacyStream(url, fileName, onProgress, signal) {
+  const MAX_ATTEMPTS = 6;          // 1 initial + 5 retries
+  const MAX_BACKOFF_MS = 30000;
+  let lastErr = null;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    if (signal?.aborted) throw new Error("aborted");
+    const startBytes = await opfsFileSize(fileName);
+    try {
+      await streamOnnxToOpfs(url, fileName, startBytes, onProgress, signal);
+      return;
+    } catch (err) {
+      lastErr = err;
+      const msg = String(err?.message || err);
+      if (isAbortErr(err, signal) || attempt === MAX_ATTEMPTS) throw err;
+      const delayMs = Math.min(2000 * 2 ** (attempt - 1), MAX_BACKOFF_MS); // 2,4,8,16,30 s
+      const resumeFrom = await opfsFileSize(fileName);
+      console.warn(`[sd] download error for ${fileName} (attempt ${attempt}/${MAX_ATTEMPTS}): ${msg} — ` +
+        `resuming from ${(resumeFrom / 1e6).toFixed(1)} MB in ${delayMs} ms`);
+      await sleep(delayMs, signal);
+    }
+  }
+  if (lastErr) throw lastErr;
+}
+
+/**
+ * Download a URL into the OPFS cache file. Prefers parallel segmented direct
+ * fetches (fast, throttle-resistant); falls back to the legacy single SW stream
+ * when the offscreen doc can't probe HF directly or the server ignores Range.
+ */
+async function downloadToOpfs(url, fileName, onProgress, signal) {
+  let probe;
+  try {
+    probe = await probeRangeDirect(url, signal);
+  } catch (err) {
+    if (isAbortErr(err, signal) || DIRECT) throw err;   // Firefox has no SW proxy fallback
+    console.warn(`[sd] range probe failed for ${fileName} (${err?.message || err}); using SW stream`);
+    return await legacyStream(url, fileName, onProgress, signal);
+  }
+  // Tiny files or a server that won't range → not worth segmenting.
+  if (!probe.ranges || probe.size <= DL_BLOCK_BYTES) {
+    return await legacyStream(url, fileName, onProgress, signal);
+  }
+  // One retry of the whole segmented pass: a terminal block failure persisted
+  // the manifest, so this resumes and re-fetches only what's missing.
+  try {
+    return await segmentedDownload(url, fileName, probe.size, onProgress, signal);
+  } catch (err) {
+    if (isAbortErr(err, signal)) throw err;
+    console.warn(`[sd] segmented download of ${fileName} failed (${err?.message || err}); resuming once more`);
+    return await segmentedDownload(url, fileName, probe.size, onProgress, signal);
+  }
+}
+
 async function fetchOnnxCachedImpl(url, onProgress, signal) {
   if (isLocalUrl(url)) return await fetchDirectToBuffer(url, onProgress, signal);
   const fileName = cacheKeyFor(url);
@@ -440,44 +719,11 @@ async function fetchOnnxCachedImpl(url, onProgress, signal) {
     return await opfsReadFull(fileName);
   }
 
-  if (onDiskSize > 0) {
-    console.info(`[sd] resuming ${fileName} from ${onDiskSize} bytes`);
-  } else {
-    console.info(`[sd] fresh download ${fileName}`);
-  }
-
-  // Stream with auto-retry. HF (and especially the Xet CDN) drops large
-  // connections regularly, and downloading a multi-GB SDXL shard over a flaky
-  // link can blip for tens of seconds. The download is idempotent and resumes
-  // from the on-disk offset via Range, so we retry on ANY error except a
-  // user-initiated abort. Backoff is exponential, capped at 30 s, giving the
-  // network ~2 minutes total to recover across the attempts.
-  const MAX_ATTEMPTS = 6;          // 1 initial + 5 retries
-  const MAX_BACKOFF_MS = 30000;
-  let lastErr;
-  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
-    if (signal?.aborted) throw new Error("aborted");
-    const startBytes = await opfsFileSize(fileName);
-    try {
-      await streamOnnxToOpfs(url, fileName, startBytes, onProgress, signal);
-      lastErr = null;
-      break;
-    } catch (err) {
-      lastErr = err;
-      const msg = String(err?.message || err);
-      const isAbort = signal?.aborted || msg === "aborted" || /aborted/i.test(msg);
-      if (isAbort || attempt === MAX_ATTEMPTS) throw err;
-      const delayMs = Math.min(2000 * 2 ** (attempt - 1), MAX_BACKOFF_MS); // 2,4,8,16,30 s
-      const resumeFrom = await opfsFileSize(fileName);
-      console.warn(`[sd] download error for ${fileName} (attempt ${attempt}/${MAX_ATTEMPTS}): ${msg} — ` +
-        `resuming from ${(resumeFrom / 1e6).toFixed(1)} MB in ${delayMs} ms`);
-      await new Promise((r) => setTimeout(r, delayMs));
-    }
-  }
-  if (lastErr) throw lastErr;
+  console.info(onDiskSize > 0 ? `[sd] resuming ${fileName}` : `[sd] fresh download ${fileName}`);
+  await downloadToOpfs(url, fileName, onProgress, signal);
 
   // Mark the file as complete by storing its size — only happens if the
-  // stream finished without aborting.
+  // download finished without aborting.
   const finalSize = await opfsFileSize(fileName);
   await swStorageSet({ [sizeKey]: finalSize });
   return await opfsReadFull(fileName);
@@ -816,7 +1062,7 @@ export async function preloadModelFiles(repoId, { progress, signal, encoderRepoI
       onProgress?.(onDiskSize);
       return;
     }
-    await streamOnnxToOpfs(url, fileName, onDiskSize, onProgress, signal);
+    await downloadToOpfs(url, fileName, onProgress, signal);
     const finalSize = await opfsFileSize(fileName);
     await swStorageSet({ [sizeKey]: finalSize });
   }

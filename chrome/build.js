@@ -215,6 +215,18 @@ function processJSON(relPath, srcPath, dstPath) {
       obj.content_security_policy.extension_pages =
         "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; connect-src 'self' https:;";
     }
+    // The dev manifest grants broad host access (http(s)://*/* + localhost) for
+    // testing against local/arbitrary model servers. The release build narrows
+    // it to the only hosts the shipped extension contacts — HuggingFace (+ its
+    // Xet/AWS CDN under *.hf.co) and mindix.space — so the install prompt reads
+    // "your data on huggingface.co / mindix.space" instead of "all websites".
+    obj.host_permissions = [
+      "https://huggingface.co/*",
+      "https://*.huggingface.co/*",
+      "https://*.hf.co/*",
+      "https://mindix.space/*",
+      "https://*.mindix.space/*",
+    ];
   }
 
   const minified = JSON.stringify(obj);
